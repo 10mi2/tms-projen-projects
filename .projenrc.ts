@@ -6,7 +6,7 @@ const project = new cdk.JsiiProject({
   defaultReleaseBranch: "main",
   jsiiVersion: "~5.0.0",
   name: "tms-projen-projects",
-  packageName: "tms-projen-projects",
+  packageName: "@10mi2/tms-projen-projects",
   packageManager: javascript.NodePackageManager.NPM,
   projenrcTs: true,
   repositoryUrl: "https://github.com/10mi2/tms-projen-projects.git",
