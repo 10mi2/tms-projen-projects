@@ -147,7 +147,6 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
     );
     this.addDevDeps(
       "@tsconfig/strictest",
-      "file:/Users/rob/Projects/Ten-Mile-Square/TMSProjenProjects",
       "@nestjs/cli@^10.0.0",
       "@nestjs/schematics@^10.0.0",
       "@nestjs/testing@^10.0.0",
