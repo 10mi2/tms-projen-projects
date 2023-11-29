@@ -122,7 +122,6 @@ exports[`TmsNestJSAppProject has reasonable configuration 3`] = `
     "projen": "*",
     "source-map-support": "^0.5.21",
     "supertest": "^6.3.3",
-    "tms-projen-projects": "/Users/rob/Projects/Ten-Mile-Square/TMSProjenProjects",
     "ts-jest": "*",
     "ts-loader": "^9.4.3",
     "ts-node": "*",
