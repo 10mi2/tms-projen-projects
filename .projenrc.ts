@@ -1,7 +1,7 @@
 import { cdk, javascript } from "projen";
 import { UpdateSnapshot } from "projen/lib/javascript";
 const project = new cdk.JsiiProject({
-  author: "Rob Giseburt",
+  author: "Ten Mile Square",
   authorAddress: "rob@tenmilesquare.com",
   defaultReleaseBranch: "main",
   jsiiVersion: "~5.0.0",
@@ -10,6 +10,7 @@ const project = new cdk.JsiiProject({
   packageManager: javascript.NodePackageManager.NPM,
   projenrcTs: true,
   repositoryUrl: "https://github.com/10mi2/tms-projen-projects.git",
+  license: "MIT",
 
   eslint: true,
   prettier: true,

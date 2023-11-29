@@ -30,7 +30,7 @@
     "projen": "npx projen"
   },
   "author": {
-    "name": "Rob Giseburt",
+    "name": "Ten Mile Square",
     "email": "rob@tenmilesquare.com",
     "organization": false
   },
@@ -65,7 +65,7 @@
     "projen": "^0.76.26"
   },
   "main": "lib/index.js",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "version": "0.0.0",
   "jest": {
     "testMatch": [

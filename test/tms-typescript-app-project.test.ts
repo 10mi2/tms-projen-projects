@@ -1,6 +1,6 @@
 import { Testing } from "projen/lib/testing";
 // import { synthSnapshot } from "projen/lib/util/synth";
-import { TmsTypeScriptAppProject } from "../src/tms-typescript-app-project";
+import { TmsTypeScriptAppProject } from "../src/";
 
 test("TMSTypeScriptAppProject has reasonable configuration", () => {
   const project = new TmsTypeScriptAppProject({
