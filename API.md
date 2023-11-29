@@ -2,27 +2,27 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### TmsNestJSAppProject <a name="TmsNestJSAppProject" id="tms-projen-projects.TmsNestJSAppProject"></a>
+### TmsNestJSAppProject <a name="TmsNestJSAppProject" id="@10mi2/tms-projen-projects.TmsNestJSAppProject"></a>
 
 Create a [NestJS](https://docs.nestjs.com) TypeScript project with [Ten Mile Square](https://tenmilesquare.com) opinionated defaults, and preloaded with one of a few possible sample applications.
 
-#### Initializers <a name="Initializers" id="tms-projen-projects.TmsNestJSAppProject.Initializer"></a>
+#### Initializers <a name="Initializers" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.Initializer"></a>
 
 ```typescript
-import { TmsNestJSAppProject } from 'tms-projen-projects'
+import { TmsNestJSAppProject } from '@10mi2/tms-projen-projects'
 
 new TmsNestJSAppProject(options: TmsNestJSAppProjectOptions)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.Initializer.parameter.options">options</a></code> | <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions">TmsNestJSAppProjectOptions</a></code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.Initializer.parameter.options">options</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions">TmsNestJSAppProjectOptions</a></code> | *No description.* |
 
 ---
 
-##### `options`<sup>Required</sup> <a name="options" id="tms-projen-projects.TmsNestJSAppProject.Initializer.parameter.options"></a>
+##### `options`<sup>Required</sup> <a name="options" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.Initializer.parameter.options"></a>
 
-- *Type:* <a href="#tms-projen-projects.TmsNestJSAppProjectOptions">TmsNestJSAppProjectOptions</a>
+- *Type:* <a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions">TmsNestJSAppProjectOptions</a>
 
 ---
 
@@ -30,40 +30,40 @@ new TmsNestJSAppProject(options: TmsNestJSAppProjectOptions)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addExcludeFromCleanup">addExcludeFromCleanup</a></code> | Exclude the matching files from pre-synth cleanup. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addGitIgnore">addGitIgnore</a></code> | Adds a .gitignore pattern. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addPackageIgnore">addPackageIgnore</a></code> | Exclude these files from the bundled package. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addTask">addTask</a></code> | Adds a new task to this project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addTip">addTip</a></code> | Prints a "tip" message during synthesis. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.annotateGenerated">annotateGenerated</a></code> | Marks the provided file(s) as being generated. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.postSynthesize">postSynthesize</a></code> | Called after all components are synthesized. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.preSynthesize">preSynthesize</a></code> | Called before all components are synthesized. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.removeTask">removeTask</a></code> | Removes a task from a project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.runTaskCommand">runTaskCommand</a></code> | Returns the shell command to execute in order to run a task. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.synth">synth</a></code> | Synthesize all project files into `outdir`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.tryFindFile">tryFindFile</a></code> | Finds a file at the specified relative path within this project and all its subprojects. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.tryFindJsonFile">tryFindJsonFile</a></code> | Finds a json file by name. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.tryFindObjectFile">tryFindObjectFile</a></code> | Finds an object file (like JsonFile, YamlFile, etc.) by name. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.tryRemoveFile">tryRemoveFile</a></code> | Finds a file at the specified relative path within this project and removes it. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addBins">addBins</a></code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addBundledDeps">addBundledDeps</a></code> | Defines bundled dependencies. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addCompileCommand">addCompileCommand</a></code> | DEPRECATED. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addDeps">addDeps</a></code> | Defines normal dependencies. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addDevDeps">addDevDeps</a></code> | Defines development/test dependencies. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addFields">addFields</a></code> | Directly set fields in `package.json`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addKeywords">addKeywords</a></code> | Adds keywords to package.json (deduplicated). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addPeerDeps">addPeerDeps</a></code> | Defines peer dependencies. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addScripts">addScripts</a></code> | Replaces the contents of multiple npm package.json scripts. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.addTestCommand">addTestCommand</a></code> | DEPRECATED. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.hasScript">hasScript</a></code> | Indicates if a script by the name name is defined. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.removeScript">removeScript</a></code> | Removes the npm script (always successful). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.renderWorkflowSetup">renderWorkflowSetup</a></code> | Returns the set of workflow steps which should be executed to bootstrap a workflow. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addExcludeFromCleanup">addExcludeFromCleanup</a></code> | Exclude the matching files from pre-synth cleanup. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addGitIgnore">addGitIgnore</a></code> | Adds a .gitignore pattern. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addPackageIgnore">addPackageIgnore</a></code> | Exclude these files from the bundled package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addTask">addTask</a></code> | Adds a new task to this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addTip">addTip</a></code> | Prints a "tip" message during synthesis. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.annotateGenerated">annotateGenerated</a></code> | Marks the provided file(s) as being generated. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.postSynthesize">postSynthesize</a></code> | Called after all components are synthesized. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.preSynthesize">preSynthesize</a></code> | Called before all components are synthesized. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.removeTask">removeTask</a></code> | Removes a task from a project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.runTaskCommand">runTaskCommand</a></code> | Returns the shell command to execute in order to run a task. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.synth">synth</a></code> | Synthesize all project files into `outdir`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.tryFindFile">tryFindFile</a></code> | Finds a file at the specified relative path within this project and all its subprojects. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.tryFindJsonFile">tryFindJsonFile</a></code> | Finds a json file by name. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.tryFindObjectFile">tryFindObjectFile</a></code> | Finds an object file (like JsonFile, YamlFile, etc.) by name. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.tryRemoveFile">tryRemoveFile</a></code> | Finds a file at the specified relative path within this project and removes it. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addBins">addBins</a></code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addBundledDeps">addBundledDeps</a></code> | Defines bundled dependencies. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addCompileCommand">addCompileCommand</a></code> | DEPRECATED. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addDeps">addDeps</a></code> | Defines normal dependencies. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addDevDeps">addDevDeps</a></code> | Defines development/test dependencies. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addFields">addFields</a></code> | Directly set fields in `package.json`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addKeywords">addKeywords</a></code> | Adds keywords to package.json (deduplicated). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addPeerDeps">addPeerDeps</a></code> | Defines peer dependencies. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addScripts">addScripts</a></code> | Replaces the contents of multiple npm package.json scripts. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.addTestCommand">addTestCommand</a></code> | DEPRECATED. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.hasScript">hasScript</a></code> | Indicates if a script by the name name is defined. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.removeScript">removeScript</a></code> | Removes the npm script (always successful). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.renderWorkflowSetup">renderWorkflowSetup</a></code> | Returns the set of workflow steps which should be executed to bootstrap a workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
 
 ---
 
-##### `toString` <a name="toString" id="tms-projen-projects.TmsNestJSAppProject.toString"></a>
+##### `toString` <a name="toString" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.toString"></a>
 
 ```typescript
 public toString(): string
@@ -71,7 +71,7 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="tms-projen-projects.TmsNestJSAppProject.addExcludeFromCleanup"></a>
+##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addExcludeFromCleanup"></a>
 
 ```typescript
 public addExcludeFromCleanup(globs: string): void
@@ -82,7 +82,7 @@ Exclude the matching files from pre-synth cleanup.
 Can be used when, for example, some
 source files include the projen marker and we don't want them to be erased during synth.
 
-###### `globs`<sup>Required</sup> <a name="globs" id="tms-projen-projects.TmsNestJSAppProject.addExcludeFromCleanup.parameter.globs"></a>
+###### `globs`<sup>Required</sup> <a name="globs" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addExcludeFromCleanup.parameter.globs"></a>
 
 - *Type:* string
 
@@ -90,7 +90,7 @@ The glob patterns to match.
 
 ---
 
-##### `addGitIgnore` <a name="addGitIgnore" id="tms-projen-projects.TmsNestJSAppProject.addGitIgnore"></a>
+##### `addGitIgnore` <a name="addGitIgnore" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addGitIgnore"></a>
 
 ```typescript
 public addGitIgnore(pattern: string): void
@@ -98,7 +98,7 @@ public addGitIgnore(pattern: string): void
 
 Adds a .gitignore pattern.
 
-###### `pattern`<sup>Required</sup> <a name="pattern" id="tms-projen-projects.TmsNestJSAppProject.addGitIgnore.parameter.pattern"></a>
+###### `pattern`<sup>Required</sup> <a name="pattern" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addGitIgnore.parameter.pattern"></a>
 
 - *Type:* string
 
@@ -106,7 +106,7 @@ The glob pattern to ignore.
 
 ---
 
-##### `addPackageIgnore` <a name="addPackageIgnore" id="tms-projen-projects.TmsNestJSAppProject.addPackageIgnore"></a>
+##### `addPackageIgnore` <a name="addPackageIgnore" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addPackageIgnore"></a>
 
 ```typescript
 public addPackageIgnore(pattern: string): void
@@ -117,13 +117,13 @@ Exclude these files from the bundled package.
 Implemented by project types based on the
 packaging mechanism. For example, `NodeProject` delegates this to `.npmignore`.
 
-###### `pattern`<sup>Required</sup> <a name="pattern" id="tms-projen-projects.TmsNestJSAppProject.addPackageIgnore.parameter.pattern"></a>
+###### `pattern`<sup>Required</sup> <a name="pattern" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addPackageIgnore.parameter.pattern"></a>
 
 - *Type:* string
 
 ---
 
-##### `addTask` <a name="addTask" id="tms-projen-projects.TmsNestJSAppProject.addTask"></a>
+##### `addTask` <a name="addTask" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addTask"></a>
 
 ```typescript
 public addTask(name: string, props?: TaskOptions): Task
@@ -134,7 +134,7 @@ Adds a new task to this project.
 This will fail if the project already has
 a task with this name.
 
-###### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsNestJSAppProject.addTask.parameter.name"></a>
+###### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addTask.parameter.name"></a>
 
 - *Type:* string
 
@@ -142,7 +142,7 @@ The task name to add.
 
 ---
 
-###### `props`<sup>Optional</sup> <a name="props" id="tms-projen-projects.TmsNestJSAppProject.addTask.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addTask.parameter.props"></a>
 
 - *Type:* projen.TaskOptions
 
@@ -150,7 +150,7 @@ Task properties.
 
 ---
 
-##### ~~`addTip`~~ <a name="addTip" id="tms-projen-projects.TmsNestJSAppProject.addTip"></a>
+##### ~~`addTip`~~ <a name="addTip" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addTip"></a>
 
 ```typescript
 public addTip(message: string): void
@@ -158,7 +158,7 @@ public addTip(message: string): void
 
 Prints a "tip" message during synthesis.
 
-###### `message`<sup>Required</sup> <a name="message" id="tms-projen-projects.TmsNestJSAppProject.addTip.parameter.message"></a>
+###### `message`<sup>Required</sup> <a name="message" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addTip.parameter.message"></a>
 
 - *Type:* string
 
@@ -166,7 +166,7 @@ The message.
 
 ---
 
-##### `annotateGenerated` <a name="annotateGenerated" id="tms-projen-projects.TmsNestJSAppProject.annotateGenerated"></a>
+##### `annotateGenerated` <a name="annotateGenerated" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.annotateGenerated"></a>
 
 ```typescript
 public annotateGenerated(glob: string): void
@@ -180,7 +180,7 @@ repository statistics and language breakdown.
 
 > [https://github.com/github/linguist/blob/master/docs/overrides.md](https://github.com/github/linguist/blob/master/docs/overrides.md)
 
-###### `glob`<sup>Required</sup> <a name="glob" id="tms-projen-projects.TmsNestJSAppProject.annotateGenerated.parameter.glob"></a>
+###### `glob`<sup>Required</sup> <a name="glob" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.annotateGenerated.parameter.glob"></a>
 
 - *Type:* string
 
@@ -188,7 +188,7 @@ the glob pattern to match (could be a file path).
 
 ---
 
-##### `postSynthesize` <a name="postSynthesize" id="tms-projen-projects.TmsNestJSAppProject.postSynthesize"></a>
+##### `postSynthesize` <a name="postSynthesize" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.postSynthesize"></a>
 
 ```typescript
 public postSynthesize(): void
@@ -198,7 +198,7 @@ Called after all components are synthesized.
 
 Order is *not* guaranteed.
 
-##### `preSynthesize` <a name="preSynthesize" id="tms-projen-projects.TmsNestJSAppProject.preSynthesize"></a>
+##### `preSynthesize` <a name="preSynthesize" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.preSynthesize"></a>
 
 ```typescript
 public preSynthesize(): void
@@ -206,7 +206,7 @@ public preSynthesize(): void
 
 Called before all components are synthesized.
 
-##### `removeTask` <a name="removeTask" id="tms-projen-projects.TmsNestJSAppProject.removeTask"></a>
+##### `removeTask` <a name="removeTask" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.removeTask"></a>
 
 ```typescript
 public removeTask(name: string): Task
@@ -214,7 +214,7 @@ public removeTask(name: string): Task
 
 Removes a task from a project.
 
-###### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsNestJSAppProject.removeTask.parameter.name"></a>
+###### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.removeTask.parameter.name"></a>
 
 - *Type:* string
 
@@ -222,7 +222,7 @@ The name of the task to remove.
 
 ---
 
-##### `runTaskCommand` <a name="runTaskCommand" id="tms-projen-projects.TmsNestJSAppProject.runTaskCommand"></a>
+##### `runTaskCommand` <a name="runTaskCommand" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.runTaskCommand"></a>
 
 ```typescript
 public runTaskCommand(task: Task): string
@@ -233,7 +233,7 @@ Returns the shell command to execute in order to run a task.
 This will
 typically be `npx projen TASK`.
 
-###### `task`<sup>Required</sup> <a name="task" id="tms-projen-projects.TmsNestJSAppProject.runTaskCommand.parameter.task"></a>
+###### `task`<sup>Required</sup> <a name="task" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.runTaskCommand.parameter.task"></a>
 
 - *Type:* projen.Task
 
@@ -241,7 +241,7 @@ The task for which the command is required.
 
 ---
 
-##### `synth` <a name="synth" id="tms-projen-projects.TmsNestJSAppProject.synth"></a>
+##### `synth` <a name="synth" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.synth"></a>
 
 ```typescript
 public synth(): void
@@ -256,7 +256,7 @@ Synthesize all project files into `outdir`.
 5. Call "postSynthesize()" for all components of this project
 6. Call "this.postSynthesize()"
 
-##### `tryFindFile` <a name="tryFindFile" id="tms-projen-projects.TmsNestJSAppProject.tryFindFile"></a>
+##### `tryFindFile` <a name="tryFindFile" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.tryFindFile"></a>
 
 ```typescript
 public tryFindFile(filePath: string): FileBase
@@ -264,7 +264,7 @@ public tryFindFile(filePath: string): FileBase
 
 Finds a file at the specified relative path within this project and all its subprojects.
 
-###### `filePath`<sup>Required</sup> <a name="filePath" id="tms-projen-projects.TmsNestJSAppProject.tryFindFile.parameter.filePath"></a>
+###### `filePath`<sup>Required</sup> <a name="filePath" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.tryFindFile.parameter.filePath"></a>
 
 - *Type:* string
 
@@ -275,7 +275,7 @@ from the root of _this_ project.
 
 ---
 
-##### ~~`tryFindJsonFile`~~ <a name="tryFindJsonFile" id="tms-projen-projects.TmsNestJSAppProject.tryFindJsonFile"></a>
+##### ~~`tryFindJsonFile`~~ <a name="tryFindJsonFile" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.tryFindJsonFile"></a>
 
 ```typescript
 public tryFindJsonFile(filePath: string): JsonFile
@@ -283,7 +283,7 @@ public tryFindJsonFile(filePath: string): JsonFile
 
 Finds a json file by name.
 
-###### `filePath`<sup>Required</sup> <a name="filePath" id="tms-projen-projects.TmsNestJSAppProject.tryFindJsonFile.parameter.filePath"></a>
+###### `filePath`<sup>Required</sup> <a name="filePath" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.tryFindJsonFile.parameter.filePath"></a>
 
 - *Type:* string
 
@@ -291,7 +291,7 @@ The file path.
 
 ---
 
-##### `tryFindObjectFile` <a name="tryFindObjectFile" id="tms-projen-projects.TmsNestJSAppProject.tryFindObjectFile"></a>
+##### `tryFindObjectFile` <a name="tryFindObjectFile" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.tryFindObjectFile"></a>
 
 ```typescript
 public tryFindObjectFile(filePath: string): ObjectFile
@@ -299,7 +299,7 @@ public tryFindObjectFile(filePath: string): ObjectFile
 
 Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
-###### `filePath`<sup>Required</sup> <a name="filePath" id="tms-projen-projects.TmsNestJSAppProject.tryFindObjectFile.parameter.filePath"></a>
+###### `filePath`<sup>Required</sup> <a name="filePath" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.tryFindObjectFile.parameter.filePath"></a>
 
 - *Type:* string
 
@@ -307,7 +307,7 @@ The file path.
 
 ---
 
-##### `tryRemoveFile` <a name="tryRemoveFile" id="tms-projen-projects.TmsNestJSAppProject.tryRemoveFile"></a>
+##### `tryRemoveFile` <a name="tryRemoveFile" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.tryRemoveFile"></a>
 
 ```typescript
 public tryRemoveFile(filePath: string): FileBase
@@ -315,7 +315,7 @@ public tryRemoveFile(filePath: string): FileBase
 
 Finds a file at the specified relative path within this project and removes it.
 
-###### `filePath`<sup>Required</sup> <a name="filePath" id="tms-projen-projects.TmsNestJSAppProject.tryRemoveFile.parameter.filePath"></a>
+###### `filePath`<sup>Required</sup> <a name="filePath" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.tryRemoveFile.parameter.filePath"></a>
 
 - *Type:* string
 
@@ -326,19 +326,19 @@ resolved from the root of _this_ project.
 
 ---
 
-##### `addBins` <a name="addBins" id="tms-projen-projects.TmsNestJSAppProject.addBins"></a>
+##### `addBins` <a name="addBins" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addBins"></a>
 
 ```typescript
 public addBins(bins: {[ key: string ]: string}): void
 ```
 
-###### `bins`<sup>Required</sup> <a name="bins" id="tms-projen-projects.TmsNestJSAppProject.addBins.parameter.bins"></a>
+###### `bins`<sup>Required</sup> <a name="bins" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addBins.parameter.bins"></a>
 
 - *Type:* {[ key: string ]: string}
 
 ---
 
-##### `addBundledDeps` <a name="addBundledDeps" id="tms-projen-projects.TmsNestJSAppProject.addBundledDeps"></a>
+##### `addBundledDeps` <a name="addBundledDeps" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addBundledDeps"></a>
 
 ```typescript
 public addBundledDeps(deps: string): void
@@ -349,7 +349,7 @@ Defines bundled dependencies.
 Bundled dependencies will be added as normal dependencies as well as to the
 `bundledDependencies` section of your `package.json`.
 
-###### `deps`<sup>Required</sup> <a name="deps" id="tms-projen-projects.TmsNestJSAppProject.addBundledDeps.parameter.deps"></a>
+###### `deps`<sup>Required</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addBundledDeps.parameter.deps"></a>
 
 - *Type:* string
 
@@ -363,7 +363,7 @@ add/upgrade`. If you wish to specify a version range use this syntax:
 
 ---
 
-##### ~~`addCompileCommand`~~ <a name="addCompileCommand" id="tms-projen-projects.TmsNestJSAppProject.addCompileCommand"></a>
+##### ~~`addCompileCommand`~~ <a name="addCompileCommand" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addCompileCommand"></a>
 
 ```typescript
 public addCompileCommand(commands: string): void
@@ -371,13 +371,13 @@ public addCompileCommand(commands: string): void
 
 DEPRECATED.
 
-###### `commands`<sup>Required</sup> <a name="commands" id="tms-projen-projects.TmsNestJSAppProject.addCompileCommand.parameter.commands"></a>
+###### `commands`<sup>Required</sup> <a name="commands" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addCompileCommand.parameter.commands"></a>
 
 - *Type:* string
 
 ---
 
-##### `addDeps` <a name="addDeps" id="tms-projen-projects.TmsNestJSAppProject.addDeps"></a>
+##### `addDeps` <a name="addDeps" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addDeps"></a>
 
 ```typescript
 public addDeps(deps: string): void
@@ -385,7 +385,7 @@ public addDeps(deps: string): void
 
 Defines normal dependencies.
 
-###### `deps`<sup>Required</sup> <a name="deps" id="tms-projen-projects.TmsNestJSAppProject.addDeps.parameter.deps"></a>
+###### `deps`<sup>Required</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addDeps.parameter.deps"></a>
 
 - *Type:* string
 
@@ -399,7 +399,7 @@ add/upgrade`. If you wish to specify a version range use this syntax:
 
 ---
 
-##### `addDevDeps` <a name="addDevDeps" id="tms-projen-projects.TmsNestJSAppProject.addDevDeps"></a>
+##### `addDevDeps` <a name="addDevDeps" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addDevDeps"></a>
 
 ```typescript
 public addDevDeps(deps: string): void
@@ -407,7 +407,7 @@ public addDevDeps(deps: string): void
 
 Defines development/test dependencies.
 
-###### `deps`<sup>Required</sup> <a name="deps" id="tms-projen-projects.TmsNestJSAppProject.addDevDeps.parameter.deps"></a>
+###### `deps`<sup>Required</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addDevDeps.parameter.deps"></a>
 
 - *Type:* string
 
@@ -421,7 +421,7 @@ add/upgrade`. If you wish to specify a version range use this syntax:
 
 ---
 
-##### `addFields` <a name="addFields" id="tms-projen-projects.TmsNestJSAppProject.addFields"></a>
+##### `addFields` <a name="addFields" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addFields"></a>
 
 ```typescript
 public addFields(fields: {[ key: string ]: any}): void
@@ -429,7 +429,7 @@ public addFields(fields: {[ key: string ]: any}): void
 
 Directly set fields in `package.json`.
 
-###### `fields`<sup>Required</sup> <a name="fields" id="tms-projen-projects.TmsNestJSAppProject.addFields.parameter.fields"></a>
+###### `fields`<sup>Required</sup> <a name="fields" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addFields.parameter.fields"></a>
 
 - *Type:* {[ key: string ]: any}
 
@@ -437,7 +437,7 @@ The fields to set.
 
 ---
 
-##### `addKeywords` <a name="addKeywords" id="tms-projen-projects.TmsNestJSAppProject.addKeywords"></a>
+##### `addKeywords` <a name="addKeywords" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addKeywords"></a>
 
 ```typescript
 public addKeywords(keywords: string): void
@@ -445,7 +445,7 @@ public addKeywords(keywords: string): void
 
 Adds keywords to package.json (deduplicated).
 
-###### `keywords`<sup>Required</sup> <a name="keywords" id="tms-projen-projects.TmsNestJSAppProject.addKeywords.parameter.keywords"></a>
+###### `keywords`<sup>Required</sup> <a name="keywords" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addKeywords.parameter.keywords"></a>
 
 - *Type:* string
 
@@ -453,7 +453,7 @@ The keywords to add.
 
 ---
 
-##### `addPeerDeps` <a name="addPeerDeps" id="tms-projen-projects.TmsNestJSAppProject.addPeerDeps"></a>
+##### `addPeerDeps` <a name="addPeerDeps" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addPeerDeps"></a>
 
 ```typescript
 public addPeerDeps(deps: string): void
@@ -465,7 +465,7 @@ When adding peer dependencies, a devDependency will also be added on the
 pinned version of the declared peer. This will ensure that you are testing
 your code against the minimum version required from your consumers.
 
-###### `deps`<sup>Required</sup> <a name="deps" id="tms-projen-projects.TmsNestJSAppProject.addPeerDeps.parameter.deps"></a>
+###### `deps`<sup>Required</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addPeerDeps.parameter.deps"></a>
 
 - *Type:* string
 
@@ -479,7 +479,7 @@ add/upgrade`. If you wish to specify a version range use this syntax:
 
 ---
 
-##### `addScripts` <a name="addScripts" id="tms-projen-projects.TmsNestJSAppProject.addScripts"></a>
+##### `addScripts` <a name="addScripts" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addScripts"></a>
 
 ```typescript
 public addScripts(scripts: {[ key: string ]: string}): void
@@ -487,7 +487,7 @@ public addScripts(scripts: {[ key: string ]: string}): void
 
 Replaces the contents of multiple npm package.json scripts.
 
-###### `scripts`<sup>Required</sup> <a name="scripts" id="tms-projen-projects.TmsNestJSAppProject.addScripts.parameter.scripts"></a>
+###### `scripts`<sup>Required</sup> <a name="scripts" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addScripts.parameter.scripts"></a>
 
 - *Type:* {[ key: string ]: string}
 
@@ -495,7 +495,7 @@ The scripts to set.
 
 ---
 
-##### ~~`addTestCommand`~~ <a name="addTestCommand" id="tms-projen-projects.TmsNestJSAppProject.addTestCommand"></a>
+##### ~~`addTestCommand`~~ <a name="addTestCommand" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addTestCommand"></a>
 
 ```typescript
 public addTestCommand(commands: string): void
@@ -503,13 +503,13 @@ public addTestCommand(commands: string): void
 
 DEPRECATED.
 
-###### `commands`<sup>Required</sup> <a name="commands" id="tms-projen-projects.TmsNestJSAppProject.addTestCommand.parameter.commands"></a>
+###### `commands`<sup>Required</sup> <a name="commands" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.addTestCommand.parameter.commands"></a>
 
 - *Type:* string
 
 ---
 
-##### ~~`hasScript`~~ <a name="hasScript" id="tms-projen-projects.TmsNestJSAppProject.hasScript"></a>
+##### ~~`hasScript`~~ <a name="hasScript" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.hasScript"></a>
 
 ```typescript
 public hasScript(name: string): boolean
@@ -517,7 +517,7 @@ public hasScript(name: string): boolean
 
 Indicates if a script by the name name is defined.
 
-###### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsNestJSAppProject.hasScript.parameter.name"></a>
+###### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.hasScript.parameter.name"></a>
 
 - *Type:* string
 
@@ -525,7 +525,7 @@ The name of the script.
 
 ---
 
-##### `removeScript` <a name="removeScript" id="tms-projen-projects.TmsNestJSAppProject.removeScript"></a>
+##### `removeScript` <a name="removeScript" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.removeScript"></a>
 
 ```typescript
 public removeScript(name: string): void
@@ -533,7 +533,7 @@ public removeScript(name: string): void
 
 Removes the npm script (always successful).
 
-###### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsNestJSAppProject.removeScript.parameter.name"></a>
+###### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.removeScript.parameter.name"></a>
 
 - *Type:* string
 
@@ -541,7 +541,7 @@ The name of the script.
 
 ---
 
-##### `renderWorkflowSetup` <a name="renderWorkflowSetup" id="tms-projen-projects.TmsNestJSAppProject.renderWorkflowSetup"></a>
+##### `renderWorkflowSetup` <a name="renderWorkflowSetup" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.renderWorkflowSetup"></a>
 
 ```typescript
 public renderWorkflowSetup(options?: RenderWorkflowSetupOptions): JobStep[]
@@ -549,7 +549,7 @@ public renderWorkflowSetup(options?: RenderWorkflowSetupOptions): JobStep[]
 
 Returns the set of workflow steps which should be executed to bootstrap a workflow.
 
-###### `options`<sup>Optional</sup> <a name="options" id="tms-projen-projects.TmsNestJSAppProject.renderWorkflowSetup.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.renderWorkflowSetup.parameter.options"></a>
 
 - *Type:* projen.javascript.RenderWorkflowSetupOptions
 
@@ -557,7 +557,7 @@ Options.
 
 ---
 
-##### `setScript` <a name="setScript" id="tms-projen-projects.TmsNestJSAppProject.setScript"></a>
+##### `setScript` <a name="setScript" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.setScript"></a>
 
 ```typescript
 public setScript(name: string, command: string): void
@@ -565,7 +565,7 @@ public setScript(name: string, command: string): void
 
 Replaces the contents of an npm package.json script.
 
-###### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsNestJSAppProject.setScript.parameter.name"></a>
+###### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.setScript.parameter.name"></a>
 
 - *Type:* string
 
@@ -573,7 +573,7 @@ The script name.
 
 ---
 
-###### `command`<sup>Required</sup> <a name="command" id="tms-projen-projects.TmsNestJSAppProject.setScript.parameter.command"></a>
+###### `command`<sup>Required</sup> <a name="command" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.setScript.parameter.command"></a>
 
 - *Type:* string
 
@@ -585,16 +585,16 @@ The command to execute.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.isProject">isProject</a></code> | Test whether the given construct is a project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.of">of</a></code> | Find the closest ancestor project for given construct. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.isProject">isProject</a></code> | Test whether the given construct is a project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.of">of</a></code> | Find the closest ancestor project for given construct. |
 
 ---
 
-##### `isConstruct` <a name="isConstruct" id="tms-projen-projects.TmsNestJSAppProject.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.isConstruct"></a>
 
 ```typescript
-import { TmsNestJSAppProject } from 'tms-projen-projects'
+import { TmsNestJSAppProject } from '@10mi2/tms-projen-projects'
 
 TmsNestJSAppProject.isConstruct(x: any)
 ```
@@ -615,7 +615,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="tms-projen-projects.TmsNestJSAppProject.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -623,26 +623,26 @@ Any object.
 
 ---
 
-##### `isProject` <a name="isProject" id="tms-projen-projects.TmsNestJSAppProject.isProject"></a>
+##### `isProject` <a name="isProject" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.isProject"></a>
 
 ```typescript
-import { TmsNestJSAppProject } from 'tms-projen-projects'
+import { TmsNestJSAppProject } from '@10mi2/tms-projen-projects'
 
 TmsNestJSAppProject.isProject(x: any)
 ```
 
 Test whether the given construct is a project.
 
-###### `x`<sup>Required</sup> <a name="x" id="tms-projen-projects.TmsNestJSAppProject.isProject.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.isProject.parameter.x"></a>
 
 - *Type:* any
 
 ---
 
-##### `of` <a name="of" id="tms-projen-projects.TmsNestJSAppProject.of"></a>
+##### `of` <a name="of" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.of"></a>
 
 ```typescript
-import { TmsNestJSAppProject } from 'tms-projen-projects'
+import { TmsNestJSAppProject } from '@10mi2/tms-projen-projects'
 
 TmsNestJSAppProject.of(construct: IConstruct)
 ```
@@ -651,7 +651,7 @@ Find the closest ancestor project for given construct.
 
 When given a project, this it the project itself.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="tms-projen-projects.TmsNestJSAppProject.of.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.of.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
@@ -661,72 +661,72 @@ When given a project, this it the project itself.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.buildTask">buildTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.commitGenerated">commitGenerated</a></code> | <code>boolean</code> | Whether to commit the managed files by default. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.compileTask">compileTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.components">components</a></code> | <code>projen.Component[]</code> | Returns all the components within this project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.deps">deps</a></code> | <code>projen.Dependencies</code> | Project dependencies. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.ejected">ejected</a></code> | <code>boolean</code> | Whether or not the project is being ejected. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.files">files</a></code> | <code>projen.FileBase[]</code> | All files in this project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.gitattributes">gitattributes</a></code> | <code>projen.GitAttributesFile</code> | The .gitattributes file for this repository. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.gitignore">gitignore</a></code> | <code>projen.IgnoreFile</code> | .gitignore. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.logger">logger</a></code> | <code>projen.Logger</code> | Logging utilities. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.name">name</a></code> | <code>string</code> | Project name. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.outdir">outdir</a></code> | <code>string</code> | Absolute output directory of this project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.packageTask">packageTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.postCompileTask">postCompileTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.preCompileTask">preCompileTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.projectBuild">projectBuild</a></code> | <code>projen.ProjectBuild</code> | Manages the build process of the project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.projenCommand">projenCommand</a></code> | <code>string</code> | The command to use in order to run the projen CLI. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.root">root</a></code> | <code>projen.Project</code> | The root project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.subprojects">subprojects</a></code> | <code>projen.Project[]</code> | Returns all the subprojects within this project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.tasks">tasks</a></code> | <code>projen.Tasks</code> | Project tasks. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.testTask">testTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.defaultTask">defaultTask</a></code> | <code>projen.Task</code> | This is the "default" task, the one that executes "projen". |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.initProject">initProject</a></code> | <code>projen.InitProject</code> | The options used when this project is bootstrapped via `projen new`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.parent">parent</a></code> | <code>projen.Project</code> | A parent project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.projectType">projectType</a></code> | <code>projen.ProjectType</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.autoApprove">autoApprove</a></code> | <code>projen.github.AutoApprove</code> | Auto approve set up for this project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.devContainer">devContainer</a></code> | <code>projen.vscode.DevContainer</code> | Access for .devcontainer.json (used for GitHub Codespaces). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.github">github</a></code> | <code>projen.github.GitHub</code> | Access all github components. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.gitpod">gitpod</a></code> | <code>projen.Gitpod</code> | Access for Gitpod. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.vscode">vscode</a></code> | <code>projen.vscode.VsCode</code> | Access all VSCode components. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.allowLibraryDependencies">allowLibraryDependencies</a></code> | <code>boolean</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | The build output directory. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.artifactsJavascriptDirectory">artifactsJavascriptDirectory</a></code> | <code>string</code> | The location of the npm tarball after build (`${artifactsDirectory}/js`). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.bundler">bundler</a></code> | <code>projen.javascript.Bundler</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.entrypoint">entrypoint</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.manifest">manifest</a></code> | <code>any</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.npmrc">npmrc</a></code> | <code>projen.javascript.NpmConfig</code> | The .npmrc file. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.package">package</a></code> | <code>projen.javascript.NodePackage</code> | API for managing the node package. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.packageManager">packageManager</a></code> | <code>projen.javascript.NodePackageManager</code> | The package manager to use. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.runScriptCommand">runScriptCommand</a></code> | <code>string</code> | The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the package manager). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.autoMerge">autoMerge</a></code> | <code>projen.github.AutoMerge</code> | Component that sets up mergify for merging approved pull requests. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.buildWorkflow">buildWorkflow</a></code> | <code>projen.build.BuildWorkflow</code> | The PR build GitHub workflow. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.buildWorkflowJobId">buildWorkflowJobId</a></code> | <code>string</code> | The job ID of the build workflow. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.jest">jest</a></code> | <code>projen.javascript.Jest</code> | The Jest configuration (if enabled). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Maximum node version required by this package. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum node.js version required by this package. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.npmignore">npmignore</a></code> | <code>projen.IgnoreFile</code> | The .npmignore file. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.prettier">prettier</a></code> | <code>projen.javascript.Prettier</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.publisher">publisher</a></code> | <code>projen.release.Publisher</code> | Package publisher. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.release">release</a></code> | <code>projen.release.Release</code> | Release management. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.upgradeWorkflow">upgradeWorkflow</a></code> | <code>projen.javascript.UpgradeDependencies</code> | The upgrade workflow. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.docsDirectory">docsDirectory</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.libdir">libdir</a></code> | <code>string</code> | The directory in which compiled .js files reside. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.srcdir">srcdir</a></code> | <code>string</code> | The directory in which the .ts sources reside. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.testdir">testdir</a></code> | <code>string</code> | The directory in which tests reside. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.tsconfigDev">tsconfigDev</a></code> | <code>projen.javascript.TypescriptConfig</code> | A typescript configuration file which covers all files (sources, tests, projen). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.watchTask">watchTask</a></code> | <code>projen.Task</code> | The "watch" task. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.docgen">docgen</a></code> | <code>boolean</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.eslint">eslint</a></code> | <code>projen.javascript.Eslint</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.tsconfig">tsconfig</a></code> | <code>projen.javascript.TypescriptConfig</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.tsconfigEslint">tsconfigEslint</a></code> | <code>projen.javascript.TypescriptConfig</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.buildTask">buildTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.commitGenerated">commitGenerated</a></code> | <code>boolean</code> | Whether to commit the managed files by default. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.compileTask">compileTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.components">components</a></code> | <code>projen.Component[]</code> | Returns all the components within this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.deps">deps</a></code> | <code>projen.Dependencies</code> | Project dependencies. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.ejected">ejected</a></code> | <code>boolean</code> | Whether or not the project is being ejected. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.files">files</a></code> | <code>projen.FileBase[]</code> | All files in this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.gitattributes">gitattributes</a></code> | <code>projen.GitAttributesFile</code> | The .gitattributes file for this repository. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.gitignore">gitignore</a></code> | <code>projen.IgnoreFile</code> | .gitignore. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.logger">logger</a></code> | <code>projen.Logger</code> | Logging utilities. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.name">name</a></code> | <code>string</code> | Project name. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.outdir">outdir</a></code> | <code>string</code> | Absolute output directory of this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.packageTask">packageTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.postCompileTask">postCompileTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.preCompileTask">preCompileTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.projectBuild">projectBuild</a></code> | <code>projen.ProjectBuild</code> | Manages the build process of the project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.projenCommand">projenCommand</a></code> | <code>string</code> | The command to use in order to run the projen CLI. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.root">root</a></code> | <code>projen.Project</code> | The root project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.subprojects">subprojects</a></code> | <code>projen.Project[]</code> | Returns all the subprojects within this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.tasks">tasks</a></code> | <code>projen.Tasks</code> | Project tasks. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.testTask">testTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.defaultTask">defaultTask</a></code> | <code>projen.Task</code> | This is the "default" task, the one that executes "projen". |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.initProject">initProject</a></code> | <code>projen.InitProject</code> | The options used when this project is bootstrapped via `projen new`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.parent">parent</a></code> | <code>projen.Project</code> | A parent project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.projectType">projectType</a></code> | <code>projen.ProjectType</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.autoApprove">autoApprove</a></code> | <code>projen.github.AutoApprove</code> | Auto approve set up for this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.devContainer">devContainer</a></code> | <code>projen.vscode.DevContainer</code> | Access for .devcontainer.json (used for GitHub Codespaces). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.github">github</a></code> | <code>projen.github.GitHub</code> | Access all github components. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.gitpod">gitpod</a></code> | <code>projen.Gitpod</code> | Access for Gitpod. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.vscode">vscode</a></code> | <code>projen.vscode.VsCode</code> | Access all VSCode components. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.allowLibraryDependencies">allowLibraryDependencies</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | The build output directory. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.artifactsJavascriptDirectory">artifactsJavascriptDirectory</a></code> | <code>string</code> | The location of the npm tarball after build (`${artifactsDirectory}/js`). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.bundler">bundler</a></code> | <code>projen.javascript.Bundler</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.entrypoint">entrypoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.manifest">manifest</a></code> | <code>any</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.npmrc">npmrc</a></code> | <code>projen.javascript.NpmConfig</code> | The .npmrc file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.package">package</a></code> | <code>projen.javascript.NodePackage</code> | API for managing the node package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.packageManager">packageManager</a></code> | <code>projen.javascript.NodePackageManager</code> | The package manager to use. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.runScriptCommand">runScriptCommand</a></code> | <code>string</code> | The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the package manager). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.autoMerge">autoMerge</a></code> | <code>projen.github.AutoMerge</code> | Component that sets up mergify for merging approved pull requests. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.buildWorkflow">buildWorkflow</a></code> | <code>projen.build.BuildWorkflow</code> | The PR build GitHub workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.buildWorkflowJobId">buildWorkflowJobId</a></code> | <code>string</code> | The job ID of the build workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.jest">jest</a></code> | <code>projen.javascript.Jest</code> | The Jest configuration (if enabled). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Maximum node version required by this package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum node.js version required by this package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.npmignore">npmignore</a></code> | <code>projen.IgnoreFile</code> | The .npmignore file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.prettier">prettier</a></code> | <code>projen.javascript.Prettier</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.publisher">publisher</a></code> | <code>projen.release.Publisher</code> | Package publisher. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.release">release</a></code> | <code>projen.release.Release</code> | Release management. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.upgradeWorkflow">upgradeWorkflow</a></code> | <code>projen.javascript.UpgradeDependencies</code> | The upgrade workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.docsDirectory">docsDirectory</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.libdir">libdir</a></code> | <code>string</code> | The directory in which compiled .js files reside. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.srcdir">srcdir</a></code> | <code>string</code> | The directory in which the .ts sources reside. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.testdir">testdir</a></code> | <code>string</code> | The directory in which tests reside. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.tsconfigDev">tsconfigDev</a></code> | <code>projen.javascript.TypescriptConfig</code> | A typescript configuration file which covers all files (sources, tests, projen). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.watchTask">watchTask</a></code> | <code>projen.Task</code> | The "watch" task. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.docgen">docgen</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.eslint">eslint</a></code> | <code>projen.javascript.Eslint</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.tsconfig">tsconfig</a></code> | <code>projen.javascript.TypescriptConfig</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.tsconfigEslint">tsconfigEslint</a></code> | <code>projen.javascript.TypescriptConfig</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="tms-projen-projects.TmsNestJSAppProject.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -738,7 +738,7 @@ The tree node.
 
 ---
 
-##### `buildTask`<sup>Required</sup> <a name="buildTask" id="tms-projen-projects.TmsNestJSAppProject.property.buildTask"></a>
+##### `buildTask`<sup>Required</sup> <a name="buildTask" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.buildTask"></a>
 
 ```typescript
 public readonly buildTask: Task;
@@ -748,7 +748,7 @@ public readonly buildTask: Task;
 
 ---
 
-##### `commitGenerated`<sup>Required</sup> <a name="commitGenerated" id="tms-projen-projects.TmsNestJSAppProject.property.commitGenerated"></a>
+##### `commitGenerated`<sup>Required</sup> <a name="commitGenerated" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.commitGenerated"></a>
 
 ```typescript
 public readonly commitGenerated: boolean;
@@ -760,7 +760,7 @@ Whether to commit the managed files by default.
 
 ---
 
-##### `compileTask`<sup>Required</sup> <a name="compileTask" id="tms-projen-projects.TmsNestJSAppProject.property.compileTask"></a>
+##### `compileTask`<sup>Required</sup> <a name="compileTask" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.compileTask"></a>
 
 ```typescript
 public readonly compileTask: Task;
@@ -770,7 +770,7 @@ public readonly compileTask: Task;
 
 ---
 
-##### `components`<sup>Required</sup> <a name="components" id="tms-projen-projects.TmsNestJSAppProject.property.components"></a>
+##### `components`<sup>Required</sup> <a name="components" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.components"></a>
 
 ```typescript
 public readonly components: Component[];
@@ -782,7 +782,7 @@ Returns all the components within this project.
 
 ---
 
-##### `deps`<sup>Required</sup> <a name="deps" id="tms-projen-projects.TmsNestJSAppProject.property.deps"></a>
+##### `deps`<sup>Required</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.deps"></a>
 
 ```typescript
 public readonly deps: Dependencies;
@@ -794,7 +794,7 @@ Project dependencies.
 
 ---
 
-##### `ejected`<sup>Required</sup> <a name="ejected" id="tms-projen-projects.TmsNestJSAppProject.property.ejected"></a>
+##### `ejected`<sup>Required</sup> <a name="ejected" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.ejected"></a>
 
 ```typescript
 public readonly ejected: boolean;
@@ -806,7 +806,7 @@ Whether or not the project is being ejected.
 
 ---
 
-##### `files`<sup>Required</sup> <a name="files" id="tms-projen-projects.TmsNestJSAppProject.property.files"></a>
+##### `files`<sup>Required</sup> <a name="files" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.files"></a>
 
 ```typescript
 public readonly files: FileBase[];
@@ -818,7 +818,7 @@ All files in this project.
 
 ---
 
-##### `gitattributes`<sup>Required</sup> <a name="gitattributes" id="tms-projen-projects.TmsNestJSAppProject.property.gitattributes"></a>
+##### `gitattributes`<sup>Required</sup> <a name="gitattributes" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.gitattributes"></a>
 
 ```typescript
 public readonly gitattributes: GitAttributesFile;
@@ -830,7 +830,7 @@ The .gitattributes file for this repository.
 
 ---
 
-##### `gitignore`<sup>Required</sup> <a name="gitignore" id="tms-projen-projects.TmsNestJSAppProject.property.gitignore"></a>
+##### `gitignore`<sup>Required</sup> <a name="gitignore" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.gitignore"></a>
 
 ```typescript
 public readonly gitignore: IgnoreFile;
@@ -842,7 +842,7 @@ public readonly gitignore: IgnoreFile;
 
 ---
 
-##### `logger`<sup>Required</sup> <a name="logger" id="tms-projen-projects.TmsNestJSAppProject.property.logger"></a>
+##### `logger`<sup>Required</sup> <a name="logger" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.logger"></a>
 
 ```typescript
 public readonly logger: Logger;
@@ -854,7 +854,7 @@ Logging utilities.
 
 ---
 
-##### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsNestJSAppProject.property.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -866,7 +866,7 @@ Project name.
 
 ---
 
-##### `outdir`<sup>Required</sup> <a name="outdir" id="tms-projen-projects.TmsNestJSAppProject.property.outdir"></a>
+##### `outdir`<sup>Required</sup> <a name="outdir" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.outdir"></a>
 
 ```typescript
 public readonly outdir: string;
@@ -878,7 +878,7 @@ Absolute output directory of this project.
 
 ---
 
-##### `packageTask`<sup>Required</sup> <a name="packageTask" id="tms-projen-projects.TmsNestJSAppProject.property.packageTask"></a>
+##### `packageTask`<sup>Required</sup> <a name="packageTask" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.packageTask"></a>
 
 ```typescript
 public readonly packageTask: Task;
@@ -888,7 +888,7 @@ public readonly packageTask: Task;
 
 ---
 
-##### `postCompileTask`<sup>Required</sup> <a name="postCompileTask" id="tms-projen-projects.TmsNestJSAppProject.property.postCompileTask"></a>
+##### `postCompileTask`<sup>Required</sup> <a name="postCompileTask" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.postCompileTask"></a>
 
 ```typescript
 public readonly postCompileTask: Task;
@@ -898,7 +898,7 @@ public readonly postCompileTask: Task;
 
 ---
 
-##### `preCompileTask`<sup>Required</sup> <a name="preCompileTask" id="tms-projen-projects.TmsNestJSAppProject.property.preCompileTask"></a>
+##### `preCompileTask`<sup>Required</sup> <a name="preCompileTask" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.preCompileTask"></a>
 
 ```typescript
 public readonly preCompileTask: Task;
@@ -908,7 +908,7 @@ public readonly preCompileTask: Task;
 
 ---
 
-##### `projectBuild`<sup>Required</sup> <a name="projectBuild" id="tms-projen-projects.TmsNestJSAppProject.property.projectBuild"></a>
+##### `projectBuild`<sup>Required</sup> <a name="projectBuild" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.projectBuild"></a>
 
 ```typescript
 public readonly projectBuild: ProjectBuild;
@@ -920,7 +920,7 @@ Manages the build process of the project.
 
 ---
 
-##### `projenCommand`<sup>Required</sup> <a name="projenCommand" id="tms-projen-projects.TmsNestJSAppProject.property.projenCommand"></a>
+##### `projenCommand`<sup>Required</sup> <a name="projenCommand" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.projenCommand"></a>
 
 ```typescript
 public readonly projenCommand: string;
@@ -932,7 +932,7 @@ The command to use in order to run the projen CLI.
 
 ---
 
-##### `root`<sup>Required</sup> <a name="root" id="tms-projen-projects.TmsNestJSAppProject.property.root"></a>
+##### `root`<sup>Required</sup> <a name="root" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.root"></a>
 
 ```typescript
 public readonly root: Project;
@@ -944,7 +944,7 @@ The root project.
 
 ---
 
-##### `subprojects`<sup>Required</sup> <a name="subprojects" id="tms-projen-projects.TmsNestJSAppProject.property.subprojects"></a>
+##### `subprojects`<sup>Required</sup> <a name="subprojects" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.subprojects"></a>
 
 ```typescript
 public readonly subprojects: Project[];
@@ -956,7 +956,7 @@ Returns all the subprojects within this project.
 
 ---
 
-##### `tasks`<sup>Required</sup> <a name="tasks" id="tms-projen-projects.TmsNestJSAppProject.property.tasks"></a>
+##### `tasks`<sup>Required</sup> <a name="tasks" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.tasks"></a>
 
 ```typescript
 public readonly tasks: Tasks;
@@ -968,7 +968,7 @@ Project tasks.
 
 ---
 
-##### `testTask`<sup>Required</sup> <a name="testTask" id="tms-projen-projects.TmsNestJSAppProject.property.testTask"></a>
+##### `testTask`<sup>Required</sup> <a name="testTask" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.testTask"></a>
 
 ```typescript
 public readonly testTask: Task;
@@ -978,7 +978,7 @@ public readonly testTask: Task;
 
 ---
 
-##### `defaultTask`<sup>Optional</sup> <a name="defaultTask" id="tms-projen-projects.TmsNestJSAppProject.property.defaultTask"></a>
+##### `defaultTask`<sup>Optional</sup> <a name="defaultTask" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.defaultTask"></a>
 
 ```typescript
 public readonly defaultTask: Task;
@@ -993,7 +993,7 @@ the project is being ejected.
 
 ---
 
-##### `initProject`<sup>Optional</sup> <a name="initProject" id="tms-projen-projects.TmsNestJSAppProject.property.initProject"></a>
+##### `initProject`<sup>Optional</sup> <a name="initProject" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.initProject"></a>
 
 ```typescript
 public readonly initProject: InitProject;
@@ -1009,7 +1009,7 @@ FQN of the project type.
 
 ---
 
-##### `parent`<sup>Optional</sup> <a name="parent" id="tms-projen-projects.TmsNestJSAppProject.property.parent"></a>
+##### `parent`<sup>Optional</sup> <a name="parent" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.parent"></a>
 
 ```typescript
 public readonly parent: Project;
@@ -1023,7 +1023,7 @@ If undefined, this is the root project.
 
 ---
 
-##### `projectType`<sup>Required</sup> <a name="projectType" id="tms-projen-projects.TmsNestJSAppProject.property.projectType"></a>
+##### `projectType`<sup>Required</sup> <a name="projectType" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.projectType"></a>
 
 ```typescript
 public readonly projectType: ProjectType;
@@ -1033,7 +1033,7 @@ public readonly projectType: ProjectType;
 
 ---
 
-##### `autoApprove`<sup>Optional</sup> <a name="autoApprove" id="tms-projen-projects.TmsNestJSAppProject.property.autoApprove"></a>
+##### `autoApprove`<sup>Optional</sup> <a name="autoApprove" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.autoApprove"></a>
 
 ```typescript
 public readonly autoApprove: AutoApprove;
@@ -1045,7 +1045,7 @@ Auto approve set up for this project.
 
 ---
 
-##### `devContainer`<sup>Optional</sup> <a name="devContainer" id="tms-projen-projects.TmsNestJSAppProject.property.devContainer"></a>
+##### `devContainer`<sup>Optional</sup> <a name="devContainer" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.devContainer"></a>
 
 ```typescript
 public readonly devContainer: DevContainer;
@@ -1059,7 +1059,7 @@ This will be `undefined` if devContainer boolean is false
 
 ---
 
-##### `github`<sup>Optional</sup> <a name="github" id="tms-projen-projects.TmsNestJSAppProject.property.github"></a>
+##### `github`<sup>Optional</sup> <a name="github" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.github"></a>
 
 ```typescript
 public readonly github: GitHub;
@@ -1073,7 +1073,7 @@ This will be `undefined` for subprojects.
 
 ---
 
-##### `gitpod`<sup>Optional</sup> <a name="gitpod" id="tms-projen-projects.TmsNestJSAppProject.property.gitpod"></a>
+##### `gitpod`<sup>Optional</sup> <a name="gitpod" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.gitpod"></a>
 
 ```typescript
 public readonly gitpod: Gitpod;
@@ -1087,7 +1087,7 @@ This will be `undefined` if gitpod boolean is false
 
 ---
 
-##### `vscode`<sup>Optional</sup> <a name="vscode" id="tms-projen-projects.TmsNestJSAppProject.property.vscode"></a>
+##### `vscode`<sup>Optional</sup> <a name="vscode" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.vscode"></a>
 
 ```typescript
 public readonly vscode: VsCode;
@@ -1101,7 +1101,7 @@ This will be `undefined` for subprojects.
 
 ---
 
-##### ~~`allowLibraryDependencies`~~<sup>Required</sup> <a name="allowLibraryDependencies" id="tms-projen-projects.TmsNestJSAppProject.property.allowLibraryDependencies"></a>
+##### ~~`allowLibraryDependencies`~~<sup>Required</sup> <a name="allowLibraryDependencies" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.allowLibraryDependencies"></a>
 
 - *Deprecated:* use `package.allowLibraryDependencies`
 
@@ -1113,7 +1113,7 @@ public readonly allowLibraryDependencies: boolean;
 
 ---
 
-##### `artifactsDirectory`<sup>Required</sup> <a name="artifactsDirectory" id="tms-projen-projects.TmsNestJSAppProject.property.artifactsDirectory"></a>
+##### `artifactsDirectory`<sup>Required</sup> <a name="artifactsDirectory" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.artifactsDirectory"></a>
 
 ```typescript
 public readonly artifactsDirectory: string;
@@ -1129,7 +1129,7 @@ tarball will be placed under `dist/js/boom-boom-1.2.3.tg`.
 
 ---
 
-##### `artifactsJavascriptDirectory`<sup>Required</sup> <a name="artifactsJavascriptDirectory" id="tms-projen-projects.TmsNestJSAppProject.property.artifactsJavascriptDirectory"></a>
+##### `artifactsJavascriptDirectory`<sup>Required</sup> <a name="artifactsJavascriptDirectory" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.artifactsJavascriptDirectory"></a>
 
 ```typescript
 public readonly artifactsJavascriptDirectory: string;
@@ -1141,7 +1141,7 @@ The location of the npm tarball after build (`${artifactsDirectory}/js`).
 
 ---
 
-##### `bundler`<sup>Required</sup> <a name="bundler" id="tms-projen-projects.TmsNestJSAppProject.property.bundler"></a>
+##### `bundler`<sup>Required</sup> <a name="bundler" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.bundler"></a>
 
 ```typescript
 public readonly bundler: Bundler;
@@ -1151,7 +1151,7 @@ public readonly bundler: Bundler;
 
 ---
 
-##### ~~`entrypoint`~~<sup>Required</sup> <a name="entrypoint" id="tms-projen-projects.TmsNestJSAppProject.property.entrypoint"></a>
+##### ~~`entrypoint`~~<sup>Required</sup> <a name="entrypoint" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.entrypoint"></a>
 
 - *Deprecated:* use `package.entrypoint`
 
@@ -1163,7 +1163,7 @@ public readonly entrypoint: string;
 
 ---
 
-##### ~~`manifest`~~<sup>Required</sup> <a name="manifest" id="tms-projen-projects.TmsNestJSAppProject.property.manifest"></a>
+##### ~~`manifest`~~<sup>Required</sup> <a name="manifest" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.manifest"></a>
 
 - *Deprecated:* use `package.addField(x, y)`
 
@@ -1175,7 +1175,7 @@ public readonly manifest: any;
 
 ---
 
-##### `npmrc`<sup>Required</sup> <a name="npmrc" id="tms-projen-projects.TmsNestJSAppProject.property.npmrc"></a>
+##### `npmrc`<sup>Required</sup> <a name="npmrc" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.npmrc"></a>
 
 ```typescript
 public readonly npmrc: NpmConfig;
@@ -1187,7 +1187,7 @@ The .npmrc file.
 
 ---
 
-##### `package`<sup>Required</sup> <a name="package" id="tms-projen-projects.TmsNestJSAppProject.property.package"></a>
+##### `package`<sup>Required</sup> <a name="package" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.package"></a>
 
 ```typescript
 public readonly package: NodePackage;
@@ -1199,7 +1199,7 @@ API for managing the node package.
 
 ---
 
-##### ~~`packageManager`~~<sup>Required</sup> <a name="packageManager" id="tms-projen-projects.TmsNestJSAppProject.property.packageManager"></a>
+##### ~~`packageManager`~~<sup>Required</sup> <a name="packageManager" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.packageManager"></a>
 
 - *Deprecated:* use `package.packageManager`
 
@@ -1213,7 +1213,7 @@ The package manager to use.
 
 ---
 
-##### `runScriptCommand`<sup>Required</sup> <a name="runScriptCommand" id="tms-projen-projects.TmsNestJSAppProject.property.runScriptCommand"></a>
+##### `runScriptCommand`<sup>Required</sup> <a name="runScriptCommand" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.runScriptCommand"></a>
 
 ```typescript
 public readonly runScriptCommand: string;
@@ -1225,7 +1225,7 @@ The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the p
 
 ---
 
-##### `autoMerge`<sup>Optional</sup> <a name="autoMerge" id="tms-projen-projects.TmsNestJSAppProject.property.autoMerge"></a>
+##### `autoMerge`<sup>Optional</sup> <a name="autoMerge" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.autoMerge"></a>
 
 ```typescript
 public readonly autoMerge: AutoMerge;
@@ -1237,7 +1237,7 @@ Component that sets up mergify for merging approved pull requests.
 
 ---
 
-##### `buildWorkflow`<sup>Optional</sup> <a name="buildWorkflow" id="tms-projen-projects.TmsNestJSAppProject.property.buildWorkflow"></a>
+##### `buildWorkflow`<sup>Optional</sup> <a name="buildWorkflow" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.buildWorkflow"></a>
 
 ```typescript
 public readonly buildWorkflow: BuildWorkflow;
@@ -1251,7 +1251,7 @@ The PR build GitHub workflow.
 
 ---
 
-##### `buildWorkflowJobId`<sup>Optional</sup> <a name="buildWorkflowJobId" id="tms-projen-projects.TmsNestJSAppProject.property.buildWorkflowJobId"></a>
+##### `buildWorkflowJobId`<sup>Optional</sup> <a name="buildWorkflowJobId" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.buildWorkflowJobId"></a>
 
 ```typescript
 public readonly buildWorkflowJobId: string;
@@ -1263,7 +1263,7 @@ The job ID of the build workflow.
 
 ---
 
-##### `jest`<sup>Optional</sup> <a name="jest" id="tms-projen-projects.TmsNestJSAppProject.property.jest"></a>
+##### `jest`<sup>Optional</sup> <a name="jest" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.jest"></a>
 
 ```typescript
 public readonly jest: Jest;
@@ -1275,7 +1275,7 @@ The Jest configuration (if enabled).
 
 ---
 
-##### `maxNodeVersion`<sup>Optional</sup> <a name="maxNodeVersion" id="tms-projen-projects.TmsNestJSAppProject.property.maxNodeVersion"></a>
+##### `maxNodeVersion`<sup>Optional</sup> <a name="maxNodeVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.maxNodeVersion"></a>
 
 ```typescript
 public readonly maxNodeVersion: string;
@@ -1287,7 +1287,7 @@ Maximum node version required by this package.
 
 ---
 
-##### `minNodeVersion`<sup>Optional</sup> <a name="minNodeVersion" id="tms-projen-projects.TmsNestJSAppProject.property.minNodeVersion"></a>
+##### `minNodeVersion`<sup>Optional</sup> <a name="minNodeVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.minNodeVersion"></a>
 
 ```typescript
 public readonly minNodeVersion: string;
@@ -1299,7 +1299,7 @@ Minimum node.js version required by this package.
 
 ---
 
-##### `npmignore`<sup>Optional</sup> <a name="npmignore" id="tms-projen-projects.TmsNestJSAppProject.property.npmignore"></a>
+##### `npmignore`<sup>Optional</sup> <a name="npmignore" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.npmignore"></a>
 
 ```typescript
 public readonly npmignore: IgnoreFile;
@@ -1311,7 +1311,7 @@ The .npmignore file.
 
 ---
 
-##### `prettier`<sup>Optional</sup> <a name="prettier" id="tms-projen-projects.TmsNestJSAppProject.property.prettier"></a>
+##### `prettier`<sup>Optional</sup> <a name="prettier" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.prettier"></a>
 
 ```typescript
 public readonly prettier: Prettier;
@@ -1321,7 +1321,7 @@ public readonly prettier: Prettier;
 
 ---
 
-##### ~~`publisher`~~<sup>Optional</sup> <a name="publisher" id="tms-projen-projects.TmsNestJSAppProject.property.publisher"></a>
+##### ~~`publisher`~~<sup>Optional</sup> <a name="publisher" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.publisher"></a>
 
 - *Deprecated:* use `release.publisher`.
 
@@ -1338,7 +1338,7 @@ release workflow.
 
 ---
 
-##### `release`<sup>Optional</sup> <a name="release" id="tms-projen-projects.TmsNestJSAppProject.property.release"></a>
+##### `release`<sup>Optional</sup> <a name="release" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.release"></a>
 
 ```typescript
 public readonly release: Release;
@@ -1350,7 +1350,7 @@ Release management.
 
 ---
 
-##### `upgradeWorkflow`<sup>Optional</sup> <a name="upgradeWorkflow" id="tms-projen-projects.TmsNestJSAppProject.property.upgradeWorkflow"></a>
+##### `upgradeWorkflow`<sup>Optional</sup> <a name="upgradeWorkflow" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.upgradeWorkflow"></a>
 
 ```typescript
 public readonly upgradeWorkflow: UpgradeDependencies;
@@ -1362,7 +1362,7 @@ The upgrade workflow.
 
 ---
 
-##### `docsDirectory`<sup>Required</sup> <a name="docsDirectory" id="tms-projen-projects.TmsNestJSAppProject.property.docsDirectory"></a>
+##### `docsDirectory`<sup>Required</sup> <a name="docsDirectory" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.docsDirectory"></a>
 
 ```typescript
 public readonly docsDirectory: string;
@@ -1372,7 +1372,7 @@ public readonly docsDirectory: string;
 
 ---
 
-##### `libdir`<sup>Required</sup> <a name="libdir" id="tms-projen-projects.TmsNestJSAppProject.property.libdir"></a>
+##### `libdir`<sup>Required</sup> <a name="libdir" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.libdir"></a>
 
 ```typescript
 public readonly libdir: string;
@@ -1384,7 +1384,7 @@ The directory in which compiled .js files reside.
 
 ---
 
-##### `srcdir`<sup>Required</sup> <a name="srcdir" id="tms-projen-projects.TmsNestJSAppProject.property.srcdir"></a>
+##### `srcdir`<sup>Required</sup> <a name="srcdir" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.srcdir"></a>
 
 ```typescript
 public readonly srcdir: string;
@@ -1396,7 +1396,7 @@ The directory in which the .ts sources reside.
 
 ---
 
-##### `testdir`<sup>Required</sup> <a name="testdir" id="tms-projen-projects.TmsNestJSAppProject.property.testdir"></a>
+##### `testdir`<sup>Required</sup> <a name="testdir" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.testdir"></a>
 
 ```typescript
 public readonly testdir: string;
@@ -1408,7 +1408,7 @@ The directory in which tests reside.
 
 ---
 
-##### `tsconfigDev`<sup>Required</sup> <a name="tsconfigDev" id="tms-projen-projects.TmsNestJSAppProject.property.tsconfigDev"></a>
+##### `tsconfigDev`<sup>Required</sup> <a name="tsconfigDev" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.tsconfigDev"></a>
 
 ```typescript
 public readonly tsconfigDev: TypescriptConfig;
@@ -1420,7 +1420,7 @@ A typescript configuration file which covers all files (sources, tests, projen).
 
 ---
 
-##### `watchTask`<sup>Required</sup> <a name="watchTask" id="tms-projen-projects.TmsNestJSAppProject.property.watchTask"></a>
+##### `watchTask`<sup>Required</sup> <a name="watchTask" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.watchTask"></a>
 
 ```typescript
 public readonly watchTask: Task;
@@ -1432,7 +1432,7 @@ The "watch" task.
 
 ---
 
-##### `docgen`<sup>Optional</sup> <a name="docgen" id="tms-projen-projects.TmsNestJSAppProject.property.docgen"></a>
+##### `docgen`<sup>Optional</sup> <a name="docgen" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.docgen"></a>
 
 ```typescript
 public readonly docgen: boolean;
@@ -1442,7 +1442,7 @@ public readonly docgen: boolean;
 
 ---
 
-##### `eslint`<sup>Optional</sup> <a name="eslint" id="tms-projen-projects.TmsNestJSAppProject.property.eslint"></a>
+##### `eslint`<sup>Optional</sup> <a name="eslint" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.eslint"></a>
 
 ```typescript
 public readonly eslint: Eslint;
@@ -1452,7 +1452,7 @@ public readonly eslint: Eslint;
 
 ---
 
-##### `tsconfig`<sup>Optional</sup> <a name="tsconfig" id="tms-projen-projects.TmsNestJSAppProject.property.tsconfig"></a>
+##### `tsconfig`<sup>Optional</sup> <a name="tsconfig" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.tsconfig"></a>
 
 ```typescript
 public readonly tsconfig: TypescriptConfig;
@@ -1462,7 +1462,7 @@ public readonly tsconfig: TypescriptConfig;
 
 ---
 
-##### `tsconfigEslint`<sup>Optional</sup> <a name="tsconfigEslint" id="tms-projen-projects.TmsNestJSAppProject.property.tsconfigEslint"></a>
+##### `tsconfigEslint`<sup>Optional</sup> <a name="tsconfigEslint" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.tsconfigEslint"></a>
 
 ```typescript
 public readonly tsconfigEslint: TypescriptConfig;
@@ -1476,11 +1476,11 @@ public readonly tsconfigEslint: TypescriptConfig;
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProject.property.DEFAULT_TASK">DEFAULT_TASK</a></code> | <code>string</code> | The name of the default task (the task executed when `projen` is run without arguments). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProject.property.DEFAULT_TASK">DEFAULT_TASK</a></code> | <code>string</code> | The name of the default task (the task executed when `projen` is run without arguments). |
 
 ---
 
-##### `DEFAULT_TASK`<sup>Required</sup> <a name="DEFAULT_TASK" id="tms-projen-projects.TmsNestJSAppProject.property.DEFAULT_TASK"></a>
+##### `DEFAULT_TASK`<sup>Required</sup> <a name="DEFAULT_TASK" id="@10mi2/tms-projen-projects.TmsNestJSAppProject.property.DEFAULT_TASK"></a>
 
 ```typescript
 public readonly DEFAULT_TASK: string;
@@ -1495,27 +1495,27 @@ this task should synthesize the project files.
 
 ---
 
-### TmsTypeScriptAppProject <a name="TmsTypeScriptAppProject" id="tms-projen-projects.TmsTypeScriptAppProject"></a>
+### TmsTypeScriptAppProject <a name="TmsTypeScriptAppProject" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject"></a>
 
 Create a [TypeScriptAppProject](https://projen.io/api/API.html#typescriptappproject-) with [Ten Mile Square](https://tenmilesquare.com) opinionated defaults.
 
-#### Initializers <a name="Initializers" id="tms-projen-projects.TmsTypeScriptAppProject.Initializer"></a>
+#### Initializers <a name="Initializers" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.Initializer"></a>
 
 ```typescript
-import { TmsTypeScriptAppProject } from 'tms-projen-projects'
+import { TmsTypeScriptAppProject } from '@10mi2/tms-projen-projects'
 
 new TmsTypeScriptAppProject(options: TmsTypeScriptAppProjectOptions)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.Initializer.parameter.options">options</a></code> | <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions">TmsTypeScriptAppProjectOptions</a></code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.Initializer.parameter.options">options</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions">TmsTypeScriptAppProjectOptions</a></code> | *No description.* |
 
 ---
 
-##### `options`<sup>Required</sup> <a name="options" id="tms-projen-projects.TmsTypeScriptAppProject.Initializer.parameter.options"></a>
+##### `options`<sup>Required</sup> <a name="options" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.Initializer.parameter.options"></a>
 
-- *Type:* <a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions">TmsTypeScriptAppProjectOptions</a>
+- *Type:* <a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions">TmsTypeScriptAppProjectOptions</a>
 
 ---
 
@@ -1523,40 +1523,40 @@ new TmsTypeScriptAppProject(options: TmsTypeScriptAppProjectOptions)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addExcludeFromCleanup">addExcludeFromCleanup</a></code> | Exclude the matching files from pre-synth cleanup. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addGitIgnore">addGitIgnore</a></code> | Adds a .gitignore pattern. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addPackageIgnore">addPackageIgnore</a></code> | Exclude these files from the bundled package. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addTask">addTask</a></code> | Adds a new task to this project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addTip">addTip</a></code> | Prints a "tip" message during synthesis. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.annotateGenerated">annotateGenerated</a></code> | Marks the provided file(s) as being generated. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.postSynthesize">postSynthesize</a></code> | Called after all components are synthesized. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.preSynthesize">preSynthesize</a></code> | Called before all components are synthesized. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.removeTask">removeTask</a></code> | Removes a task from a project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.runTaskCommand">runTaskCommand</a></code> | Returns the shell command to execute in order to run a task. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.synth">synth</a></code> | Synthesize all project files into `outdir`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.tryFindFile">tryFindFile</a></code> | Finds a file at the specified relative path within this project and all its subprojects. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.tryFindJsonFile">tryFindJsonFile</a></code> | Finds a json file by name. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.tryFindObjectFile">tryFindObjectFile</a></code> | Finds an object file (like JsonFile, YamlFile, etc.) by name. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.tryRemoveFile">tryRemoveFile</a></code> | Finds a file at the specified relative path within this project and removes it. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addBins">addBins</a></code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addBundledDeps">addBundledDeps</a></code> | Defines bundled dependencies. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addCompileCommand">addCompileCommand</a></code> | DEPRECATED. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addDeps">addDeps</a></code> | Defines normal dependencies. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addDevDeps">addDevDeps</a></code> | Defines development/test dependencies. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addFields">addFields</a></code> | Directly set fields in `package.json`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addKeywords">addKeywords</a></code> | Adds keywords to package.json (deduplicated). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addPeerDeps">addPeerDeps</a></code> | Defines peer dependencies. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addScripts">addScripts</a></code> | Replaces the contents of multiple npm package.json scripts. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.addTestCommand">addTestCommand</a></code> | DEPRECATED. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.hasScript">hasScript</a></code> | Indicates if a script by the name name is defined. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.removeScript">removeScript</a></code> | Removes the npm script (always successful). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.renderWorkflowSetup">renderWorkflowSetup</a></code> | Returns the set of workflow steps which should be executed to bootstrap a workflow. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addExcludeFromCleanup">addExcludeFromCleanup</a></code> | Exclude the matching files from pre-synth cleanup. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addGitIgnore">addGitIgnore</a></code> | Adds a .gitignore pattern. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addPackageIgnore">addPackageIgnore</a></code> | Exclude these files from the bundled package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addTask">addTask</a></code> | Adds a new task to this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addTip">addTip</a></code> | Prints a "tip" message during synthesis. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.annotateGenerated">annotateGenerated</a></code> | Marks the provided file(s) as being generated. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.postSynthesize">postSynthesize</a></code> | Called after all components are synthesized. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.preSynthesize">preSynthesize</a></code> | Called before all components are synthesized. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.removeTask">removeTask</a></code> | Removes a task from a project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.runTaskCommand">runTaskCommand</a></code> | Returns the shell command to execute in order to run a task. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.synth">synth</a></code> | Synthesize all project files into `outdir`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryFindFile">tryFindFile</a></code> | Finds a file at the specified relative path within this project and all its subprojects. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryFindJsonFile">tryFindJsonFile</a></code> | Finds a json file by name. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryFindObjectFile">tryFindObjectFile</a></code> | Finds an object file (like JsonFile, YamlFile, etc.) by name. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryRemoveFile">tryRemoveFile</a></code> | Finds a file at the specified relative path within this project and removes it. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addBins">addBins</a></code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addBundledDeps">addBundledDeps</a></code> | Defines bundled dependencies. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addCompileCommand">addCompileCommand</a></code> | DEPRECATED. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addDeps">addDeps</a></code> | Defines normal dependencies. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addDevDeps">addDevDeps</a></code> | Defines development/test dependencies. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addFields">addFields</a></code> | Directly set fields in `package.json`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addKeywords">addKeywords</a></code> | Adds keywords to package.json (deduplicated). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addPeerDeps">addPeerDeps</a></code> | Defines peer dependencies. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addScripts">addScripts</a></code> | Replaces the contents of multiple npm package.json scripts. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addTestCommand">addTestCommand</a></code> | DEPRECATED. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.hasScript">hasScript</a></code> | Indicates if a script by the name name is defined. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.removeScript">removeScript</a></code> | Removes the npm script (always successful). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.renderWorkflowSetup">renderWorkflowSetup</a></code> | Returns the set of workflow steps which should be executed to bootstrap a workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
 
 ---
 
-##### `toString` <a name="toString" id="tms-projen-projects.TmsTypeScriptAppProject.toString"></a>
+##### `toString` <a name="toString" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.toString"></a>
 
 ```typescript
 public toString(): string
@@ -1564,7 +1564,7 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="tms-projen-projects.TmsTypeScriptAppProject.addExcludeFromCleanup"></a>
+##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addExcludeFromCleanup"></a>
 
 ```typescript
 public addExcludeFromCleanup(globs: string): void
@@ -1575,7 +1575,7 @@ Exclude the matching files from pre-synth cleanup.
 Can be used when, for example, some
 source files include the projen marker and we don't want them to be erased during synth.
 
-###### `globs`<sup>Required</sup> <a name="globs" id="tms-projen-projects.TmsTypeScriptAppProject.addExcludeFromCleanup.parameter.globs"></a>
+###### `globs`<sup>Required</sup> <a name="globs" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addExcludeFromCleanup.parameter.globs"></a>
 
 - *Type:* string
 
@@ -1583,7 +1583,7 @@ The glob patterns to match.
 
 ---
 
-##### `addGitIgnore` <a name="addGitIgnore" id="tms-projen-projects.TmsTypeScriptAppProject.addGitIgnore"></a>
+##### `addGitIgnore` <a name="addGitIgnore" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addGitIgnore"></a>
 
 ```typescript
 public addGitIgnore(pattern: string): void
@@ -1591,7 +1591,7 @@ public addGitIgnore(pattern: string): void
 
 Adds a .gitignore pattern.
 
-###### `pattern`<sup>Required</sup> <a name="pattern" id="tms-projen-projects.TmsTypeScriptAppProject.addGitIgnore.parameter.pattern"></a>
+###### `pattern`<sup>Required</sup> <a name="pattern" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addGitIgnore.parameter.pattern"></a>
 
 - *Type:* string
 
@@ -1599,7 +1599,7 @@ The glob pattern to ignore.
 
 ---
 
-##### `addPackageIgnore` <a name="addPackageIgnore" id="tms-projen-projects.TmsTypeScriptAppProject.addPackageIgnore"></a>
+##### `addPackageIgnore` <a name="addPackageIgnore" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addPackageIgnore"></a>
 
 ```typescript
 public addPackageIgnore(pattern: string): void
@@ -1610,13 +1610,13 @@ Exclude these files from the bundled package.
 Implemented by project types based on the
 packaging mechanism. For example, `NodeProject` delegates this to `.npmignore`.
 
-###### `pattern`<sup>Required</sup> <a name="pattern" id="tms-projen-projects.TmsTypeScriptAppProject.addPackageIgnore.parameter.pattern"></a>
+###### `pattern`<sup>Required</sup> <a name="pattern" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addPackageIgnore.parameter.pattern"></a>
 
 - *Type:* string
 
 ---
 
-##### `addTask` <a name="addTask" id="tms-projen-projects.TmsTypeScriptAppProject.addTask"></a>
+##### `addTask` <a name="addTask" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addTask"></a>
 
 ```typescript
 public addTask(name: string, props?: TaskOptions): Task
@@ -1627,7 +1627,7 @@ Adds a new task to this project.
 This will fail if the project already has
 a task with this name.
 
-###### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsTypeScriptAppProject.addTask.parameter.name"></a>
+###### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addTask.parameter.name"></a>
 
 - *Type:* string
 
@@ -1635,7 +1635,7 @@ The task name to add.
 
 ---
 
-###### `props`<sup>Optional</sup> <a name="props" id="tms-projen-projects.TmsTypeScriptAppProject.addTask.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addTask.parameter.props"></a>
 
 - *Type:* projen.TaskOptions
 
@@ -1643,7 +1643,7 @@ Task properties.
 
 ---
 
-##### ~~`addTip`~~ <a name="addTip" id="tms-projen-projects.TmsTypeScriptAppProject.addTip"></a>
+##### ~~`addTip`~~ <a name="addTip" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addTip"></a>
 
 ```typescript
 public addTip(message: string): void
@@ -1651,7 +1651,7 @@ public addTip(message: string): void
 
 Prints a "tip" message during synthesis.
 
-###### `message`<sup>Required</sup> <a name="message" id="tms-projen-projects.TmsTypeScriptAppProject.addTip.parameter.message"></a>
+###### `message`<sup>Required</sup> <a name="message" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addTip.parameter.message"></a>
 
 - *Type:* string
 
@@ -1659,7 +1659,7 @@ The message.
 
 ---
 
-##### `annotateGenerated` <a name="annotateGenerated" id="tms-projen-projects.TmsTypeScriptAppProject.annotateGenerated"></a>
+##### `annotateGenerated` <a name="annotateGenerated" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.annotateGenerated"></a>
 
 ```typescript
 public annotateGenerated(glob: string): void
@@ -1673,7 +1673,7 @@ repository statistics and language breakdown.
 
 > [https://github.com/github/linguist/blob/master/docs/overrides.md](https://github.com/github/linguist/blob/master/docs/overrides.md)
 
-###### `glob`<sup>Required</sup> <a name="glob" id="tms-projen-projects.TmsTypeScriptAppProject.annotateGenerated.parameter.glob"></a>
+###### `glob`<sup>Required</sup> <a name="glob" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.annotateGenerated.parameter.glob"></a>
 
 - *Type:* string
 
@@ -1681,7 +1681,7 @@ the glob pattern to match (could be a file path).
 
 ---
 
-##### `postSynthesize` <a name="postSynthesize" id="tms-projen-projects.TmsTypeScriptAppProject.postSynthesize"></a>
+##### `postSynthesize` <a name="postSynthesize" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.postSynthesize"></a>
 
 ```typescript
 public postSynthesize(): void
@@ -1691,7 +1691,7 @@ Called after all components are synthesized.
 
 Order is *not* guaranteed.
 
-##### `preSynthesize` <a name="preSynthesize" id="tms-projen-projects.TmsTypeScriptAppProject.preSynthesize"></a>
+##### `preSynthesize` <a name="preSynthesize" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.preSynthesize"></a>
 
 ```typescript
 public preSynthesize(): void
@@ -1699,7 +1699,7 @@ public preSynthesize(): void
 
 Called before all components are synthesized.
 
-##### `removeTask` <a name="removeTask" id="tms-projen-projects.TmsTypeScriptAppProject.removeTask"></a>
+##### `removeTask` <a name="removeTask" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.removeTask"></a>
 
 ```typescript
 public removeTask(name: string): Task
@@ -1707,7 +1707,7 @@ public removeTask(name: string): Task
 
 Removes a task from a project.
 
-###### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsTypeScriptAppProject.removeTask.parameter.name"></a>
+###### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.removeTask.parameter.name"></a>
 
 - *Type:* string
 
@@ -1715,7 +1715,7 @@ The name of the task to remove.
 
 ---
 
-##### `runTaskCommand` <a name="runTaskCommand" id="tms-projen-projects.TmsTypeScriptAppProject.runTaskCommand"></a>
+##### `runTaskCommand` <a name="runTaskCommand" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.runTaskCommand"></a>
 
 ```typescript
 public runTaskCommand(task: Task): string
@@ -1726,7 +1726,7 @@ Returns the shell command to execute in order to run a task.
 This will
 typically be `npx projen TASK`.
 
-###### `task`<sup>Required</sup> <a name="task" id="tms-projen-projects.TmsTypeScriptAppProject.runTaskCommand.parameter.task"></a>
+###### `task`<sup>Required</sup> <a name="task" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.runTaskCommand.parameter.task"></a>
 
 - *Type:* projen.Task
 
@@ -1734,7 +1734,7 @@ The task for which the command is required.
 
 ---
 
-##### `synth` <a name="synth" id="tms-projen-projects.TmsTypeScriptAppProject.synth"></a>
+##### `synth` <a name="synth" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.synth"></a>
 
 ```typescript
 public synth(): void
@@ -1749,7 +1749,7 @@ Synthesize all project files into `outdir`.
 5. Call "postSynthesize()" for all components of this project
 6. Call "this.postSynthesize()"
 
-##### `tryFindFile` <a name="tryFindFile" id="tms-projen-projects.TmsTypeScriptAppProject.tryFindFile"></a>
+##### `tryFindFile` <a name="tryFindFile" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryFindFile"></a>
 
 ```typescript
 public tryFindFile(filePath: string): FileBase
@@ -1757,7 +1757,7 @@ public tryFindFile(filePath: string): FileBase
 
 Finds a file at the specified relative path within this project and all its subprojects.
 
-###### `filePath`<sup>Required</sup> <a name="filePath" id="tms-projen-projects.TmsTypeScriptAppProject.tryFindFile.parameter.filePath"></a>
+###### `filePath`<sup>Required</sup> <a name="filePath" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryFindFile.parameter.filePath"></a>
 
 - *Type:* string
 
@@ -1768,7 +1768,7 @@ from the root of _this_ project.
 
 ---
 
-##### ~~`tryFindJsonFile`~~ <a name="tryFindJsonFile" id="tms-projen-projects.TmsTypeScriptAppProject.tryFindJsonFile"></a>
+##### ~~`tryFindJsonFile`~~ <a name="tryFindJsonFile" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryFindJsonFile"></a>
 
 ```typescript
 public tryFindJsonFile(filePath: string): JsonFile
@@ -1776,7 +1776,7 @@ public tryFindJsonFile(filePath: string): JsonFile
 
 Finds a json file by name.
 
-###### `filePath`<sup>Required</sup> <a name="filePath" id="tms-projen-projects.TmsTypeScriptAppProject.tryFindJsonFile.parameter.filePath"></a>
+###### `filePath`<sup>Required</sup> <a name="filePath" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryFindJsonFile.parameter.filePath"></a>
 
 - *Type:* string
 
@@ -1784,7 +1784,7 @@ The file path.
 
 ---
 
-##### `tryFindObjectFile` <a name="tryFindObjectFile" id="tms-projen-projects.TmsTypeScriptAppProject.tryFindObjectFile"></a>
+##### `tryFindObjectFile` <a name="tryFindObjectFile" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryFindObjectFile"></a>
 
 ```typescript
 public tryFindObjectFile(filePath: string): ObjectFile
@@ -1792,7 +1792,7 @@ public tryFindObjectFile(filePath: string): ObjectFile
 
 Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
-###### `filePath`<sup>Required</sup> <a name="filePath" id="tms-projen-projects.TmsTypeScriptAppProject.tryFindObjectFile.parameter.filePath"></a>
+###### `filePath`<sup>Required</sup> <a name="filePath" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryFindObjectFile.parameter.filePath"></a>
 
 - *Type:* string
 
@@ -1800,7 +1800,7 @@ The file path.
 
 ---
 
-##### `tryRemoveFile` <a name="tryRemoveFile" id="tms-projen-projects.TmsTypeScriptAppProject.tryRemoveFile"></a>
+##### `tryRemoveFile` <a name="tryRemoveFile" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryRemoveFile"></a>
 
 ```typescript
 public tryRemoveFile(filePath: string): FileBase
@@ -1808,7 +1808,7 @@ public tryRemoveFile(filePath: string): FileBase
 
 Finds a file at the specified relative path within this project and removes it.
 
-###### `filePath`<sup>Required</sup> <a name="filePath" id="tms-projen-projects.TmsTypeScriptAppProject.tryRemoveFile.parameter.filePath"></a>
+###### `filePath`<sup>Required</sup> <a name="filePath" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.tryRemoveFile.parameter.filePath"></a>
 
 - *Type:* string
 
@@ -1819,19 +1819,19 @@ resolved from the root of _this_ project.
 
 ---
 
-##### `addBins` <a name="addBins" id="tms-projen-projects.TmsTypeScriptAppProject.addBins"></a>
+##### `addBins` <a name="addBins" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addBins"></a>
 
 ```typescript
 public addBins(bins: {[ key: string ]: string}): void
 ```
 
-###### `bins`<sup>Required</sup> <a name="bins" id="tms-projen-projects.TmsTypeScriptAppProject.addBins.parameter.bins"></a>
+###### `bins`<sup>Required</sup> <a name="bins" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addBins.parameter.bins"></a>
 
 - *Type:* {[ key: string ]: string}
 
 ---
 
-##### `addBundledDeps` <a name="addBundledDeps" id="tms-projen-projects.TmsTypeScriptAppProject.addBundledDeps"></a>
+##### `addBundledDeps` <a name="addBundledDeps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addBundledDeps"></a>
 
 ```typescript
 public addBundledDeps(deps: string): void
@@ -1842,7 +1842,7 @@ Defines bundled dependencies.
 Bundled dependencies will be added as normal dependencies as well as to the
 `bundledDependencies` section of your `package.json`.
 
-###### `deps`<sup>Required</sup> <a name="deps" id="tms-projen-projects.TmsTypeScriptAppProject.addBundledDeps.parameter.deps"></a>
+###### `deps`<sup>Required</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addBundledDeps.parameter.deps"></a>
 
 - *Type:* string
 
@@ -1856,7 +1856,7 @@ add/upgrade`. If you wish to specify a version range use this syntax:
 
 ---
 
-##### ~~`addCompileCommand`~~ <a name="addCompileCommand" id="tms-projen-projects.TmsTypeScriptAppProject.addCompileCommand"></a>
+##### ~~`addCompileCommand`~~ <a name="addCompileCommand" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addCompileCommand"></a>
 
 ```typescript
 public addCompileCommand(commands: string): void
@@ -1864,13 +1864,13 @@ public addCompileCommand(commands: string): void
 
 DEPRECATED.
 
-###### `commands`<sup>Required</sup> <a name="commands" id="tms-projen-projects.TmsTypeScriptAppProject.addCompileCommand.parameter.commands"></a>
+###### `commands`<sup>Required</sup> <a name="commands" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addCompileCommand.parameter.commands"></a>
 
 - *Type:* string
 
 ---
 
-##### `addDeps` <a name="addDeps" id="tms-projen-projects.TmsTypeScriptAppProject.addDeps"></a>
+##### `addDeps` <a name="addDeps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addDeps"></a>
 
 ```typescript
 public addDeps(deps: string): void
@@ -1878,7 +1878,7 @@ public addDeps(deps: string): void
 
 Defines normal dependencies.
 
-###### `deps`<sup>Required</sup> <a name="deps" id="tms-projen-projects.TmsTypeScriptAppProject.addDeps.parameter.deps"></a>
+###### `deps`<sup>Required</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addDeps.parameter.deps"></a>
 
 - *Type:* string
 
@@ -1892,7 +1892,7 @@ add/upgrade`. If you wish to specify a version range use this syntax:
 
 ---
 
-##### `addDevDeps` <a name="addDevDeps" id="tms-projen-projects.TmsTypeScriptAppProject.addDevDeps"></a>
+##### `addDevDeps` <a name="addDevDeps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addDevDeps"></a>
 
 ```typescript
 public addDevDeps(deps: string): void
@@ -1900,7 +1900,7 @@ public addDevDeps(deps: string): void
 
 Defines development/test dependencies.
 
-###### `deps`<sup>Required</sup> <a name="deps" id="tms-projen-projects.TmsTypeScriptAppProject.addDevDeps.parameter.deps"></a>
+###### `deps`<sup>Required</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addDevDeps.parameter.deps"></a>
 
 - *Type:* string
 
@@ -1914,7 +1914,7 @@ add/upgrade`. If you wish to specify a version range use this syntax:
 
 ---
 
-##### `addFields` <a name="addFields" id="tms-projen-projects.TmsTypeScriptAppProject.addFields"></a>
+##### `addFields` <a name="addFields" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addFields"></a>
 
 ```typescript
 public addFields(fields: {[ key: string ]: any}): void
@@ -1922,7 +1922,7 @@ public addFields(fields: {[ key: string ]: any}): void
 
 Directly set fields in `package.json`.
 
-###### `fields`<sup>Required</sup> <a name="fields" id="tms-projen-projects.TmsTypeScriptAppProject.addFields.parameter.fields"></a>
+###### `fields`<sup>Required</sup> <a name="fields" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addFields.parameter.fields"></a>
 
 - *Type:* {[ key: string ]: any}
 
@@ -1930,7 +1930,7 @@ The fields to set.
 
 ---
 
-##### `addKeywords` <a name="addKeywords" id="tms-projen-projects.TmsTypeScriptAppProject.addKeywords"></a>
+##### `addKeywords` <a name="addKeywords" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addKeywords"></a>
 
 ```typescript
 public addKeywords(keywords: string): void
@@ -1938,7 +1938,7 @@ public addKeywords(keywords: string): void
 
 Adds keywords to package.json (deduplicated).
 
-###### `keywords`<sup>Required</sup> <a name="keywords" id="tms-projen-projects.TmsTypeScriptAppProject.addKeywords.parameter.keywords"></a>
+###### `keywords`<sup>Required</sup> <a name="keywords" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addKeywords.parameter.keywords"></a>
 
 - *Type:* string
 
@@ -1946,7 +1946,7 @@ The keywords to add.
 
 ---
 
-##### `addPeerDeps` <a name="addPeerDeps" id="tms-projen-projects.TmsTypeScriptAppProject.addPeerDeps"></a>
+##### `addPeerDeps` <a name="addPeerDeps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addPeerDeps"></a>
 
 ```typescript
 public addPeerDeps(deps: string): void
@@ -1958,7 +1958,7 @@ When adding peer dependencies, a devDependency will also be added on the
 pinned version of the declared peer. This will ensure that you are testing
 your code against the minimum version required from your consumers.
 
-###### `deps`<sup>Required</sup> <a name="deps" id="tms-projen-projects.TmsTypeScriptAppProject.addPeerDeps.parameter.deps"></a>
+###### `deps`<sup>Required</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addPeerDeps.parameter.deps"></a>
 
 - *Type:* string
 
@@ -1972,7 +1972,7 @@ add/upgrade`. If you wish to specify a version range use this syntax:
 
 ---
 
-##### `addScripts` <a name="addScripts" id="tms-projen-projects.TmsTypeScriptAppProject.addScripts"></a>
+##### `addScripts` <a name="addScripts" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addScripts"></a>
 
 ```typescript
 public addScripts(scripts: {[ key: string ]: string}): void
@@ -1980,7 +1980,7 @@ public addScripts(scripts: {[ key: string ]: string}): void
 
 Replaces the contents of multiple npm package.json scripts.
 
-###### `scripts`<sup>Required</sup> <a name="scripts" id="tms-projen-projects.TmsTypeScriptAppProject.addScripts.parameter.scripts"></a>
+###### `scripts`<sup>Required</sup> <a name="scripts" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addScripts.parameter.scripts"></a>
 
 - *Type:* {[ key: string ]: string}
 
@@ -1988,7 +1988,7 @@ The scripts to set.
 
 ---
 
-##### ~~`addTestCommand`~~ <a name="addTestCommand" id="tms-projen-projects.TmsTypeScriptAppProject.addTestCommand"></a>
+##### ~~`addTestCommand`~~ <a name="addTestCommand" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addTestCommand"></a>
 
 ```typescript
 public addTestCommand(commands: string): void
@@ -1996,13 +1996,13 @@ public addTestCommand(commands: string): void
 
 DEPRECATED.
 
-###### `commands`<sup>Required</sup> <a name="commands" id="tms-projen-projects.TmsTypeScriptAppProject.addTestCommand.parameter.commands"></a>
+###### `commands`<sup>Required</sup> <a name="commands" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.addTestCommand.parameter.commands"></a>
 
 - *Type:* string
 
 ---
 
-##### ~~`hasScript`~~ <a name="hasScript" id="tms-projen-projects.TmsTypeScriptAppProject.hasScript"></a>
+##### ~~`hasScript`~~ <a name="hasScript" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.hasScript"></a>
 
 ```typescript
 public hasScript(name: string): boolean
@@ -2010,7 +2010,7 @@ public hasScript(name: string): boolean
 
 Indicates if a script by the name name is defined.
 
-###### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsTypeScriptAppProject.hasScript.parameter.name"></a>
+###### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.hasScript.parameter.name"></a>
 
 - *Type:* string
 
@@ -2018,7 +2018,7 @@ The name of the script.
 
 ---
 
-##### `removeScript` <a name="removeScript" id="tms-projen-projects.TmsTypeScriptAppProject.removeScript"></a>
+##### `removeScript` <a name="removeScript" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.removeScript"></a>
 
 ```typescript
 public removeScript(name: string): void
@@ -2026,7 +2026,7 @@ public removeScript(name: string): void
 
 Removes the npm script (always successful).
 
-###### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsTypeScriptAppProject.removeScript.parameter.name"></a>
+###### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.removeScript.parameter.name"></a>
 
 - *Type:* string
 
@@ -2034,7 +2034,7 @@ The name of the script.
 
 ---
 
-##### `renderWorkflowSetup` <a name="renderWorkflowSetup" id="tms-projen-projects.TmsTypeScriptAppProject.renderWorkflowSetup"></a>
+##### `renderWorkflowSetup` <a name="renderWorkflowSetup" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.renderWorkflowSetup"></a>
 
 ```typescript
 public renderWorkflowSetup(options?: RenderWorkflowSetupOptions): JobStep[]
@@ -2042,7 +2042,7 @@ public renderWorkflowSetup(options?: RenderWorkflowSetupOptions): JobStep[]
 
 Returns the set of workflow steps which should be executed to bootstrap a workflow.
 
-###### `options`<sup>Optional</sup> <a name="options" id="tms-projen-projects.TmsTypeScriptAppProject.renderWorkflowSetup.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.renderWorkflowSetup.parameter.options"></a>
 
 - *Type:* projen.javascript.RenderWorkflowSetupOptions
 
@@ -2050,7 +2050,7 @@ Options.
 
 ---
 
-##### `setScript` <a name="setScript" id="tms-projen-projects.TmsTypeScriptAppProject.setScript"></a>
+##### `setScript` <a name="setScript" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.setScript"></a>
 
 ```typescript
 public setScript(name: string, command: string): void
@@ -2058,7 +2058,7 @@ public setScript(name: string, command: string): void
 
 Replaces the contents of an npm package.json script.
 
-###### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsTypeScriptAppProject.setScript.parameter.name"></a>
+###### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.setScript.parameter.name"></a>
 
 - *Type:* string
 
@@ -2066,7 +2066,7 @@ The script name.
 
 ---
 
-###### `command`<sup>Required</sup> <a name="command" id="tms-projen-projects.TmsTypeScriptAppProject.setScript.parameter.command"></a>
+###### `command`<sup>Required</sup> <a name="command" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.setScript.parameter.command"></a>
 
 - *Type:* string
 
@@ -2078,16 +2078,16 @@ The command to execute.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.isProject">isProject</a></code> | Test whether the given construct is a project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.of">of</a></code> | Find the closest ancestor project for given construct. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.isProject">isProject</a></code> | Test whether the given construct is a project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.of">of</a></code> | Find the closest ancestor project for given construct. |
 
 ---
 
-##### `isConstruct` <a name="isConstruct" id="tms-projen-projects.TmsTypeScriptAppProject.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.isConstruct"></a>
 
 ```typescript
-import { TmsTypeScriptAppProject } from 'tms-projen-projects'
+import { TmsTypeScriptAppProject } from '@10mi2/tms-projen-projects'
 
 TmsTypeScriptAppProject.isConstruct(x: any)
 ```
@@ -2108,7 +2108,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="tms-projen-projects.TmsTypeScriptAppProject.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -2116,26 +2116,26 @@ Any object.
 
 ---
 
-##### `isProject` <a name="isProject" id="tms-projen-projects.TmsTypeScriptAppProject.isProject"></a>
+##### `isProject` <a name="isProject" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.isProject"></a>
 
 ```typescript
-import { TmsTypeScriptAppProject } from 'tms-projen-projects'
+import { TmsTypeScriptAppProject } from '@10mi2/tms-projen-projects'
 
 TmsTypeScriptAppProject.isProject(x: any)
 ```
 
 Test whether the given construct is a project.
 
-###### `x`<sup>Required</sup> <a name="x" id="tms-projen-projects.TmsTypeScriptAppProject.isProject.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.isProject.parameter.x"></a>
 
 - *Type:* any
 
 ---
 
-##### `of` <a name="of" id="tms-projen-projects.TmsTypeScriptAppProject.of"></a>
+##### `of` <a name="of" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.of"></a>
 
 ```typescript
-import { TmsTypeScriptAppProject } from 'tms-projen-projects'
+import { TmsTypeScriptAppProject } from '@10mi2/tms-projen-projects'
 
 TmsTypeScriptAppProject.of(construct: IConstruct)
 ```
@@ -2144,7 +2144,7 @@ Find the closest ancestor project for given construct.
 
 When given a project, this it the project itself.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="tms-projen-projects.TmsTypeScriptAppProject.of.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.of.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
@@ -2154,72 +2154,72 @@ When given a project, this it the project itself.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.buildTask">buildTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.commitGenerated">commitGenerated</a></code> | <code>boolean</code> | Whether to commit the managed files by default. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.compileTask">compileTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.components">components</a></code> | <code>projen.Component[]</code> | Returns all the components within this project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.deps">deps</a></code> | <code>projen.Dependencies</code> | Project dependencies. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.ejected">ejected</a></code> | <code>boolean</code> | Whether or not the project is being ejected. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.files">files</a></code> | <code>projen.FileBase[]</code> | All files in this project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.gitattributes">gitattributes</a></code> | <code>projen.GitAttributesFile</code> | The .gitattributes file for this repository. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.gitignore">gitignore</a></code> | <code>projen.IgnoreFile</code> | .gitignore. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.logger">logger</a></code> | <code>projen.Logger</code> | Logging utilities. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.name">name</a></code> | <code>string</code> | Project name. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.outdir">outdir</a></code> | <code>string</code> | Absolute output directory of this project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.packageTask">packageTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.postCompileTask">postCompileTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.preCompileTask">preCompileTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.projectBuild">projectBuild</a></code> | <code>projen.ProjectBuild</code> | Manages the build process of the project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.projenCommand">projenCommand</a></code> | <code>string</code> | The command to use in order to run the projen CLI. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.root">root</a></code> | <code>projen.Project</code> | The root project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.subprojects">subprojects</a></code> | <code>projen.Project[]</code> | Returns all the subprojects within this project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.tasks">tasks</a></code> | <code>projen.Tasks</code> | Project tasks. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.testTask">testTask</a></code> | <code>projen.Task</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.defaultTask">defaultTask</a></code> | <code>projen.Task</code> | This is the "default" task, the one that executes "projen". |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.initProject">initProject</a></code> | <code>projen.InitProject</code> | The options used when this project is bootstrapped via `projen new`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.parent">parent</a></code> | <code>projen.Project</code> | A parent project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.projectType">projectType</a></code> | <code>projen.ProjectType</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.autoApprove">autoApprove</a></code> | <code>projen.github.AutoApprove</code> | Auto approve set up for this project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.devContainer">devContainer</a></code> | <code>projen.vscode.DevContainer</code> | Access for .devcontainer.json (used for GitHub Codespaces). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.github">github</a></code> | <code>projen.github.GitHub</code> | Access all github components. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.gitpod">gitpod</a></code> | <code>projen.Gitpod</code> | Access for Gitpod. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.vscode">vscode</a></code> | <code>projen.vscode.VsCode</code> | Access all VSCode components. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.allowLibraryDependencies">allowLibraryDependencies</a></code> | <code>boolean</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | The build output directory. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.artifactsJavascriptDirectory">artifactsJavascriptDirectory</a></code> | <code>string</code> | The location of the npm tarball after build (`${artifactsDirectory}/js`). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.bundler">bundler</a></code> | <code>projen.javascript.Bundler</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.entrypoint">entrypoint</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.manifest">manifest</a></code> | <code>any</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.npmrc">npmrc</a></code> | <code>projen.javascript.NpmConfig</code> | The .npmrc file. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.package">package</a></code> | <code>projen.javascript.NodePackage</code> | API for managing the node package. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.packageManager">packageManager</a></code> | <code>projen.javascript.NodePackageManager</code> | The package manager to use. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.runScriptCommand">runScriptCommand</a></code> | <code>string</code> | The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the package manager). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.autoMerge">autoMerge</a></code> | <code>projen.github.AutoMerge</code> | Component that sets up mergify for merging approved pull requests. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.buildWorkflow">buildWorkflow</a></code> | <code>projen.build.BuildWorkflow</code> | The PR build GitHub workflow. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.buildWorkflowJobId">buildWorkflowJobId</a></code> | <code>string</code> | The job ID of the build workflow. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.jest">jest</a></code> | <code>projen.javascript.Jest</code> | The Jest configuration (if enabled). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Maximum node version required by this package. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum node.js version required by this package. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.npmignore">npmignore</a></code> | <code>projen.IgnoreFile</code> | The .npmignore file. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.prettier">prettier</a></code> | <code>projen.javascript.Prettier</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.publisher">publisher</a></code> | <code>projen.release.Publisher</code> | Package publisher. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.release">release</a></code> | <code>projen.release.Release</code> | Release management. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.upgradeWorkflow">upgradeWorkflow</a></code> | <code>projen.javascript.UpgradeDependencies</code> | The upgrade workflow. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.docsDirectory">docsDirectory</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.libdir">libdir</a></code> | <code>string</code> | The directory in which compiled .js files reside. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.srcdir">srcdir</a></code> | <code>string</code> | The directory in which the .ts sources reside. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.testdir">testdir</a></code> | <code>string</code> | The directory in which tests reside. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.tsconfigDev">tsconfigDev</a></code> | <code>projen.javascript.TypescriptConfig</code> | A typescript configuration file which covers all files (sources, tests, projen). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.watchTask">watchTask</a></code> | <code>projen.Task</code> | The "watch" task. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.docgen">docgen</a></code> | <code>boolean</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.eslint">eslint</a></code> | <code>projen.javascript.Eslint</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.tsconfig">tsconfig</a></code> | <code>projen.javascript.TypescriptConfig</code> | *No description.* |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.tsconfigEslint">tsconfigEslint</a></code> | <code>projen.javascript.TypescriptConfig</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.buildTask">buildTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.commitGenerated">commitGenerated</a></code> | <code>boolean</code> | Whether to commit the managed files by default. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.compileTask">compileTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.components">components</a></code> | <code>projen.Component[]</code> | Returns all the components within this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.deps">deps</a></code> | <code>projen.Dependencies</code> | Project dependencies. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.ejected">ejected</a></code> | <code>boolean</code> | Whether or not the project is being ejected. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.files">files</a></code> | <code>projen.FileBase[]</code> | All files in this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.gitattributes">gitattributes</a></code> | <code>projen.GitAttributesFile</code> | The .gitattributes file for this repository. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.gitignore">gitignore</a></code> | <code>projen.IgnoreFile</code> | .gitignore. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.logger">logger</a></code> | <code>projen.Logger</code> | Logging utilities. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.name">name</a></code> | <code>string</code> | Project name. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.outdir">outdir</a></code> | <code>string</code> | Absolute output directory of this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.packageTask">packageTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.postCompileTask">postCompileTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.preCompileTask">preCompileTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.projectBuild">projectBuild</a></code> | <code>projen.ProjectBuild</code> | Manages the build process of the project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.projenCommand">projenCommand</a></code> | <code>string</code> | The command to use in order to run the projen CLI. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.root">root</a></code> | <code>projen.Project</code> | The root project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.subprojects">subprojects</a></code> | <code>projen.Project[]</code> | Returns all the subprojects within this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.tasks">tasks</a></code> | <code>projen.Tasks</code> | Project tasks. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.testTask">testTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.defaultTask">defaultTask</a></code> | <code>projen.Task</code> | This is the "default" task, the one that executes "projen". |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.initProject">initProject</a></code> | <code>projen.InitProject</code> | The options used when this project is bootstrapped via `projen new`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.parent">parent</a></code> | <code>projen.Project</code> | A parent project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.projectType">projectType</a></code> | <code>projen.ProjectType</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.autoApprove">autoApprove</a></code> | <code>projen.github.AutoApprove</code> | Auto approve set up for this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.devContainer">devContainer</a></code> | <code>projen.vscode.DevContainer</code> | Access for .devcontainer.json (used for GitHub Codespaces). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.github">github</a></code> | <code>projen.github.GitHub</code> | Access all github components. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.gitpod">gitpod</a></code> | <code>projen.Gitpod</code> | Access for Gitpod. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.vscode">vscode</a></code> | <code>projen.vscode.VsCode</code> | Access all VSCode components. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.allowLibraryDependencies">allowLibraryDependencies</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | The build output directory. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.artifactsJavascriptDirectory">artifactsJavascriptDirectory</a></code> | <code>string</code> | The location of the npm tarball after build (`${artifactsDirectory}/js`). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.bundler">bundler</a></code> | <code>projen.javascript.Bundler</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.entrypoint">entrypoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.manifest">manifest</a></code> | <code>any</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.npmrc">npmrc</a></code> | <code>projen.javascript.NpmConfig</code> | The .npmrc file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.package">package</a></code> | <code>projen.javascript.NodePackage</code> | API for managing the node package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.packageManager">packageManager</a></code> | <code>projen.javascript.NodePackageManager</code> | The package manager to use. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.runScriptCommand">runScriptCommand</a></code> | <code>string</code> | The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the package manager). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.autoMerge">autoMerge</a></code> | <code>projen.github.AutoMerge</code> | Component that sets up mergify for merging approved pull requests. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.buildWorkflow">buildWorkflow</a></code> | <code>projen.build.BuildWorkflow</code> | The PR build GitHub workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.buildWorkflowJobId">buildWorkflowJobId</a></code> | <code>string</code> | The job ID of the build workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.jest">jest</a></code> | <code>projen.javascript.Jest</code> | The Jest configuration (if enabled). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Maximum node version required by this package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum node.js version required by this package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.npmignore">npmignore</a></code> | <code>projen.IgnoreFile</code> | The .npmignore file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.prettier">prettier</a></code> | <code>projen.javascript.Prettier</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.publisher">publisher</a></code> | <code>projen.release.Publisher</code> | Package publisher. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.release">release</a></code> | <code>projen.release.Release</code> | Release management. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.upgradeWorkflow">upgradeWorkflow</a></code> | <code>projen.javascript.UpgradeDependencies</code> | The upgrade workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.docsDirectory">docsDirectory</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.libdir">libdir</a></code> | <code>string</code> | The directory in which compiled .js files reside. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.srcdir">srcdir</a></code> | <code>string</code> | The directory in which the .ts sources reside. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.testdir">testdir</a></code> | <code>string</code> | The directory in which tests reside. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.tsconfigDev">tsconfigDev</a></code> | <code>projen.javascript.TypescriptConfig</code> | A typescript configuration file which covers all files (sources, tests, projen). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.watchTask">watchTask</a></code> | <code>projen.Task</code> | The "watch" task. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.docgen">docgen</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.eslint">eslint</a></code> | <code>projen.javascript.Eslint</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.tsconfig">tsconfig</a></code> | <code>projen.javascript.TypescriptConfig</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.tsconfigEslint">tsconfigEslint</a></code> | <code>projen.javascript.TypescriptConfig</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="tms-projen-projects.TmsTypeScriptAppProject.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -2231,7 +2231,7 @@ The tree node.
 
 ---
 
-##### `buildTask`<sup>Required</sup> <a name="buildTask" id="tms-projen-projects.TmsTypeScriptAppProject.property.buildTask"></a>
+##### `buildTask`<sup>Required</sup> <a name="buildTask" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.buildTask"></a>
 
 ```typescript
 public readonly buildTask: Task;
@@ -2241,7 +2241,7 @@ public readonly buildTask: Task;
 
 ---
 
-##### `commitGenerated`<sup>Required</sup> <a name="commitGenerated" id="tms-projen-projects.TmsTypeScriptAppProject.property.commitGenerated"></a>
+##### `commitGenerated`<sup>Required</sup> <a name="commitGenerated" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.commitGenerated"></a>
 
 ```typescript
 public readonly commitGenerated: boolean;
@@ -2253,7 +2253,7 @@ Whether to commit the managed files by default.
 
 ---
 
-##### `compileTask`<sup>Required</sup> <a name="compileTask" id="tms-projen-projects.TmsTypeScriptAppProject.property.compileTask"></a>
+##### `compileTask`<sup>Required</sup> <a name="compileTask" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.compileTask"></a>
 
 ```typescript
 public readonly compileTask: Task;
@@ -2263,7 +2263,7 @@ public readonly compileTask: Task;
 
 ---
 
-##### `components`<sup>Required</sup> <a name="components" id="tms-projen-projects.TmsTypeScriptAppProject.property.components"></a>
+##### `components`<sup>Required</sup> <a name="components" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.components"></a>
 
 ```typescript
 public readonly components: Component[];
@@ -2275,7 +2275,7 @@ Returns all the components within this project.
 
 ---
 
-##### `deps`<sup>Required</sup> <a name="deps" id="tms-projen-projects.TmsTypeScriptAppProject.property.deps"></a>
+##### `deps`<sup>Required</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.deps"></a>
 
 ```typescript
 public readonly deps: Dependencies;
@@ -2287,7 +2287,7 @@ Project dependencies.
 
 ---
 
-##### `ejected`<sup>Required</sup> <a name="ejected" id="tms-projen-projects.TmsTypeScriptAppProject.property.ejected"></a>
+##### `ejected`<sup>Required</sup> <a name="ejected" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.ejected"></a>
 
 ```typescript
 public readonly ejected: boolean;
@@ -2299,7 +2299,7 @@ Whether or not the project is being ejected.
 
 ---
 
-##### `files`<sup>Required</sup> <a name="files" id="tms-projen-projects.TmsTypeScriptAppProject.property.files"></a>
+##### `files`<sup>Required</sup> <a name="files" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.files"></a>
 
 ```typescript
 public readonly files: FileBase[];
@@ -2311,7 +2311,7 @@ All files in this project.
 
 ---
 
-##### `gitattributes`<sup>Required</sup> <a name="gitattributes" id="tms-projen-projects.TmsTypeScriptAppProject.property.gitattributes"></a>
+##### `gitattributes`<sup>Required</sup> <a name="gitattributes" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.gitattributes"></a>
 
 ```typescript
 public readonly gitattributes: GitAttributesFile;
@@ -2323,7 +2323,7 @@ The .gitattributes file for this repository.
 
 ---
 
-##### `gitignore`<sup>Required</sup> <a name="gitignore" id="tms-projen-projects.TmsTypeScriptAppProject.property.gitignore"></a>
+##### `gitignore`<sup>Required</sup> <a name="gitignore" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.gitignore"></a>
 
 ```typescript
 public readonly gitignore: IgnoreFile;
@@ -2335,7 +2335,7 @@ public readonly gitignore: IgnoreFile;
 
 ---
 
-##### `logger`<sup>Required</sup> <a name="logger" id="tms-projen-projects.TmsTypeScriptAppProject.property.logger"></a>
+##### `logger`<sup>Required</sup> <a name="logger" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.logger"></a>
 
 ```typescript
 public readonly logger: Logger;
@@ -2347,7 +2347,7 @@ Logging utilities.
 
 ---
 
-##### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsTypeScriptAppProject.property.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -2359,7 +2359,7 @@ Project name.
 
 ---
 
-##### `outdir`<sup>Required</sup> <a name="outdir" id="tms-projen-projects.TmsTypeScriptAppProject.property.outdir"></a>
+##### `outdir`<sup>Required</sup> <a name="outdir" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.outdir"></a>
 
 ```typescript
 public readonly outdir: string;
@@ -2371,7 +2371,7 @@ Absolute output directory of this project.
 
 ---
 
-##### `packageTask`<sup>Required</sup> <a name="packageTask" id="tms-projen-projects.TmsTypeScriptAppProject.property.packageTask"></a>
+##### `packageTask`<sup>Required</sup> <a name="packageTask" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.packageTask"></a>
 
 ```typescript
 public readonly packageTask: Task;
@@ -2381,7 +2381,7 @@ public readonly packageTask: Task;
 
 ---
 
-##### `postCompileTask`<sup>Required</sup> <a name="postCompileTask" id="tms-projen-projects.TmsTypeScriptAppProject.property.postCompileTask"></a>
+##### `postCompileTask`<sup>Required</sup> <a name="postCompileTask" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.postCompileTask"></a>
 
 ```typescript
 public readonly postCompileTask: Task;
@@ -2391,7 +2391,7 @@ public readonly postCompileTask: Task;
 
 ---
 
-##### `preCompileTask`<sup>Required</sup> <a name="preCompileTask" id="tms-projen-projects.TmsTypeScriptAppProject.property.preCompileTask"></a>
+##### `preCompileTask`<sup>Required</sup> <a name="preCompileTask" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.preCompileTask"></a>
 
 ```typescript
 public readonly preCompileTask: Task;
@@ -2401,7 +2401,7 @@ public readonly preCompileTask: Task;
 
 ---
 
-##### `projectBuild`<sup>Required</sup> <a name="projectBuild" id="tms-projen-projects.TmsTypeScriptAppProject.property.projectBuild"></a>
+##### `projectBuild`<sup>Required</sup> <a name="projectBuild" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.projectBuild"></a>
 
 ```typescript
 public readonly projectBuild: ProjectBuild;
@@ -2413,7 +2413,7 @@ Manages the build process of the project.
 
 ---
 
-##### `projenCommand`<sup>Required</sup> <a name="projenCommand" id="tms-projen-projects.TmsTypeScriptAppProject.property.projenCommand"></a>
+##### `projenCommand`<sup>Required</sup> <a name="projenCommand" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.projenCommand"></a>
 
 ```typescript
 public readonly projenCommand: string;
@@ -2425,7 +2425,7 @@ The command to use in order to run the projen CLI.
 
 ---
 
-##### `root`<sup>Required</sup> <a name="root" id="tms-projen-projects.TmsTypeScriptAppProject.property.root"></a>
+##### `root`<sup>Required</sup> <a name="root" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.root"></a>
 
 ```typescript
 public readonly root: Project;
@@ -2437,7 +2437,7 @@ The root project.
 
 ---
 
-##### `subprojects`<sup>Required</sup> <a name="subprojects" id="tms-projen-projects.TmsTypeScriptAppProject.property.subprojects"></a>
+##### `subprojects`<sup>Required</sup> <a name="subprojects" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.subprojects"></a>
 
 ```typescript
 public readonly subprojects: Project[];
@@ -2449,7 +2449,7 @@ Returns all the subprojects within this project.
 
 ---
 
-##### `tasks`<sup>Required</sup> <a name="tasks" id="tms-projen-projects.TmsTypeScriptAppProject.property.tasks"></a>
+##### `tasks`<sup>Required</sup> <a name="tasks" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.tasks"></a>
 
 ```typescript
 public readonly tasks: Tasks;
@@ -2461,7 +2461,7 @@ Project tasks.
 
 ---
 
-##### `testTask`<sup>Required</sup> <a name="testTask" id="tms-projen-projects.TmsTypeScriptAppProject.property.testTask"></a>
+##### `testTask`<sup>Required</sup> <a name="testTask" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.testTask"></a>
 
 ```typescript
 public readonly testTask: Task;
@@ -2471,7 +2471,7 @@ public readonly testTask: Task;
 
 ---
 
-##### `defaultTask`<sup>Optional</sup> <a name="defaultTask" id="tms-projen-projects.TmsTypeScriptAppProject.property.defaultTask"></a>
+##### `defaultTask`<sup>Optional</sup> <a name="defaultTask" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.defaultTask"></a>
 
 ```typescript
 public readonly defaultTask: Task;
@@ -2486,7 +2486,7 @@ the project is being ejected.
 
 ---
 
-##### `initProject`<sup>Optional</sup> <a name="initProject" id="tms-projen-projects.TmsTypeScriptAppProject.property.initProject"></a>
+##### `initProject`<sup>Optional</sup> <a name="initProject" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.initProject"></a>
 
 ```typescript
 public readonly initProject: InitProject;
@@ -2502,7 +2502,7 @@ FQN of the project type.
 
 ---
 
-##### `parent`<sup>Optional</sup> <a name="parent" id="tms-projen-projects.TmsTypeScriptAppProject.property.parent"></a>
+##### `parent`<sup>Optional</sup> <a name="parent" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.parent"></a>
 
 ```typescript
 public readonly parent: Project;
@@ -2516,7 +2516,7 @@ If undefined, this is the root project.
 
 ---
 
-##### `projectType`<sup>Required</sup> <a name="projectType" id="tms-projen-projects.TmsTypeScriptAppProject.property.projectType"></a>
+##### `projectType`<sup>Required</sup> <a name="projectType" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.projectType"></a>
 
 ```typescript
 public readonly projectType: ProjectType;
@@ -2526,7 +2526,7 @@ public readonly projectType: ProjectType;
 
 ---
 
-##### `autoApprove`<sup>Optional</sup> <a name="autoApprove" id="tms-projen-projects.TmsTypeScriptAppProject.property.autoApprove"></a>
+##### `autoApprove`<sup>Optional</sup> <a name="autoApprove" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.autoApprove"></a>
 
 ```typescript
 public readonly autoApprove: AutoApprove;
@@ -2538,7 +2538,7 @@ Auto approve set up for this project.
 
 ---
 
-##### `devContainer`<sup>Optional</sup> <a name="devContainer" id="tms-projen-projects.TmsTypeScriptAppProject.property.devContainer"></a>
+##### `devContainer`<sup>Optional</sup> <a name="devContainer" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.devContainer"></a>
 
 ```typescript
 public readonly devContainer: DevContainer;
@@ -2552,7 +2552,7 @@ This will be `undefined` if devContainer boolean is false
 
 ---
 
-##### `github`<sup>Optional</sup> <a name="github" id="tms-projen-projects.TmsTypeScriptAppProject.property.github"></a>
+##### `github`<sup>Optional</sup> <a name="github" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.github"></a>
 
 ```typescript
 public readonly github: GitHub;
@@ -2566,7 +2566,7 @@ This will be `undefined` for subprojects.
 
 ---
 
-##### `gitpod`<sup>Optional</sup> <a name="gitpod" id="tms-projen-projects.TmsTypeScriptAppProject.property.gitpod"></a>
+##### `gitpod`<sup>Optional</sup> <a name="gitpod" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.gitpod"></a>
 
 ```typescript
 public readonly gitpod: Gitpod;
@@ -2580,7 +2580,7 @@ This will be `undefined` if gitpod boolean is false
 
 ---
 
-##### `vscode`<sup>Optional</sup> <a name="vscode" id="tms-projen-projects.TmsTypeScriptAppProject.property.vscode"></a>
+##### `vscode`<sup>Optional</sup> <a name="vscode" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.vscode"></a>
 
 ```typescript
 public readonly vscode: VsCode;
@@ -2594,7 +2594,7 @@ This will be `undefined` for subprojects.
 
 ---
 
-##### ~~`allowLibraryDependencies`~~<sup>Required</sup> <a name="allowLibraryDependencies" id="tms-projen-projects.TmsTypeScriptAppProject.property.allowLibraryDependencies"></a>
+##### ~~`allowLibraryDependencies`~~<sup>Required</sup> <a name="allowLibraryDependencies" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.allowLibraryDependencies"></a>
 
 - *Deprecated:* use `package.allowLibraryDependencies`
 
@@ -2606,7 +2606,7 @@ public readonly allowLibraryDependencies: boolean;
 
 ---
 
-##### `artifactsDirectory`<sup>Required</sup> <a name="artifactsDirectory" id="tms-projen-projects.TmsTypeScriptAppProject.property.artifactsDirectory"></a>
+##### `artifactsDirectory`<sup>Required</sup> <a name="artifactsDirectory" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.artifactsDirectory"></a>
 
 ```typescript
 public readonly artifactsDirectory: string;
@@ -2622,7 +2622,7 @@ tarball will be placed under `dist/js/boom-boom-1.2.3.tg`.
 
 ---
 
-##### `artifactsJavascriptDirectory`<sup>Required</sup> <a name="artifactsJavascriptDirectory" id="tms-projen-projects.TmsTypeScriptAppProject.property.artifactsJavascriptDirectory"></a>
+##### `artifactsJavascriptDirectory`<sup>Required</sup> <a name="artifactsJavascriptDirectory" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.artifactsJavascriptDirectory"></a>
 
 ```typescript
 public readonly artifactsJavascriptDirectory: string;
@@ -2634,7 +2634,7 @@ The location of the npm tarball after build (`${artifactsDirectory}/js`).
 
 ---
 
-##### `bundler`<sup>Required</sup> <a name="bundler" id="tms-projen-projects.TmsTypeScriptAppProject.property.bundler"></a>
+##### `bundler`<sup>Required</sup> <a name="bundler" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.bundler"></a>
 
 ```typescript
 public readonly bundler: Bundler;
@@ -2644,7 +2644,7 @@ public readonly bundler: Bundler;
 
 ---
 
-##### ~~`entrypoint`~~<sup>Required</sup> <a name="entrypoint" id="tms-projen-projects.TmsTypeScriptAppProject.property.entrypoint"></a>
+##### ~~`entrypoint`~~<sup>Required</sup> <a name="entrypoint" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.entrypoint"></a>
 
 - *Deprecated:* use `package.entrypoint`
 
@@ -2656,7 +2656,7 @@ public readonly entrypoint: string;
 
 ---
 
-##### ~~`manifest`~~<sup>Required</sup> <a name="manifest" id="tms-projen-projects.TmsTypeScriptAppProject.property.manifest"></a>
+##### ~~`manifest`~~<sup>Required</sup> <a name="manifest" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.manifest"></a>
 
 - *Deprecated:* use `package.addField(x, y)`
 
@@ -2668,7 +2668,7 @@ public readonly manifest: any;
 
 ---
 
-##### `npmrc`<sup>Required</sup> <a name="npmrc" id="tms-projen-projects.TmsTypeScriptAppProject.property.npmrc"></a>
+##### `npmrc`<sup>Required</sup> <a name="npmrc" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.npmrc"></a>
 
 ```typescript
 public readonly npmrc: NpmConfig;
@@ -2680,7 +2680,7 @@ The .npmrc file.
 
 ---
 
-##### `package`<sup>Required</sup> <a name="package" id="tms-projen-projects.TmsTypeScriptAppProject.property.package"></a>
+##### `package`<sup>Required</sup> <a name="package" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.package"></a>
 
 ```typescript
 public readonly package: NodePackage;
@@ -2692,7 +2692,7 @@ API for managing the node package.
 
 ---
 
-##### ~~`packageManager`~~<sup>Required</sup> <a name="packageManager" id="tms-projen-projects.TmsTypeScriptAppProject.property.packageManager"></a>
+##### ~~`packageManager`~~<sup>Required</sup> <a name="packageManager" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.packageManager"></a>
 
 - *Deprecated:* use `package.packageManager`
 
@@ -2706,7 +2706,7 @@ The package manager to use.
 
 ---
 
-##### `runScriptCommand`<sup>Required</sup> <a name="runScriptCommand" id="tms-projen-projects.TmsTypeScriptAppProject.property.runScriptCommand"></a>
+##### `runScriptCommand`<sup>Required</sup> <a name="runScriptCommand" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.runScriptCommand"></a>
 
 ```typescript
 public readonly runScriptCommand: string;
@@ -2718,7 +2718,7 @@ The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the p
 
 ---
 
-##### `autoMerge`<sup>Optional</sup> <a name="autoMerge" id="tms-projen-projects.TmsTypeScriptAppProject.property.autoMerge"></a>
+##### `autoMerge`<sup>Optional</sup> <a name="autoMerge" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.autoMerge"></a>
 
 ```typescript
 public readonly autoMerge: AutoMerge;
@@ -2730,7 +2730,7 @@ Component that sets up mergify for merging approved pull requests.
 
 ---
 
-##### `buildWorkflow`<sup>Optional</sup> <a name="buildWorkflow" id="tms-projen-projects.TmsTypeScriptAppProject.property.buildWorkflow"></a>
+##### `buildWorkflow`<sup>Optional</sup> <a name="buildWorkflow" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.buildWorkflow"></a>
 
 ```typescript
 public readonly buildWorkflow: BuildWorkflow;
@@ -2744,7 +2744,7 @@ The PR build GitHub workflow.
 
 ---
 
-##### `buildWorkflowJobId`<sup>Optional</sup> <a name="buildWorkflowJobId" id="tms-projen-projects.TmsTypeScriptAppProject.property.buildWorkflowJobId"></a>
+##### `buildWorkflowJobId`<sup>Optional</sup> <a name="buildWorkflowJobId" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.buildWorkflowJobId"></a>
 
 ```typescript
 public readonly buildWorkflowJobId: string;
@@ -2756,7 +2756,7 @@ The job ID of the build workflow.
 
 ---
 
-##### `jest`<sup>Optional</sup> <a name="jest" id="tms-projen-projects.TmsTypeScriptAppProject.property.jest"></a>
+##### `jest`<sup>Optional</sup> <a name="jest" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.jest"></a>
 
 ```typescript
 public readonly jest: Jest;
@@ -2768,7 +2768,7 @@ The Jest configuration (if enabled).
 
 ---
 
-##### `maxNodeVersion`<sup>Optional</sup> <a name="maxNodeVersion" id="tms-projen-projects.TmsTypeScriptAppProject.property.maxNodeVersion"></a>
+##### `maxNodeVersion`<sup>Optional</sup> <a name="maxNodeVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.maxNodeVersion"></a>
 
 ```typescript
 public readonly maxNodeVersion: string;
@@ -2780,7 +2780,7 @@ Maximum node version required by this package.
 
 ---
 
-##### `minNodeVersion`<sup>Optional</sup> <a name="minNodeVersion" id="tms-projen-projects.TmsTypeScriptAppProject.property.minNodeVersion"></a>
+##### `minNodeVersion`<sup>Optional</sup> <a name="minNodeVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.minNodeVersion"></a>
 
 ```typescript
 public readonly minNodeVersion: string;
@@ -2792,7 +2792,7 @@ Minimum node.js version required by this package.
 
 ---
 
-##### `npmignore`<sup>Optional</sup> <a name="npmignore" id="tms-projen-projects.TmsTypeScriptAppProject.property.npmignore"></a>
+##### `npmignore`<sup>Optional</sup> <a name="npmignore" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.npmignore"></a>
 
 ```typescript
 public readonly npmignore: IgnoreFile;
@@ -2804,7 +2804,7 @@ The .npmignore file.
 
 ---
 
-##### `prettier`<sup>Optional</sup> <a name="prettier" id="tms-projen-projects.TmsTypeScriptAppProject.property.prettier"></a>
+##### `prettier`<sup>Optional</sup> <a name="prettier" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.prettier"></a>
 
 ```typescript
 public readonly prettier: Prettier;
@@ -2814,7 +2814,7 @@ public readonly prettier: Prettier;
 
 ---
 
-##### ~~`publisher`~~<sup>Optional</sup> <a name="publisher" id="tms-projen-projects.TmsTypeScriptAppProject.property.publisher"></a>
+##### ~~`publisher`~~<sup>Optional</sup> <a name="publisher" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.publisher"></a>
 
 - *Deprecated:* use `release.publisher`.
 
@@ -2831,7 +2831,7 @@ release workflow.
 
 ---
 
-##### `release`<sup>Optional</sup> <a name="release" id="tms-projen-projects.TmsTypeScriptAppProject.property.release"></a>
+##### `release`<sup>Optional</sup> <a name="release" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.release"></a>
 
 ```typescript
 public readonly release: Release;
@@ -2843,7 +2843,7 @@ Release management.
 
 ---
 
-##### `upgradeWorkflow`<sup>Optional</sup> <a name="upgradeWorkflow" id="tms-projen-projects.TmsTypeScriptAppProject.property.upgradeWorkflow"></a>
+##### `upgradeWorkflow`<sup>Optional</sup> <a name="upgradeWorkflow" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.upgradeWorkflow"></a>
 
 ```typescript
 public readonly upgradeWorkflow: UpgradeDependencies;
@@ -2855,7 +2855,7 @@ The upgrade workflow.
 
 ---
 
-##### `docsDirectory`<sup>Required</sup> <a name="docsDirectory" id="tms-projen-projects.TmsTypeScriptAppProject.property.docsDirectory"></a>
+##### `docsDirectory`<sup>Required</sup> <a name="docsDirectory" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.docsDirectory"></a>
 
 ```typescript
 public readonly docsDirectory: string;
@@ -2865,7 +2865,7 @@ public readonly docsDirectory: string;
 
 ---
 
-##### `libdir`<sup>Required</sup> <a name="libdir" id="tms-projen-projects.TmsTypeScriptAppProject.property.libdir"></a>
+##### `libdir`<sup>Required</sup> <a name="libdir" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.libdir"></a>
 
 ```typescript
 public readonly libdir: string;
@@ -2877,7 +2877,7 @@ The directory in which compiled .js files reside.
 
 ---
 
-##### `srcdir`<sup>Required</sup> <a name="srcdir" id="tms-projen-projects.TmsTypeScriptAppProject.property.srcdir"></a>
+##### `srcdir`<sup>Required</sup> <a name="srcdir" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.srcdir"></a>
 
 ```typescript
 public readonly srcdir: string;
@@ -2889,7 +2889,7 @@ The directory in which the .ts sources reside.
 
 ---
 
-##### `testdir`<sup>Required</sup> <a name="testdir" id="tms-projen-projects.TmsTypeScriptAppProject.property.testdir"></a>
+##### `testdir`<sup>Required</sup> <a name="testdir" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.testdir"></a>
 
 ```typescript
 public readonly testdir: string;
@@ -2901,7 +2901,7 @@ The directory in which tests reside.
 
 ---
 
-##### `tsconfigDev`<sup>Required</sup> <a name="tsconfigDev" id="tms-projen-projects.TmsTypeScriptAppProject.property.tsconfigDev"></a>
+##### `tsconfigDev`<sup>Required</sup> <a name="tsconfigDev" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.tsconfigDev"></a>
 
 ```typescript
 public readonly tsconfigDev: TypescriptConfig;
@@ -2913,7 +2913,7 @@ A typescript configuration file which covers all files (sources, tests, projen).
 
 ---
 
-##### `watchTask`<sup>Required</sup> <a name="watchTask" id="tms-projen-projects.TmsTypeScriptAppProject.property.watchTask"></a>
+##### `watchTask`<sup>Required</sup> <a name="watchTask" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.watchTask"></a>
 
 ```typescript
 public readonly watchTask: Task;
@@ -2925,7 +2925,7 @@ The "watch" task.
 
 ---
 
-##### `docgen`<sup>Optional</sup> <a name="docgen" id="tms-projen-projects.TmsTypeScriptAppProject.property.docgen"></a>
+##### `docgen`<sup>Optional</sup> <a name="docgen" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.docgen"></a>
 
 ```typescript
 public readonly docgen: boolean;
@@ -2935,7 +2935,7 @@ public readonly docgen: boolean;
 
 ---
 
-##### `eslint`<sup>Optional</sup> <a name="eslint" id="tms-projen-projects.TmsTypeScriptAppProject.property.eslint"></a>
+##### `eslint`<sup>Optional</sup> <a name="eslint" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.eslint"></a>
 
 ```typescript
 public readonly eslint: Eslint;
@@ -2945,7 +2945,7 @@ public readonly eslint: Eslint;
 
 ---
 
-##### `tsconfig`<sup>Optional</sup> <a name="tsconfig" id="tms-projen-projects.TmsTypeScriptAppProject.property.tsconfig"></a>
+##### `tsconfig`<sup>Optional</sup> <a name="tsconfig" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.tsconfig"></a>
 
 ```typescript
 public readonly tsconfig: TypescriptConfig;
@@ -2955,7 +2955,7 @@ public readonly tsconfig: TypescriptConfig;
 
 ---
 
-##### `tsconfigEslint`<sup>Optional</sup> <a name="tsconfigEslint" id="tms-projen-projects.TmsTypeScriptAppProject.property.tsconfigEslint"></a>
+##### `tsconfigEslint`<sup>Optional</sup> <a name="tsconfigEslint" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.tsconfigEslint"></a>
 
 ```typescript
 public readonly tsconfigEslint: TypescriptConfig;
@@ -2969,11 +2969,11 @@ public readonly tsconfigEslint: TypescriptConfig;
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProject.property.DEFAULT_TASK">DEFAULT_TASK</a></code> | <code>string</code> | The name of the default task (the task executed when `projen` is run without arguments). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.DEFAULT_TASK">DEFAULT_TASK</a></code> | <code>string</code> | The name of the default task (the task executed when `projen` is run without arguments). |
 
 ---
 
-##### `DEFAULT_TASK`<sup>Required</sup> <a name="DEFAULT_TASK" id="tms-projen-projects.TmsTypeScriptAppProject.property.DEFAULT_TASK"></a>
+##### `DEFAULT_TASK`<sup>Required</sup> <a name="DEFAULT_TASK" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProject.property.DEFAULT_TASK"></a>
 
 ```typescript
 public readonly DEFAULT_TASK: string;
@@ -2990,12 +2990,12 @@ this task should synthesize the project files.
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### TmsNestJSAppProjectOptions <a name="TmsNestJSAppProjectOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions"></a>
+### TmsNestJSAppProjectOptions <a name="TmsNestJSAppProjectOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions"></a>
 
-#### Initializer <a name="Initializer" id="tms-projen-projects.TmsNestJSAppProjectOptions.Initializer"></a>
+#### Initializer <a name="Initializer" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.Initializer"></a>
 
 ```typescript
-import { TmsNestJSAppProjectOptions } from 'tms-projen-projects'
+import { TmsNestJSAppProjectOptions } from '@10mi2/tms-projen-projects'
 
 const tmsNestJSAppProjectOptions: TmsNestJSAppProjectOptions = { ... }
 ```
@@ -3004,155 +3004,155 @@ const tmsNestJSAppProjectOptions: TmsNestJSAppProjectOptions = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.name">name</a></code> | <code>string</code> | This is the name of your project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.commitGenerated">commitGenerated</a></code> | <code>boolean</code> | Whether to commit the managed files by default. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.gitIgnoreOptions">gitIgnoreOptions</a></code> | <code>projen.IgnoreFileOptions</code> | Configuration options for .gitignore file. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.gitOptions">gitOptions</a></code> | <code>projen.GitOptions</code> | Configuration options for git. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.renovatebot">renovatebot</a></code> | <code>boolean</code> | Use renovatebot to handle dependency upgrades. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.renovatebotOptions">renovatebotOptions</a></code> | <code>projen.RenovatebotOptions</code> | Options for renovatebot. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.autoApproveOptions">autoApproveOptions</a></code> | <code>projen.github.AutoApproveOptions</code> | Enable and configure the 'auto approve' workflow. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.autoMerge">autoMerge</a></code> | <code>boolean</code> | Enable automatic merging on GitHub. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.autoMergeOptions">autoMergeOptions</a></code> | <code>projen.github.AutoMergeOptions</code> | Configure options for automatic merging on GitHub. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.clobber">clobber</a></code> | <code>boolean</code> | Add a `clobber` task which resets the repo to origin. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.devContainer">devContainer</a></code> | <code>boolean</code> | Add a VSCode development environment (used for GitHub Codespaces). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.github">github</a></code> | <code>boolean</code> | Enable GitHub integration. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.githubOptions">githubOptions</a></code> | <code>projen.github.GitHubOptions</code> | Options for GitHub integration. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.gitpod">gitpod</a></code> | <code>boolean</code> | Add a Gitpod development environment. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.mergify">mergify</a></code> | <code>boolean</code> | Whether mergify should be enabled on this repository or not. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.mergifyOptions">mergifyOptions</a></code> | <code>projen.github.MergifyOptions</code> | Options for mergify. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projectType">projectType</a></code> | <code>projen.ProjectType</code> | Which type of project this is (library/app). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projenCredentials">projenCredentials</a></code> | <code>projen.github.GithubCredentials</code> | Choose a method of providing GitHub API access for projen workflows. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projenTokenSecret">projenTokenSecret</a></code> | <code>string</code> | The name of a secret which includes a GitHub Personal Access Token to be used by projen workflows. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.readme">readme</a></code> | <code>projen.SampleReadmeProps</code> | The README setup. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.stale">stale</a></code> | <code>boolean</code> | Auto-close of stale issues and pull request. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.staleOptions">staleOptions</a></code> | <code>projen.github.StaleOptions</code> | Auto-close stale issues and pull requests. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.vscode">vscode</a></code> | <code>boolean</code> | Enable VSCode integration. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.allowLibraryDependencies">allowLibraryDependencies</a></code> | <code>boolean</code> | Allow the project to include `peerDependencies` and `bundledDependencies`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.authorEmail">authorEmail</a></code> | <code>string</code> | Author's e-mail. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.authorName">authorName</a></code> | <code>string</code> | Author's name. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Is the author an organization. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.authorUrl">authorUrl</a></code> | <code>string</code> | Author's URL / Website. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.autoDetectBin">autoDetectBin</a></code> | <code>boolean</code> | Automatically add all executables under the `bin` directory to your `package.json` file under the `bin` section. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | Binary programs vended with your module. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.bugsEmail">bugsEmail</a></code> | <code>string</code> | The email address to which issues should be reported. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.bugsUrl">bugsUrl</a></code> | <code>string</code> | The url to your project's issue tracker. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | List of dependencies to bundle into this module. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.codeArtifactOptions">codeArtifactOptions</a></code> | <code>projen.javascript.CodeArtifactOptions</code> | Options for npm packages using AWS CodeArtifact. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | Runtime dependencies of this module. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.description">description</a></code> | <code>string</code> | The description is just a string that helps people understand the purpose of the package. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | Build dependencies for this module. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.entrypoint">entrypoint</a></code> | <code>string</code> | Module entrypoint (`main` in `package.json`). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.homepage">homepage</a></code> | <code>string</code> | Package's Homepage / Website. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.keywords">keywords</a></code> | <code>string[]</code> | Keywords to include in `package.json`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.license">license</a></code> | <code>string</code> | License's SPDX identifier. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.licensed">licensed</a></code> | <code>boolean</code> | Indicates if a license should be added. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Minimum node.js version to require via `engines` (inclusive). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum Node.js version to require via package.json `engines` (inclusive). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.npmAccess">npmAccess</a></code> | <code>projen.javascript.NpmAccess</code> | Access level of the npm package. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.npmRegistry">npmRegistry</a></code> | <code>string</code> | The host name of the npm registry to publish to. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.npmRegistryUrl">npmRegistryUrl</a></code> | <code>string</code> | The base URL of the npm package registry. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.npmTokenSecret">npmTokenSecret</a></code> | <code>string</code> | GitHub secret which contains the NPM token to use when publishing packages. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.packageManager">packageManager</a></code> | <code>projen.javascript.NodePackageManager</code> | The Node Package Manager used to execute scripts. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.packageName">packageName</a></code> | <code>string</code> | The "name" in package.json. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.peerDependencyOptions">peerDependencyOptions</a></code> | <code>projen.javascript.PeerDependencyOptions</code> | Options for `peerDeps`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | Peer dependencies for this module. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.pnpmVersion">pnpmVersion</a></code> | <code>string</code> | The version of PNPM to use if using PNPM as a package manager. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.repository">repository</a></code> | <code>string</code> | The repository is the location where the actual code for your package lives. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.repositoryDirectory">repositoryDirectory</a></code> | <code>string</code> | If the package.json for your package is not in the root directory (for example if it is part of a monorepo), you can specify the directory in which it lives. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.scopedPackagesOptions">scopedPackagesOptions</a></code> | <code>projen.javascript.ScopedPackagesOptions[]</code> | Options for privately hosted scoped packages. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.scripts">scripts</a></code> | <code>{[ key: string ]: string}</code> | npm scripts to include. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.stability">stability</a></code> | <code>string</code> | Package's Stability. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.yarnBerryOptions">yarnBerryOptions</a></code> | <code>projen.javascript.YarnBerryOptions</code> | Options for Yarn Berry. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.jsiiReleaseVersion">jsiiReleaseVersion</a></code> | <code>string</code> | Version requirement of `publib` which is used to publish modules to npm. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.majorVersion">majorVersion</a></code> | <code>number</code> | Major version to release from the default branch. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.minMajorVersion">minMajorVersion</a></code> | <code>number</code> | Minimal Major version to release. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.npmDistTag">npmDistTag</a></code> | <code>string</code> | The npmDistTag to use when publishing from the default branch. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.postBuildSteps">postBuildSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | Steps to execute after build as part of the release workflow. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.prerelease">prerelease</a></code> | <code>string</code> | Bump versions from the default branch as pre-releases (e.g. "beta", "alpha", "pre"). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.publishDryRun">publishDryRun</a></code> | <code>boolean</code> | Instead of actually publishing to package managers, just print the publishing command. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.publishTasks">publishTasks</a></code> | <code>boolean</code> | Define publishing tasks that can be executed manually as well as workflows. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releasableCommits">releasableCommits</a></code> | <code>projen.ReleasableCommits</code> | Find commits that should be considered releasable Used to decide if a release is required. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseBranches">releaseBranches</a></code> | <code>{[ key: string ]: projen.release.BranchOptions}</code> | Defines additional release branches. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseEveryCommit">releaseEveryCommit</a></code> | <code>boolean</code> | Automatically release new versions every commit to one of branches in `releaseBranches`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseFailureIssue">releaseFailureIssue</a></code> | <code>boolean</code> | Create a github issue on every failed publishing task. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseFailureIssueLabel">releaseFailureIssueLabel</a></code> | <code>string</code> | The label to apply to issues indicating publish failures. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseSchedule">releaseSchedule</a></code> | <code>string</code> | CRON schedule to trigger new releases. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseTagPrefix">releaseTagPrefix</a></code> | <code>string</code> | Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseTrigger">releaseTrigger</a></code> | <code>projen.release.ReleaseTrigger</code> | The release trigger to use. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflowName">releaseWorkflowName</a></code> | <code>string</code> | The name of the default release workflow. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflowSetupSteps">releaseWorkflowSetupSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | A set of workflow steps to execute in order to setup the workflow container. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.versionrcOptions">versionrcOptions</a></code> | <code>{[ key: string ]: any}</code> | Custom configuration used when creating changelog with standard-version package. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowContainerImage">workflowContainerImage</a></code> | <code>string</code> | Container image to use for GitHub workflows. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowRunsOn">workflowRunsOn</a></code> | <code>string[]</code> | Github Runner selection labels. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowRunsOnGroup">workflowRunsOnGroup</a></code> | <code>projen.GroupRunnerOptions</code> | Github Runner Group selection options. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.defaultReleaseBranch">defaultReleaseBranch</a></code> | <code>string</code> | The name of the main release branch. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | A directory which will contain build artifacts. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.autoApproveUpgrades">autoApproveUpgrades</a></code> | <code>boolean</code> | Automatically approve deps upgrade PRs, allowing them to be merged by mergify (if configued). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflow">buildWorkflow</a></code> | <code>boolean</code> | Define a GitHub workflow for building PRs. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflowTriggers">buildWorkflowTriggers</a></code> | <code>projen.github.workflows.Triggers</code> | Build workflow triggers. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.bundlerOptions">bundlerOptions</a></code> | <code>projen.javascript.BundlerOptions</code> | Options for `Bundler`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with `@codeCovTokenSecret`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.codeCovTokenSecret">codeCovTokenSecret</a></code> | <code>string</code> | Define the secret name for a specified https://codecov.io/ token A secret is required to send coverage for private repositories. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.copyrightOwner">copyrightOwner</a></code> | <code>string</code> | License copyright owner. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.copyrightPeriod">copyrightPeriod</a></code> | <code>string</code> | The copyright years to put in the LICENSE file. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.dependabot">dependabot</a></code> | <code>boolean</code> | Use dependabot to handle dependency upgrades. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.dependabotOptions">dependabotOptions</a></code> | <code>projen.github.DependabotOptions</code> | Options for dependabot. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.depsUpgrade">depsUpgrade</a></code> | <code>boolean</code> | Use tasks and github workflows to handle dependency upgrades. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.depsUpgradeOptions">depsUpgradeOptions</a></code> | <code>projen.javascript.UpgradeDependenciesOptions</code> | Options for `UpgradeDependencies`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.gitignore">gitignore</a></code> | <code>string[]</code> | Additional entries to .gitignore. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.jest">jest</a></code> | <code>boolean</code> | Setup jest unit tests. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.jestOptions">jestOptions</a></code> | <code>projen.javascript.JestOptions</code> | Jest options. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.mutableBuild">mutableBuild</a></code> | <code>boolean</code> | Automatically update files modified during builds to pull-request branches. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.npmignore">npmignore</a></code> | <code>string[]</code> | Additional entries to .npmignore. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.npmignoreEnabled">npmignoreEnabled</a></code> | <code>boolean</code> | Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.npmIgnoreOptions">npmIgnoreOptions</a></code> | <code>projen.IgnoreFileOptions</code> | Configuration options for .npmignore file. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.package">package</a></code> | <code>boolean</code> | Defines a `package` task that will produce an npm tarball under the artifacts directory (e.g. `dist`). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.prettier">prettier</a></code> | <code>boolean</code> | Setup prettier. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.prettierOptions">prettierOptions</a></code> | <code>projen.javascript.PrettierOptions</code> | Prettier options. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projenDevDependency">projenDevDependency</a></code> | <code>boolean</code> | Indicates of "projen" should be installed as a devDependency. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJs">projenrcJs</a></code> | <code>boolean</code> | Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable .projenrc.js generation. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJsOptions">projenrcJsOptions</a></code> | <code>projen.javascript.ProjenrcOptions</code> | Options for .projenrc.js. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projenVersion">projenVersion</a></code> | <code>string</code> | Version of projen to install. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.pullRequestTemplate">pullRequestTemplate</a></code> | <code>boolean</code> | Include a GitHub pull request template. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.pullRequestTemplateContents">pullRequestTemplateContents</a></code> | <code>string[]</code> | The contents of the pull request template. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.release">release</a></code> | <code>boolean</code> | Add release management to this project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseToNpm">releaseToNpm</a></code> | <code>boolean</code> | Automatically release to npm when new versions are introduced. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflow">releaseWorkflow</a></code> | <code>boolean</code> | DEPRECATED: renamed to `release`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowBootstrapSteps">workflowBootstrapSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | Workflow steps to use in order to bootstrap this repo. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowGitIdentity">workflowGitIdentity</a></code> | <code>projen.github.GitIdentity</code> | The git identity to use in workflows. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowNodeVersion">workflowNodeVersion</a></code> | <code>string</code> | The node version to use in GitHub workflows. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowPackageCache">workflowPackageCache</a></code> | <code>boolean</code> | Enable Node.js package cache in GitHub workflows. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.disableTsconfig">disableTsconfig</a></code> | <code>boolean</code> | Do not generate a `tsconfig.json` file (used by jsii projects since tsconfig.json is generated by the jsii compiler). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.disableTsconfigDev">disableTsconfigDev</a></code> | <code>boolean</code> | Do not generate a `tsconfig.dev.json` file. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.docgen">docgen</a></code> | <code>boolean</code> | Docgen by Typedoc. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.docsDirectory">docsDirectory</a></code> | <code>string</code> | Docs directory. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.entrypointTypes">entrypointTypes</a></code> | <code>string</code> | The .d.ts file that includes the type declarations for this module. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.eslint">eslint</a></code> | <code>boolean</code> | Setup eslint. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.eslintOptions">eslintOptions</a></code> | <code>projen.javascript.EslintOptions</code> | Eslint options. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.libdir">libdir</a></code> | <code>string</code> | Typescript  artifacts output directory. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcTs">projenrcTs</a></code> | <code>boolean</code> | Use TypeScript for your projenrc file (`.projenrc.ts`). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcTsOptions">projenrcTsOptions</a></code> | <code>projen.typescript.ProjenrcOptions</code> | Options for .projenrc.ts. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleCode">sampleCode</a></code> | <code>boolean</code> | Generate one-time sample in `src/` and `test/` if there are no files there. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.srcdir">srcdir</a></code> | <code>string</code> | Typescript sources directory. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.testdir">testdir</a></code> | <code>string</code> | Jest tests directory. Tests files should be named `xxx.test.ts`. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfig">tsconfig</a></code> | <code>projen.javascript.TypescriptConfigOptions</code> | Custom TSConfig. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigDev">tsconfigDev</a></code> | <code>projen.javascript.TypescriptConfigOptions</code> | Custom tsconfig options for the development tsconfig.json file (used for testing). |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigDevFile">tsconfigDevFile</a></code> | <code>string</code> | The name of the development tsconfig.json file. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.typescriptVersion">typescriptVersion</a></code> | <code>string</code> | TypeScript version to use. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.addDefaultBundle">addDefaultBundle</a></code> | <code>boolean</code> | Add a default bundle to the project. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.eslintFixableAsWarn">eslintFixableAsWarn</a></code> | <code>boolean</code> | Change the default-set eslint auto-fixable rules to "warn" instead of "error". |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.esmSupportConfig">esmSupportConfig</a></code> | <code>boolean</code> | Configure for ESM. |
-| <code><a href="#tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleType">sampleType</a></code> | <code>string</code> | Which type of sample code to include, if `sampleCode` is true. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.name">name</a></code> | <code>string</code> | This is the name of your project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.commitGenerated">commitGenerated</a></code> | <code>boolean</code> | Whether to commit the managed files by default. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.gitIgnoreOptions">gitIgnoreOptions</a></code> | <code>projen.IgnoreFileOptions</code> | Configuration options for .gitignore file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.gitOptions">gitOptions</a></code> | <code>projen.GitOptions</code> | Configuration options for git. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.renovatebot">renovatebot</a></code> | <code>boolean</code> | Use renovatebot to handle dependency upgrades. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.renovatebotOptions">renovatebotOptions</a></code> | <code>projen.RenovatebotOptions</code> | Options for renovatebot. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.autoApproveOptions">autoApproveOptions</a></code> | <code>projen.github.AutoApproveOptions</code> | Enable and configure the 'auto approve' workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.autoMerge">autoMerge</a></code> | <code>boolean</code> | Enable automatic merging on GitHub. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.autoMergeOptions">autoMergeOptions</a></code> | <code>projen.github.AutoMergeOptions</code> | Configure options for automatic merging on GitHub. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.clobber">clobber</a></code> | <code>boolean</code> | Add a `clobber` task which resets the repo to origin. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.devContainer">devContainer</a></code> | <code>boolean</code> | Add a VSCode development environment (used for GitHub Codespaces). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.github">github</a></code> | <code>boolean</code> | Enable GitHub integration. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.githubOptions">githubOptions</a></code> | <code>projen.github.GitHubOptions</code> | Options for GitHub integration. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.gitpod">gitpod</a></code> | <code>boolean</code> | Add a Gitpod development environment. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.mergify">mergify</a></code> | <code>boolean</code> | Whether mergify should be enabled on this repository or not. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.mergifyOptions">mergifyOptions</a></code> | <code>projen.github.MergifyOptions</code> | Options for mergify. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projectType">projectType</a></code> | <code>projen.ProjectType</code> | Which type of project this is (library/app). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenCredentials">projenCredentials</a></code> | <code>projen.github.GithubCredentials</code> | Choose a method of providing GitHub API access for projen workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenTokenSecret">projenTokenSecret</a></code> | <code>string</code> | The name of a secret which includes a GitHub Personal Access Token to be used by projen workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.readme">readme</a></code> | <code>projen.SampleReadmeProps</code> | The README setup. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.stale">stale</a></code> | <code>boolean</code> | Auto-close of stale issues and pull request. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.staleOptions">staleOptions</a></code> | <code>projen.github.StaleOptions</code> | Auto-close stale issues and pull requests. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.vscode">vscode</a></code> | <code>boolean</code> | Enable VSCode integration. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.allowLibraryDependencies">allowLibraryDependencies</a></code> | <code>boolean</code> | Allow the project to include `peerDependencies` and `bundledDependencies`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.authorEmail">authorEmail</a></code> | <code>string</code> | Author's e-mail. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.authorName">authorName</a></code> | <code>string</code> | Author's name. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Is the author an organization. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.authorUrl">authorUrl</a></code> | <code>string</code> | Author's URL / Website. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.autoDetectBin">autoDetectBin</a></code> | <code>boolean</code> | Automatically add all executables under the `bin` directory to your `package.json` file under the `bin` section. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | Binary programs vended with your module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bugsEmail">bugsEmail</a></code> | <code>string</code> | The email address to which issues should be reported. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bugsUrl">bugsUrl</a></code> | <code>string</code> | The url to your project's issue tracker. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | List of dependencies to bundle into this module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.codeArtifactOptions">codeArtifactOptions</a></code> | <code>projen.javascript.CodeArtifactOptions</code> | Options for npm packages using AWS CodeArtifact. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | Runtime dependencies of this module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.description">description</a></code> | <code>string</code> | The description is just a string that helps people understand the purpose of the package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | Build dependencies for this module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.entrypoint">entrypoint</a></code> | <code>string</code> | Module entrypoint (`main` in `package.json`). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.homepage">homepage</a></code> | <code>string</code> | Package's Homepage / Website. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.keywords">keywords</a></code> | <code>string[]</code> | Keywords to include in `package.json`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.license">license</a></code> | <code>string</code> | License's SPDX identifier. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.licensed">licensed</a></code> | <code>boolean</code> | Indicates if a license should be added. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Minimum node.js version to require via `engines` (inclusive). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum Node.js version to require via package.json `engines` (inclusive). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmAccess">npmAccess</a></code> | <code>projen.javascript.NpmAccess</code> | Access level of the npm package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmRegistry">npmRegistry</a></code> | <code>string</code> | The host name of the npm registry to publish to. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmRegistryUrl">npmRegistryUrl</a></code> | <code>string</code> | The base URL of the npm package registry. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmTokenSecret">npmTokenSecret</a></code> | <code>string</code> | GitHub secret which contains the NPM token to use when publishing packages. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.packageManager">packageManager</a></code> | <code>projen.javascript.NodePackageManager</code> | The Node Package Manager used to execute scripts. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.packageName">packageName</a></code> | <code>string</code> | The "name" in package.json. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.peerDependencyOptions">peerDependencyOptions</a></code> | <code>projen.javascript.PeerDependencyOptions</code> | Options for `peerDeps`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | Peer dependencies for this module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.pnpmVersion">pnpmVersion</a></code> | <code>string</code> | The version of PNPM to use if using PNPM as a package manager. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.repository">repository</a></code> | <code>string</code> | The repository is the location where the actual code for your package lives. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.repositoryDirectory">repositoryDirectory</a></code> | <code>string</code> | If the package.json for your package is not in the root directory (for example if it is part of a monorepo), you can specify the directory in which it lives. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.scopedPackagesOptions">scopedPackagesOptions</a></code> | <code>projen.javascript.ScopedPackagesOptions[]</code> | Options for privately hosted scoped packages. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.scripts">scripts</a></code> | <code>{[ key: string ]: string}</code> | npm scripts to include. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.stability">stability</a></code> | <code>string</code> | Package's Stability. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.yarnBerryOptions">yarnBerryOptions</a></code> | <code>projen.javascript.YarnBerryOptions</code> | Options for Yarn Berry. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.jsiiReleaseVersion">jsiiReleaseVersion</a></code> | <code>string</code> | Version requirement of `publib` which is used to publish modules to npm. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.majorVersion">majorVersion</a></code> | <code>number</code> | Major version to release from the default branch. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.minMajorVersion">minMajorVersion</a></code> | <code>number</code> | Minimal Major version to release. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmDistTag">npmDistTag</a></code> | <code>string</code> | The npmDistTag to use when publishing from the default branch. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.postBuildSteps">postBuildSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | Steps to execute after build as part of the release workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.prerelease">prerelease</a></code> | <code>string</code> | Bump versions from the default branch as pre-releases (e.g. "beta", "alpha", "pre"). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.publishDryRun">publishDryRun</a></code> | <code>boolean</code> | Instead of actually publishing to package managers, just print the publishing command. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.publishTasks">publishTasks</a></code> | <code>boolean</code> | Define publishing tasks that can be executed manually as well as workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releasableCommits">releasableCommits</a></code> | <code>projen.ReleasableCommits</code> | Find commits that should be considered releasable Used to decide if a release is required. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseBranches">releaseBranches</a></code> | <code>{[ key: string ]: projen.release.BranchOptions}</code> | Defines additional release branches. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseEveryCommit">releaseEveryCommit</a></code> | <code>boolean</code> | Automatically release new versions every commit to one of branches in `releaseBranches`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseFailureIssue">releaseFailureIssue</a></code> | <code>boolean</code> | Create a github issue on every failed publishing task. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseFailureIssueLabel">releaseFailureIssueLabel</a></code> | <code>string</code> | The label to apply to issues indicating publish failures. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseSchedule">releaseSchedule</a></code> | <code>string</code> | CRON schedule to trigger new releases. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseTagPrefix">releaseTagPrefix</a></code> | <code>string</code> | Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseTrigger">releaseTrigger</a></code> | <code>projen.release.ReleaseTrigger</code> | The release trigger to use. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflowName">releaseWorkflowName</a></code> | <code>string</code> | The name of the default release workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflowSetupSteps">releaseWorkflowSetupSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | A set of workflow steps to execute in order to setup the workflow container. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.versionrcOptions">versionrcOptions</a></code> | <code>{[ key: string ]: any}</code> | Custom configuration used when creating changelog with standard-version package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowContainerImage">workflowContainerImage</a></code> | <code>string</code> | Container image to use for GitHub workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowRunsOn">workflowRunsOn</a></code> | <code>string[]</code> | Github Runner selection labels. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowRunsOnGroup">workflowRunsOnGroup</a></code> | <code>projen.GroupRunnerOptions</code> | Github Runner Group selection options. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.defaultReleaseBranch">defaultReleaseBranch</a></code> | <code>string</code> | The name of the main release branch. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | A directory which will contain build artifacts. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.autoApproveUpgrades">autoApproveUpgrades</a></code> | <code>boolean</code> | Automatically approve deps upgrade PRs, allowing them to be merged by mergify (if configued). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflow">buildWorkflow</a></code> | <code>boolean</code> | Define a GitHub workflow for building PRs. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflowTriggers">buildWorkflowTriggers</a></code> | <code>projen.github.workflows.Triggers</code> | Build workflow triggers. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bundlerOptions">bundlerOptions</a></code> | <code>projen.javascript.BundlerOptions</code> | Options for `Bundler`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with `@codeCovTokenSecret`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.codeCovTokenSecret">codeCovTokenSecret</a></code> | <code>string</code> | Define the secret name for a specified https://codecov.io/ token A secret is required to send coverage for private repositories. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.copyrightOwner">copyrightOwner</a></code> | <code>string</code> | License copyright owner. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.copyrightPeriod">copyrightPeriod</a></code> | <code>string</code> | The copyright years to put in the LICENSE file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.dependabot">dependabot</a></code> | <code>boolean</code> | Use dependabot to handle dependency upgrades. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.dependabotOptions">dependabotOptions</a></code> | <code>projen.github.DependabotOptions</code> | Options for dependabot. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.depsUpgrade">depsUpgrade</a></code> | <code>boolean</code> | Use tasks and github workflows to handle dependency upgrades. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.depsUpgradeOptions">depsUpgradeOptions</a></code> | <code>projen.javascript.UpgradeDependenciesOptions</code> | Options for `UpgradeDependencies`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.gitignore">gitignore</a></code> | <code>string[]</code> | Additional entries to .gitignore. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.jest">jest</a></code> | <code>boolean</code> | Setup jest unit tests. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.jestOptions">jestOptions</a></code> | <code>projen.javascript.JestOptions</code> | Jest options. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.mutableBuild">mutableBuild</a></code> | <code>boolean</code> | Automatically update files modified during builds to pull-request branches. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmignore">npmignore</a></code> | <code>string[]</code> | Additional entries to .npmignore. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmignoreEnabled">npmignoreEnabled</a></code> | <code>boolean</code> | Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmIgnoreOptions">npmIgnoreOptions</a></code> | <code>projen.IgnoreFileOptions</code> | Configuration options for .npmignore file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.package">package</a></code> | <code>boolean</code> | Defines a `package` task that will produce an npm tarball under the artifacts directory (e.g. `dist`). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.prettier">prettier</a></code> | <code>boolean</code> | Setup prettier. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.prettierOptions">prettierOptions</a></code> | <code>projen.javascript.PrettierOptions</code> | Prettier options. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenDevDependency">projenDevDependency</a></code> | <code>boolean</code> | Indicates of "projen" should be installed as a devDependency. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJs">projenrcJs</a></code> | <code>boolean</code> | Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable .projenrc.js generation. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJsOptions">projenrcJsOptions</a></code> | <code>projen.javascript.ProjenrcOptions</code> | Options for .projenrc.js. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenVersion">projenVersion</a></code> | <code>string</code> | Version of projen to install. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.pullRequestTemplate">pullRequestTemplate</a></code> | <code>boolean</code> | Include a GitHub pull request template. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.pullRequestTemplateContents">pullRequestTemplateContents</a></code> | <code>string[]</code> | The contents of the pull request template. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.release">release</a></code> | <code>boolean</code> | Add release management to this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseToNpm">releaseToNpm</a></code> | <code>boolean</code> | Automatically release to npm when new versions are introduced. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflow">releaseWorkflow</a></code> | <code>boolean</code> | DEPRECATED: renamed to `release`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowBootstrapSteps">workflowBootstrapSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | Workflow steps to use in order to bootstrap this repo. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowGitIdentity">workflowGitIdentity</a></code> | <code>projen.github.GitIdentity</code> | The git identity to use in workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowNodeVersion">workflowNodeVersion</a></code> | <code>string</code> | The node version to use in GitHub workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowPackageCache">workflowPackageCache</a></code> | <code>boolean</code> | Enable Node.js package cache in GitHub workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.disableTsconfig">disableTsconfig</a></code> | <code>boolean</code> | Do not generate a `tsconfig.json` file (used by jsii projects since tsconfig.json is generated by the jsii compiler). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.disableTsconfigDev">disableTsconfigDev</a></code> | <code>boolean</code> | Do not generate a `tsconfig.dev.json` file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.docgen">docgen</a></code> | <code>boolean</code> | Docgen by Typedoc. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.docsDirectory">docsDirectory</a></code> | <code>string</code> | Docs directory. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.entrypointTypes">entrypointTypes</a></code> | <code>string</code> | The .d.ts file that includes the type declarations for this module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.eslint">eslint</a></code> | <code>boolean</code> | Setup eslint. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.eslintOptions">eslintOptions</a></code> | <code>projen.javascript.EslintOptions</code> | Eslint options. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.libdir">libdir</a></code> | <code>string</code> | Typescript  artifacts output directory. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcTs">projenrcTs</a></code> | <code>boolean</code> | Use TypeScript for your projenrc file (`.projenrc.ts`). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcTsOptions">projenrcTsOptions</a></code> | <code>projen.typescript.ProjenrcOptions</code> | Options for .projenrc.ts. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleCode">sampleCode</a></code> | <code>boolean</code> | Generate one-time sample in `src/` and `test/` if there are no files there. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.srcdir">srcdir</a></code> | <code>string</code> | Typescript sources directory. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.testdir">testdir</a></code> | <code>string</code> | Jest tests directory. Tests files should be named `xxx.test.ts`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfig">tsconfig</a></code> | <code>projen.javascript.TypescriptConfigOptions</code> | Custom TSConfig. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigDev">tsconfigDev</a></code> | <code>projen.javascript.TypescriptConfigOptions</code> | Custom tsconfig options for the development tsconfig.json file (used for testing). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigDevFile">tsconfigDevFile</a></code> | <code>string</code> | The name of the development tsconfig.json file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.typescriptVersion">typescriptVersion</a></code> | <code>string</code> | TypeScript version to use. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.addDefaultBundle">addDefaultBundle</a></code> | <code>boolean</code> | Add a default bundle to the project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.eslintFixableAsWarn">eslintFixableAsWarn</a></code> | <code>boolean</code> | Change the default-set eslint auto-fixable rules to "warn" instead of "error". |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.esmSupportConfig">esmSupportConfig</a></code> | <code>boolean</code> | Configure for ESM. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleType">sampleType</a></code> | <code>string</code> | Which type of sample code to include, if `sampleCode` is true. |
 
 ---
 
-##### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -3165,7 +3165,7 @@ This is the name of your project.
 
 ---
 
-##### `commitGenerated`<sup>Optional</sup> <a name="commitGenerated" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.commitGenerated"></a>
+##### `commitGenerated`<sup>Optional</sup> <a name="commitGenerated" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.commitGenerated"></a>
 
 ```typescript
 public readonly commitGenerated: boolean;
@@ -3178,7 +3178,7 @@ Whether to commit the managed files by default.
 
 ---
 
-##### `gitIgnoreOptions`<sup>Optional</sup> <a name="gitIgnoreOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.gitIgnoreOptions"></a>
+##### `gitIgnoreOptions`<sup>Optional</sup> <a name="gitIgnoreOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.gitIgnoreOptions"></a>
 
 ```typescript
 public readonly gitIgnoreOptions: IgnoreFileOptions;
@@ -3190,7 +3190,7 @@ Configuration options for .gitignore file.
 
 ---
 
-##### `gitOptions`<sup>Optional</sup> <a name="gitOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.gitOptions"></a>
+##### `gitOptions`<sup>Optional</sup> <a name="gitOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.gitOptions"></a>
 
 ```typescript
 public readonly gitOptions: GitOptions;
@@ -3202,7 +3202,7 @@ Configuration options for git.
 
 ---
 
-##### `logging`<sup>Optional</sup> <a name="logging" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.logging"></a>
+##### `logging`<sup>Optional</sup> <a name="logging" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.logging"></a>
 
 ```typescript
 public readonly logging: LoggerOptions;
@@ -3215,7 +3215,7 @@ Configure logging options such as verbosity.
 
 ---
 
-##### `outdir`<sup>Optional</sup> <a name="outdir" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.outdir"></a>
+##### `outdir`<sup>Optional</sup> <a name="outdir" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.outdir"></a>
 
 ```typescript
 public readonly outdir: string;
@@ -3234,7 +3234,7 @@ subprojects.
 
 ---
 
-##### `parent`<sup>Optional</sup> <a name="parent" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.parent"></a>
+##### `parent`<sup>Optional</sup> <a name="parent" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.parent"></a>
 
 ```typescript
 public readonly parent: Project;
@@ -3246,7 +3246,7 @@ The parent project, if this project is part of a bigger project.
 
 ---
 
-##### `projenCommand`<sup>Optional</sup> <a name="projenCommand" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projenCommand"></a>
+##### `projenCommand`<sup>Optional</sup> <a name="projenCommand" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenCommand"></a>
 
 ```typescript
 public readonly projenCommand: string;
@@ -3261,7 +3261,7 @@ Can be used to customize in special environments.
 
 ---
 
-##### `projenrcJson`<sup>Optional</sup> <a name="projenrcJson" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJson"></a>
+##### `projenrcJson`<sup>Optional</sup> <a name="projenrcJson" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJson"></a>
 
 ```typescript
 public readonly projenrcJson: boolean;
@@ -3274,7 +3274,7 @@ Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .pr
 
 ---
 
-##### `projenrcJsonOptions`<sup>Optional</sup> <a name="projenrcJsonOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJsonOptions"></a>
+##### `projenrcJsonOptions`<sup>Optional</sup> <a name="projenrcJsonOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJsonOptions"></a>
 
 ```typescript
 public readonly projenrcJsonOptions: ProjenrcJsonOptions;
@@ -3287,7 +3287,7 @@ Options for .projenrc.json.
 
 ---
 
-##### `renovatebot`<sup>Optional</sup> <a name="renovatebot" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.renovatebot"></a>
+##### `renovatebot`<sup>Optional</sup> <a name="renovatebot" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.renovatebot"></a>
 
 ```typescript
 public readonly renovatebot: boolean;
@@ -3300,7 +3300,7 @@ Use renovatebot to handle dependency upgrades.
 
 ---
 
-##### `renovatebotOptions`<sup>Optional</sup> <a name="renovatebotOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.renovatebotOptions"></a>
+##### `renovatebotOptions`<sup>Optional</sup> <a name="renovatebotOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.renovatebotOptions"></a>
 
 ```typescript
 public readonly renovatebotOptions: RenovatebotOptions;
@@ -3313,7 +3313,7 @@ Options for renovatebot.
 
 ---
 
-##### `autoApproveOptions`<sup>Optional</sup> <a name="autoApproveOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.autoApproveOptions"></a>
+##### `autoApproveOptions`<sup>Optional</sup> <a name="autoApproveOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.autoApproveOptions"></a>
 
 ```typescript
 public readonly autoApproveOptions: AutoApproveOptions;
@@ -3326,7 +3326,7 @@ Enable and configure the 'auto approve' workflow.
 
 ---
 
-##### `autoMerge`<sup>Optional</sup> <a name="autoMerge" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.autoMerge"></a>
+##### `autoMerge`<sup>Optional</sup> <a name="autoMerge" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.autoMerge"></a>
 
 ```typescript
 public readonly autoMerge: boolean;
@@ -3342,7 +3342,7 @@ is set to false.
 
 ---
 
-##### `autoMergeOptions`<sup>Optional</sup> <a name="autoMergeOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.autoMergeOptions"></a>
+##### `autoMergeOptions`<sup>Optional</sup> <a name="autoMergeOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.autoMergeOptions"></a>
 
 ```typescript
 public readonly autoMergeOptions: AutoMergeOptions;
@@ -3358,7 +3358,7 @@ Has no effect if
 
 ---
 
-##### `clobber`<sup>Optional</sup> <a name="clobber" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.clobber"></a>
+##### `clobber`<sup>Optional</sup> <a name="clobber" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.clobber"></a>
 
 ```typescript
 public readonly clobber: boolean;
@@ -3371,7 +3371,7 @@ Add a `clobber` task which resets the repo to origin.
 
 ---
 
-##### `devContainer`<sup>Optional</sup> <a name="devContainer" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.devContainer"></a>
+##### `devContainer`<sup>Optional</sup> <a name="devContainer" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.devContainer"></a>
 
 ```typescript
 public readonly devContainer: boolean;
@@ -3384,7 +3384,7 @@ Add a VSCode development environment (used for GitHub Codespaces).
 
 ---
 
-##### `github`<sup>Optional</sup> <a name="github" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.github"></a>
+##### `github`<sup>Optional</sup> <a name="github" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.github"></a>
 
 ```typescript
 public readonly github: boolean;
@@ -3399,7 +3399,7 @@ Enabled by default for root projects. Disabled for non-root projects.
 
 ---
 
-##### `githubOptions`<sup>Optional</sup> <a name="githubOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.githubOptions"></a>
+##### `githubOptions`<sup>Optional</sup> <a name="githubOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.githubOptions"></a>
 
 ```typescript
 public readonly githubOptions: GitHubOptions;
@@ -3412,7 +3412,7 @@ Options for GitHub integration.
 
 ---
 
-##### `gitpod`<sup>Optional</sup> <a name="gitpod" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.gitpod"></a>
+##### `gitpod`<sup>Optional</sup> <a name="gitpod" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.gitpod"></a>
 
 ```typescript
 public readonly gitpod: boolean;
@@ -3425,7 +3425,7 @@ Add a Gitpod development environment.
 
 ---
 
-##### ~~`mergify`~~<sup>Optional</sup> <a name="mergify" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.mergify"></a>
+##### ~~`mergify`~~<sup>Optional</sup> <a name="mergify" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.mergify"></a>
 
 - *Deprecated:* use `githubOptions.mergify` instead
 
@@ -3440,7 +3440,7 @@ Whether mergify should be enabled on this repository or not.
 
 ---
 
-##### ~~`mergifyOptions`~~<sup>Optional</sup> <a name="mergifyOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.mergifyOptions"></a>
+##### ~~`mergifyOptions`~~<sup>Optional</sup> <a name="mergifyOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.mergifyOptions"></a>
 
 - *Deprecated:* use `githubOptions.mergifyOptions` instead
 
@@ -3455,7 +3455,7 @@ Options for mergify.
 
 ---
 
-##### ~~`projectType`~~<sup>Optional</sup> <a name="projectType" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projectType"></a>
+##### ~~`projectType`~~<sup>Optional</sup> <a name="projectType" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projectType"></a>
 
 - *Deprecated:* no longer supported at the base project level
 
@@ -3470,7 +3470,7 @@ Which type of project this is (library/app).
 
 ---
 
-##### `projenCredentials`<sup>Optional</sup> <a name="projenCredentials" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projenCredentials"></a>
+##### `projenCredentials`<sup>Optional</sup> <a name="projenCredentials" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenCredentials"></a>
 
 ```typescript
 public readonly projenCredentials: GithubCredentials;
@@ -3483,7 +3483,7 @@ Choose a method of providing GitHub API access for projen workflows.
 
 ---
 
-##### ~~`projenTokenSecret`~~<sup>Optional</sup> <a name="projenTokenSecret" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projenTokenSecret"></a>
+##### ~~`projenTokenSecret`~~<sup>Optional</sup> <a name="projenTokenSecret" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenTokenSecret"></a>
 
 - *Deprecated:* use `projenCredentials`
 
@@ -3501,7 +3501,7 @@ and `packages` scope.
 
 ---
 
-##### `readme`<sup>Optional</sup> <a name="readme" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.readme"></a>
+##### `readme`<sup>Optional</sup> <a name="readme" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.readme"></a>
 
 ```typescript
 public readonly readme: SampleReadmeProps;
@@ -3521,7 +3521,7 @@ The README setup.
 ```
 
 
-##### `stale`<sup>Optional</sup> <a name="stale" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.stale"></a>
+##### `stale`<sup>Optional</sup> <a name="stale" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.stale"></a>
 
 ```typescript
 public readonly stale: boolean;
@@ -3536,7 +3536,7 @@ See `staleOptions` for options.
 
 ---
 
-##### `staleOptions`<sup>Optional</sup> <a name="staleOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.staleOptions"></a>
+##### `staleOptions`<sup>Optional</sup> <a name="staleOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.staleOptions"></a>
 
 ```typescript
 public readonly staleOptions: StaleOptions;
@@ -3551,7 +3551,7 @@ To disable set `stale` to `false`.
 
 ---
 
-##### `vscode`<sup>Optional</sup> <a name="vscode" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.vscode"></a>
+##### `vscode`<sup>Optional</sup> <a name="vscode" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.vscode"></a>
 
 ```typescript
 public readonly vscode: boolean;
@@ -3566,7 +3566,7 @@ Enabled by default for root projects. Disabled for non-root projects.
 
 ---
 
-##### `allowLibraryDependencies`<sup>Optional</sup> <a name="allowLibraryDependencies" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.allowLibraryDependencies"></a>
+##### `allowLibraryDependencies`<sup>Optional</sup> <a name="allowLibraryDependencies" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.allowLibraryDependencies"></a>
 
 ```typescript
 public readonly allowLibraryDependencies: boolean;
@@ -3582,7 +3582,7 @@ for specifying these.
 
 ---
 
-##### `authorEmail`<sup>Optional</sup> <a name="authorEmail" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.authorEmail"></a>
+##### `authorEmail`<sup>Optional</sup> <a name="authorEmail" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.authorEmail"></a>
 
 ```typescript
 public readonly authorEmail: string;
@@ -3594,7 +3594,7 @@ Author's e-mail.
 
 ---
 
-##### `authorName`<sup>Optional</sup> <a name="authorName" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.authorName"></a>
+##### `authorName`<sup>Optional</sup> <a name="authorName" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.authorName"></a>
 
 ```typescript
 public readonly authorName: string;
@@ -3606,7 +3606,7 @@ Author's name.
 
 ---
 
-##### `authorOrganization`<sup>Optional</sup> <a name="authorOrganization" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.authorOrganization"></a>
+##### `authorOrganization`<sup>Optional</sup> <a name="authorOrganization" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.authorOrganization"></a>
 
 ```typescript
 public readonly authorOrganization: boolean;
@@ -3618,7 +3618,7 @@ Is the author an organization.
 
 ---
 
-##### `authorUrl`<sup>Optional</sup> <a name="authorUrl" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.authorUrl"></a>
+##### `authorUrl`<sup>Optional</sup> <a name="authorUrl" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.authorUrl"></a>
 
 ```typescript
 public readonly authorUrl: string;
@@ -3630,7 +3630,7 @@ Author's URL / Website.
 
 ---
 
-##### `autoDetectBin`<sup>Optional</sup> <a name="autoDetectBin" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.autoDetectBin"></a>
+##### `autoDetectBin`<sup>Optional</sup> <a name="autoDetectBin" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.autoDetectBin"></a>
 
 ```typescript
 public readonly autoDetectBin: boolean;
@@ -3643,7 +3643,7 @@ Automatically add all executables under the `bin` directory to your `package.jso
 
 ---
 
-##### `bin`<sup>Optional</sup> <a name="bin" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.bin"></a>
+##### `bin`<sup>Optional</sup> <a name="bin" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bin"></a>
 
 ```typescript
 public readonly bin: {[ key: string ]: string};
@@ -3659,7 +3659,7 @@ executable file under `bin` will automatically be added to this section.
 
 ---
 
-##### `bugsEmail`<sup>Optional</sup> <a name="bugsEmail" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.bugsEmail"></a>
+##### `bugsEmail`<sup>Optional</sup> <a name="bugsEmail" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bugsEmail"></a>
 
 ```typescript
 public readonly bugsEmail: string;
@@ -3671,7 +3671,7 @@ The email address to which issues should be reported.
 
 ---
 
-##### `bugsUrl`<sup>Optional</sup> <a name="bugsUrl" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.bugsUrl"></a>
+##### `bugsUrl`<sup>Optional</sup> <a name="bugsUrl" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bugsUrl"></a>
 
 ```typescript
 public readonly bugsUrl: string;
@@ -3683,7 +3683,7 @@ The url to your project's issue tracker.
 
 ---
 
-##### `bundledDeps`<sup>Optional</sup> <a name="bundledDeps" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.bundledDeps"></a>
+##### `bundledDeps`<sup>Optional</sup> <a name="bundledDeps" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bundledDeps"></a>
 
 ```typescript
 public readonly bundledDeps: string[];
@@ -3706,7 +3706,7 @@ this will be what you `package.json` will eventually include.
 
 ---
 
-##### `codeArtifactOptions`<sup>Optional</sup> <a name="codeArtifactOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.codeArtifactOptions"></a>
+##### `codeArtifactOptions`<sup>Optional</sup> <a name="codeArtifactOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.codeArtifactOptions"></a>
 
 ```typescript
 public readonly codeArtifactOptions: CodeArtifactOptions;
@@ -3721,7 +3721,7 @@ This is required if publishing packages to, or installing scoped packages from A
 
 ---
 
-##### `deps`<sup>Optional</sup> <a name="deps" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.deps"></a>
+##### `deps`<sup>Optional</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.deps"></a>
 
 ```typescript
 public readonly deps: string[];
@@ -3748,7 +3748,7 @@ this will be what you `package.json` will eventually include.
 ```
 
 
-##### `description`<sup>Optional</sup> <a name="description" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.description"></a>
+##### `description`<sup>Optional</sup> <a name="description" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.description"></a>
 
 ```typescript
 public readonly description: string;
@@ -3763,7 +3763,7 @@ See https://classic.yarnpkg.com/en/docs/package-json/#toc-description
 
 ---
 
-##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.devDeps"></a>
+##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.devDeps"></a>
 
 ```typescript
 public readonly devDeps: string[];
@@ -3794,7 +3794,7 @@ this will be what you `package.json` will eventually include.
 ```
 
 
-##### `entrypoint`<sup>Optional</sup> <a name="entrypoint" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.entrypoint"></a>
+##### `entrypoint`<sup>Optional</sup> <a name="entrypoint" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.entrypoint"></a>
 
 ```typescript
 public readonly entrypoint: string;
@@ -3809,7 +3809,7 @@ Set to an empty string to not include `main` in your package.json
 
 ---
 
-##### `homepage`<sup>Optional</sup> <a name="homepage" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.homepage"></a>
+##### `homepage`<sup>Optional</sup> <a name="homepage" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.homepage"></a>
 
 ```typescript
 public readonly homepage: string;
@@ -3821,7 +3821,7 @@ Package's Homepage / Website.
 
 ---
 
-##### `keywords`<sup>Optional</sup> <a name="keywords" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.keywords"></a>
+##### `keywords`<sup>Optional</sup> <a name="keywords" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.keywords"></a>
 
 ```typescript
 public readonly keywords: string[];
@@ -3833,7 +3833,7 @@ Keywords to include in `package.json`.
 
 ---
 
-##### `license`<sup>Optional</sup> <a name="license" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.license"></a>
+##### `license`<sup>Optional</sup> <a name="license" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.license"></a>
 
 ```typescript
 public readonly license: string;
@@ -3849,7 +3849,7 @@ Use the `licensed` option if you want to no license to be specified.
 
 ---
 
-##### `licensed`<sup>Optional</sup> <a name="licensed" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.licensed"></a>
+##### `licensed`<sup>Optional</sup> <a name="licensed" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.licensed"></a>
 
 ```typescript
 public readonly licensed: boolean;
@@ -3862,7 +3862,7 @@ Indicates if a license should be added.
 
 ---
 
-##### `maxNodeVersion`<sup>Optional</sup> <a name="maxNodeVersion" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.maxNodeVersion"></a>
+##### `maxNodeVersion`<sup>Optional</sup> <a name="maxNodeVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.maxNodeVersion"></a>
 
 ```typescript
 public readonly maxNodeVersion: string;
@@ -3875,7 +3875,7 @@ Minimum node.js version to require via `engines` (inclusive).
 
 ---
 
-##### `minNodeVersion`<sup>Optional</sup> <a name="minNodeVersion" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.minNodeVersion"></a>
+##### `minNodeVersion`<sup>Optional</sup> <a name="minNodeVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.minNodeVersion"></a>
 
 ```typescript
 public readonly minNodeVersion: string;
@@ -3888,7 +3888,7 @@ Minimum Node.js version to require via package.json `engines` (inclusive).
 
 ---
 
-##### `npmAccess`<sup>Optional</sup> <a name="npmAccess" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.npmAccess"></a>
+##### `npmAccess`<sup>Optional</sup> <a name="npmAccess" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmAccess"></a>
 
 ```typescript
 public readonly npmAccess: NpmAccess;
@@ -3901,7 +3901,7 @@ Access level of the npm package.
 
 ---
 
-##### ~~`npmRegistry`~~<sup>Optional</sup> <a name="npmRegistry" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.npmRegistry"></a>
+##### ~~`npmRegistry`~~<sup>Optional</sup> <a name="npmRegistry" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmRegistry"></a>
 
 - *Deprecated:* use `npmRegistryUrl` instead
 
@@ -3917,7 +3917,7 @@ Cannot be set together with `npmRegistryUrl`.
 
 ---
 
-##### `npmRegistryUrl`<sup>Optional</sup> <a name="npmRegistryUrl" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.npmRegistryUrl"></a>
+##### `npmRegistryUrl`<sup>Optional</sup> <a name="npmRegistryUrl" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmRegistryUrl"></a>
 
 ```typescript
 public readonly npmRegistryUrl: string;
@@ -3932,7 +3932,7 @@ Must be a URL (e.g. start with "https://" or "http://")
 
 ---
 
-##### `npmTokenSecret`<sup>Optional</sup> <a name="npmTokenSecret" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.npmTokenSecret"></a>
+##### `npmTokenSecret`<sup>Optional</sup> <a name="npmTokenSecret" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmTokenSecret"></a>
 
 ```typescript
 public readonly npmTokenSecret: string;
@@ -3945,7 +3945,7 @@ GitHub secret which contains the NPM token to use when publishing packages.
 
 ---
 
-##### `packageManager`<sup>Optional</sup> <a name="packageManager" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.packageManager"></a>
+##### `packageManager`<sup>Optional</sup> <a name="packageManager" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.packageManager"></a>
 
 ```typescript
 public readonly packageManager: NodePackageManager;
@@ -3958,7 +3958,7 @@ The Node Package Manager used to execute scripts.
 
 ---
 
-##### `packageName`<sup>Optional</sup> <a name="packageName" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.packageName"></a>
+##### `packageName`<sup>Optional</sup> <a name="packageName" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.packageName"></a>
 
 ```typescript
 public readonly packageName: string;
@@ -3971,7 +3971,7 @@ The "name" in package.json.
 
 ---
 
-##### `peerDependencyOptions`<sup>Optional</sup> <a name="peerDependencyOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.peerDependencyOptions"></a>
+##### `peerDependencyOptions`<sup>Optional</sup> <a name="peerDependencyOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.peerDependencyOptions"></a>
 
 ```typescript
 public readonly peerDependencyOptions: PeerDependencyOptions;
@@ -3983,7 +3983,7 @@ Options for `peerDeps`.
 
 ---
 
-##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.peerDeps"></a>
+##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.peerDeps"></a>
 
 ```typescript
 public readonly peerDeps: string[];
@@ -4010,7 +4010,7 @@ test your module against the lowest peer version required.
 
 ---
 
-##### `pnpmVersion`<sup>Optional</sup> <a name="pnpmVersion" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.pnpmVersion"></a>
+##### `pnpmVersion`<sup>Optional</sup> <a name="pnpmVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.pnpmVersion"></a>
 
 ```typescript
 public readonly pnpmVersion: string;
@@ -4023,7 +4023,7 @@ The version of PNPM to use if using PNPM as a package manager.
 
 ---
 
-##### `repository`<sup>Optional</sup> <a name="repository" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.repository"></a>
+##### `repository`<sup>Optional</sup> <a name="repository" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.repository"></a>
 
 ```typescript
 public readonly repository: string;
@@ -4037,7 +4037,7 @@ See https://classic.yarnpkg.com/en/docs/package-json/#toc-repository
 
 ---
 
-##### `repositoryDirectory`<sup>Optional</sup> <a name="repositoryDirectory" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.repositoryDirectory"></a>
+##### `repositoryDirectory`<sup>Optional</sup> <a name="repositoryDirectory" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.repositoryDirectory"></a>
 
 ```typescript
 public readonly repositoryDirectory: string;
@@ -4049,7 +4049,7 @@ If the package.json for your package is not in the root directory (for example i
 
 ---
 
-##### `scopedPackagesOptions`<sup>Optional</sup> <a name="scopedPackagesOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.scopedPackagesOptions"></a>
+##### `scopedPackagesOptions`<sup>Optional</sup> <a name="scopedPackagesOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.scopedPackagesOptions"></a>
 
 ```typescript
 public readonly scopedPackagesOptions: ScopedPackagesOptions[];
@@ -4062,7 +4062,7 @@ Options for privately hosted scoped packages.
 
 ---
 
-##### ~~`scripts`~~<sup>Optional</sup> <a name="scripts" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.scripts"></a>
+##### ~~`scripts`~~<sup>Optional</sup> <a name="scripts" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.scripts"></a>
 
 - *Deprecated:* use `project.addTask()` or `package.setScript()`
 
@@ -4081,7 +4081,7 @@ Also adds the script as a task.
 
 ---
 
-##### `stability`<sup>Optional</sup> <a name="stability" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.stability"></a>
+##### `stability`<sup>Optional</sup> <a name="stability" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.stability"></a>
 
 ```typescript
 public readonly stability: string;
@@ -4093,7 +4093,7 @@ Package's Stability.
 
 ---
 
-##### `yarnBerryOptions`<sup>Optional</sup> <a name="yarnBerryOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.yarnBerryOptions"></a>
+##### `yarnBerryOptions`<sup>Optional</sup> <a name="yarnBerryOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.yarnBerryOptions"></a>
 
 ```typescript
 public readonly yarnBerryOptions: YarnBerryOptions;
@@ -4106,7 +4106,7 @@ Options for Yarn Berry.
 
 ---
 
-##### `jsiiReleaseVersion`<sup>Optional</sup> <a name="jsiiReleaseVersion" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.jsiiReleaseVersion"></a>
+##### `jsiiReleaseVersion`<sup>Optional</sup> <a name="jsiiReleaseVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.jsiiReleaseVersion"></a>
 
 ```typescript
 public readonly jsiiReleaseVersion: string;
@@ -4119,7 +4119,7 @@ Version requirement of `publib` which is used to publish modules to npm.
 
 ---
 
-##### `majorVersion`<sup>Optional</sup> <a name="majorVersion" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.majorVersion"></a>
+##### `majorVersion`<sup>Optional</sup> <a name="majorVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.majorVersion"></a>
 
 ```typescript
 public readonly majorVersion: number;
@@ -4135,7 +4135,7 @@ If not specified, we bump the global latest version.
 
 ---
 
-##### `minMajorVersion`<sup>Optional</sup> <a name="minMajorVersion" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.minMajorVersion"></a>
+##### `minMajorVersion`<sup>Optional</sup> <a name="minMajorVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.minMajorVersion"></a>
 
 ```typescript
 public readonly minMajorVersion: number;
@@ -4153,7 +4153,7 @@ Can not be set together with `majorVersion`.
 
 ---
 
-##### `npmDistTag`<sup>Optional</sup> <a name="npmDistTag" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.npmDistTag"></a>
+##### `npmDistTag`<sup>Optional</sup> <a name="npmDistTag" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmDistTag"></a>
 
 ```typescript
 public readonly npmDistTag: string;
@@ -4169,7 +4169,7 @@ for each branch.
 
 ---
 
-##### `postBuildSteps`<sup>Optional</sup> <a name="postBuildSteps" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.postBuildSteps"></a>
+##### `postBuildSteps`<sup>Optional</sup> <a name="postBuildSteps" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.postBuildSteps"></a>
 
 ```typescript
 public readonly postBuildSteps: JobStep[];
@@ -4182,7 +4182,7 @@ Steps to execute after build as part of the release workflow.
 
 ---
 
-##### `prerelease`<sup>Optional</sup> <a name="prerelease" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.prerelease"></a>
+##### `prerelease`<sup>Optional</sup> <a name="prerelease" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.prerelease"></a>
 
 ```typescript
 public readonly prerelease: string;
@@ -4195,7 +4195,7 @@ Bump versions from the default branch as pre-releases (e.g. "beta", "alpha", "pr
 
 ---
 
-##### `publishDryRun`<sup>Optional</sup> <a name="publishDryRun" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.publishDryRun"></a>
+##### `publishDryRun`<sup>Optional</sup> <a name="publishDryRun" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.publishDryRun"></a>
 
 ```typescript
 public readonly publishDryRun: boolean;
@@ -4208,7 +4208,7 @@ Instead of actually publishing to package managers, just print the publishing co
 
 ---
 
-##### `publishTasks`<sup>Optional</sup> <a name="publishTasks" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.publishTasks"></a>
+##### `publishTasks`<sup>Optional</sup> <a name="publishTasks" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.publishTasks"></a>
 
 ```typescript
 public readonly publishTasks: boolean;
@@ -4224,7 +4224,7 @@ in order to create a publishing task for each publishing activity.
 
 ---
 
-##### `releasableCommits`<sup>Optional</sup> <a name="releasableCommits" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releasableCommits"></a>
+##### `releasableCommits`<sup>Optional</sup> <a name="releasableCommits" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releasableCommits"></a>
 
 ```typescript
 public readonly releasableCommits: ReleasableCommits;
@@ -4237,7 +4237,7 @@ Find commits that should be considered releasable Used to decide if a release is
 
 ---
 
-##### `releaseBranches`<sup>Optional</sup> <a name="releaseBranches" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseBranches"></a>
+##### `releaseBranches`<sup>Optional</sup> <a name="releaseBranches" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseBranches"></a>
 
 ```typescript
 public readonly releaseBranches: {[ key: string ]: BranchOptions};
@@ -4257,7 +4257,7 @@ be provided for the default branch.
 
 ---
 
-##### ~~`releaseEveryCommit`~~<sup>Optional</sup> <a name="releaseEveryCommit" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseEveryCommit"></a>
+##### ~~`releaseEveryCommit`~~<sup>Optional</sup> <a name="releaseEveryCommit" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseEveryCommit"></a>
 
 - *Deprecated:* Use `releaseTrigger: ReleaseTrigger.continuous()` instead
 
@@ -4272,7 +4272,7 @@ Automatically release new versions every commit to one of branches in `releaseBr
 
 ---
 
-##### `releaseFailureIssue`<sup>Optional</sup> <a name="releaseFailureIssue" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseFailureIssue"></a>
+##### `releaseFailureIssue`<sup>Optional</sup> <a name="releaseFailureIssue" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseFailureIssue"></a>
 
 ```typescript
 public readonly releaseFailureIssue: boolean;
@@ -4285,7 +4285,7 @@ Create a github issue on every failed publishing task.
 
 ---
 
-##### `releaseFailureIssueLabel`<sup>Optional</sup> <a name="releaseFailureIssueLabel" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseFailureIssueLabel"></a>
+##### `releaseFailureIssueLabel`<sup>Optional</sup> <a name="releaseFailureIssueLabel" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseFailureIssueLabel"></a>
 
 ```typescript
 public readonly releaseFailureIssueLabel: string;
@@ -4300,7 +4300,7 @@ Only applies if `releaseFailureIssue` is true.
 
 ---
 
-##### ~~`releaseSchedule`~~<sup>Optional</sup> <a name="releaseSchedule" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseSchedule"></a>
+##### ~~`releaseSchedule`~~<sup>Optional</sup> <a name="releaseSchedule" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseSchedule"></a>
 
 - *Deprecated:* Use `releaseTrigger: ReleaseTrigger.scheduled()` instead
 
@@ -4315,7 +4315,7 @@ CRON schedule to trigger new releases.
 
 ---
 
-##### `releaseTagPrefix`<sup>Optional</sup> <a name="releaseTagPrefix" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseTagPrefix"></a>
+##### `releaseTagPrefix`<sup>Optional</sup> <a name="releaseTagPrefix" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseTagPrefix"></a>
 
 ```typescript
 public readonly releaseTagPrefix: string;
@@ -4333,7 +4333,7 @@ with the new prefix.
 
 ---
 
-##### `releaseTrigger`<sup>Optional</sup> <a name="releaseTrigger" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseTrigger"></a>
+##### `releaseTrigger`<sup>Optional</sup> <a name="releaseTrigger" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseTrigger"></a>
 
 ```typescript
 public readonly releaseTrigger: ReleaseTrigger;
@@ -4346,7 +4346,7 @@ The release trigger to use.
 
 ---
 
-##### `releaseWorkflowName`<sup>Optional</sup> <a name="releaseWorkflowName" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflowName"></a>
+##### `releaseWorkflowName`<sup>Optional</sup> <a name="releaseWorkflowName" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflowName"></a>
 
 ```typescript
 public readonly releaseWorkflowName: string;
@@ -4359,7 +4359,7 @@ The name of the default release workflow.
 
 ---
 
-##### `releaseWorkflowSetupSteps`<sup>Optional</sup> <a name="releaseWorkflowSetupSteps" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflowSetupSteps"></a>
+##### `releaseWorkflowSetupSteps`<sup>Optional</sup> <a name="releaseWorkflowSetupSteps" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflowSetupSteps"></a>
 
 ```typescript
 public readonly releaseWorkflowSetupSteps: JobStep[];
@@ -4371,7 +4371,7 @@ A set of workflow steps to execute in order to setup the workflow container.
 
 ---
 
-##### `versionrcOptions`<sup>Optional</sup> <a name="versionrcOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.versionrcOptions"></a>
+##### `versionrcOptions`<sup>Optional</sup> <a name="versionrcOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.versionrcOptions"></a>
 
 ```typescript
 public readonly versionrcOptions: {[ key: string ]: any};
@@ -4386,7 +4386,7 @@ Given values either append to default configuration or overwrite values in it.
 
 ---
 
-##### `workflowContainerImage`<sup>Optional</sup> <a name="workflowContainerImage" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowContainerImage"></a>
+##### `workflowContainerImage`<sup>Optional</sup> <a name="workflowContainerImage" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowContainerImage"></a>
 
 ```typescript
 public readonly workflowContainerImage: string;
@@ -4399,7 +4399,7 @@ Container image to use for GitHub workflows.
 
 ---
 
-##### `workflowRunsOn`<sup>Optional</sup> <a name="workflowRunsOn" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowRunsOn"></a>
+##### `workflowRunsOn`<sup>Optional</sup> <a name="workflowRunsOn" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowRunsOn"></a>
 
 ```typescript
 public readonly workflowRunsOn: string[];
@@ -4412,7 +4412,7 @@ Github Runner selection labels.
 
 ---
 
-##### `workflowRunsOnGroup`<sup>Optional</sup> <a name="workflowRunsOnGroup" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowRunsOnGroup"></a>
+##### `workflowRunsOnGroup`<sup>Optional</sup> <a name="workflowRunsOnGroup" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowRunsOnGroup"></a>
 
 ```typescript
 public readonly workflowRunsOnGroup: GroupRunnerOptions;
@@ -4424,7 +4424,7 @@ Github Runner Group selection options.
 
 ---
 
-##### `defaultReleaseBranch`<sup>Required</sup> <a name="defaultReleaseBranch" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.defaultReleaseBranch"></a>
+##### `defaultReleaseBranch`<sup>Required</sup> <a name="defaultReleaseBranch" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.defaultReleaseBranch"></a>
 
 ```typescript
 public readonly defaultReleaseBranch: string;
@@ -4437,7 +4437,7 @@ The name of the main release branch.
 
 ---
 
-##### `artifactsDirectory`<sup>Optional</sup> <a name="artifactsDirectory" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.artifactsDirectory"></a>
+##### `artifactsDirectory`<sup>Optional</sup> <a name="artifactsDirectory" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.artifactsDirectory"></a>
 
 ```typescript
 public readonly artifactsDirectory: string;
@@ -4450,7 +4450,7 @@ A directory which will contain build artifacts.
 
 ---
 
-##### `autoApproveUpgrades`<sup>Optional</sup> <a name="autoApproveUpgrades" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.autoApproveUpgrades"></a>
+##### `autoApproveUpgrades`<sup>Optional</sup> <a name="autoApproveUpgrades" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.autoApproveUpgrades"></a>
 
 ```typescript
 public readonly autoApproveUpgrades: boolean;
@@ -4465,7 +4465,7 @@ Throw if set to true but `autoApproveOptions` are not defined.
 
 ---
 
-##### `buildWorkflow`<sup>Optional</sup> <a name="buildWorkflow" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflow"></a>
+##### `buildWorkflow`<sup>Optional</sup> <a name="buildWorkflow" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflow"></a>
 
 ```typescript
 public readonly buildWorkflow: boolean;
@@ -4478,7 +4478,7 @@ Define a GitHub workflow for building PRs.
 
 ---
 
-##### `buildWorkflowTriggers`<sup>Optional</sup> <a name="buildWorkflowTriggers" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflowTriggers"></a>
+##### `buildWorkflowTriggers`<sup>Optional</sup> <a name="buildWorkflowTriggers" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflowTriggers"></a>
 
 ```typescript
 public readonly buildWorkflowTriggers: Triggers;
@@ -4491,7 +4491,7 @@ Build workflow triggers.
 
 ---
 
-##### `bundlerOptions`<sup>Optional</sup> <a name="bundlerOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.bundlerOptions"></a>
+##### `bundlerOptions`<sup>Optional</sup> <a name="bundlerOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bundlerOptions"></a>
 
 ```typescript
 public readonly bundlerOptions: BundlerOptions;
@@ -4503,7 +4503,7 @@ Options for `Bundler`.
 
 ---
 
-##### `codeCov`<sup>Optional</sup> <a name="codeCov" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.codeCov"></a>
+##### `codeCov`<sup>Optional</sup> <a name="codeCov" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.codeCov"></a>
 
 ```typescript
 public readonly codeCov: boolean;
@@ -4516,7 +4516,7 @@ Define a GitHub workflow step for sending code coverage metrics to https://codec
 
 ---
 
-##### `codeCovTokenSecret`<sup>Optional</sup> <a name="codeCovTokenSecret" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.codeCovTokenSecret"></a>
+##### `codeCovTokenSecret`<sup>Optional</sup> <a name="codeCovTokenSecret" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.codeCovTokenSecret"></a>
 
 ```typescript
 public readonly codeCovTokenSecret: string;
@@ -4529,7 +4529,7 @@ Define the secret name for a specified https://codecov.io/ token A secret is req
 
 ---
 
-##### `copyrightOwner`<sup>Optional</sup> <a name="copyrightOwner" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.copyrightOwner"></a>
+##### `copyrightOwner`<sup>Optional</sup> <a name="copyrightOwner" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.copyrightOwner"></a>
 
 ```typescript
 public readonly copyrightOwner: string;
@@ -4542,7 +4542,7 @@ License copyright owner.
 
 ---
 
-##### `copyrightPeriod`<sup>Optional</sup> <a name="copyrightPeriod" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.copyrightPeriod"></a>
+##### `copyrightPeriod`<sup>Optional</sup> <a name="copyrightPeriod" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.copyrightPeriod"></a>
 
 ```typescript
 public readonly copyrightPeriod: string;
@@ -4555,7 +4555,7 @@ The copyright years to put in the LICENSE file.
 
 ---
 
-##### `dependabot`<sup>Optional</sup> <a name="dependabot" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.dependabot"></a>
+##### `dependabot`<sup>Optional</sup> <a name="dependabot" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.dependabot"></a>
 
 ```typescript
 public readonly dependabot: boolean;
@@ -4570,7 +4570,7 @@ Cannot be used in conjunction with `depsUpgrade`.
 
 ---
 
-##### `dependabotOptions`<sup>Optional</sup> <a name="dependabotOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.dependabotOptions"></a>
+##### `dependabotOptions`<sup>Optional</sup> <a name="dependabotOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.dependabotOptions"></a>
 
 ```typescript
 public readonly dependabotOptions: DependabotOptions;
@@ -4583,7 +4583,7 @@ Options for dependabot.
 
 ---
 
-##### `depsUpgrade`<sup>Optional</sup> <a name="depsUpgrade" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.depsUpgrade"></a>
+##### `depsUpgrade`<sup>Optional</sup> <a name="depsUpgrade" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.depsUpgrade"></a>
 
 ```typescript
 public readonly depsUpgrade: boolean;
@@ -4598,7 +4598,7 @@ Cannot be used in conjunction with `dependabot`.
 
 ---
 
-##### `depsUpgradeOptions`<sup>Optional</sup> <a name="depsUpgradeOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.depsUpgradeOptions"></a>
+##### `depsUpgradeOptions`<sup>Optional</sup> <a name="depsUpgradeOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.depsUpgradeOptions"></a>
 
 ```typescript
 public readonly depsUpgradeOptions: UpgradeDependenciesOptions;
@@ -4611,7 +4611,7 @@ Options for `UpgradeDependencies`.
 
 ---
 
-##### `gitignore`<sup>Optional</sup> <a name="gitignore" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.gitignore"></a>
+##### `gitignore`<sup>Optional</sup> <a name="gitignore" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.gitignore"></a>
 
 ```typescript
 public readonly gitignore: string[];
@@ -4623,7 +4623,7 @@ Additional entries to .gitignore.
 
 ---
 
-##### `jest`<sup>Optional</sup> <a name="jest" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.jest"></a>
+##### `jest`<sup>Optional</sup> <a name="jest" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.jest"></a>
 
 ```typescript
 public readonly jest: boolean;
@@ -4636,7 +4636,7 @@ Setup jest unit tests.
 
 ---
 
-##### `jestOptions`<sup>Optional</sup> <a name="jestOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.jestOptions"></a>
+##### `jestOptions`<sup>Optional</sup> <a name="jestOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.jestOptions"></a>
 
 ```typescript
 public readonly jestOptions: JestOptions;
@@ -4649,7 +4649,7 @@ Jest options.
 
 ---
 
-##### `mutableBuild`<sup>Optional</sup> <a name="mutableBuild" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.mutableBuild"></a>
+##### `mutableBuild`<sup>Optional</sup> <a name="mutableBuild" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.mutableBuild"></a>
 
 ```typescript
 public readonly mutableBuild: boolean;
@@ -4668,7 +4668,7 @@ Implies that PR builds do not have anti-tamper checks.
 
 ---
 
-##### ~~`npmignore`~~<sup>Optional</sup> <a name="npmignore" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.npmignore"></a>
+##### ~~`npmignore`~~<sup>Optional</sup> <a name="npmignore" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmignore"></a>
 
 - *Deprecated:* - use `project.addPackageIgnore`
 
@@ -4682,7 +4682,7 @@ Additional entries to .npmignore.
 
 ---
 
-##### `npmignoreEnabled`<sup>Optional</sup> <a name="npmignoreEnabled" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.npmignoreEnabled"></a>
+##### `npmignoreEnabled`<sup>Optional</sup> <a name="npmignoreEnabled" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmignoreEnabled"></a>
 
 ```typescript
 public readonly npmignoreEnabled: boolean;
@@ -4695,7 +4695,7 @@ Defines an .npmignore file. Normally this is only needed for libraries that are 
 
 ---
 
-##### `npmIgnoreOptions`<sup>Optional</sup> <a name="npmIgnoreOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.npmIgnoreOptions"></a>
+##### `npmIgnoreOptions`<sup>Optional</sup> <a name="npmIgnoreOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmIgnoreOptions"></a>
 
 ```typescript
 public readonly npmIgnoreOptions: IgnoreFileOptions;
@@ -4707,7 +4707,7 @@ Configuration options for .npmignore file.
 
 ---
 
-##### `package`<sup>Optional</sup> <a name="package" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.package"></a>
+##### `package`<sup>Optional</sup> <a name="package" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.package"></a>
 
 ```typescript
 public readonly package: boolean;
@@ -4720,7 +4720,7 @@ Defines a `package` task that will produce an npm tarball under the artifacts di
 
 ---
 
-##### `prettier`<sup>Optional</sup> <a name="prettier" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.prettier"></a>
+##### `prettier`<sup>Optional</sup> <a name="prettier" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.prettier"></a>
 
 ```typescript
 public readonly prettier: boolean;
@@ -4733,7 +4733,7 @@ Setup prettier.
 
 ---
 
-##### `prettierOptions`<sup>Optional</sup> <a name="prettierOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.prettierOptions"></a>
+##### `prettierOptions`<sup>Optional</sup> <a name="prettierOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.prettierOptions"></a>
 
 ```typescript
 public readonly prettierOptions: PrettierOptions;
@@ -4746,7 +4746,7 @@ Prettier options.
 
 ---
 
-##### `projenDevDependency`<sup>Optional</sup> <a name="projenDevDependency" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projenDevDependency"></a>
+##### `projenDevDependency`<sup>Optional</sup> <a name="projenDevDependency" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenDevDependency"></a>
 
 ```typescript
 public readonly projenDevDependency: boolean;
@@ -4759,7 +4759,7 @@ Indicates of "projen" should be installed as a devDependency.
 
 ---
 
-##### `projenrcJs`<sup>Optional</sup> <a name="projenrcJs" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJs"></a>
+##### `projenrcJs`<sup>Optional</sup> <a name="projenrcJs" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJs"></a>
 
 ```typescript
 public readonly projenrcJs: boolean;
@@ -4772,7 +4772,7 @@ Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable
 
 ---
 
-##### `projenrcJsOptions`<sup>Optional</sup> <a name="projenrcJsOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJsOptions"></a>
+##### `projenrcJsOptions`<sup>Optional</sup> <a name="projenrcJsOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcJsOptions"></a>
 
 ```typescript
 public readonly projenrcJsOptions: ProjenrcOptions;
@@ -4785,7 +4785,7 @@ Options for .projenrc.js.
 
 ---
 
-##### `projenVersion`<sup>Optional</sup> <a name="projenVersion" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projenVersion"></a>
+##### `projenVersion`<sup>Optional</sup> <a name="projenVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenVersion"></a>
 
 ```typescript
 public readonly projenVersion: string;
@@ -4798,7 +4798,7 @@ Version of projen to install.
 
 ---
 
-##### `pullRequestTemplate`<sup>Optional</sup> <a name="pullRequestTemplate" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.pullRequestTemplate"></a>
+##### `pullRequestTemplate`<sup>Optional</sup> <a name="pullRequestTemplate" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.pullRequestTemplate"></a>
 
 ```typescript
 public readonly pullRequestTemplate: boolean;
@@ -4811,7 +4811,7 @@ Include a GitHub pull request template.
 
 ---
 
-##### `pullRequestTemplateContents`<sup>Optional</sup> <a name="pullRequestTemplateContents" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.pullRequestTemplateContents"></a>
+##### `pullRequestTemplateContents`<sup>Optional</sup> <a name="pullRequestTemplateContents" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.pullRequestTemplateContents"></a>
 
 ```typescript
 public readonly pullRequestTemplateContents: string[];
@@ -4824,7 +4824,7 @@ The contents of the pull request template.
 
 ---
 
-##### `release`<sup>Optional</sup> <a name="release" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.release"></a>
+##### `release`<sup>Optional</sup> <a name="release" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.release"></a>
 
 ```typescript
 public readonly release: boolean;
@@ -4837,7 +4837,7 @@ Add release management to this project.
 
 ---
 
-##### `releaseToNpm`<sup>Optional</sup> <a name="releaseToNpm" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseToNpm"></a>
+##### `releaseToNpm`<sup>Optional</sup> <a name="releaseToNpm" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseToNpm"></a>
 
 ```typescript
 public readonly releaseToNpm: boolean;
@@ -4850,7 +4850,7 @@ Automatically release to npm when new versions are introduced.
 
 ---
 
-##### ~~`releaseWorkflow`~~<sup>Optional</sup> <a name="releaseWorkflow" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflow"></a>
+##### ~~`releaseWorkflow`~~<sup>Optional</sup> <a name="releaseWorkflow" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.releaseWorkflow"></a>
 
 - *Deprecated:* see `release`.
 
@@ -4865,7 +4865,7 @@ DEPRECATED: renamed to `release`.
 
 ---
 
-##### `workflowBootstrapSteps`<sup>Optional</sup> <a name="workflowBootstrapSteps" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowBootstrapSteps"></a>
+##### `workflowBootstrapSteps`<sup>Optional</sup> <a name="workflowBootstrapSteps" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowBootstrapSteps"></a>
 
 ```typescript
 public readonly workflowBootstrapSteps: JobStep[];
@@ -4878,7 +4878,7 @@ Workflow steps to use in order to bootstrap this repo.
 
 ---
 
-##### `workflowGitIdentity`<sup>Optional</sup> <a name="workflowGitIdentity" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowGitIdentity"></a>
+##### `workflowGitIdentity`<sup>Optional</sup> <a name="workflowGitIdentity" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowGitIdentity"></a>
 
 ```typescript
 public readonly workflowGitIdentity: GitIdentity;
@@ -4891,7 +4891,7 @@ The git identity to use in workflows.
 
 ---
 
-##### `workflowNodeVersion`<sup>Optional</sup> <a name="workflowNodeVersion" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowNodeVersion"></a>
+##### `workflowNodeVersion`<sup>Optional</sup> <a name="workflowNodeVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowNodeVersion"></a>
 
 ```typescript
 public readonly workflowNodeVersion: string;
@@ -4904,7 +4904,7 @@ The node version to use in GitHub workflows.
 
 ---
 
-##### `workflowPackageCache`<sup>Optional</sup> <a name="workflowPackageCache" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowPackageCache"></a>
+##### `workflowPackageCache`<sup>Optional</sup> <a name="workflowPackageCache" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.workflowPackageCache"></a>
 
 ```typescript
 public readonly workflowPackageCache: boolean;
@@ -4917,7 +4917,7 @@ Enable Node.js package cache in GitHub workflows.
 
 ---
 
-##### `disableTsconfig`<sup>Optional</sup> <a name="disableTsconfig" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.disableTsconfig"></a>
+##### `disableTsconfig`<sup>Optional</sup> <a name="disableTsconfig" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.disableTsconfig"></a>
 
 ```typescript
 public readonly disableTsconfig: boolean;
@@ -4930,7 +4930,7 @@ Do not generate a `tsconfig.json` file (used by jsii projects since tsconfig.jso
 
 ---
 
-##### `disableTsconfigDev`<sup>Optional</sup> <a name="disableTsconfigDev" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.disableTsconfigDev"></a>
+##### `disableTsconfigDev`<sup>Optional</sup> <a name="disableTsconfigDev" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.disableTsconfigDev"></a>
 
 ```typescript
 public readonly disableTsconfigDev: boolean;
@@ -4943,7 +4943,7 @@ Do not generate a `tsconfig.dev.json` file.
 
 ---
 
-##### `docgen`<sup>Optional</sup> <a name="docgen" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.docgen"></a>
+##### `docgen`<sup>Optional</sup> <a name="docgen" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.docgen"></a>
 
 ```typescript
 public readonly docgen: boolean;
@@ -4956,7 +4956,7 @@ Docgen by Typedoc.
 
 ---
 
-##### `docsDirectory`<sup>Optional</sup> <a name="docsDirectory" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.docsDirectory"></a>
+##### `docsDirectory`<sup>Optional</sup> <a name="docsDirectory" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.docsDirectory"></a>
 
 ```typescript
 public readonly docsDirectory: string;
@@ -4969,7 +4969,7 @@ Docs directory.
 
 ---
 
-##### `entrypointTypes`<sup>Optional</sup> <a name="entrypointTypes" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.entrypointTypes"></a>
+##### `entrypointTypes`<sup>Optional</sup> <a name="entrypointTypes" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.entrypointTypes"></a>
 
 ```typescript
 public readonly entrypointTypes: string;
@@ -4982,7 +4982,7 @@ The .d.ts file that includes the type declarations for this module.
 
 ---
 
-##### `eslint`<sup>Optional</sup> <a name="eslint" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.eslint"></a>
+##### `eslint`<sup>Optional</sup> <a name="eslint" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.eslint"></a>
 
 ```typescript
 public readonly eslint: boolean;
@@ -4995,7 +4995,7 @@ Setup eslint.
 
 ---
 
-##### `eslintOptions`<sup>Optional</sup> <a name="eslintOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.eslintOptions"></a>
+##### `eslintOptions`<sup>Optional</sup> <a name="eslintOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.eslintOptions"></a>
 
 ```typescript
 public readonly eslintOptions: EslintOptions;
@@ -5008,7 +5008,7 @@ Eslint options.
 
 ---
 
-##### `libdir`<sup>Optional</sup> <a name="libdir" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.libdir"></a>
+##### `libdir`<sup>Optional</sup> <a name="libdir" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.libdir"></a>
 
 ```typescript
 public readonly libdir: string;
@@ -5021,7 +5021,7 @@ Typescript  artifacts output directory.
 
 ---
 
-##### `projenrcTs`<sup>Optional</sup> <a name="projenrcTs" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcTs"></a>
+##### `projenrcTs`<sup>Optional</sup> <a name="projenrcTs" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcTs"></a>
 
 ```typescript
 public readonly projenrcTs: boolean;
@@ -5034,7 +5034,7 @@ Use TypeScript for your projenrc file (`.projenrc.ts`).
 
 ---
 
-##### `projenrcTsOptions`<sup>Optional</sup> <a name="projenrcTsOptions" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcTsOptions"></a>
+##### `projenrcTsOptions`<sup>Optional</sup> <a name="projenrcTsOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.projenrcTsOptions"></a>
 
 ```typescript
 public readonly projenrcTsOptions: ProjenrcOptions;
@@ -5046,7 +5046,7 @@ Options for .projenrc.ts.
 
 ---
 
-##### `sampleCode`<sup>Optional</sup> <a name="sampleCode" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleCode"></a>
+##### `sampleCode`<sup>Optional</sup> <a name="sampleCode" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleCode"></a>
 
 ```typescript
 public readonly sampleCode: boolean;
@@ -5059,7 +5059,7 @@ Generate one-time sample in `src/` and `test/` if there are no files there.
 
 ---
 
-##### `srcdir`<sup>Optional</sup> <a name="srcdir" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.srcdir"></a>
+##### `srcdir`<sup>Optional</sup> <a name="srcdir" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.srcdir"></a>
 
 ```typescript
 public readonly srcdir: string;
@@ -5072,7 +5072,7 @@ Typescript sources directory.
 
 ---
 
-##### `testdir`<sup>Optional</sup> <a name="testdir" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.testdir"></a>
+##### `testdir`<sup>Optional</sup> <a name="testdir" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.testdir"></a>
 
 ```typescript
 public readonly testdir: string;
@@ -5090,7 +5090,7 @@ compile the code in-memory.
 
 ---
 
-##### `tsconfig`<sup>Optional</sup> <a name="tsconfig" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfig"></a>
+##### `tsconfig`<sup>Optional</sup> <a name="tsconfig" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfig"></a>
 
 ```typescript
 public readonly tsconfig: TypescriptConfigOptions;
@@ -5103,7 +5103,7 @@ Custom TSConfig.
 
 ---
 
-##### `tsconfigDev`<sup>Optional</sup> <a name="tsconfigDev" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigDev"></a>
+##### `tsconfigDev`<sup>Optional</sup> <a name="tsconfigDev" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigDev"></a>
 
 ```typescript
 public readonly tsconfigDev: TypescriptConfigOptions;
@@ -5116,7 +5116,7 @@ Custom tsconfig options for the development tsconfig.json file (used for testing
 
 ---
 
-##### `tsconfigDevFile`<sup>Optional</sup> <a name="tsconfigDevFile" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigDevFile"></a>
+##### `tsconfigDevFile`<sup>Optional</sup> <a name="tsconfigDevFile" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigDevFile"></a>
 
 ```typescript
 public readonly tsconfigDevFile: string;
@@ -5129,7 +5129,7 @@ The name of the development tsconfig.json file.
 
 ---
 
-##### `typescriptVersion`<sup>Optional</sup> <a name="typescriptVersion" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.typescriptVersion"></a>
+##### `typescriptVersion`<sup>Optional</sup> <a name="typescriptVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.typescriptVersion"></a>
 
 ```typescript
 public readonly typescriptVersion: string;
@@ -5145,7 +5145,7 @@ same minor, so we recommend using a `~` dependency (e.g. `~1.2.3`).
 
 ---
 
-##### `addDefaultBundle`<sup>Optional</sup> <a name="addDefaultBundle" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.addDefaultBundle"></a>
+##### `addDefaultBundle`<sup>Optional</sup> <a name="addDefaultBundle" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.addDefaultBundle"></a>
 
 ```typescript
 public readonly addDefaultBundle: boolean;
@@ -5160,7 +5160,7 @@ Will bundle ./src/ to ./dist/ using esbuild.
 
 ---
 
-##### `eslintFixableAsWarn`<sup>Optional</sup> <a name="eslintFixableAsWarn" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.eslintFixableAsWarn"></a>
+##### `eslintFixableAsWarn`<sup>Optional</sup> <a name="eslintFixableAsWarn" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.eslintFixableAsWarn"></a>
 
 ```typescript
 public readonly eslintFixableAsWarn: boolean;
@@ -5173,7 +5173,7 @@ Change the default-set eslint auto-fixable rules to "warn" instead of "error".
 
 ---
 
-##### `esmSupportConfig`<sup>Optional</sup> <a name="esmSupportConfig" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.esmSupportConfig"></a>
+##### `esmSupportConfig`<sup>Optional</sup> <a name="esmSupportConfig" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.esmSupportConfig"></a>
 
 ```typescript
 public readonly esmSupportConfig: boolean;
@@ -5186,7 +5186,7 @@ Configure for ESM.
 
 ---
 
-##### `sampleType`<sup>Optional</sup> <a name="sampleType" id="tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleType"></a>
+##### `sampleType`<sup>Optional</sup> <a name="sampleType" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleType"></a>
 
 ```typescript
 public readonly sampleType: string;
@@ -5199,12 +5199,12 @@ Which type of sample code to include, if `sampleCode` is true.
 
 ---
 
-### TmsTypeScriptAppProjectOptions <a name="TmsTypeScriptAppProjectOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions"></a>
+### TmsTypeScriptAppProjectOptions <a name="TmsTypeScriptAppProjectOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions"></a>
 
-#### Initializer <a name="Initializer" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.Initializer"></a>
+#### Initializer <a name="Initializer" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.Initializer"></a>
 
 ```typescript
-import { TmsTypeScriptAppProjectOptions } from 'tms-projen-projects'
+import { TmsTypeScriptAppProjectOptions } from '@10mi2/tms-projen-projects'
 
 const tmsTypeScriptAppProjectOptions: TmsTypeScriptAppProjectOptions = { ... }
 ```
@@ -5213,154 +5213,154 @@ const tmsTypeScriptAppProjectOptions: TmsTypeScriptAppProjectOptions = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.name">name</a></code> | <code>string</code> | This is the name of your project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.commitGenerated">commitGenerated</a></code> | <code>boolean</code> | Whether to commit the managed files by default. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitIgnoreOptions">gitIgnoreOptions</a></code> | <code>projen.IgnoreFileOptions</code> | Configuration options for .gitignore file. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitOptions">gitOptions</a></code> | <code>projen.GitOptions</code> | Configuration options for git. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.renovatebot">renovatebot</a></code> | <code>boolean</code> | Use renovatebot to handle dependency upgrades. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.renovatebotOptions">renovatebotOptions</a></code> | <code>projen.RenovatebotOptions</code> | Options for renovatebot. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoApproveOptions">autoApproveOptions</a></code> | <code>projen.github.AutoApproveOptions</code> | Enable and configure the 'auto approve' workflow. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoMerge">autoMerge</a></code> | <code>boolean</code> | Enable automatic merging on GitHub. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoMergeOptions">autoMergeOptions</a></code> | <code>projen.github.AutoMergeOptions</code> | Configure options for automatic merging on GitHub. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.clobber">clobber</a></code> | <code>boolean</code> | Add a `clobber` task which resets the repo to origin. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.devContainer">devContainer</a></code> | <code>boolean</code> | Add a VSCode development environment (used for GitHub Codespaces). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.github">github</a></code> | <code>boolean</code> | Enable GitHub integration. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.githubOptions">githubOptions</a></code> | <code>projen.github.GitHubOptions</code> | Options for GitHub integration. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitpod">gitpod</a></code> | <code>boolean</code> | Add a Gitpod development environment. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mergify">mergify</a></code> | <code>boolean</code> | Whether mergify should be enabled on this repository or not. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mergifyOptions">mergifyOptions</a></code> | <code>projen.github.MergifyOptions</code> | Options for mergify. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projectType">projectType</a></code> | <code>projen.ProjectType</code> | Which type of project this is (library/app). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenCredentials">projenCredentials</a></code> | <code>projen.github.GithubCredentials</code> | Choose a method of providing GitHub API access for projen workflows. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenTokenSecret">projenTokenSecret</a></code> | <code>string</code> | The name of a secret which includes a GitHub Personal Access Token to be used by projen workflows. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.readme">readme</a></code> | <code>projen.SampleReadmeProps</code> | The README setup. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.stale">stale</a></code> | <code>boolean</code> | Auto-close of stale issues and pull request. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.staleOptions">staleOptions</a></code> | <code>projen.github.StaleOptions</code> | Auto-close stale issues and pull requests. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.vscode">vscode</a></code> | <code>boolean</code> | Enable VSCode integration. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.allowLibraryDependencies">allowLibraryDependencies</a></code> | <code>boolean</code> | Allow the project to include `peerDependencies` and `bundledDependencies`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorEmail">authorEmail</a></code> | <code>string</code> | Author's e-mail. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorName">authorName</a></code> | <code>string</code> | Author's name. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Is the author an organization. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorUrl">authorUrl</a></code> | <code>string</code> | Author's URL / Website. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoDetectBin">autoDetectBin</a></code> | <code>boolean</code> | Automatically add all executables under the `bin` directory to your `package.json` file under the `bin` section. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | Binary programs vended with your module. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bugsEmail">bugsEmail</a></code> | <code>string</code> | The email address to which issues should be reported. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bugsUrl">bugsUrl</a></code> | <code>string</code> | The url to your project's issue tracker. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | List of dependencies to bundle into this module. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeArtifactOptions">codeArtifactOptions</a></code> | <code>projen.javascript.CodeArtifactOptions</code> | Options for npm packages using AWS CodeArtifact. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | Runtime dependencies of this module. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.description">description</a></code> | <code>string</code> | The description is just a string that helps people understand the purpose of the package. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | Build dependencies for this module. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.entrypoint">entrypoint</a></code> | <code>string</code> | Module entrypoint (`main` in `package.json`). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.homepage">homepage</a></code> | <code>string</code> | Package's Homepage / Website. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.keywords">keywords</a></code> | <code>string[]</code> | Keywords to include in `package.json`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.license">license</a></code> | <code>string</code> | License's SPDX identifier. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.licensed">licensed</a></code> | <code>boolean</code> | Indicates if a license should be added. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Minimum node.js version to require via `engines` (inclusive). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum Node.js version to require via package.json `engines` (inclusive). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmAccess">npmAccess</a></code> | <code>projen.javascript.NpmAccess</code> | Access level of the npm package. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmRegistry">npmRegistry</a></code> | <code>string</code> | The host name of the npm registry to publish to. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmRegistryUrl">npmRegistryUrl</a></code> | <code>string</code> | The base URL of the npm package registry. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmTokenSecret">npmTokenSecret</a></code> | <code>string</code> | GitHub secret which contains the NPM token to use when publishing packages. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.packageManager">packageManager</a></code> | <code>projen.javascript.NodePackageManager</code> | The Node Package Manager used to execute scripts. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.packageName">packageName</a></code> | <code>string</code> | The "name" in package.json. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.peerDependencyOptions">peerDependencyOptions</a></code> | <code>projen.javascript.PeerDependencyOptions</code> | Options for `peerDeps`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | Peer dependencies for this module. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pnpmVersion">pnpmVersion</a></code> | <code>string</code> | The version of PNPM to use if using PNPM as a package manager. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.repository">repository</a></code> | <code>string</code> | The repository is the location where the actual code for your package lives. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.repositoryDirectory">repositoryDirectory</a></code> | <code>string</code> | If the package.json for your package is not in the root directory (for example if it is part of a monorepo), you can specify the directory in which it lives. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.scopedPackagesOptions">scopedPackagesOptions</a></code> | <code>projen.javascript.ScopedPackagesOptions[]</code> | Options for privately hosted scoped packages. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.scripts">scripts</a></code> | <code>{[ key: string ]: string}</code> | npm scripts to include. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.stability">stability</a></code> | <code>string</code> | Package's Stability. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.yarnBerryOptions">yarnBerryOptions</a></code> | <code>projen.javascript.YarnBerryOptions</code> | Options for Yarn Berry. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jsiiReleaseVersion">jsiiReleaseVersion</a></code> | <code>string</code> | Version requirement of `publib` which is used to publish modules to npm. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.majorVersion">majorVersion</a></code> | <code>number</code> | Major version to release from the default branch. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.minMajorVersion">minMajorVersion</a></code> | <code>number</code> | Minimal Major version to release. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmDistTag">npmDistTag</a></code> | <code>string</code> | The npmDistTag to use when publishing from the default branch. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.postBuildSteps">postBuildSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | Steps to execute after build as part of the release workflow. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prerelease">prerelease</a></code> | <code>string</code> | Bump versions from the default branch as pre-releases (e.g. "beta", "alpha", "pre"). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.publishDryRun">publishDryRun</a></code> | <code>boolean</code> | Instead of actually publishing to package managers, just print the publishing command. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.publishTasks">publishTasks</a></code> | <code>boolean</code> | Define publishing tasks that can be executed manually as well as workflows. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releasableCommits">releasableCommits</a></code> | <code>projen.ReleasableCommits</code> | Find commits that should be considered releasable Used to decide if a release is required. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseBranches">releaseBranches</a></code> | <code>{[ key: string ]: projen.release.BranchOptions}</code> | Defines additional release branches. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseEveryCommit">releaseEveryCommit</a></code> | <code>boolean</code> | Automatically release new versions every commit to one of branches in `releaseBranches`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseFailureIssue">releaseFailureIssue</a></code> | <code>boolean</code> | Create a github issue on every failed publishing task. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseFailureIssueLabel">releaseFailureIssueLabel</a></code> | <code>string</code> | The label to apply to issues indicating publish failures. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseSchedule">releaseSchedule</a></code> | <code>string</code> | CRON schedule to trigger new releases. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseTagPrefix">releaseTagPrefix</a></code> | <code>string</code> | Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseTrigger">releaseTrigger</a></code> | <code>projen.release.ReleaseTrigger</code> | The release trigger to use. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflowName">releaseWorkflowName</a></code> | <code>string</code> | The name of the default release workflow. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflowSetupSteps">releaseWorkflowSetupSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | A set of workflow steps to execute in order to setup the workflow container. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.versionrcOptions">versionrcOptions</a></code> | <code>{[ key: string ]: any}</code> | Custom configuration used when creating changelog with standard-version package. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowContainerImage">workflowContainerImage</a></code> | <code>string</code> | Container image to use for GitHub workflows. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowRunsOn">workflowRunsOn</a></code> | <code>string[]</code> | Github Runner selection labels. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowRunsOnGroup">workflowRunsOnGroup</a></code> | <code>projen.GroupRunnerOptions</code> | Github Runner Group selection options. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.defaultReleaseBranch">defaultReleaseBranch</a></code> | <code>string</code> | The name of the main release branch. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | A directory which will contain build artifacts. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoApproveUpgrades">autoApproveUpgrades</a></code> | <code>boolean</code> | Automatically approve deps upgrade PRs, allowing them to be merged by mergify (if configued). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflow">buildWorkflow</a></code> | <code>boolean</code> | Define a GitHub workflow for building PRs. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflowTriggers">buildWorkflowTriggers</a></code> | <code>projen.github.workflows.Triggers</code> | Build workflow triggers. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bundlerOptions">bundlerOptions</a></code> | <code>projen.javascript.BundlerOptions</code> | Options for `Bundler`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with `@codeCovTokenSecret`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeCovTokenSecret">codeCovTokenSecret</a></code> | <code>string</code> | Define the secret name for a specified https://codecov.io/ token A secret is required to send coverage for private repositories. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.copyrightOwner">copyrightOwner</a></code> | <code>string</code> | License copyright owner. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.copyrightPeriod">copyrightPeriod</a></code> | <code>string</code> | The copyright years to put in the LICENSE file. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.dependabot">dependabot</a></code> | <code>boolean</code> | Use dependabot to handle dependency upgrades. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.dependabotOptions">dependabotOptions</a></code> | <code>projen.github.DependabotOptions</code> | Options for dependabot. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.depsUpgrade">depsUpgrade</a></code> | <code>boolean</code> | Use tasks and github workflows to handle dependency upgrades. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.depsUpgradeOptions">depsUpgradeOptions</a></code> | <code>projen.javascript.UpgradeDependenciesOptions</code> | Options for `UpgradeDependencies`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitignore">gitignore</a></code> | <code>string[]</code> | Additional entries to .gitignore. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jest">jest</a></code> | <code>boolean</code> | Setup jest unit tests. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jestOptions">jestOptions</a></code> | <code>projen.javascript.JestOptions</code> | Jest options. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mutableBuild">mutableBuild</a></code> | <code>boolean</code> | Automatically update files modified during builds to pull-request branches. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmignore">npmignore</a></code> | <code>string[]</code> | Additional entries to .npmignore. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmignoreEnabled">npmignoreEnabled</a></code> | <code>boolean</code> | Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmIgnoreOptions">npmIgnoreOptions</a></code> | <code>projen.IgnoreFileOptions</code> | Configuration options for .npmignore file. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.package">package</a></code> | <code>boolean</code> | Defines a `package` task that will produce an npm tarball under the artifacts directory (e.g. `dist`). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prettier">prettier</a></code> | <code>boolean</code> | Setup prettier. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prettierOptions">prettierOptions</a></code> | <code>projen.javascript.PrettierOptions</code> | Prettier options. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenDevDependency">projenDevDependency</a></code> | <code>boolean</code> | Indicates of "projen" should be installed as a devDependency. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJs">projenrcJs</a></code> | <code>boolean</code> | Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable .projenrc.js generation. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJsOptions">projenrcJsOptions</a></code> | <code>projen.javascript.ProjenrcOptions</code> | Options for .projenrc.js. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenVersion">projenVersion</a></code> | <code>string</code> | Version of projen to install. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pullRequestTemplate">pullRequestTemplate</a></code> | <code>boolean</code> | Include a GitHub pull request template. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pullRequestTemplateContents">pullRequestTemplateContents</a></code> | <code>string[]</code> | The contents of the pull request template. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.release">release</a></code> | <code>boolean</code> | Add release management to this project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseToNpm">releaseToNpm</a></code> | <code>boolean</code> | Automatically release to npm when new versions are introduced. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflow">releaseWorkflow</a></code> | <code>boolean</code> | DEPRECATED: renamed to `release`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowBootstrapSteps">workflowBootstrapSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | Workflow steps to use in order to bootstrap this repo. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowGitIdentity">workflowGitIdentity</a></code> | <code>projen.github.GitIdentity</code> | The git identity to use in workflows. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowNodeVersion">workflowNodeVersion</a></code> | <code>string</code> | The node version to use in GitHub workflows. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowPackageCache">workflowPackageCache</a></code> | <code>boolean</code> | Enable Node.js package cache in GitHub workflows. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.disableTsconfig">disableTsconfig</a></code> | <code>boolean</code> | Do not generate a `tsconfig.json` file (used by jsii projects since tsconfig.json is generated by the jsii compiler). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.disableTsconfigDev">disableTsconfigDev</a></code> | <code>boolean</code> | Do not generate a `tsconfig.dev.json` file. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.docgen">docgen</a></code> | <code>boolean</code> | Docgen by Typedoc. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.docsDirectory">docsDirectory</a></code> | <code>string</code> | Docs directory. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.entrypointTypes">entrypointTypes</a></code> | <code>string</code> | The .d.ts file that includes the type declarations for this module. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslint">eslint</a></code> | <code>boolean</code> | Setup eslint. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslintOptions">eslintOptions</a></code> | <code>projen.javascript.EslintOptions</code> | Eslint options. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.libdir">libdir</a></code> | <code>string</code> | Typescript  artifacts output directory. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcTs">projenrcTs</a></code> | <code>boolean</code> | Use TypeScript for your projenrc file (`.projenrc.ts`). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcTsOptions">projenrcTsOptions</a></code> | <code>projen.typescript.ProjenrcOptions</code> | Options for .projenrc.ts. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.sampleCode">sampleCode</a></code> | <code>boolean</code> | Generate one-time sample in `src/` and `test/` if there are no files there. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.srcdir">srcdir</a></code> | <code>string</code> | Typescript sources directory. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.testdir">testdir</a></code> | <code>string</code> | Jest tests directory. Tests files should be named `xxx.test.ts`. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfig">tsconfig</a></code> | <code>projen.javascript.TypescriptConfigOptions</code> | Custom TSConfig. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigDev">tsconfigDev</a></code> | <code>projen.javascript.TypescriptConfigOptions</code> | Custom tsconfig options for the development tsconfig.json file (used for testing). |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigDevFile">tsconfigDevFile</a></code> | <code>string</code> | The name of the development tsconfig.json file. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.typescriptVersion">typescriptVersion</a></code> | <code>string</code> | TypeScript version to use. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.addDefaultBundle">addDefaultBundle</a></code> | <code>boolean</code> | Add a default bundle to the project. |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslintFixableAsWarn">eslintFixableAsWarn</a></code> | <code>boolean</code> | Change the default-set eslint auto-fixable rules to "warn" instead of "error". |
-| <code><a href="#tms-projen-projects.TmsTypeScriptAppProjectOptions.property.esmSupportConfig">esmSupportConfig</a></code> | <code>boolean</code> | Configure for ESM. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.name">name</a></code> | <code>string</code> | This is the name of your project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.commitGenerated">commitGenerated</a></code> | <code>boolean</code> | Whether to commit the managed files by default. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitIgnoreOptions">gitIgnoreOptions</a></code> | <code>projen.IgnoreFileOptions</code> | Configuration options for .gitignore file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitOptions">gitOptions</a></code> | <code>projen.GitOptions</code> | Configuration options for git. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.renovatebot">renovatebot</a></code> | <code>boolean</code> | Use renovatebot to handle dependency upgrades. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.renovatebotOptions">renovatebotOptions</a></code> | <code>projen.RenovatebotOptions</code> | Options for renovatebot. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoApproveOptions">autoApproveOptions</a></code> | <code>projen.github.AutoApproveOptions</code> | Enable and configure the 'auto approve' workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoMerge">autoMerge</a></code> | <code>boolean</code> | Enable automatic merging on GitHub. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoMergeOptions">autoMergeOptions</a></code> | <code>projen.github.AutoMergeOptions</code> | Configure options for automatic merging on GitHub. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.clobber">clobber</a></code> | <code>boolean</code> | Add a `clobber` task which resets the repo to origin. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.devContainer">devContainer</a></code> | <code>boolean</code> | Add a VSCode development environment (used for GitHub Codespaces). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.github">github</a></code> | <code>boolean</code> | Enable GitHub integration. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.githubOptions">githubOptions</a></code> | <code>projen.github.GitHubOptions</code> | Options for GitHub integration. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitpod">gitpod</a></code> | <code>boolean</code> | Add a Gitpod development environment. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mergify">mergify</a></code> | <code>boolean</code> | Whether mergify should be enabled on this repository or not. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mergifyOptions">mergifyOptions</a></code> | <code>projen.github.MergifyOptions</code> | Options for mergify. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projectType">projectType</a></code> | <code>projen.ProjectType</code> | Which type of project this is (library/app). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenCredentials">projenCredentials</a></code> | <code>projen.github.GithubCredentials</code> | Choose a method of providing GitHub API access for projen workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenTokenSecret">projenTokenSecret</a></code> | <code>string</code> | The name of a secret which includes a GitHub Personal Access Token to be used by projen workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.readme">readme</a></code> | <code>projen.SampleReadmeProps</code> | The README setup. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.stale">stale</a></code> | <code>boolean</code> | Auto-close of stale issues and pull request. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.staleOptions">staleOptions</a></code> | <code>projen.github.StaleOptions</code> | Auto-close stale issues and pull requests. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.vscode">vscode</a></code> | <code>boolean</code> | Enable VSCode integration. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.allowLibraryDependencies">allowLibraryDependencies</a></code> | <code>boolean</code> | Allow the project to include `peerDependencies` and `bundledDependencies`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorEmail">authorEmail</a></code> | <code>string</code> | Author's e-mail. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorName">authorName</a></code> | <code>string</code> | Author's name. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Is the author an organization. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorUrl">authorUrl</a></code> | <code>string</code> | Author's URL / Website. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoDetectBin">autoDetectBin</a></code> | <code>boolean</code> | Automatically add all executables under the `bin` directory to your `package.json` file under the `bin` section. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | Binary programs vended with your module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bugsEmail">bugsEmail</a></code> | <code>string</code> | The email address to which issues should be reported. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bugsUrl">bugsUrl</a></code> | <code>string</code> | The url to your project's issue tracker. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | List of dependencies to bundle into this module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeArtifactOptions">codeArtifactOptions</a></code> | <code>projen.javascript.CodeArtifactOptions</code> | Options for npm packages using AWS CodeArtifact. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | Runtime dependencies of this module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.description">description</a></code> | <code>string</code> | The description is just a string that helps people understand the purpose of the package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | Build dependencies for this module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.entrypoint">entrypoint</a></code> | <code>string</code> | Module entrypoint (`main` in `package.json`). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.homepage">homepage</a></code> | <code>string</code> | Package's Homepage / Website. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.keywords">keywords</a></code> | <code>string[]</code> | Keywords to include in `package.json`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.license">license</a></code> | <code>string</code> | License's SPDX identifier. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.licensed">licensed</a></code> | <code>boolean</code> | Indicates if a license should be added. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Minimum node.js version to require via `engines` (inclusive). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum Node.js version to require via package.json `engines` (inclusive). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmAccess">npmAccess</a></code> | <code>projen.javascript.NpmAccess</code> | Access level of the npm package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmRegistry">npmRegistry</a></code> | <code>string</code> | The host name of the npm registry to publish to. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmRegistryUrl">npmRegistryUrl</a></code> | <code>string</code> | The base URL of the npm package registry. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmTokenSecret">npmTokenSecret</a></code> | <code>string</code> | GitHub secret which contains the NPM token to use when publishing packages. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.packageManager">packageManager</a></code> | <code>projen.javascript.NodePackageManager</code> | The Node Package Manager used to execute scripts. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.packageName">packageName</a></code> | <code>string</code> | The "name" in package.json. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.peerDependencyOptions">peerDependencyOptions</a></code> | <code>projen.javascript.PeerDependencyOptions</code> | Options for `peerDeps`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | Peer dependencies for this module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pnpmVersion">pnpmVersion</a></code> | <code>string</code> | The version of PNPM to use if using PNPM as a package manager. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.repository">repository</a></code> | <code>string</code> | The repository is the location where the actual code for your package lives. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.repositoryDirectory">repositoryDirectory</a></code> | <code>string</code> | If the package.json for your package is not in the root directory (for example if it is part of a monorepo), you can specify the directory in which it lives. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.scopedPackagesOptions">scopedPackagesOptions</a></code> | <code>projen.javascript.ScopedPackagesOptions[]</code> | Options for privately hosted scoped packages. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.scripts">scripts</a></code> | <code>{[ key: string ]: string}</code> | npm scripts to include. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.stability">stability</a></code> | <code>string</code> | Package's Stability. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.yarnBerryOptions">yarnBerryOptions</a></code> | <code>projen.javascript.YarnBerryOptions</code> | Options for Yarn Berry. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jsiiReleaseVersion">jsiiReleaseVersion</a></code> | <code>string</code> | Version requirement of `publib` which is used to publish modules to npm. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.majorVersion">majorVersion</a></code> | <code>number</code> | Major version to release from the default branch. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.minMajorVersion">minMajorVersion</a></code> | <code>number</code> | Minimal Major version to release. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmDistTag">npmDistTag</a></code> | <code>string</code> | The npmDistTag to use when publishing from the default branch. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.postBuildSteps">postBuildSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | Steps to execute after build as part of the release workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prerelease">prerelease</a></code> | <code>string</code> | Bump versions from the default branch as pre-releases (e.g. "beta", "alpha", "pre"). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.publishDryRun">publishDryRun</a></code> | <code>boolean</code> | Instead of actually publishing to package managers, just print the publishing command. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.publishTasks">publishTasks</a></code> | <code>boolean</code> | Define publishing tasks that can be executed manually as well as workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releasableCommits">releasableCommits</a></code> | <code>projen.ReleasableCommits</code> | Find commits that should be considered releasable Used to decide if a release is required. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseBranches">releaseBranches</a></code> | <code>{[ key: string ]: projen.release.BranchOptions}</code> | Defines additional release branches. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseEveryCommit">releaseEveryCommit</a></code> | <code>boolean</code> | Automatically release new versions every commit to one of branches in `releaseBranches`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseFailureIssue">releaseFailureIssue</a></code> | <code>boolean</code> | Create a github issue on every failed publishing task. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseFailureIssueLabel">releaseFailureIssueLabel</a></code> | <code>string</code> | The label to apply to issues indicating publish failures. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseSchedule">releaseSchedule</a></code> | <code>string</code> | CRON schedule to trigger new releases. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseTagPrefix">releaseTagPrefix</a></code> | <code>string</code> | Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseTrigger">releaseTrigger</a></code> | <code>projen.release.ReleaseTrigger</code> | The release trigger to use. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflowName">releaseWorkflowName</a></code> | <code>string</code> | The name of the default release workflow. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflowSetupSteps">releaseWorkflowSetupSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | A set of workflow steps to execute in order to setup the workflow container. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.versionrcOptions">versionrcOptions</a></code> | <code>{[ key: string ]: any}</code> | Custom configuration used when creating changelog with standard-version package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowContainerImage">workflowContainerImage</a></code> | <code>string</code> | Container image to use for GitHub workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowRunsOn">workflowRunsOn</a></code> | <code>string[]</code> | Github Runner selection labels. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowRunsOnGroup">workflowRunsOnGroup</a></code> | <code>projen.GroupRunnerOptions</code> | Github Runner Group selection options. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.defaultReleaseBranch">defaultReleaseBranch</a></code> | <code>string</code> | The name of the main release branch. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | A directory which will contain build artifacts. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoApproveUpgrades">autoApproveUpgrades</a></code> | <code>boolean</code> | Automatically approve deps upgrade PRs, allowing them to be merged by mergify (if configued). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflow">buildWorkflow</a></code> | <code>boolean</code> | Define a GitHub workflow for building PRs. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflowTriggers">buildWorkflowTriggers</a></code> | <code>projen.github.workflows.Triggers</code> | Build workflow triggers. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bundlerOptions">bundlerOptions</a></code> | <code>projen.javascript.BundlerOptions</code> | Options for `Bundler`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with `@codeCovTokenSecret`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeCovTokenSecret">codeCovTokenSecret</a></code> | <code>string</code> | Define the secret name for a specified https://codecov.io/ token A secret is required to send coverage for private repositories. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.copyrightOwner">copyrightOwner</a></code> | <code>string</code> | License copyright owner. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.copyrightPeriod">copyrightPeriod</a></code> | <code>string</code> | The copyright years to put in the LICENSE file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.dependabot">dependabot</a></code> | <code>boolean</code> | Use dependabot to handle dependency upgrades. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.dependabotOptions">dependabotOptions</a></code> | <code>projen.github.DependabotOptions</code> | Options for dependabot. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.depsUpgrade">depsUpgrade</a></code> | <code>boolean</code> | Use tasks and github workflows to handle dependency upgrades. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.depsUpgradeOptions">depsUpgradeOptions</a></code> | <code>projen.javascript.UpgradeDependenciesOptions</code> | Options for `UpgradeDependencies`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitignore">gitignore</a></code> | <code>string[]</code> | Additional entries to .gitignore. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jest">jest</a></code> | <code>boolean</code> | Setup jest unit tests. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jestOptions">jestOptions</a></code> | <code>projen.javascript.JestOptions</code> | Jest options. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mutableBuild">mutableBuild</a></code> | <code>boolean</code> | Automatically update files modified during builds to pull-request branches. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmignore">npmignore</a></code> | <code>string[]</code> | Additional entries to .npmignore. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmignoreEnabled">npmignoreEnabled</a></code> | <code>boolean</code> | Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmIgnoreOptions">npmIgnoreOptions</a></code> | <code>projen.IgnoreFileOptions</code> | Configuration options for .npmignore file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.package">package</a></code> | <code>boolean</code> | Defines a `package` task that will produce an npm tarball under the artifacts directory (e.g. `dist`). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prettier">prettier</a></code> | <code>boolean</code> | Setup prettier. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prettierOptions">prettierOptions</a></code> | <code>projen.javascript.PrettierOptions</code> | Prettier options. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenDevDependency">projenDevDependency</a></code> | <code>boolean</code> | Indicates of "projen" should be installed as a devDependency. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJs">projenrcJs</a></code> | <code>boolean</code> | Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable .projenrc.js generation. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJsOptions">projenrcJsOptions</a></code> | <code>projen.javascript.ProjenrcOptions</code> | Options for .projenrc.js. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenVersion">projenVersion</a></code> | <code>string</code> | Version of projen to install. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pullRequestTemplate">pullRequestTemplate</a></code> | <code>boolean</code> | Include a GitHub pull request template. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pullRequestTemplateContents">pullRequestTemplateContents</a></code> | <code>string[]</code> | The contents of the pull request template. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.release">release</a></code> | <code>boolean</code> | Add release management to this project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseToNpm">releaseToNpm</a></code> | <code>boolean</code> | Automatically release to npm when new versions are introduced. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflow">releaseWorkflow</a></code> | <code>boolean</code> | DEPRECATED: renamed to `release`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowBootstrapSteps">workflowBootstrapSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | Workflow steps to use in order to bootstrap this repo. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowGitIdentity">workflowGitIdentity</a></code> | <code>projen.github.GitIdentity</code> | The git identity to use in workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowNodeVersion">workflowNodeVersion</a></code> | <code>string</code> | The node version to use in GitHub workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowPackageCache">workflowPackageCache</a></code> | <code>boolean</code> | Enable Node.js package cache in GitHub workflows. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.disableTsconfig">disableTsconfig</a></code> | <code>boolean</code> | Do not generate a `tsconfig.json` file (used by jsii projects since tsconfig.json is generated by the jsii compiler). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.disableTsconfigDev">disableTsconfigDev</a></code> | <code>boolean</code> | Do not generate a `tsconfig.dev.json` file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.docgen">docgen</a></code> | <code>boolean</code> | Docgen by Typedoc. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.docsDirectory">docsDirectory</a></code> | <code>string</code> | Docs directory. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.entrypointTypes">entrypointTypes</a></code> | <code>string</code> | The .d.ts file that includes the type declarations for this module. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslint">eslint</a></code> | <code>boolean</code> | Setup eslint. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslintOptions">eslintOptions</a></code> | <code>projen.javascript.EslintOptions</code> | Eslint options. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.libdir">libdir</a></code> | <code>string</code> | Typescript  artifacts output directory. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcTs">projenrcTs</a></code> | <code>boolean</code> | Use TypeScript for your projenrc file (`.projenrc.ts`). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcTsOptions">projenrcTsOptions</a></code> | <code>projen.typescript.ProjenrcOptions</code> | Options for .projenrc.ts. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.sampleCode">sampleCode</a></code> | <code>boolean</code> | Generate one-time sample in `src/` and `test/` if there are no files there. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.srcdir">srcdir</a></code> | <code>string</code> | Typescript sources directory. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.testdir">testdir</a></code> | <code>string</code> | Jest tests directory. Tests files should be named `xxx.test.ts`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfig">tsconfig</a></code> | <code>projen.javascript.TypescriptConfigOptions</code> | Custom TSConfig. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigDev">tsconfigDev</a></code> | <code>projen.javascript.TypescriptConfigOptions</code> | Custom tsconfig options for the development tsconfig.json file (used for testing). |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigDevFile">tsconfigDevFile</a></code> | <code>string</code> | The name of the development tsconfig.json file. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.typescriptVersion">typescriptVersion</a></code> | <code>string</code> | TypeScript version to use. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.addDefaultBundle">addDefaultBundle</a></code> | <code>boolean</code> | Add a default bundle to the project. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslintFixableAsWarn">eslintFixableAsWarn</a></code> | <code>boolean</code> | Change the default-set eslint auto-fixable rules to "warn" instead of "error". |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.esmSupportConfig">esmSupportConfig</a></code> | <code>boolean</code> | Configure for ESM. |
 
 ---
 
-##### `name`<sup>Required</sup> <a name="name" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -5373,7 +5373,7 @@ This is the name of your project.
 
 ---
 
-##### `commitGenerated`<sup>Optional</sup> <a name="commitGenerated" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.commitGenerated"></a>
+##### `commitGenerated`<sup>Optional</sup> <a name="commitGenerated" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.commitGenerated"></a>
 
 ```typescript
 public readonly commitGenerated: boolean;
@@ -5386,7 +5386,7 @@ Whether to commit the managed files by default.
 
 ---
 
-##### `gitIgnoreOptions`<sup>Optional</sup> <a name="gitIgnoreOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitIgnoreOptions"></a>
+##### `gitIgnoreOptions`<sup>Optional</sup> <a name="gitIgnoreOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitIgnoreOptions"></a>
 
 ```typescript
 public readonly gitIgnoreOptions: IgnoreFileOptions;
@@ -5398,7 +5398,7 @@ Configuration options for .gitignore file.
 
 ---
 
-##### `gitOptions`<sup>Optional</sup> <a name="gitOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitOptions"></a>
+##### `gitOptions`<sup>Optional</sup> <a name="gitOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitOptions"></a>
 
 ```typescript
 public readonly gitOptions: GitOptions;
@@ -5410,7 +5410,7 @@ Configuration options for git.
 
 ---
 
-##### `logging`<sup>Optional</sup> <a name="logging" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.logging"></a>
+##### `logging`<sup>Optional</sup> <a name="logging" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.logging"></a>
 
 ```typescript
 public readonly logging: LoggerOptions;
@@ -5423,7 +5423,7 @@ Configure logging options such as verbosity.
 
 ---
 
-##### `outdir`<sup>Optional</sup> <a name="outdir" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.outdir"></a>
+##### `outdir`<sup>Optional</sup> <a name="outdir" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.outdir"></a>
 
 ```typescript
 public readonly outdir: string;
@@ -5442,7 +5442,7 @@ subprojects.
 
 ---
 
-##### `parent`<sup>Optional</sup> <a name="parent" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.parent"></a>
+##### `parent`<sup>Optional</sup> <a name="parent" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.parent"></a>
 
 ```typescript
 public readonly parent: Project;
@@ -5454,7 +5454,7 @@ The parent project, if this project is part of a bigger project.
 
 ---
 
-##### `projenCommand`<sup>Optional</sup> <a name="projenCommand" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenCommand"></a>
+##### `projenCommand`<sup>Optional</sup> <a name="projenCommand" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenCommand"></a>
 
 ```typescript
 public readonly projenCommand: string;
@@ -5469,7 +5469,7 @@ Can be used to customize in special environments.
 
 ---
 
-##### `projenrcJson`<sup>Optional</sup> <a name="projenrcJson" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJson"></a>
+##### `projenrcJson`<sup>Optional</sup> <a name="projenrcJson" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJson"></a>
 
 ```typescript
 public readonly projenrcJson: boolean;
@@ -5482,7 +5482,7 @@ Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .pr
 
 ---
 
-##### `projenrcJsonOptions`<sup>Optional</sup> <a name="projenrcJsonOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJsonOptions"></a>
+##### `projenrcJsonOptions`<sup>Optional</sup> <a name="projenrcJsonOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJsonOptions"></a>
 
 ```typescript
 public readonly projenrcJsonOptions: ProjenrcJsonOptions;
@@ -5495,7 +5495,7 @@ Options for .projenrc.json.
 
 ---
 
-##### `renovatebot`<sup>Optional</sup> <a name="renovatebot" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.renovatebot"></a>
+##### `renovatebot`<sup>Optional</sup> <a name="renovatebot" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.renovatebot"></a>
 
 ```typescript
 public readonly renovatebot: boolean;
@@ -5508,7 +5508,7 @@ Use renovatebot to handle dependency upgrades.
 
 ---
 
-##### `renovatebotOptions`<sup>Optional</sup> <a name="renovatebotOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.renovatebotOptions"></a>
+##### `renovatebotOptions`<sup>Optional</sup> <a name="renovatebotOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.renovatebotOptions"></a>
 
 ```typescript
 public readonly renovatebotOptions: RenovatebotOptions;
@@ -5521,7 +5521,7 @@ Options for renovatebot.
 
 ---
 
-##### `autoApproveOptions`<sup>Optional</sup> <a name="autoApproveOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoApproveOptions"></a>
+##### `autoApproveOptions`<sup>Optional</sup> <a name="autoApproveOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoApproveOptions"></a>
 
 ```typescript
 public readonly autoApproveOptions: AutoApproveOptions;
@@ -5534,7 +5534,7 @@ Enable and configure the 'auto approve' workflow.
 
 ---
 
-##### `autoMerge`<sup>Optional</sup> <a name="autoMerge" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoMerge"></a>
+##### `autoMerge`<sup>Optional</sup> <a name="autoMerge" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoMerge"></a>
 
 ```typescript
 public readonly autoMerge: boolean;
@@ -5550,7 +5550,7 @@ is set to false.
 
 ---
 
-##### `autoMergeOptions`<sup>Optional</sup> <a name="autoMergeOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoMergeOptions"></a>
+##### `autoMergeOptions`<sup>Optional</sup> <a name="autoMergeOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoMergeOptions"></a>
 
 ```typescript
 public readonly autoMergeOptions: AutoMergeOptions;
@@ -5566,7 +5566,7 @@ Has no effect if
 
 ---
 
-##### `clobber`<sup>Optional</sup> <a name="clobber" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.clobber"></a>
+##### `clobber`<sup>Optional</sup> <a name="clobber" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.clobber"></a>
 
 ```typescript
 public readonly clobber: boolean;
@@ -5579,7 +5579,7 @@ Add a `clobber` task which resets the repo to origin.
 
 ---
 
-##### `devContainer`<sup>Optional</sup> <a name="devContainer" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.devContainer"></a>
+##### `devContainer`<sup>Optional</sup> <a name="devContainer" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.devContainer"></a>
 
 ```typescript
 public readonly devContainer: boolean;
@@ -5592,7 +5592,7 @@ Add a VSCode development environment (used for GitHub Codespaces).
 
 ---
 
-##### `github`<sup>Optional</sup> <a name="github" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.github"></a>
+##### `github`<sup>Optional</sup> <a name="github" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.github"></a>
 
 ```typescript
 public readonly github: boolean;
@@ -5607,7 +5607,7 @@ Enabled by default for root projects. Disabled for non-root projects.
 
 ---
 
-##### `githubOptions`<sup>Optional</sup> <a name="githubOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.githubOptions"></a>
+##### `githubOptions`<sup>Optional</sup> <a name="githubOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.githubOptions"></a>
 
 ```typescript
 public readonly githubOptions: GitHubOptions;
@@ -5620,7 +5620,7 @@ Options for GitHub integration.
 
 ---
 
-##### `gitpod`<sup>Optional</sup> <a name="gitpod" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitpod"></a>
+##### `gitpod`<sup>Optional</sup> <a name="gitpod" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitpod"></a>
 
 ```typescript
 public readonly gitpod: boolean;
@@ -5633,7 +5633,7 @@ Add a Gitpod development environment.
 
 ---
 
-##### ~~`mergify`~~<sup>Optional</sup> <a name="mergify" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mergify"></a>
+##### ~~`mergify`~~<sup>Optional</sup> <a name="mergify" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mergify"></a>
 
 - *Deprecated:* use `githubOptions.mergify` instead
 
@@ -5648,7 +5648,7 @@ Whether mergify should be enabled on this repository or not.
 
 ---
 
-##### ~~`mergifyOptions`~~<sup>Optional</sup> <a name="mergifyOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mergifyOptions"></a>
+##### ~~`mergifyOptions`~~<sup>Optional</sup> <a name="mergifyOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mergifyOptions"></a>
 
 - *Deprecated:* use `githubOptions.mergifyOptions` instead
 
@@ -5663,7 +5663,7 @@ Options for mergify.
 
 ---
 
-##### ~~`projectType`~~<sup>Optional</sup> <a name="projectType" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projectType"></a>
+##### ~~`projectType`~~<sup>Optional</sup> <a name="projectType" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projectType"></a>
 
 - *Deprecated:* no longer supported at the base project level
 
@@ -5678,7 +5678,7 @@ Which type of project this is (library/app).
 
 ---
 
-##### `projenCredentials`<sup>Optional</sup> <a name="projenCredentials" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenCredentials"></a>
+##### `projenCredentials`<sup>Optional</sup> <a name="projenCredentials" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenCredentials"></a>
 
 ```typescript
 public readonly projenCredentials: GithubCredentials;
@@ -5691,7 +5691,7 @@ Choose a method of providing GitHub API access for projen workflows.
 
 ---
 
-##### ~~`projenTokenSecret`~~<sup>Optional</sup> <a name="projenTokenSecret" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenTokenSecret"></a>
+##### ~~`projenTokenSecret`~~<sup>Optional</sup> <a name="projenTokenSecret" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenTokenSecret"></a>
 
 - *Deprecated:* use `projenCredentials`
 
@@ -5709,7 +5709,7 @@ and `packages` scope.
 
 ---
 
-##### `readme`<sup>Optional</sup> <a name="readme" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.readme"></a>
+##### `readme`<sup>Optional</sup> <a name="readme" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.readme"></a>
 
 ```typescript
 public readonly readme: SampleReadmeProps;
@@ -5729,7 +5729,7 @@ The README setup.
 ```
 
 
-##### `stale`<sup>Optional</sup> <a name="stale" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.stale"></a>
+##### `stale`<sup>Optional</sup> <a name="stale" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.stale"></a>
 
 ```typescript
 public readonly stale: boolean;
@@ -5744,7 +5744,7 @@ See `staleOptions` for options.
 
 ---
 
-##### `staleOptions`<sup>Optional</sup> <a name="staleOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.staleOptions"></a>
+##### `staleOptions`<sup>Optional</sup> <a name="staleOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.staleOptions"></a>
 
 ```typescript
 public readonly staleOptions: StaleOptions;
@@ -5759,7 +5759,7 @@ To disable set `stale` to `false`.
 
 ---
 
-##### `vscode`<sup>Optional</sup> <a name="vscode" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.vscode"></a>
+##### `vscode`<sup>Optional</sup> <a name="vscode" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.vscode"></a>
 
 ```typescript
 public readonly vscode: boolean;
@@ -5774,7 +5774,7 @@ Enabled by default for root projects. Disabled for non-root projects.
 
 ---
 
-##### `allowLibraryDependencies`<sup>Optional</sup> <a name="allowLibraryDependencies" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.allowLibraryDependencies"></a>
+##### `allowLibraryDependencies`<sup>Optional</sup> <a name="allowLibraryDependencies" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.allowLibraryDependencies"></a>
 
 ```typescript
 public readonly allowLibraryDependencies: boolean;
@@ -5790,7 +5790,7 @@ for specifying these.
 
 ---
 
-##### `authorEmail`<sup>Optional</sup> <a name="authorEmail" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorEmail"></a>
+##### `authorEmail`<sup>Optional</sup> <a name="authorEmail" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorEmail"></a>
 
 ```typescript
 public readonly authorEmail: string;
@@ -5802,7 +5802,7 @@ Author's e-mail.
 
 ---
 
-##### `authorName`<sup>Optional</sup> <a name="authorName" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorName"></a>
+##### `authorName`<sup>Optional</sup> <a name="authorName" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorName"></a>
 
 ```typescript
 public readonly authorName: string;
@@ -5814,7 +5814,7 @@ Author's name.
 
 ---
 
-##### `authorOrganization`<sup>Optional</sup> <a name="authorOrganization" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorOrganization"></a>
+##### `authorOrganization`<sup>Optional</sup> <a name="authorOrganization" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorOrganization"></a>
 
 ```typescript
 public readonly authorOrganization: boolean;
@@ -5826,7 +5826,7 @@ Is the author an organization.
 
 ---
 
-##### `authorUrl`<sup>Optional</sup> <a name="authorUrl" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorUrl"></a>
+##### `authorUrl`<sup>Optional</sup> <a name="authorUrl" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.authorUrl"></a>
 
 ```typescript
 public readonly authorUrl: string;
@@ -5838,7 +5838,7 @@ Author's URL / Website.
 
 ---
 
-##### `autoDetectBin`<sup>Optional</sup> <a name="autoDetectBin" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoDetectBin"></a>
+##### `autoDetectBin`<sup>Optional</sup> <a name="autoDetectBin" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoDetectBin"></a>
 
 ```typescript
 public readonly autoDetectBin: boolean;
@@ -5851,7 +5851,7 @@ Automatically add all executables under the `bin` directory to your `package.jso
 
 ---
 
-##### `bin`<sup>Optional</sup> <a name="bin" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bin"></a>
+##### `bin`<sup>Optional</sup> <a name="bin" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bin"></a>
 
 ```typescript
 public readonly bin: {[ key: string ]: string};
@@ -5867,7 +5867,7 @@ executable file under `bin` will automatically be added to this section.
 
 ---
 
-##### `bugsEmail`<sup>Optional</sup> <a name="bugsEmail" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bugsEmail"></a>
+##### `bugsEmail`<sup>Optional</sup> <a name="bugsEmail" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bugsEmail"></a>
 
 ```typescript
 public readonly bugsEmail: string;
@@ -5879,7 +5879,7 @@ The email address to which issues should be reported.
 
 ---
 
-##### `bugsUrl`<sup>Optional</sup> <a name="bugsUrl" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bugsUrl"></a>
+##### `bugsUrl`<sup>Optional</sup> <a name="bugsUrl" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bugsUrl"></a>
 
 ```typescript
 public readonly bugsUrl: string;
@@ -5891,7 +5891,7 @@ The url to your project's issue tracker.
 
 ---
 
-##### `bundledDeps`<sup>Optional</sup> <a name="bundledDeps" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bundledDeps"></a>
+##### `bundledDeps`<sup>Optional</sup> <a name="bundledDeps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bundledDeps"></a>
 
 ```typescript
 public readonly bundledDeps: string[];
@@ -5914,7 +5914,7 @@ this will be what you `package.json` will eventually include.
 
 ---
 
-##### `codeArtifactOptions`<sup>Optional</sup> <a name="codeArtifactOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeArtifactOptions"></a>
+##### `codeArtifactOptions`<sup>Optional</sup> <a name="codeArtifactOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeArtifactOptions"></a>
 
 ```typescript
 public readonly codeArtifactOptions: CodeArtifactOptions;
@@ -5929,7 +5929,7 @@ This is required if publishing packages to, or installing scoped packages from A
 
 ---
 
-##### `deps`<sup>Optional</sup> <a name="deps" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.deps"></a>
+##### `deps`<sup>Optional</sup> <a name="deps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.deps"></a>
 
 ```typescript
 public readonly deps: string[];
@@ -5956,7 +5956,7 @@ this will be what you `package.json` will eventually include.
 ```
 
 
-##### `description`<sup>Optional</sup> <a name="description" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.description"></a>
+##### `description`<sup>Optional</sup> <a name="description" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.description"></a>
 
 ```typescript
 public readonly description: string;
@@ -5971,7 +5971,7 @@ See https://classic.yarnpkg.com/en/docs/package-json/#toc-description
 
 ---
 
-##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.devDeps"></a>
+##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.devDeps"></a>
 
 ```typescript
 public readonly devDeps: string[];
@@ -6002,7 +6002,7 @@ this will be what you `package.json` will eventually include.
 ```
 
 
-##### `entrypoint`<sup>Optional</sup> <a name="entrypoint" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.entrypoint"></a>
+##### `entrypoint`<sup>Optional</sup> <a name="entrypoint" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.entrypoint"></a>
 
 ```typescript
 public readonly entrypoint: string;
@@ -6017,7 +6017,7 @@ Set to an empty string to not include `main` in your package.json
 
 ---
 
-##### `homepage`<sup>Optional</sup> <a name="homepage" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.homepage"></a>
+##### `homepage`<sup>Optional</sup> <a name="homepage" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.homepage"></a>
 
 ```typescript
 public readonly homepage: string;
@@ -6029,7 +6029,7 @@ Package's Homepage / Website.
 
 ---
 
-##### `keywords`<sup>Optional</sup> <a name="keywords" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.keywords"></a>
+##### `keywords`<sup>Optional</sup> <a name="keywords" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.keywords"></a>
 
 ```typescript
 public readonly keywords: string[];
@@ -6041,7 +6041,7 @@ Keywords to include in `package.json`.
 
 ---
 
-##### `license`<sup>Optional</sup> <a name="license" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.license"></a>
+##### `license`<sup>Optional</sup> <a name="license" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.license"></a>
 
 ```typescript
 public readonly license: string;
@@ -6057,7 +6057,7 @@ Use the `licensed` option if you want to no license to be specified.
 
 ---
 
-##### `licensed`<sup>Optional</sup> <a name="licensed" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.licensed"></a>
+##### `licensed`<sup>Optional</sup> <a name="licensed" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.licensed"></a>
 
 ```typescript
 public readonly licensed: boolean;
@@ -6070,7 +6070,7 @@ Indicates if a license should be added.
 
 ---
 
-##### `maxNodeVersion`<sup>Optional</sup> <a name="maxNodeVersion" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.maxNodeVersion"></a>
+##### `maxNodeVersion`<sup>Optional</sup> <a name="maxNodeVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.maxNodeVersion"></a>
 
 ```typescript
 public readonly maxNodeVersion: string;
@@ -6083,7 +6083,7 @@ Minimum node.js version to require via `engines` (inclusive).
 
 ---
 
-##### `minNodeVersion`<sup>Optional</sup> <a name="minNodeVersion" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.minNodeVersion"></a>
+##### `minNodeVersion`<sup>Optional</sup> <a name="minNodeVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.minNodeVersion"></a>
 
 ```typescript
 public readonly minNodeVersion: string;
@@ -6096,7 +6096,7 @@ Minimum Node.js version to require via package.json `engines` (inclusive).
 
 ---
 
-##### `npmAccess`<sup>Optional</sup> <a name="npmAccess" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmAccess"></a>
+##### `npmAccess`<sup>Optional</sup> <a name="npmAccess" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmAccess"></a>
 
 ```typescript
 public readonly npmAccess: NpmAccess;
@@ -6109,7 +6109,7 @@ Access level of the npm package.
 
 ---
 
-##### ~~`npmRegistry`~~<sup>Optional</sup> <a name="npmRegistry" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmRegistry"></a>
+##### ~~`npmRegistry`~~<sup>Optional</sup> <a name="npmRegistry" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmRegistry"></a>
 
 - *Deprecated:* use `npmRegistryUrl` instead
 
@@ -6125,7 +6125,7 @@ Cannot be set together with `npmRegistryUrl`.
 
 ---
 
-##### `npmRegistryUrl`<sup>Optional</sup> <a name="npmRegistryUrl" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmRegistryUrl"></a>
+##### `npmRegistryUrl`<sup>Optional</sup> <a name="npmRegistryUrl" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmRegistryUrl"></a>
 
 ```typescript
 public readonly npmRegistryUrl: string;
@@ -6140,7 +6140,7 @@ Must be a URL (e.g. start with "https://" or "http://")
 
 ---
 
-##### `npmTokenSecret`<sup>Optional</sup> <a name="npmTokenSecret" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmTokenSecret"></a>
+##### `npmTokenSecret`<sup>Optional</sup> <a name="npmTokenSecret" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmTokenSecret"></a>
 
 ```typescript
 public readonly npmTokenSecret: string;
@@ -6153,7 +6153,7 @@ GitHub secret which contains the NPM token to use when publishing packages.
 
 ---
 
-##### `packageManager`<sup>Optional</sup> <a name="packageManager" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.packageManager"></a>
+##### `packageManager`<sup>Optional</sup> <a name="packageManager" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.packageManager"></a>
 
 ```typescript
 public readonly packageManager: NodePackageManager;
@@ -6166,7 +6166,7 @@ The Node Package Manager used to execute scripts.
 
 ---
 
-##### `packageName`<sup>Optional</sup> <a name="packageName" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.packageName"></a>
+##### `packageName`<sup>Optional</sup> <a name="packageName" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.packageName"></a>
 
 ```typescript
 public readonly packageName: string;
@@ -6179,7 +6179,7 @@ The "name" in package.json.
 
 ---
 
-##### `peerDependencyOptions`<sup>Optional</sup> <a name="peerDependencyOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.peerDependencyOptions"></a>
+##### `peerDependencyOptions`<sup>Optional</sup> <a name="peerDependencyOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.peerDependencyOptions"></a>
 
 ```typescript
 public readonly peerDependencyOptions: PeerDependencyOptions;
@@ -6191,7 +6191,7 @@ Options for `peerDeps`.
 
 ---
 
-##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.peerDeps"></a>
+##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.peerDeps"></a>
 
 ```typescript
 public readonly peerDeps: string[];
@@ -6218,7 +6218,7 @@ test your module against the lowest peer version required.
 
 ---
 
-##### `pnpmVersion`<sup>Optional</sup> <a name="pnpmVersion" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pnpmVersion"></a>
+##### `pnpmVersion`<sup>Optional</sup> <a name="pnpmVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pnpmVersion"></a>
 
 ```typescript
 public readonly pnpmVersion: string;
@@ -6231,7 +6231,7 @@ The version of PNPM to use if using PNPM as a package manager.
 
 ---
 
-##### `repository`<sup>Optional</sup> <a name="repository" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.repository"></a>
+##### `repository`<sup>Optional</sup> <a name="repository" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.repository"></a>
 
 ```typescript
 public readonly repository: string;
@@ -6245,7 +6245,7 @@ See https://classic.yarnpkg.com/en/docs/package-json/#toc-repository
 
 ---
 
-##### `repositoryDirectory`<sup>Optional</sup> <a name="repositoryDirectory" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.repositoryDirectory"></a>
+##### `repositoryDirectory`<sup>Optional</sup> <a name="repositoryDirectory" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.repositoryDirectory"></a>
 
 ```typescript
 public readonly repositoryDirectory: string;
@@ -6257,7 +6257,7 @@ If the package.json for your package is not in the root directory (for example i
 
 ---
 
-##### `scopedPackagesOptions`<sup>Optional</sup> <a name="scopedPackagesOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.scopedPackagesOptions"></a>
+##### `scopedPackagesOptions`<sup>Optional</sup> <a name="scopedPackagesOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.scopedPackagesOptions"></a>
 
 ```typescript
 public readonly scopedPackagesOptions: ScopedPackagesOptions[];
@@ -6270,7 +6270,7 @@ Options for privately hosted scoped packages.
 
 ---
 
-##### ~~`scripts`~~<sup>Optional</sup> <a name="scripts" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.scripts"></a>
+##### ~~`scripts`~~<sup>Optional</sup> <a name="scripts" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.scripts"></a>
 
 - *Deprecated:* use `project.addTask()` or `package.setScript()`
 
@@ -6289,7 +6289,7 @@ Also adds the script as a task.
 
 ---
 
-##### `stability`<sup>Optional</sup> <a name="stability" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.stability"></a>
+##### `stability`<sup>Optional</sup> <a name="stability" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.stability"></a>
 
 ```typescript
 public readonly stability: string;
@@ -6301,7 +6301,7 @@ Package's Stability.
 
 ---
 
-##### `yarnBerryOptions`<sup>Optional</sup> <a name="yarnBerryOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.yarnBerryOptions"></a>
+##### `yarnBerryOptions`<sup>Optional</sup> <a name="yarnBerryOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.yarnBerryOptions"></a>
 
 ```typescript
 public readonly yarnBerryOptions: YarnBerryOptions;
@@ -6314,7 +6314,7 @@ Options for Yarn Berry.
 
 ---
 
-##### `jsiiReleaseVersion`<sup>Optional</sup> <a name="jsiiReleaseVersion" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jsiiReleaseVersion"></a>
+##### `jsiiReleaseVersion`<sup>Optional</sup> <a name="jsiiReleaseVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jsiiReleaseVersion"></a>
 
 ```typescript
 public readonly jsiiReleaseVersion: string;
@@ -6327,7 +6327,7 @@ Version requirement of `publib` which is used to publish modules to npm.
 
 ---
 
-##### `majorVersion`<sup>Optional</sup> <a name="majorVersion" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.majorVersion"></a>
+##### `majorVersion`<sup>Optional</sup> <a name="majorVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.majorVersion"></a>
 
 ```typescript
 public readonly majorVersion: number;
@@ -6343,7 +6343,7 @@ If not specified, we bump the global latest version.
 
 ---
 
-##### `minMajorVersion`<sup>Optional</sup> <a name="minMajorVersion" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.minMajorVersion"></a>
+##### `minMajorVersion`<sup>Optional</sup> <a name="minMajorVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.minMajorVersion"></a>
 
 ```typescript
 public readonly minMajorVersion: number;
@@ -6361,7 +6361,7 @@ Can not be set together with `majorVersion`.
 
 ---
 
-##### `npmDistTag`<sup>Optional</sup> <a name="npmDistTag" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmDistTag"></a>
+##### `npmDistTag`<sup>Optional</sup> <a name="npmDistTag" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmDistTag"></a>
 
 ```typescript
 public readonly npmDistTag: string;
@@ -6377,7 +6377,7 @@ for each branch.
 
 ---
 
-##### `postBuildSteps`<sup>Optional</sup> <a name="postBuildSteps" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.postBuildSteps"></a>
+##### `postBuildSteps`<sup>Optional</sup> <a name="postBuildSteps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.postBuildSteps"></a>
 
 ```typescript
 public readonly postBuildSteps: JobStep[];
@@ -6390,7 +6390,7 @@ Steps to execute after build as part of the release workflow.
 
 ---
 
-##### `prerelease`<sup>Optional</sup> <a name="prerelease" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prerelease"></a>
+##### `prerelease`<sup>Optional</sup> <a name="prerelease" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prerelease"></a>
 
 ```typescript
 public readonly prerelease: string;
@@ -6403,7 +6403,7 @@ Bump versions from the default branch as pre-releases (e.g. "beta", "alpha", "pr
 
 ---
 
-##### `publishDryRun`<sup>Optional</sup> <a name="publishDryRun" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.publishDryRun"></a>
+##### `publishDryRun`<sup>Optional</sup> <a name="publishDryRun" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.publishDryRun"></a>
 
 ```typescript
 public readonly publishDryRun: boolean;
@@ -6416,7 +6416,7 @@ Instead of actually publishing to package managers, just print the publishing co
 
 ---
 
-##### `publishTasks`<sup>Optional</sup> <a name="publishTasks" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.publishTasks"></a>
+##### `publishTasks`<sup>Optional</sup> <a name="publishTasks" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.publishTasks"></a>
 
 ```typescript
 public readonly publishTasks: boolean;
@@ -6432,7 +6432,7 @@ in order to create a publishing task for each publishing activity.
 
 ---
 
-##### `releasableCommits`<sup>Optional</sup> <a name="releasableCommits" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releasableCommits"></a>
+##### `releasableCommits`<sup>Optional</sup> <a name="releasableCommits" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releasableCommits"></a>
 
 ```typescript
 public readonly releasableCommits: ReleasableCommits;
@@ -6445,7 +6445,7 @@ Find commits that should be considered releasable Used to decide if a release is
 
 ---
 
-##### `releaseBranches`<sup>Optional</sup> <a name="releaseBranches" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseBranches"></a>
+##### `releaseBranches`<sup>Optional</sup> <a name="releaseBranches" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseBranches"></a>
 
 ```typescript
 public readonly releaseBranches: {[ key: string ]: BranchOptions};
@@ -6465,7 +6465,7 @@ be provided for the default branch.
 
 ---
 
-##### ~~`releaseEveryCommit`~~<sup>Optional</sup> <a name="releaseEveryCommit" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseEveryCommit"></a>
+##### ~~`releaseEveryCommit`~~<sup>Optional</sup> <a name="releaseEveryCommit" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseEveryCommit"></a>
 
 - *Deprecated:* Use `releaseTrigger: ReleaseTrigger.continuous()` instead
 
@@ -6480,7 +6480,7 @@ Automatically release new versions every commit to one of branches in `releaseBr
 
 ---
 
-##### `releaseFailureIssue`<sup>Optional</sup> <a name="releaseFailureIssue" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseFailureIssue"></a>
+##### `releaseFailureIssue`<sup>Optional</sup> <a name="releaseFailureIssue" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseFailureIssue"></a>
 
 ```typescript
 public readonly releaseFailureIssue: boolean;
@@ -6493,7 +6493,7 @@ Create a github issue on every failed publishing task.
 
 ---
 
-##### `releaseFailureIssueLabel`<sup>Optional</sup> <a name="releaseFailureIssueLabel" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseFailureIssueLabel"></a>
+##### `releaseFailureIssueLabel`<sup>Optional</sup> <a name="releaseFailureIssueLabel" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseFailureIssueLabel"></a>
 
 ```typescript
 public readonly releaseFailureIssueLabel: string;
@@ -6508,7 +6508,7 @@ Only applies if `releaseFailureIssue` is true.
 
 ---
 
-##### ~~`releaseSchedule`~~<sup>Optional</sup> <a name="releaseSchedule" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseSchedule"></a>
+##### ~~`releaseSchedule`~~<sup>Optional</sup> <a name="releaseSchedule" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseSchedule"></a>
 
 - *Deprecated:* Use `releaseTrigger: ReleaseTrigger.scheduled()` instead
 
@@ -6523,7 +6523,7 @@ CRON schedule to trigger new releases.
 
 ---
 
-##### `releaseTagPrefix`<sup>Optional</sup> <a name="releaseTagPrefix" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseTagPrefix"></a>
+##### `releaseTagPrefix`<sup>Optional</sup> <a name="releaseTagPrefix" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseTagPrefix"></a>
 
 ```typescript
 public readonly releaseTagPrefix: string;
@@ -6541,7 +6541,7 @@ with the new prefix.
 
 ---
 
-##### `releaseTrigger`<sup>Optional</sup> <a name="releaseTrigger" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseTrigger"></a>
+##### `releaseTrigger`<sup>Optional</sup> <a name="releaseTrigger" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseTrigger"></a>
 
 ```typescript
 public readonly releaseTrigger: ReleaseTrigger;
@@ -6554,7 +6554,7 @@ The release trigger to use.
 
 ---
 
-##### `releaseWorkflowName`<sup>Optional</sup> <a name="releaseWorkflowName" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflowName"></a>
+##### `releaseWorkflowName`<sup>Optional</sup> <a name="releaseWorkflowName" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflowName"></a>
 
 ```typescript
 public readonly releaseWorkflowName: string;
@@ -6567,7 +6567,7 @@ The name of the default release workflow.
 
 ---
 
-##### `releaseWorkflowSetupSteps`<sup>Optional</sup> <a name="releaseWorkflowSetupSteps" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflowSetupSteps"></a>
+##### `releaseWorkflowSetupSteps`<sup>Optional</sup> <a name="releaseWorkflowSetupSteps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflowSetupSteps"></a>
 
 ```typescript
 public readonly releaseWorkflowSetupSteps: JobStep[];
@@ -6579,7 +6579,7 @@ A set of workflow steps to execute in order to setup the workflow container.
 
 ---
 
-##### `versionrcOptions`<sup>Optional</sup> <a name="versionrcOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.versionrcOptions"></a>
+##### `versionrcOptions`<sup>Optional</sup> <a name="versionrcOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.versionrcOptions"></a>
 
 ```typescript
 public readonly versionrcOptions: {[ key: string ]: any};
@@ -6594,7 +6594,7 @@ Given values either append to default configuration or overwrite values in it.
 
 ---
 
-##### `workflowContainerImage`<sup>Optional</sup> <a name="workflowContainerImage" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowContainerImage"></a>
+##### `workflowContainerImage`<sup>Optional</sup> <a name="workflowContainerImage" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowContainerImage"></a>
 
 ```typescript
 public readonly workflowContainerImage: string;
@@ -6607,7 +6607,7 @@ Container image to use for GitHub workflows.
 
 ---
 
-##### `workflowRunsOn`<sup>Optional</sup> <a name="workflowRunsOn" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowRunsOn"></a>
+##### `workflowRunsOn`<sup>Optional</sup> <a name="workflowRunsOn" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowRunsOn"></a>
 
 ```typescript
 public readonly workflowRunsOn: string[];
@@ -6620,7 +6620,7 @@ Github Runner selection labels.
 
 ---
 
-##### `workflowRunsOnGroup`<sup>Optional</sup> <a name="workflowRunsOnGroup" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowRunsOnGroup"></a>
+##### `workflowRunsOnGroup`<sup>Optional</sup> <a name="workflowRunsOnGroup" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowRunsOnGroup"></a>
 
 ```typescript
 public readonly workflowRunsOnGroup: GroupRunnerOptions;
@@ -6632,7 +6632,7 @@ Github Runner Group selection options.
 
 ---
 
-##### `defaultReleaseBranch`<sup>Required</sup> <a name="defaultReleaseBranch" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.defaultReleaseBranch"></a>
+##### `defaultReleaseBranch`<sup>Required</sup> <a name="defaultReleaseBranch" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.defaultReleaseBranch"></a>
 
 ```typescript
 public readonly defaultReleaseBranch: string;
@@ -6645,7 +6645,7 @@ The name of the main release branch.
 
 ---
 
-##### `artifactsDirectory`<sup>Optional</sup> <a name="artifactsDirectory" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.artifactsDirectory"></a>
+##### `artifactsDirectory`<sup>Optional</sup> <a name="artifactsDirectory" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.artifactsDirectory"></a>
 
 ```typescript
 public readonly artifactsDirectory: string;
@@ -6658,7 +6658,7 @@ A directory which will contain build artifacts.
 
 ---
 
-##### `autoApproveUpgrades`<sup>Optional</sup> <a name="autoApproveUpgrades" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoApproveUpgrades"></a>
+##### `autoApproveUpgrades`<sup>Optional</sup> <a name="autoApproveUpgrades" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoApproveUpgrades"></a>
 
 ```typescript
 public readonly autoApproveUpgrades: boolean;
@@ -6673,7 +6673,7 @@ Throw if set to true but `autoApproveOptions` are not defined.
 
 ---
 
-##### `buildWorkflow`<sup>Optional</sup> <a name="buildWorkflow" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflow"></a>
+##### `buildWorkflow`<sup>Optional</sup> <a name="buildWorkflow" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflow"></a>
 
 ```typescript
 public readonly buildWorkflow: boolean;
@@ -6686,7 +6686,7 @@ Define a GitHub workflow for building PRs.
 
 ---
 
-##### `buildWorkflowTriggers`<sup>Optional</sup> <a name="buildWorkflowTriggers" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflowTriggers"></a>
+##### `buildWorkflowTriggers`<sup>Optional</sup> <a name="buildWorkflowTriggers" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflowTriggers"></a>
 
 ```typescript
 public readonly buildWorkflowTriggers: Triggers;
@@ -6699,7 +6699,7 @@ Build workflow triggers.
 
 ---
 
-##### `bundlerOptions`<sup>Optional</sup> <a name="bundlerOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bundlerOptions"></a>
+##### `bundlerOptions`<sup>Optional</sup> <a name="bundlerOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bundlerOptions"></a>
 
 ```typescript
 public readonly bundlerOptions: BundlerOptions;
@@ -6711,7 +6711,7 @@ Options for `Bundler`.
 
 ---
 
-##### `codeCov`<sup>Optional</sup> <a name="codeCov" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeCov"></a>
+##### `codeCov`<sup>Optional</sup> <a name="codeCov" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeCov"></a>
 
 ```typescript
 public readonly codeCov: boolean;
@@ -6724,7 +6724,7 @@ Define a GitHub workflow step for sending code coverage metrics to https://codec
 
 ---
 
-##### `codeCovTokenSecret`<sup>Optional</sup> <a name="codeCovTokenSecret" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeCovTokenSecret"></a>
+##### `codeCovTokenSecret`<sup>Optional</sup> <a name="codeCovTokenSecret" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeCovTokenSecret"></a>
 
 ```typescript
 public readonly codeCovTokenSecret: string;
@@ -6737,7 +6737,7 @@ Define the secret name for a specified https://codecov.io/ token A secret is req
 
 ---
 
-##### `copyrightOwner`<sup>Optional</sup> <a name="copyrightOwner" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.copyrightOwner"></a>
+##### `copyrightOwner`<sup>Optional</sup> <a name="copyrightOwner" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.copyrightOwner"></a>
 
 ```typescript
 public readonly copyrightOwner: string;
@@ -6750,7 +6750,7 @@ License copyright owner.
 
 ---
 
-##### `copyrightPeriod`<sup>Optional</sup> <a name="copyrightPeriod" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.copyrightPeriod"></a>
+##### `copyrightPeriod`<sup>Optional</sup> <a name="copyrightPeriod" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.copyrightPeriod"></a>
 
 ```typescript
 public readonly copyrightPeriod: string;
@@ -6763,7 +6763,7 @@ The copyright years to put in the LICENSE file.
 
 ---
 
-##### `dependabot`<sup>Optional</sup> <a name="dependabot" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.dependabot"></a>
+##### `dependabot`<sup>Optional</sup> <a name="dependabot" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.dependabot"></a>
 
 ```typescript
 public readonly dependabot: boolean;
@@ -6778,7 +6778,7 @@ Cannot be used in conjunction with `depsUpgrade`.
 
 ---
 
-##### `dependabotOptions`<sup>Optional</sup> <a name="dependabotOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.dependabotOptions"></a>
+##### `dependabotOptions`<sup>Optional</sup> <a name="dependabotOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.dependabotOptions"></a>
 
 ```typescript
 public readonly dependabotOptions: DependabotOptions;
@@ -6791,7 +6791,7 @@ Options for dependabot.
 
 ---
 
-##### `depsUpgrade`<sup>Optional</sup> <a name="depsUpgrade" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.depsUpgrade"></a>
+##### `depsUpgrade`<sup>Optional</sup> <a name="depsUpgrade" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.depsUpgrade"></a>
 
 ```typescript
 public readonly depsUpgrade: boolean;
@@ -6806,7 +6806,7 @@ Cannot be used in conjunction with `dependabot`.
 
 ---
 
-##### `depsUpgradeOptions`<sup>Optional</sup> <a name="depsUpgradeOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.depsUpgradeOptions"></a>
+##### `depsUpgradeOptions`<sup>Optional</sup> <a name="depsUpgradeOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.depsUpgradeOptions"></a>
 
 ```typescript
 public readonly depsUpgradeOptions: UpgradeDependenciesOptions;
@@ -6819,7 +6819,7 @@ Options for `UpgradeDependencies`.
 
 ---
 
-##### `gitignore`<sup>Optional</sup> <a name="gitignore" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitignore"></a>
+##### `gitignore`<sup>Optional</sup> <a name="gitignore" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.gitignore"></a>
 
 ```typescript
 public readonly gitignore: string[];
@@ -6831,7 +6831,7 @@ Additional entries to .gitignore.
 
 ---
 
-##### `jest`<sup>Optional</sup> <a name="jest" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jest"></a>
+##### `jest`<sup>Optional</sup> <a name="jest" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jest"></a>
 
 ```typescript
 public readonly jest: boolean;
@@ -6844,7 +6844,7 @@ Setup jest unit tests.
 
 ---
 
-##### `jestOptions`<sup>Optional</sup> <a name="jestOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jestOptions"></a>
+##### `jestOptions`<sup>Optional</sup> <a name="jestOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jestOptions"></a>
 
 ```typescript
 public readonly jestOptions: JestOptions;
@@ -6857,7 +6857,7 @@ Jest options.
 
 ---
 
-##### `mutableBuild`<sup>Optional</sup> <a name="mutableBuild" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mutableBuild"></a>
+##### `mutableBuild`<sup>Optional</sup> <a name="mutableBuild" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mutableBuild"></a>
 
 ```typescript
 public readonly mutableBuild: boolean;
@@ -6876,7 +6876,7 @@ Implies that PR builds do not have anti-tamper checks.
 
 ---
 
-##### ~~`npmignore`~~<sup>Optional</sup> <a name="npmignore" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmignore"></a>
+##### ~~`npmignore`~~<sup>Optional</sup> <a name="npmignore" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmignore"></a>
 
 - *Deprecated:* - use `project.addPackageIgnore`
 
@@ -6890,7 +6890,7 @@ Additional entries to .npmignore.
 
 ---
 
-##### `npmignoreEnabled`<sup>Optional</sup> <a name="npmignoreEnabled" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmignoreEnabled"></a>
+##### `npmignoreEnabled`<sup>Optional</sup> <a name="npmignoreEnabled" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmignoreEnabled"></a>
 
 ```typescript
 public readonly npmignoreEnabled: boolean;
@@ -6903,7 +6903,7 @@ Defines an .npmignore file. Normally this is only needed for libraries that are 
 
 ---
 
-##### `npmIgnoreOptions`<sup>Optional</sup> <a name="npmIgnoreOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmIgnoreOptions"></a>
+##### `npmIgnoreOptions`<sup>Optional</sup> <a name="npmIgnoreOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmIgnoreOptions"></a>
 
 ```typescript
 public readonly npmIgnoreOptions: IgnoreFileOptions;
@@ -6915,7 +6915,7 @@ Configuration options for .npmignore file.
 
 ---
 
-##### `package`<sup>Optional</sup> <a name="package" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.package"></a>
+##### `package`<sup>Optional</sup> <a name="package" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.package"></a>
 
 ```typescript
 public readonly package: boolean;
@@ -6928,7 +6928,7 @@ Defines a `package` task that will produce an npm tarball under the artifacts di
 
 ---
 
-##### `prettier`<sup>Optional</sup> <a name="prettier" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prettier"></a>
+##### `prettier`<sup>Optional</sup> <a name="prettier" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prettier"></a>
 
 ```typescript
 public readonly prettier: boolean;
@@ -6941,7 +6941,7 @@ Setup prettier.
 
 ---
 
-##### `prettierOptions`<sup>Optional</sup> <a name="prettierOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prettierOptions"></a>
+##### `prettierOptions`<sup>Optional</sup> <a name="prettierOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prettierOptions"></a>
 
 ```typescript
 public readonly prettierOptions: PrettierOptions;
@@ -6954,7 +6954,7 @@ Prettier options.
 
 ---
 
-##### `projenDevDependency`<sup>Optional</sup> <a name="projenDevDependency" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenDevDependency"></a>
+##### `projenDevDependency`<sup>Optional</sup> <a name="projenDevDependency" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenDevDependency"></a>
 
 ```typescript
 public readonly projenDevDependency: boolean;
@@ -6967,7 +6967,7 @@ Indicates of "projen" should be installed as a devDependency.
 
 ---
 
-##### `projenrcJs`<sup>Optional</sup> <a name="projenrcJs" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJs"></a>
+##### `projenrcJs`<sup>Optional</sup> <a name="projenrcJs" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJs"></a>
 
 ```typescript
 public readonly projenrcJs: boolean;
@@ -6980,7 +6980,7 @@ Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable
 
 ---
 
-##### `projenrcJsOptions`<sup>Optional</sup> <a name="projenrcJsOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJsOptions"></a>
+##### `projenrcJsOptions`<sup>Optional</sup> <a name="projenrcJsOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcJsOptions"></a>
 
 ```typescript
 public readonly projenrcJsOptions: ProjenrcOptions;
@@ -6993,7 +6993,7 @@ Options for .projenrc.js.
 
 ---
 
-##### `projenVersion`<sup>Optional</sup> <a name="projenVersion" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenVersion"></a>
+##### `projenVersion`<sup>Optional</sup> <a name="projenVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenVersion"></a>
 
 ```typescript
 public readonly projenVersion: string;
@@ -7006,7 +7006,7 @@ Version of projen to install.
 
 ---
 
-##### `pullRequestTemplate`<sup>Optional</sup> <a name="pullRequestTemplate" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pullRequestTemplate"></a>
+##### `pullRequestTemplate`<sup>Optional</sup> <a name="pullRequestTemplate" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pullRequestTemplate"></a>
 
 ```typescript
 public readonly pullRequestTemplate: boolean;
@@ -7019,7 +7019,7 @@ Include a GitHub pull request template.
 
 ---
 
-##### `pullRequestTemplateContents`<sup>Optional</sup> <a name="pullRequestTemplateContents" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pullRequestTemplateContents"></a>
+##### `pullRequestTemplateContents`<sup>Optional</sup> <a name="pullRequestTemplateContents" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.pullRequestTemplateContents"></a>
 
 ```typescript
 public readonly pullRequestTemplateContents: string[];
@@ -7032,7 +7032,7 @@ The contents of the pull request template.
 
 ---
 
-##### `release`<sup>Optional</sup> <a name="release" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.release"></a>
+##### `release`<sup>Optional</sup> <a name="release" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.release"></a>
 
 ```typescript
 public readonly release: boolean;
@@ -7045,7 +7045,7 @@ Add release management to this project.
 
 ---
 
-##### `releaseToNpm`<sup>Optional</sup> <a name="releaseToNpm" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseToNpm"></a>
+##### `releaseToNpm`<sup>Optional</sup> <a name="releaseToNpm" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseToNpm"></a>
 
 ```typescript
 public readonly releaseToNpm: boolean;
@@ -7058,7 +7058,7 @@ Automatically release to npm when new versions are introduced.
 
 ---
 
-##### ~~`releaseWorkflow`~~<sup>Optional</sup> <a name="releaseWorkflow" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflow"></a>
+##### ~~`releaseWorkflow`~~<sup>Optional</sup> <a name="releaseWorkflow" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.releaseWorkflow"></a>
 
 - *Deprecated:* see `release`.
 
@@ -7073,7 +7073,7 @@ DEPRECATED: renamed to `release`.
 
 ---
 
-##### `workflowBootstrapSteps`<sup>Optional</sup> <a name="workflowBootstrapSteps" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowBootstrapSteps"></a>
+##### `workflowBootstrapSteps`<sup>Optional</sup> <a name="workflowBootstrapSteps" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowBootstrapSteps"></a>
 
 ```typescript
 public readonly workflowBootstrapSteps: JobStep[];
@@ -7086,7 +7086,7 @@ Workflow steps to use in order to bootstrap this repo.
 
 ---
 
-##### `workflowGitIdentity`<sup>Optional</sup> <a name="workflowGitIdentity" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowGitIdentity"></a>
+##### `workflowGitIdentity`<sup>Optional</sup> <a name="workflowGitIdentity" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowGitIdentity"></a>
 
 ```typescript
 public readonly workflowGitIdentity: GitIdentity;
@@ -7099,7 +7099,7 @@ The git identity to use in workflows.
 
 ---
 
-##### `workflowNodeVersion`<sup>Optional</sup> <a name="workflowNodeVersion" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowNodeVersion"></a>
+##### `workflowNodeVersion`<sup>Optional</sup> <a name="workflowNodeVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowNodeVersion"></a>
 
 ```typescript
 public readonly workflowNodeVersion: string;
@@ -7112,7 +7112,7 @@ The node version to use in GitHub workflows.
 
 ---
 
-##### `workflowPackageCache`<sup>Optional</sup> <a name="workflowPackageCache" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowPackageCache"></a>
+##### `workflowPackageCache`<sup>Optional</sup> <a name="workflowPackageCache" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.workflowPackageCache"></a>
 
 ```typescript
 public readonly workflowPackageCache: boolean;
@@ -7125,7 +7125,7 @@ Enable Node.js package cache in GitHub workflows.
 
 ---
 
-##### `disableTsconfig`<sup>Optional</sup> <a name="disableTsconfig" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.disableTsconfig"></a>
+##### `disableTsconfig`<sup>Optional</sup> <a name="disableTsconfig" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.disableTsconfig"></a>
 
 ```typescript
 public readonly disableTsconfig: boolean;
@@ -7138,7 +7138,7 @@ Do not generate a `tsconfig.json` file (used by jsii projects since tsconfig.jso
 
 ---
 
-##### `disableTsconfigDev`<sup>Optional</sup> <a name="disableTsconfigDev" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.disableTsconfigDev"></a>
+##### `disableTsconfigDev`<sup>Optional</sup> <a name="disableTsconfigDev" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.disableTsconfigDev"></a>
 
 ```typescript
 public readonly disableTsconfigDev: boolean;
@@ -7151,7 +7151,7 @@ Do not generate a `tsconfig.dev.json` file.
 
 ---
 
-##### `docgen`<sup>Optional</sup> <a name="docgen" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.docgen"></a>
+##### `docgen`<sup>Optional</sup> <a name="docgen" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.docgen"></a>
 
 ```typescript
 public readonly docgen: boolean;
@@ -7164,7 +7164,7 @@ Docgen by Typedoc.
 
 ---
 
-##### `docsDirectory`<sup>Optional</sup> <a name="docsDirectory" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.docsDirectory"></a>
+##### `docsDirectory`<sup>Optional</sup> <a name="docsDirectory" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.docsDirectory"></a>
 
 ```typescript
 public readonly docsDirectory: string;
@@ -7177,7 +7177,7 @@ Docs directory.
 
 ---
 
-##### `entrypointTypes`<sup>Optional</sup> <a name="entrypointTypes" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.entrypointTypes"></a>
+##### `entrypointTypes`<sup>Optional</sup> <a name="entrypointTypes" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.entrypointTypes"></a>
 
 ```typescript
 public readonly entrypointTypes: string;
@@ -7190,7 +7190,7 @@ The .d.ts file that includes the type declarations for this module.
 
 ---
 
-##### `eslint`<sup>Optional</sup> <a name="eslint" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslint"></a>
+##### `eslint`<sup>Optional</sup> <a name="eslint" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslint"></a>
 
 ```typescript
 public readonly eslint: boolean;
@@ -7203,7 +7203,7 @@ Setup eslint.
 
 ---
 
-##### `eslintOptions`<sup>Optional</sup> <a name="eslintOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslintOptions"></a>
+##### `eslintOptions`<sup>Optional</sup> <a name="eslintOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslintOptions"></a>
 
 ```typescript
 public readonly eslintOptions: EslintOptions;
@@ -7216,7 +7216,7 @@ Eslint options.
 
 ---
 
-##### `libdir`<sup>Optional</sup> <a name="libdir" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.libdir"></a>
+##### `libdir`<sup>Optional</sup> <a name="libdir" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.libdir"></a>
 
 ```typescript
 public readonly libdir: string;
@@ -7229,7 +7229,7 @@ Typescript  artifacts output directory.
 
 ---
 
-##### `projenrcTs`<sup>Optional</sup> <a name="projenrcTs" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcTs"></a>
+##### `projenrcTs`<sup>Optional</sup> <a name="projenrcTs" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcTs"></a>
 
 ```typescript
 public readonly projenrcTs: boolean;
@@ -7242,7 +7242,7 @@ Use TypeScript for your projenrc file (`.projenrc.ts`).
 
 ---
 
-##### `projenrcTsOptions`<sup>Optional</sup> <a name="projenrcTsOptions" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcTsOptions"></a>
+##### `projenrcTsOptions`<sup>Optional</sup> <a name="projenrcTsOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.projenrcTsOptions"></a>
 
 ```typescript
 public readonly projenrcTsOptions: ProjenrcOptions;
@@ -7254,7 +7254,7 @@ Options for .projenrc.ts.
 
 ---
 
-##### `sampleCode`<sup>Optional</sup> <a name="sampleCode" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.sampleCode"></a>
+##### `sampleCode`<sup>Optional</sup> <a name="sampleCode" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.sampleCode"></a>
 
 ```typescript
 public readonly sampleCode: boolean;
@@ -7267,7 +7267,7 @@ Generate one-time sample in `src/` and `test/` if there are no files there.
 
 ---
 
-##### `srcdir`<sup>Optional</sup> <a name="srcdir" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.srcdir"></a>
+##### `srcdir`<sup>Optional</sup> <a name="srcdir" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.srcdir"></a>
 
 ```typescript
 public readonly srcdir: string;
@@ -7280,7 +7280,7 @@ Typescript sources directory.
 
 ---
 
-##### `testdir`<sup>Optional</sup> <a name="testdir" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.testdir"></a>
+##### `testdir`<sup>Optional</sup> <a name="testdir" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.testdir"></a>
 
 ```typescript
 public readonly testdir: string;
@@ -7298,7 +7298,7 @@ compile the code in-memory.
 
 ---
 
-##### `tsconfig`<sup>Optional</sup> <a name="tsconfig" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfig"></a>
+##### `tsconfig`<sup>Optional</sup> <a name="tsconfig" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfig"></a>
 
 ```typescript
 public readonly tsconfig: TypescriptConfigOptions;
@@ -7311,7 +7311,7 @@ Custom TSConfig.
 
 ---
 
-##### `tsconfigDev`<sup>Optional</sup> <a name="tsconfigDev" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigDev"></a>
+##### `tsconfigDev`<sup>Optional</sup> <a name="tsconfigDev" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigDev"></a>
 
 ```typescript
 public readonly tsconfigDev: TypescriptConfigOptions;
@@ -7324,7 +7324,7 @@ Custom tsconfig options for the development tsconfig.json file (used for testing
 
 ---
 
-##### `tsconfigDevFile`<sup>Optional</sup> <a name="tsconfigDevFile" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigDevFile"></a>
+##### `tsconfigDevFile`<sup>Optional</sup> <a name="tsconfigDevFile" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigDevFile"></a>
 
 ```typescript
 public readonly tsconfigDevFile: string;
@@ -7337,7 +7337,7 @@ The name of the development tsconfig.json file.
 
 ---
 
-##### `typescriptVersion`<sup>Optional</sup> <a name="typescriptVersion" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.typescriptVersion"></a>
+##### `typescriptVersion`<sup>Optional</sup> <a name="typescriptVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.typescriptVersion"></a>
 
 ```typescript
 public readonly typescriptVersion: string;
@@ -7353,7 +7353,7 @@ same minor, so we recommend using a `~` dependency (e.g. `~1.2.3`).
 
 ---
 
-##### `addDefaultBundle`<sup>Optional</sup> <a name="addDefaultBundle" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.addDefaultBundle"></a>
+##### `addDefaultBundle`<sup>Optional</sup> <a name="addDefaultBundle" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.addDefaultBundle"></a>
 
 ```typescript
 public readonly addDefaultBundle: boolean;
@@ -7368,7 +7368,7 @@ Will bundle ./src/ to ./dist/ using esbuild.
 
 ---
 
-##### `eslintFixableAsWarn`<sup>Optional</sup> <a name="eslintFixableAsWarn" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslintFixableAsWarn"></a>
+##### `eslintFixableAsWarn`<sup>Optional</sup> <a name="eslintFixableAsWarn" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslintFixableAsWarn"></a>
 
 ```typescript
 public readonly eslintFixableAsWarn: boolean;
@@ -7381,7 +7381,7 @@ Change the default-set eslint auto-fixable rules to "warn" instead of "error".
 
 ---
 
-##### `esmSupportConfig`<sup>Optional</sup> <a name="esmSupportConfig" id="tms-projen-projects.TmsTypeScriptAppProjectOptions.property.esmSupportConfig"></a>
+##### `esmSupportConfig`<sup>Optional</sup> <a name="esmSupportConfig" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.esmSupportConfig"></a>
 
 ```typescript
 public readonly esmSupportConfig: boolean;
