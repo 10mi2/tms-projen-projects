@@ -66,7 +66,6 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 3`] = `
     "eslint-plugin-prettier": "*",
     "jest": "*",
     "jest-junit": "^15",
-    "npm-check-updates": "^16",
     "prettier": "*",
     "projen": "*",
     "ts-jest": "*",
@@ -170,7 +169,6 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 6`] = `
   },
   "extends": [
     "plugin:import/typescript",
-    "prettier",
     "plugin:prettier/recommended",
   ],
   "ignorePatterns": [
@@ -202,7 +200,6 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 6`] = `
   "plugins": [
     "@typescript-eslint",
     "import",
-    "prettier",
   ],
   "root": true,
   "rules": {
@@ -317,7 +314,6 @@ exports[`TMSTypeScriptAppProject honors eslintFixableAsWarn=false 1`] = `
   },
   "extends": [
     "plugin:import/typescript",
-    "prettier",
     "plugin:prettier/recommended",
   ],
   "ignorePatterns": [
@@ -349,7 +345,6 @@ exports[`TMSTypeScriptAppProject honors eslintFixableAsWarn=false 1`] = `
   "plugins": [
     "@typescript-eslint",
     "import",
-    "prettier",
   ],
   "root": true,
   "rules": {
@@ -432,9 +427,6 @@ exports[`TMSTypeScriptAppProject honors eslintFixableAsWarn=false 1`] = `
       "off",
     ],
     "no-trailing-spaces": [
-      "error",
-    ],
-    "prettier/prettier": [
       "error",
     ],
   },
