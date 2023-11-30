@@ -32,7 +32,7 @@
   "author": {
     "name": "Ten Mile Square",
     "email": "rob@tenmilesquare.com",
-    "organization": false
+    "organization": true
   },
   "devDependencies": {
     "@types/jest": "^29.5.8",
@@ -66,6 +66,9 @@
   },
   "main": "lib/index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
     "testMatch": [
