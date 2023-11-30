@@ -1,9 +1,16 @@
+import { ApolloServerPluginLandingPageLocalDefault } from "@apollo/server/plugin/landingPage/default";
 import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
 import { Module } from "@nestjs/common";
 import { GraphQLModule } from "@nestjs/graphql";
 import { DirectiveLocation, GraphQLDirective } from "graphql";
 import { upperDirectiveTransformer } from "./common/directives/upper-case.directive";
 import { RecipesModule } from "./recipes/recipes.module";
+
+/**
+ * Set to `true` to disable the default [GraphQL Playground](https://github.com/graphql/graphql-playground) and use the
+ * embedded [Apollo Sandbox](https://www.apollographql.com/docs/graphos/explorer/sandbox) landing page instead
+ * */
+const useApolloStudio = false;
 
 @Module({
   imports: [
@@ -21,6 +28,12 @@ import { RecipesModule } from "./recipes/recipes.module";
           }),
         ],
       },
+      ...(useApolloStudio
+        ? {
+            playground: false,
+            plugins: [ApolloServerPluginLandingPageLocalDefault()],
+          }
+        : {}),
     }),
   ],
 })
