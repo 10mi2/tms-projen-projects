@@ -146,6 +146,7 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
       "@nestjs/apollo",
     );
     this.addDevDeps(
+      "@tsconfig/node18",
       "@tsconfig/strictest",
       "@nestjs/cli@^10.0.0",
       "@nestjs/schematics@^10.0.0",
