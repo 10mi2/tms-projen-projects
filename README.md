@@ -31,7 +31,14 @@ npx projen new --from @10mi2/tms-projen-projects tms-typescript-app
 
 ## NestJS App
 
-An example NestJS app. Experimental
+An example NestJS app. Experimental!
+
+Will load up one of a few sample apps:
+
+- `graphql-codefirst` - A NestJS app with a GraphQL API using the code-first approach
+  - sample code from https://github.com/nestjs/nest/tree/master/sample/23-graphql-code-first
+- `graphql-schemafirst` - A NestJS app with a GraphQL API using the code-first approach
+  - sample code from https://github.com/nestjs/nest/tree/master/sample/12-graphql-schema-first
 
 
 ```bash
