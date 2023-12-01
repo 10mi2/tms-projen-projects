@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { sep } from "path";
-import { Component, JsonPatch, SampleDir } from "projen";
+import { Component, JsonPatch, SampleDir, TextFile } from "projen";
 import {
   NodePackageManager,
   TypeScriptModuleResolution,
@@ -41,6 +41,17 @@ export interface TmsTypeScriptAppProjectOptions
    * @featured
    */
   readonly eslintFixableAsWarn?: boolean;
+
+  /**
+   * Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use
+   *
+   * NOTE: As of this writing ts-node (v10.9.1) has issues with node versions 18.19.x and newer (including 20.x)
+   * when esm is enabled (`esmSupportConfig: true`)
+   *
+   * @default v18.18.2
+   * @featured
+   */
+  readonly nodeVersion?: string;
 }
 
 /**
@@ -57,6 +68,8 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
       packageManager: NodePackageManager.NPM,
       prettier: true,
       projenrcTs: true,
+
+      nodeVersion: "v18.18.2",
 
       vscode: true,
       tsconfig: {
@@ -132,6 +145,12 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
         "no-multiple-empty-lines": ["warn"],
         "no-trailing-spaces": ["warn"],
         "dot-notation": ["warn"],
+      });
+    }
+
+    if (mergedOptions.nodeVersion) {
+      new TextFile(this, ".nvmrc", {
+        lines: [mergedOptions.nodeVersion],
       });
     }
 

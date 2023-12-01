@@ -306,6 +306,8 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 6`] = `
 }
 `;
 
+exports[`TMSTypeScriptAppProject has reasonable configuration 7`] = `"v18.18.2"`;
+
 exports[`TMSTypeScriptAppProject honors eslintFixableAsWarn=false 1`] = `
 {
   "env": {

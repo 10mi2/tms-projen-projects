@@ -18,6 +18,8 @@ test("TMSTypeScriptAppProject has reasonable configuration", () => {
 
   expect(snapshot[".eslintrc.json"]).toMatchSnapshot();
 
+  expect(snapshot[".nvmrc"]).toMatchSnapshot();
+
   expect(snapshot["src/index.ts"]).toBeDefined();
   expect(snapshot["src/hello.ts"]).toBeDefined();
   expect(snapshot["test/hello.test.ts"]).toBeDefined();
