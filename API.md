@@ -3148,6 +3148,7 @@ const tmsNestJSAppProjectOptions: TmsNestJSAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.addDefaultBundle">addDefaultBundle</a></code> | <code>boolean</code> | Add a default bundle to the project. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.eslintFixableAsWarn">eslintFixableAsWarn</a></code> | <code>boolean</code> | Change the default-set eslint auto-fixable rules to "warn" instead of "error". |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.esmSupportConfig">esmSupportConfig</a></code> | <code>boolean</code> | Configure for ESM. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.nodeVersion">nodeVersion</a></code> | <code>string</code> | Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleType">sampleType</a></code> | <code>string</code> | Which type of sample code to include, if `sampleCode` is true. |
 
 ---
@@ -5186,6 +5187,22 @@ Configure for ESM.
 
 ---
 
+##### `nodeVersion`<sup>Optional</sup> <a name="nodeVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.nodeVersion"></a>
+
+```typescript
+public readonly nodeVersion: string;
+```
+
+- *Type:* string
+- *Default:* v18.18.2
+
+Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use.
+
+NOTE: As of this writing ts-node (v10.9.1) has issues with node versions 18.19.x and newer (including 20.x)
+when esm is enabled (`esmSupportConfig: true`)
+
+---
+
 ##### `sampleType`<sup>Optional</sup> <a name="sampleType" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleType"></a>
 
 ```typescript
@@ -5357,6 +5374,7 @@ const tmsTypeScriptAppProjectOptions: TmsTypeScriptAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.addDefaultBundle">addDefaultBundle</a></code> | <code>boolean</code> | Add a default bundle to the project. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslintFixableAsWarn">eslintFixableAsWarn</a></code> | <code>boolean</code> | Change the default-set eslint auto-fixable rules to "warn" instead of "error". |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.esmSupportConfig">esmSupportConfig</a></code> | <code>boolean</code> | Configure for ESM. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.nodeVersion">nodeVersion</a></code> | <code>string</code> | Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use. |
 
 ---
 
@@ -7391,6 +7409,22 @@ public readonly esmSupportConfig: boolean;
 - *Default:* true
 
 Configure for ESM.
+
+---
+
+##### `nodeVersion`<sup>Optional</sup> <a name="nodeVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.nodeVersion"></a>
+
+```typescript
+public readonly nodeVersion: string;
+```
+
+- *Type:* string
+- *Default:* v18.18.2
+
+Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use.
+
+NOTE: As of this writing ts-node (v10.9.1) has issues with node versions 18.19.x and newer (including 20.x)
+when esm is enabled (`esmSupportConfig: true`)
 
 ---
 
