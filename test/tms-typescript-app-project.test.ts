@@ -61,7 +61,7 @@ test("TMSTypeScriptAppProject honors eslintFixableAsWarn=false", () => {
   });
   const snapshot = Testing.synth(project); // synthSnapshot(project, { parseJson: true });
 
-  expect(snapshot[".eslintrc.json"]).toMatchSnapshot();
+  expect(snapshot[".eslintrc.json"]).toMatchSnapshot(".eslintrc.json");
 });
 
 test("TMSTypeScriptAppProject honors esmSupportConfig=false", () => {
@@ -75,8 +75,8 @@ test("TMSTypeScriptAppProject honors esmSupportConfig=false", () => {
   const snapshot = Testing.synth(project); // synthSnapshot(project, { parseJson: true });
 
   expect(snapshot["package.json"].type).toBeUndefined();
-  expect(snapshot["tsconfig.json"]).toMatchSnapshot();
-  expect(snapshot["tsconfig.dev.json"]).toMatchSnapshot();
+  expect(snapshot["tsconfig.json"]).toMatchSnapshot("tsconfig.json");
+  expect(snapshot["tsconfig.dev.json"]).toMatchSnapshot("tsconfig.dev.json");
 });
 
 test("TMSTypeScriptAppProject handles relative projects properly", () => {
@@ -85,6 +85,7 @@ test("TMSTypeScriptAppProject handles relative projects properly", () => {
     defaultReleaseBranch: "main",
     // default settings
     tsconfigBase: TmsTSConfigBase.NODE_LTS,
+    tsconfigBaseStrictest: false,
   });
   new TmsTypeScriptAppProject({
     name: "test",
@@ -99,10 +100,9 @@ test("TMSTypeScriptAppProject handles relative projects properly", () => {
   const snapshot = Testing.synth(project); // synthSnapshot(project, { parseJson: true });
 
   expect(snapshot["tsconfig.json"]).toMatchSnapshot("tsconfig.json");
-  expect(snapshot["tsconfig.json"].extends).toStrictEqual([
-    "@tsconfig/strictest/tsconfig.json",
+  expect(snapshot["tsconfig.json"].extends).toStrictEqual(
     "@tsconfig/node-lts/tsconfig.json",
-  ]);
+  );
   expect(snapshot["tsconfig.dev.json"]).toMatchSnapshot("tsconfig.dev.json");
   expect(snapshot["tsconfig.dev.json"].extends).toStrictEqual(
     "./node_modules/@tsconfig/node18/tsconfig.json",
@@ -121,4 +121,17 @@ test("TMSTypeScriptAppProject handles relative projects properly", () => {
   expect(snapshot["subproject/tsconfig.dev.json"].extends).toStrictEqual(
     "../node_modules/@tsconfig/node20/tsconfig.json",
   );
+
+  expect(snapshot["package.json"].devDependencies).toMatchObject({
+    "@tsconfig/node18": expect.any(String),
+    "@tsconfig/node-lts": expect.any(String),
+  });
+  expect(
+    snapshot["package.json"]?.devDependencies?.["@tsconfig/strictest"],
+  ).toBeUndefined();
+
+  expect(snapshot["subproject/package.json"].devDependencies).toMatchObject({
+    "@tsconfig/node20": expect.any(String),
+    "@tsconfig/strictest": expect.any(String),
+  });
 });

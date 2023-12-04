@@ -165,7 +165,9 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
           ...(options.tsconfigBaseStrictest ?? true
             ? ["@tsconfig/strictest/tsconfig.json"]
             : []),
-          `@tsconfig/${options.tsconfigBase ?? "node18"}/tsconfig.json`,
+          `@tsconfig/${
+            options.tsconfigBase ?? TmsTSConfigBase.NODE18
+          }/tsconfig.json`,
         ]),
       },
 
@@ -180,7 +182,7 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
             joinPath(options.outdir ?? "."),
             "./node_modules",
           ).replace(/^(?!\.)/, "./")}/@tsconfig/${
-            options.tsconfigBaseDev ?? "node18"
+            options.tsconfigBaseDev ?? TmsTSConfigBase.NODE18
           }/tsconfig.json`,
         ]),
       },
@@ -192,6 +194,10 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
 
       addDefaultBundle: true,
       esmSupportConfig: true,
+
+      tsconfigBase: TmsTSConfigBase.NODE18,
+      tsconfigBaseDev: TmsTSConfigBase.NODE18,
+      tsconfigBaseStrictest: true,
     } satisfies Partial<TmsTypeScriptAppProjectOptions>;
     const mergedOptions = deepMerge(
       [
@@ -203,7 +209,15 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
 
     super({ ...mergedOptions, sampleCode: false });
 
-    this.addDevDeps("@tsconfig/node18");
+    this.addDevDeps(
+      ...new Set([
+        `@tsconfig/${mergedOptions.tsconfigBase ?? TmsTSConfigBase.NODE18}`,
+        `@tsconfig/${mergedOptions.tsconfigBaseDev ?? TmsTSConfigBase.NODE18}`,
+        ...(mergedOptions.tsconfigBaseStrictest ?? true
+          ? ["@tsconfig/strictest"]
+          : []),
+      ]),
+    );
 
     // Note: should adjust for https://eslint.style/guide/getting-started
 
