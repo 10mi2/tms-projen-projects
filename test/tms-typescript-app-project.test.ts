@@ -84,15 +84,15 @@ test("TMSTypeScriptAppProject handles relative projects properly", () => {
     name: "test",
     defaultReleaseBranch: "main",
     // default settings
-    tsconfigBase: TmsTSConfigBase.NodeLTS,
+    tsconfigBase: TmsTSConfigBase.NODE_LTS,
   });
   new TmsTypeScriptAppProject({
     name: "test",
     defaultReleaseBranch: "main",
     parent: project,
     outdir: "subproject",
-    tsconfigBase: TmsTSConfigBase.Node20,
-    tsconfigBaseDev: TmsTSConfigBase.Node20,
+    tsconfigBase: TmsTSConfigBase.NODE20,
+    tsconfigBaseDev: TmsTSConfigBase.NODE20,
     // default settings
   });
 

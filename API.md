@@ -3149,6 +3149,9 @@ const tmsNestJSAppProjectOptions: TmsNestJSAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.eslintFixableAsWarn">eslintFixableAsWarn</a></code> | <code>boolean</code> | Change the default-set eslint auto-fixable rules to "warn" instead of "error". |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.esmSupportConfig">esmSupportConfig</a></code> | <code>boolean</code> | Configure for ESM. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.nodeVersion">nodeVersion</a></code> | <code>string</code> | Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBase">tsconfigBase</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseDev">tsconfigBaseDev</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseStrictest">tsconfigBaseStrictest</a></code> | <code>boolean</code> | Include TSConfig "strinctest" configuration to {@link tsconfigBase}. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleType">sampleType</a></code> | <code>string</code> | Which type of sample code to include, if `sampleCode` is true. |
 
 ---
@@ -5203,6 +5206,57 @@ when esm is enabled (`esmSupportConfig: true`)
 
 ---
 
+##### `tsconfigBase`<sup>Optional</sup> <a name="tsconfigBase" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBase"></a>
+
+```typescript
+public readonly tsconfigBase: TmsTSConfigBase;
+```
+
+- *Type:* <a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a>
+- *Default:* TmsTSConfigBase.Node18
+
+TSConfig base configuration selection.
+
+Using one of the options from https://github.com/tsconfig/bases as a base, then any explicit settings override
+those. Note that only nodes18 and above are supported.
+
+> [{@link tsconfigBaseStrictest }]({@link tsconfigBaseStrictest })
+
+---
+
+##### `tsconfigBaseDev`<sup>Optional</sup> <a name="tsconfigBaseDev" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseDev"></a>
+
+```typescript
+public readonly tsconfigBaseDev: TmsTSConfigBase;
+```
+
+- *Type:* <a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a>
+- *Default:* TmsTSConfigBase.Node18
+
+TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`.
+
+> [{@link tsconfigBase }]({@link tsconfigBase })
+
+---
+
+##### `tsconfigBaseStrictest`<sup>Optional</sup> <a name="tsconfigBaseStrictest" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseStrictest"></a>
+
+```typescript
+public readonly tsconfigBaseStrictest: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+Include TSConfig "strinctest" configuration to {@link tsconfigBase}.
+
+Using one of the options from https://github.com/tsconfig/bases as a base, then any explicit settings override
+those. Note that only nodes18 and above are supported.
+
+> [{@link tsconfigBase }]({@link tsconfigBase })
+
+---
+
 ##### `sampleType`<sup>Optional</sup> <a name="sampleType" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleType"></a>
 
 ```typescript
@@ -5375,6 +5429,9 @@ const tmsTypeScriptAppProjectOptions: TmsTypeScriptAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslintFixableAsWarn">eslintFixableAsWarn</a></code> | <code>boolean</code> | Change the default-set eslint auto-fixable rules to "warn" instead of "error". |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.esmSupportConfig">esmSupportConfig</a></code> | <code>boolean</code> | Configure for ESM. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.nodeVersion">nodeVersion</a></code> | <code>string</code> | Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBase">tsconfigBase</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBaseDev">tsconfigBaseDev</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBaseStrictest">tsconfigBaseStrictest</a></code> | <code>boolean</code> | Include TSConfig "strinctest" configuration to {@link tsconfigBase}. |
 
 ---
 
@@ -7428,5 +7485,84 @@ when esm is enabled (`esmSupportConfig: true`)
 
 ---
 
+##### `tsconfigBase`<sup>Optional</sup> <a name="tsconfigBase" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBase"></a>
 
+```typescript
+public readonly tsconfigBase: TmsTSConfigBase;
+```
+
+- *Type:* <a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a>
+- *Default:* TmsTSConfigBase.Node18
+
+TSConfig base configuration selection.
+
+Using one of the options from https://github.com/tsconfig/bases as a base, then any explicit settings override
+those. Note that only nodes18 and above are supported.
+
+> [{@link tsconfigBaseStrictest }]({@link tsconfigBaseStrictest })
+
+---
+
+##### `tsconfigBaseDev`<sup>Optional</sup> <a name="tsconfigBaseDev" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBaseDev"></a>
+
+```typescript
+public readonly tsconfigBaseDev: TmsTSConfigBase;
+```
+
+- *Type:* <a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a>
+- *Default:* TmsTSConfigBase.Node18
+
+TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`.
+
+> [{@link tsconfigBase }]({@link tsconfigBase })
+
+---
+
+##### `tsconfigBaseStrictest`<sup>Optional</sup> <a name="tsconfigBaseStrictest" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBaseStrictest"></a>
+
+```typescript
+public readonly tsconfigBaseStrictest: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+Include TSConfig "strinctest" configuration to {@link tsconfigBase}.
+
+Using one of the options from https://github.com/tsconfig/bases as a base, then any explicit settings override
+those. Note that only nodes18 and above are supported.
+
+> [{@link tsconfigBase }]({@link tsconfigBase })
+
+---
+
+
+
+## Enums <a name="Enums" id="Enums"></a>
+
+### TmsTSConfigBase <a name="TmsTSConfigBase" id="@10mi2/tms-projen-projects.TmsTSConfigBase"></a>
+
+#### Members <a name="Members" id="Members"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase.NODE_LTS">NODE_LTS</a></code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase.NODE18">NODE18</a></code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase.NODE20">NODE20</a></code> | *No description.* |
+
+---
+
+##### `NODE_LTS` <a name="NODE_LTS" id="@10mi2/tms-projen-projects.TmsTSConfigBase.NODE_LTS"></a>
+
+---
+
+
+##### `NODE18` <a name="NODE18" id="@10mi2/tms-projen-projects.TmsTSConfigBase.NODE18"></a>
+
+---
+
+
+##### `NODE20` <a name="NODE20" id="@10mi2/tms-projen-projects.TmsTSConfigBase.NODE20"></a>
+
+---
 

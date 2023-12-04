@@ -15,9 +15,9 @@ import {
 import { deepMerge } from "projen/lib/util";
 
 export enum TmsTSConfigBase {
-  NodeLTS = "node-lts",
-  Node18 = "node18",
-  Node20 = "node20",
+  NODE_LTS = "node-lts",
+  NODE18 = "node18",
+  NODE20 = "node20",
 }
 
 const RESET_COMPILER_OPTIONS = {
@@ -98,7 +98,7 @@ export interface TmsTypeScriptAppProjectOptions
    * @default TmsTSConfigBase.Node18
    *
    */
-  tsconfigBase?: TmsTSConfigBase;
+  readonly tsconfigBase?: TmsTSConfigBase;
 
   /**
    * TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`
@@ -114,7 +114,7 @@ export interface TmsTypeScriptAppProjectOptions
    * @default TmsTSConfigBase.Node18
    *
    */
-  tsconfigBaseDev?: TmsTSConfigBase;
+  readonly tsconfigBaseDev?: TmsTSConfigBase;
 
   /**
    * Include TSConfig "strinctest" configuration to {@link tsconfigBase}
@@ -134,7 +134,7 @@ export interface TmsTypeScriptAppProjectOptions
    * @default true
    *
    */
-  tsconfigBaseStrictest?: boolean;
+  readonly tsconfigBaseStrictest?: boolean;
 }
 
 /**
