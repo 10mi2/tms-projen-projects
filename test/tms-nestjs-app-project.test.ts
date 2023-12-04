@@ -33,3 +33,20 @@ test("TmsNestJSAppProject doesn't make sample code when told not to", () => {
   expect(snapshot["src/main.ts"]).toBeUndefined();
   expect(snapshot["test/app.e2e-spec.ts"]).toBeUndefined();
 });
+
+test("TmsNestJSAppProject makes schemafirst sample code when told not to", () => {
+  const project = new TmsNestJSAppProject({
+    name: "test",
+    defaultReleaseBranch: "main",
+    sampleType: "graphql-schemafirst",
+    // sampleCode: false,
+    // default settings
+  });
+  const snapshot = Testing.synth(project); // synthSnapshot(project, { parseJson: true });
+
+  expect(snapshot["src/main.ts"]).toBeDefined();
+  expect(snapshot["test/app.e2e-spec.ts"]).toBeDefined();
+  expect(snapshot["src/graphql.schema.ts"]).toBeDefined();
+  expect(snapshot["generate-typings.ts"]).toBeDefined();
+  expect(snapshot["nest-cli.json"]).toBeDefined();
+});

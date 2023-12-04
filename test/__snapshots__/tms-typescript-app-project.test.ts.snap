@@ -1,16 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TMSTypeScriptAppProject has reasonable configuration 1`] = `
+exports[`TMSTypeScriptAppProject handles relative projects properly: subproject/tsconfig.dev.json 1`] = `
 {
   "compilerOptions": {
-    "module": "es2022",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node16",
+    "noEmit": true,
+  },
+  "exclude": [
+    "node_modules",
+  ],
+  "extends": "../node_modules/@tsconfig/node20/tsconfig.json",
+  "include": [
+    ".projenrc.js",
+    "src/**/*.ts",
+    "test/**/*.ts",
+  ],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+    "preferTsExts": true,
+  },
+}
+`;
+
+exports[`TMSTypeScriptAppProject handles relative projects properly: subproject/tsconfig.json 1`] = `
+{
+  "compilerOptions": {
+    "moduleResolution": "node16",
     "noEmit": true,
     "outDir": "lib",
     "rootDir": "src",
   },
   "exclude": [],
-  "extends": "@tsconfig/node18/tsconfig.json",
+  "extends": [
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/node20/tsconfig.json",
+  ],
+  "include": [
+    "src/**/*.ts",
+  ],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+    "preferTsExts": true,
+  },
+}
+`;
+
+exports[`TMSTypeScriptAppProject handles relative projects properly: tsconfig.dev.json 1`] = `
+{
+  "compilerOptions": {
+    "moduleResolution": "node16",
+    "noEmit": true,
+  },
+  "exclude": [
+    "node_modules",
+  ],
+  "extends": "./node_modules/@tsconfig/node18/tsconfig.json",
+  "include": [
+    ".projenrc.js",
+    "src/**/*.ts",
+    "test/**/*.ts",
+    ".projenrc.ts",
+    "projenrc/**/*.ts",
+  ],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+    "preferTsExts": true,
+  },
+}
+`;
+
+exports[`TMSTypeScriptAppProject handles relative projects properly: tsconfig.json 1`] = `
+{
+  "compilerOptions": {
+    "moduleResolution": "node16",
+    "noEmit": true,
+    "outDir": "lib",
+    "rootDir": "src",
+  },
+  "exclude": [],
+  "extends": [
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/node-lts/tsconfig.json",
+  ],
+  "include": [
+    "src/**/*.ts",
+  ],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+    "preferTsExts": true,
+  },
+}
+`;
+
+exports[`TMSTypeScriptAppProject has reasonable configuration 1`] = `
+{
+  "compilerOptions": {
+    "moduleResolution": "node16",
+    "noEmit": true,
+    "outDir": "lib",
+    "rootDir": "src",
+  },
+  "exclude": [],
+  "extends": [
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/node18/tsconfig.json",
+  ],
   "include": [
     "src/**/*.ts",
   ],
@@ -25,14 +123,13 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 1`] = `
 exports[`TMSTypeScriptAppProject has reasonable configuration 2`] = `
 {
   "compilerOptions": {
-    "module": "es2022",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node16",
     "noEmit": true,
   },
   "exclude": [
     "node_modules",
   ],
-  "extends": "@tsconfig/node18/tsconfig.json",
+  "extends": "./node_modules/@tsconfig/node18/tsconfig.json",
   "include": [
     ".projenrc.js",
     "src/**/*.ts",
@@ -86,6 +183,9 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 3`] = `
       "cobertura",
       "text",
     ],
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1",
+    },
     "preset": "ts-jest/presets/default-esm",
     "reporters": [
       "default",
@@ -453,14 +553,16 @@ exports[`TMSTypeScriptAppProject honors eslintFixableAsWarn=false 1`] = `
 exports[`TMSTypeScriptAppProject honors esmSupportConfig=false 1`] = `
 {
   "compilerOptions": {
-    "module": "es2022",
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "noEmit": true,
     "outDir": "lib",
     "rootDir": "src",
   },
   "exclude": [],
-  "extends": "@tsconfig/node18/tsconfig.json",
+  "extends": [
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/node18/tsconfig.json",
+  ],
   "include": [
     "src/**/*.ts",
   ],
@@ -477,14 +579,13 @@ exports[`TMSTypeScriptAppProject honors esmSupportConfig=false 1`] = `
 exports[`TMSTypeScriptAppProject honors esmSupportConfig=false 2`] = `
 {
   "compilerOptions": {
-    "module": "es2022",
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "noEmit": true,
   },
   "exclude": [
     "node_modules",
   ],
-  "extends": "@tsconfig/node18/tsconfig.json",
+  "extends": "./node_modules/@tsconfig/node18/tsconfig.json",
   "include": [
     ".projenrc.js",
     "src/**/*.ts",

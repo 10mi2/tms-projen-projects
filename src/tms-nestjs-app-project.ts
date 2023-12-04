@@ -1,6 +1,5 @@
 import * as path from "node:path";
-import { SampleDir, javascript } from "projen";
-import { TypescriptConfigExtends } from "projen/lib/javascript";
+import { SampleDir, SampleFile, javascript } from "projen";
 import { deepMerge } from "projen/lib/util";
 import {
   TmsTypeScriptAppProject,
@@ -34,8 +33,9 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
 
       tsconfig: {
         compilerOptions: {
+          module: "node16",
+
           // Needed for nestjs
-          module: "commonjs",
           noImplicitAny: true,
           declaration: true,
           emitDecoratorMetadata: true,
@@ -57,17 +57,12 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
           // incremental: true,
           // strictBindCallApply: true,
         },
-        extends: TypescriptConfigExtends.fromPaths([
-          "@tsconfig/node18/tsconfig.json",
-          "@tsconfig/strictest/tsconfig.json",
-        ]),
       },
 
       tsconfigDev: {
         compilerOptions: {
           baseUrl: "./",
 
-          module: "es2022",
           target: "es2022",
           experimentalDecorators: undefined,
           emitDecoratorMetadata: undefined,
@@ -80,10 +75,6 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
           noFallthroughCasesInSwitch: undefined,
           noEmit: true,
         },
-        extends: TypescriptConfigExtends.fromPaths([
-          "@tsconfig/node18/tsconfig.json",
-          // "@tsconfig/strictest/tsconfig.json",
-        ]),
       },
 
       jestOptions: {
@@ -100,9 +91,13 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
           // collectCoverageFrom: ["**/*.(t|j)s"],
           // coverageDirectory: "../coverage",
           testMatch: ["<rootDir>/(test|src)/**/*(*)@(.|-)@(spec|test).ts?(x)"],
+          moduleNameMapper: {
+            "^(\\.{1,2}/.*)\\.js$": "$1",
+          },
         },
         updateSnapshot: javascript.UpdateSnapshot.NEVER,
       },
+
       sampleCode: true,
       sampleType: "graphql-codefirst",
     } satisfies Partial<TmsNestJSAppProjectOptions>;
@@ -188,6 +183,48 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
             "nestjs-graphql-codefirst",
             "test",
           ),
+        });
+      } else if (mergedOptions.sampleType === "graphql-schemafirst") {
+        // generate-typings.ts uses ts-morph, so we need to add it to devDeps
+        this.addDevDeps("ts-morph");
+
+        for (const fileName of ["generate-typings.ts", "nest-cli.json"]) {
+          new SampleFile(this, fileName, {
+            sourcePath: path.join(
+              __dirname,
+              "..",
+              "samples",
+              "nestjs-graphql-schemafirst",
+              "root",
+              fileName,
+            ),
+          });
+          this.eslint?.addLintPattern(fileName);
+        }
+        new SampleDir(this, this.srcdir, {
+          sourceDir: path.join(
+            __dirname,
+            "..",
+            "samples",
+            "nestjs-graphql-schemafirst",
+            "src",
+          ),
+        });
+        new SampleDir(this, this.testdir, {
+          sourceDir: path.join(
+            __dirname,
+            "..",
+            "samples",
+            "nestjs-graphql-schemafirst",
+            "test",
+          ),
+        });
+
+        this.tsconfigDev.addInclude("./generate-typings.ts");
+
+        this.addTask("generate-typings", {
+          exec: "ts-node --project=tsconfig.dev.json generate-typings.ts",
+          description: "Generate typings from graphql files",
         });
       } else {
         throw new Error("Unsupported sample type");

@@ -1,6 +1,6 @@
 import { Testing } from "projen/lib/testing";
 // import { synthSnapshot } from "projen/lib/util/synth";
-import { TmsTypeScriptAppProject } from "../src/";
+import { TmsTSConfigBase, TmsTypeScriptAppProject } from "../src/";
 
 test("TMSTypeScriptAppProject has reasonable configuration", () => {
   const project = new TmsTypeScriptAppProject({
@@ -77,4 +77,48 @@ test("TMSTypeScriptAppProject honors esmSupportConfig=false", () => {
   expect(snapshot["package.json"].type).toBeUndefined();
   expect(snapshot["tsconfig.json"]).toMatchSnapshot();
   expect(snapshot["tsconfig.dev.json"]).toMatchSnapshot();
+});
+
+test("TMSTypeScriptAppProject handles relative projects properly", () => {
+  const project = new TmsTypeScriptAppProject({
+    name: "test",
+    defaultReleaseBranch: "main",
+    // default settings
+    tsconfigBase: TmsTSConfigBase.NodeLTS,
+  });
+  new TmsTypeScriptAppProject({
+    name: "test",
+    defaultReleaseBranch: "main",
+    parent: project,
+    outdir: "subproject",
+    tsconfigBase: TmsTSConfigBase.Node20,
+    tsconfigBaseDev: TmsTSConfigBase.Node20,
+    // default settings
+  });
+
+  const snapshot = Testing.synth(project); // synthSnapshot(project, { parseJson: true });
+
+  expect(snapshot["tsconfig.json"]).toMatchSnapshot("tsconfig.json");
+  expect(snapshot["tsconfig.json"].extends).toStrictEqual([
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/node-lts/tsconfig.json",
+  ]);
+  expect(snapshot["tsconfig.dev.json"]).toMatchSnapshot("tsconfig.dev.json");
+  expect(snapshot["tsconfig.dev.json"].extends).toStrictEqual(
+    "./node_modules/@tsconfig/node18/tsconfig.json",
+  );
+  expect(snapshot["subproject/tsconfig.json"]).toMatchSnapshot(
+    "subproject/tsconfig.json",
+  );
+  expect(snapshot["subproject/tsconfig.json"].extends).toStrictEqual([
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/node20/tsconfig.json",
+  ]);
+
+  expect(snapshot["subproject/tsconfig.dev.json"]).toMatchSnapshot(
+    "subproject/tsconfig.dev.json",
+  );
+  expect(snapshot["subproject/tsconfig.dev.json"].extends).toStrictEqual(
+    "../node_modules/@tsconfig/node20/tsconfig.json",
+  );
 });

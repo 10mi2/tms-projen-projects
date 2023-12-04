@@ -1,8 +1,8 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import { sep } from "path";
+import { join as joinPath, relative as relativePath, sep } from "path";
 import { Component, JsonPatch, SampleDir, TextFile } from "projen";
 import {
   NodePackageManager,
+  TypeScriptCompilerOptions,
   TypeScriptModuleResolution,
   TypescriptConfigExtends,
   UpdateSnapshot,
@@ -13,6 +13,36 @@ import {
   TypeScriptProjectOptions,
 } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
+
+export enum TmsTSConfigBase {
+  NodeLTS = "node-lts",
+  Node18 = "node18",
+  Node20 = "node20",
+}
+
+const RESET_COMPILER_OPTIONS = {
+  alwaysStrict: undefined,
+  declaration: undefined,
+  esModuleInterop: undefined,
+  experimentalDecorators: undefined,
+  inlineSourceMap: undefined,
+  inlineSources: undefined,
+  lib: undefined,
+  module: undefined,
+  noEmitOnError: undefined,
+  noFallthroughCasesInSwitch: undefined,
+  noImplicitAny: undefined,
+  noImplicitReturns: undefined,
+  noImplicitThis: undefined,
+  noUnusedLocals: undefined,
+  noUnusedParameters: undefined,
+  resolveJsonModule: undefined,
+  strict: undefined,
+  strictNullChecks: undefined,
+  strictPropertyInitialization: undefined,
+  stripInternal: undefined,
+  target: undefined,
+} satisfies Partial<TypeScriptCompilerOptions>;
 
 export interface TmsTypeScriptAppProjectOptions
   extends TypeScriptProjectOptions {
@@ -52,6 +82,59 @@ export interface TmsTypeScriptAppProjectOptions
    * @featured
    */
   readonly nodeVersion?: string;
+
+  /**
+   * TSConfig base configuration selection
+   *
+   * Using one of the options from https://github.com/tsconfig/bases as a base, then any explicit settings override
+   * those. Note that only nodes18 and above are supported.
+   *
+   * @remarks
+   *
+   * Not all options are supported, perticularly those of node version that are older than is supported by Projen.
+   *
+   * @see {@link tsconfigBaseStrictest}
+   *
+   * @default TmsTSConfigBase.Node18
+   *
+   */
+  tsconfigBase?: TmsTSConfigBase;
+
+  /**
+   * TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`
+   *
+   * @remarks
+   *
+   * Due to a bug in `ts-node` (v10.9.1) when used with Typescript 5.3.2 the tsconfig "extends" property when referring
+   * to a file that's in `node_modules` will not be looked up properly. The workaround currently is to make the
+   * reference relative to the tsconfig file.
+   *
+   * @see {@link tsconfigBase}
+   *
+   * @default TmsTSConfigBase.Node18
+   *
+   */
+  tsconfigBaseDev?: TmsTSConfigBase;
+
+  /**
+   * Include TSConfig "strinctest" configuration to {@link tsconfigBase}
+   *
+   * Using one of the options from https://github.com/tsconfig/bases as a base, then any explicit settings override
+   * those. Note that only nodes18 and above are supported.
+   *
+   * @remarks
+   *
+   * If true will add the "strictest" configuration to the "extends" of the tsconfig.json file, *before* the base set by
+   * the {@link tsconfigBase} option.
+   *
+   * Does **not** apply to `tsconfig.dev.json`.
+   *
+   * @see {@link tsconfigBase}
+   *
+   * @default true
+   *
+   */
+  tsconfigBaseStrictest?: boolean;
 }
 
 /**
@@ -74,35 +157,31 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
       vscode: true,
       tsconfig: {
         compilerOptions: {
-          alwaysStrict: undefined,
-          declaration: undefined,
-          esModuleInterop: undefined,
-          experimentalDecorators: undefined,
-          inlineSourceMap: undefined,
-          inlineSources: undefined,
-          lib: undefined,
-          module: "es2022",
-          noEmitOnError: undefined,
-          noFallthroughCasesInSwitch: undefined,
-          noImplicitAny: undefined,
-          noImplicitReturns: undefined,
-          noImplicitThis: undefined,
-          noUnusedLocals: undefined,
-          noUnusedParameters: undefined,
-          resolveJsonModule: undefined,
-          strict: undefined,
-          strictNullChecks: undefined,
-          strictPropertyInitialization: undefined,
-          stripInternal: undefined,
-          target: undefined,
-          moduleResolution:
-            options.esmSupportConfig ?? true
-              ? TypeScriptModuleResolution.BUNDLER
-              : TypeScriptModuleResolution.NODE,
+          ...RESET_COMPILER_OPTIONS,
+          moduleResolution: TypeScriptModuleResolution.NODE16,
+          noEmit: options.addDefaultBundle ?? true,
+        },
+        extends: TypescriptConfigExtends.fromPaths([
+          ...(options.tsconfigBaseStrictest ?? true
+            ? ["@tsconfig/strictest/tsconfig.json"]
+            : []),
+          `@tsconfig/${options.tsconfigBase ?? "node18"}/tsconfig.json`,
+        ]),
+      },
+
+      tsconfigDev: {
+        compilerOptions: {
+          ...RESET_COMPILER_OPTIONS,
+          moduleResolution: TypeScriptModuleResolution.NODE16,
           noEmit: true,
         },
         extends: TypescriptConfigExtends.fromPaths([
-          "@tsconfig/node18/tsconfig.json",
+          `${relativePath(
+            joinPath(options.outdir ?? "."),
+            "./node_modules",
+          ).replace(/^(?!\.)/, "./")}/@tsconfig/${
+            options.tsconfigBaseDev ?? "node18"
+          }/tsconfig.json`,
         ]),
       },
 
@@ -193,6 +272,10 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
             tsconfig: "tsconfig.dev.json",
           },
         ],
+      };
+
+      this.jest.config.moduleNameMapper = {
+        "^(\\.{1,2}/.*)\\.js$": "$1",
       };
 
       if (mergedOptions.esmSupportConfig ?? true) {
