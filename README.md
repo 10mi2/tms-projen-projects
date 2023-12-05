@@ -1,8 +1,10 @@
 # Ten Mile Square Technologies `projen` Projects
 
-> [Ten Mile Square](https://tenmilesquare.com) (10Mi² or `TMS` in code where the first character has to be a non-number) is an enterprise technology consulting firm based in the Washington DC area.
+> [Ten Mile Square](https://tenmilesquare.com) (10Mi² or `TMS` in code where the first character has to be a non-number)
+>  is an enterprise technology consulting firm based in the Washington DC area.
 
-This repo holds a collection of opinionated [projen](https://projen.io) ([GitHub](https://github.com/projen/projen)) projects.
+This repo holds a collection of opinionated [projen](https://projen.io) ([GitHub](https://github.com/projen/projen))
+projects.
 
 ## 10Mi² TypeScript App (`tms-typescript-app`)
 
@@ -13,16 +15,24 @@ following changes:
 2. `eslint` and `prettier` are both enabled by default
    - Configure `eslint` to have all auto-fixable options set to warning instead of error
    - Adjustable with the `eslintFixableAsWarn` property (default: `true`)
-   - Note that `eslint` and 
-3. VSCode is enables by default
-4. TSConfig uses [`@tsconfig/node18`](https://github.com/tsconfig/bases#node-18-tsconfigjson) as the base config
+3. VSCode support is enabled by default
+4. TSConfig uses [`@tsconfig/node18`](https://github.com/tsconfig/bases#node-18-tsconfigjson) as the base config by
+   default
    - `tconfig.json` is has all settings that are redundant removed
+   - Adjustable with the `tsconfigBase` property (default: `TmsTSConfigBase.NODE18`)
+   - The `tsconfigBaseStrictest` property controls strict settings (default: `true`)
+     - This uses `@tsconfig/strictest` by setting `extends` to an array, which currently causes `ts-node` to fail
+       ([issue #2000](https://github.com/TypeStrong/ts-node/issues/2000))
+   - The `tsconfigBaseDev` property controls dev tool settings (such as `projen`) (default: `TmsTSConfigBase.NODE18`)
+   - [ts-node issue #2094](https://github.com/TypeStrong/ts-node/issues/2094) prevents us from using Node > 18.18.x
+   - [ts-node issue #2076](https://github.com/TypeStrong/ts-node/issues/2076) prevents us from using ts-node with the
+     app, and a workaround is in place to refer to the TSConfig bases relatively in the `tsconfig.dev.json` for now so
+     `projen` works properly
 5. ESM suppport is enabled by default, adjusting TS and Jest configs as necessary
    - Controlled by the `esmSupportConfig` property (default: `true`)
-   - Sets the `moduleResolution` to `"bundler"` 
 6. Create a `bundle` task to build using `esbuild`
    - Controlled by the `addDefaultBundle` property (default: `true`)
-   - `noEmit` is set to `true` assuming a bundle will be made and used, or `tsx` or `ts-node` will be used if running
+   - `noEmit` is set to `true` assuming a bundle will be made and used or `tsx` or `ts-node` will be used if running
      directly
 
 ### Make a new `tms-typescript-app` project
