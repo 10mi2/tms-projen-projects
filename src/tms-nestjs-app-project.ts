@@ -120,7 +120,6 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
     this.addTask("start:dev").exec("nest start --watch");
     this.addTask("start:debug").exec("nest start --debug --watch");
     this.addTask("start:prod").exec("node dist/main");
-    this.addTask("test:e2e").exec("jest --config ./test/jest-e2e.json");
 
     this.addDeps(
       "@nestjs/common@^10.0.0",
