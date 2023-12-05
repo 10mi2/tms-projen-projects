@@ -199,7 +199,6 @@ exports[`TmsNestJSAppProject has reasonable configuration 3`] = `
     "start:dev": "npx projen start:dev",
     "start:prod": "npx projen start:prod",
     "test": "npx projen test",
-    "test:e2e": "npx projen test:e2e",
     "test:update": "npx projen test:update",
     "test:watch": "npx projen test:watch",
     "upgrade": "npx projen upgrade",
