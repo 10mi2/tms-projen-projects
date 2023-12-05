@@ -187,8 +187,9 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
       } else if (mergedOptions.sampleType === "graphql-schemafirst") {
         // generate-typings.ts uses ts-morph, so we need to add it to devDeps
         this.addDevDeps("ts-morph");
+        const generateTypingsTs = "generate-typings.ts";
 
-        for (const fileName of ["generate-typings.ts", "nest-cli.json"]) {
+        for (const fileName of [generateTypingsTs, "nest-cli.json"]) {
           new SampleFile(this, fileName, {
             sourcePath: path.join(
               __dirname,
@@ -199,7 +200,6 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
               fileName,
             ),
           });
-          this.eslint?.addLintPattern(fileName);
         }
         new SampleDir(this, this.srcdir, {
           sourceDir: path.join(
@@ -220,10 +220,10 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
           ),
         });
 
-        this.tsconfigDev.addInclude("./generate-typings.ts");
-
+        this.eslint?.addLintPattern(generateTypingsTs);
+        this.tsconfigDev.addInclude(generateTypingsTs);
         this.addTask("generate-typings", {
-          exec: "ts-node --project=tsconfig.dev.json generate-typings.ts",
+          exec: `ts-node --project=tsconfig.dev.json ${generateTypingsTs}`,
           description: "Generate typings from graphql files",
         });
       } else {

@@ -337,7 +337,7 @@ class SampleCode extends Component {
   constructor(project: TypeScriptProject) {
     super(project);
     const indexSrcCode = [
-      'import { Hello } from "./hello";',
+      'import { Hello } from "./hello.js";',
       "",
       "console.log(await new Hello().sayHello(2000));",
     ].join("\n");
@@ -352,7 +352,7 @@ class SampleCode extends Component {
     ].join("\n");
 
     const testCode = [
-      'import { Hello } from "../src/hello";',
+      'import { Hello } from "../src/hello.js";',
       "",
       'test("hello", async () => {',
       "  const hello = new Hello();",
