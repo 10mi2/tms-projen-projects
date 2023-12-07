@@ -1,12 +1,14 @@
 # Ten Mile Square Technologies `projen` Projects
 
-> [Ten Mile Square](https://tenmilesquare.com) (10Mi² or `TMS` in code where the first character has to be a non-number)
->  is an enterprise technology consulting firm based in the Washington DC area.
+A collection of opinionated [projen](https://projen.io) projects, adding support for ESM, additional ESLint config, etc.
 
-This repo holds a collection of opinionated [projen](https://projen.io) ([GitHub](https://github.com/projen/projen))
-projects.
+> <image alt="Ten Mile Square Logo" src="docs/10mi2-light-or-dark-bg.svg" width="200px"/>
+> 
+> [Ten Mile Square](https://tenmilesquare.com) (10mi2 or `TMS` in code where the first character has to be a non-number)
+> is an enterprise technology consulting firm based in the Washington DC area.
 
-## 10Mi² TypeScript App (`tms-typescript-app`)
+
+## 10mi2 TypeScript App (`tms-typescript-app`)
 
 A TypeScript App based on [TypeScriptAppProject](https://projen.io/api/API.html#typescriptappproject-) with the
 following changes:
@@ -103,7 +105,7 @@ project.addTask("start", {
 
 
 
-## 10Mi² NestJS App (`tms-nestjs-app`)
+## 10mi2 NestJS App (`tms-nestjs-app`)
 
 An example NestJS app, based on `TmsTypeScriptAppProject`, with a few options of sample apps. Experimental!
 
