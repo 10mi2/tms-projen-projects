@@ -2,11 +2,10 @@
 
 A collection of opinionated [projen](https://projen.io) projects, adding support for ESM, additional ESLint config, etc.
 
-> <image alt="Ten Mile Square Logo" src="docs/10mi2-light-or-dark-bg.svg" width="200px"/>
+> <image alt="Ten Mile Square Logo" src="docs/10mi2-light-or-dark-bg5.svg" height="196" width="400px"/>
 > 
 > [Ten Mile Square](https://tenmilesquare.com) (10mi2 or `TMS` in code where the first character has to be a non-number)
 > is an enterprise technology consulting firm based in the Washington DC area.
-
 
 ## 10mi2 TypeScript App (`tms-typescript-app`)
 
