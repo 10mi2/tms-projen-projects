@@ -263,7 +263,7 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
         `@tsconfig/${mergedOptions.tsconfigBaseDev ?? TmsTSConfigBase.NODE18}`,
         ...(tsconfigBaseStrictestExtended ? ["@tsconfig/strictest"] : []),
       ]),
-      'ts-node@">= 10.9.2"',
+      "ts-node@>=10.9.2",
     );
 
     if (this.tsconfig && tsconfigBaseStrictestEmbedded) {
