@@ -1,4 +1,4 @@
-import { join as joinPath, relative as relativePath, sep } from "path";
+import { sep } from "path";
 import { Component, JsonPatch, SampleDir, TextFile } from "projen";
 import {
   NodePackageManager,
@@ -42,6 +42,29 @@ const RESET_COMPILER_OPTIONS = {
   strictPropertyInitialization: undefined,
   stripInternal: undefined,
   target: undefined,
+} satisfies Partial<TypeScriptCompilerOptions>;
+
+const TSCONFIG_BASE_STRICTEST_SNAPSHOT = {
+  strict: true,
+  exactOptionalPropertyTypes: true,
+  noFallthroughCasesInSwitch: true,
+  noImplicitOverride: true,
+  noImplicitReturns: true,
+  noPropertyAccessFromIndexSignature: true,
+  noUncheckedIndexedAccess: true,
+  noUnusedLocals: true,
+  noUnusedParameters: true,
+
+  isolatedModules: true,
+
+  esModuleInterop: true,
+  skipLibCheck: true,
+  forceConsistentCasingInFileNames: true,
+
+  // Must be applied separately, not recognized by projen
+  // allowUnusedLabels: false,
+  // allowUnreachableCode: false,
+  // checkJs: true,
 } satisfies Partial<TypeScriptCompilerOptions>;
 
 export interface TmsTypeScriptAppProjectOptions
@@ -135,6 +158,23 @@ export interface TmsTypeScriptAppProjectOptions
    *
    */
   readonly tsconfigBaseStrictest?: boolean;
+
+  /**
+   * Workaround `ts-node` bug with "extends" in `tsconfig*.json` files
+   *
+   * @remarks
+   *
+   * When {@link tsconfigBaseStrictest} is `true`, instead of extending the "strictest" configuration by making an
+   * `extends` array in `tsconfig.json` it will copy a snapshot the contents of the "strictest" configuration instead.
+   *
+   * Once this bug is fixed you can safely choose to set this to `false` to get the benefits of the `extends` array.
+   *
+   * @see https://github.com/TypeStrong/ts-node/issues/2000
+   *
+   * @default true
+   *
+   */
+  readonly tsconfigBaseNoArrayWorkaround?: boolean;
 }
 
 /**
@@ -146,6 +186,13 @@ export interface TmsTypeScriptAppProjectOptions
 
 export class TmsTypeScriptAppProject extends TypeScriptAppProject {
   constructor(options: TmsTypeScriptAppProjectOptions) {
+    const tsconfigBaseStrictestExtended =
+      (options.tsconfigBaseStrictest ?? true) &&
+      !(options.tsconfigBaseNoArrayWorkaround ?? true);
+    const tsconfigBaseStrictestEmbedded =
+      (options.tsconfigBaseStrictest ?? true) &&
+      (options.tsconfigBaseNoArrayWorkaround ?? true);
+
     const defaultOptions = {
       eslint: true,
       packageManager: NodePackageManager.NPM,
@@ -158,11 +205,14 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
       tsconfig: {
         compilerOptions: {
           ...RESET_COMPILER_OPTIONS,
+          ...(tsconfigBaseStrictestEmbedded
+            ? TSCONFIG_BASE_STRICTEST_SNAPSHOT
+            : {}),
           moduleResolution: TypeScriptModuleResolution.NODE16,
           noEmit: options.addDefaultBundle ?? true,
         },
         extends: TypescriptConfigExtends.fromPaths([
-          ...(options.tsconfigBaseStrictest ?? true
+          ...(tsconfigBaseStrictestExtended
             ? ["@tsconfig/strictest/tsconfig.json"]
             : []),
           `@tsconfig/${
@@ -178,10 +228,7 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
           noEmit: true,
         },
         extends: TypescriptConfigExtends.fromPaths([
-          `${relativePath(
-            joinPath(options.outdir ?? "."),
-            "./node_modules",
-          ).replace(/^(?!\.)/, "./")}/@tsconfig/${
+          `@tsconfig/${
             options.tsconfigBaseDev ?? TmsTSConfigBase.NODE18
           }/tsconfig.json`,
         ]),
@@ -198,6 +245,7 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
       tsconfigBase: TmsTSConfigBase.NODE18,
       tsconfigBaseDev: TmsTSConfigBase.NODE18,
       tsconfigBaseStrictest: true,
+      tsconfigBaseNoArrayWorkaround: true,
     } satisfies Partial<TmsTypeScriptAppProjectOptions>;
     const mergedOptions = deepMerge(
       [
@@ -213,11 +261,23 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
       ...new Set([
         `@tsconfig/${mergedOptions.tsconfigBase ?? TmsTSConfigBase.NODE18}`,
         `@tsconfig/${mergedOptions.tsconfigBaseDev ?? TmsTSConfigBase.NODE18}`,
-        ...(mergedOptions.tsconfigBaseStrictest ?? true
-          ? ["@tsconfig/strictest"]
-          : []),
+        ...(tsconfigBaseStrictestExtended ? ["@tsconfig/strictest"] : []),
       ]),
+      'ts-node@">= 10.9.2"',
     );
+
+    if (this.tsconfig && tsconfigBaseStrictestEmbedded) {
+      // Options not yet internally supported by projen
+      this.tsconfig.file.addOverride(
+        "compilerOptions.allowUnusedLabels",
+        false,
+      );
+      this.tsconfig.file.addOverride(
+        "compilerOptions.allowUnreachableCode",
+        false,
+      );
+      this.tsconfig.file.addOverride("compilerOptions.checkJs", true);
+    }
 
     // Note: should adjust for https://eslint.style/guide/getting-started
 

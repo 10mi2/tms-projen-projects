@@ -23,12 +23,13 @@ following changes:
    - Adjustable with the `tsconfigBase` property (default: `TmsTSConfigBase.NODE18`)
    - The `tsconfigBaseStrictest` property controls strict settings (default: `true`)
      - This uses `@tsconfig/strictest` by setting `extends` to an array, which currently causes `ts-node` to fail
-       ([issue #2000](https://github.com/TypeStrong/ts-node/issues/2000))
+       ([issue #2000](https://github.com/TypeStrong/ts-node/issues/2000)), so the
+       `tsconfigBaseNoArrayWorkaround` flag (`true` by default) is used to work around this by embedding a snapshot of the strictest settings directly
    - The `tsconfigBaseDev` property controls dev tool settings (such as `projen`) (default: `TmsTSConfigBase.NODE18`)
    - [ts-node issue #2094](https://github.com/TypeStrong/ts-node/issues/2094) prevents us from using Node > 18.18.x
-   - [ts-node issue #2076](https://github.com/TypeStrong/ts-node/issues/2076) prevents us from using ts-node with the
+   - ~~[ts-node issue #2076](https://github.com/TypeStrong/ts-node/issues/2076) prevents us from using ts-node with the
      app, and a workaround is in place to refer to the TSConfig bases relatively in the `tsconfig.dev.json` for now so
-     `projen` works properly
+     `projen` works properly~~ (Fixed in `ts-node` [10.9.2](https://github.com/TypeStrong/ts-node/releases/tag/v10.9.2))
 5. ESM suppport is enabled by default, adjusting TS and Jest configs as necessary
    - Controlled by the `esmSupportConfig` property (default: `true`)
 6. Create a `bundle` task to build using `esbuild`

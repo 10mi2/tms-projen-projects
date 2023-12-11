@@ -155,10 +155,10 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
 
     if (this.tsconfig) {
       // Options not yet internally supported by projen
-      this.tsconfig.file.addOverride("compilerOptions/removeComments", true);
-      this.tsconfig.file.addOverride("compilerOptions/incremental", true);
+      this.tsconfig.file.addOverride("compilerOptions.removeComments", true);
+      this.tsconfig.file.addOverride("compilerOptions.incremental", true);
       this.tsconfig.file.addOverride(
-        "compilerOptions/strictBindCallApply",
+        "compilerOptions.strictBindCallApply",
         true,
       );
     }

@@ -3151,6 +3151,7 @@ const tmsNestJSAppProjectOptions: TmsNestJSAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.nodeVersion">nodeVersion</a></code> | <code>string</code> | Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBase">tsconfigBase</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseDev">tsconfigBaseDev</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseNoArrayWorkaround">tsconfigBaseNoArrayWorkaround</a></code> | <code>boolean</code> | Workaround `ts-node` bug with "extends" in `tsconfig*.json` files. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseStrictest">tsconfigBaseStrictest</a></code> | <code>boolean</code> | Include TSConfig "strinctest" configuration to {@link tsconfigBase}. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleType">sampleType</a></code> | <code>string</code> | Which type of sample code to include, if `sampleCode` is true. |
 
@@ -5239,6 +5240,21 @@ TSConfig base configuration selection for `tsconfig.dev.json`, used to run proje
 
 ---
 
+##### `tsconfigBaseNoArrayWorkaround`<sup>Optional</sup> <a name="tsconfigBaseNoArrayWorkaround" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseNoArrayWorkaround"></a>
+
+```typescript
+public readonly tsconfigBaseNoArrayWorkaround: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+Workaround `ts-node` bug with "extends" in `tsconfig*.json` files.
+
+> [https://github.com/TypeStrong/ts-node/issues/2000](https://github.com/TypeStrong/ts-node/issues/2000)
+
+---
+
 ##### `tsconfigBaseStrictest`<sup>Optional</sup> <a name="tsconfigBaseStrictest" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseStrictest"></a>
 
 ```typescript
@@ -5431,6 +5447,7 @@ const tmsTypeScriptAppProjectOptions: TmsTypeScriptAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.nodeVersion">nodeVersion</a></code> | <code>string</code> | Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBase">tsconfigBase</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBaseDev">tsconfigBaseDev</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBaseNoArrayWorkaround">tsconfigBaseNoArrayWorkaround</a></code> | <code>boolean</code> | Workaround `ts-node` bug with "extends" in `tsconfig*.json` files. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBaseStrictest">tsconfigBaseStrictest</a></code> | <code>boolean</code> | Include TSConfig "strinctest" configuration to {@link tsconfigBase}. |
 
 ---
@@ -7515,6 +7532,21 @@ public readonly tsconfigBaseDev: TmsTSConfigBase;
 TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`.
 
 > [{@link tsconfigBase }]({@link tsconfigBase })
+
+---
+
+##### `tsconfigBaseNoArrayWorkaround`<sup>Optional</sup> <a name="tsconfigBaseNoArrayWorkaround" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBaseNoArrayWorkaround"></a>
+
+```typescript
+public readonly tsconfigBaseNoArrayWorkaround: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+Workaround `ts-node` bug with "extends" in `tsconfig*.json` files.
+
+> [https://github.com/TypeStrong/ts-node/issues/2000](https://github.com/TypeStrong/ts-node/issues/2000)
 
 ---
 
