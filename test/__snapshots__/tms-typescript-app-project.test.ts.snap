@@ -32,7 +32,7 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 1`] = `
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node",
-    "preferTsExts": true,
+    "preferTsExts": false,
   },
 }
 `;
@@ -40,15 +40,8 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 1`] = `
 exports[`TMSTypeScriptAppProject has reasonable configuration 2`] = `
 {
   "compilerOptions": {
-    "exactOptionalPropertyTypes": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
     "moduleResolution": "node16",
     "noEmit": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "skipLibCheck": true,
   },
   "exclude": [
     "node_modules",
@@ -64,7 +57,7 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 2`] = `
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node",
-    "preferTsExts": true,
+    "preferTsExts": false,
   },
 }
 `;
@@ -477,15 +470,8 @@ exports[`TMSTypeScriptAppProject honors eslintFixableAsWarn=false: .eslintrc.jso
 exports[`TMSTypeScriptAppProject honors esmSupportConfig=false: tsconfig.dev.json 1`] = `
 {
   "compilerOptions": {
-    "exactOptionalPropertyTypes": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
     "moduleResolution": "node16",
     "noEmit": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "skipLibCheck": true,
   },
   "exclude": [
     "node_modules",
