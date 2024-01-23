@@ -72,7 +72,6 @@ exports[`TmsNestJSAppProject has reasonable configuration 2`] = `
   ],
   "extends": "@tsconfig/node18/tsconfig.json",
   "include": [
-    ".projenrc.js",
     "src/**/*.ts",
     "test/**/*.ts",
     ".projenrc.ts",
