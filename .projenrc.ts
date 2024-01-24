@@ -44,7 +44,10 @@ if (project.jest) {
     ],
   };
   project.jest.config.preset = "ts-jest/presets/default";
-  project.testTask.env("NODE_OPTIONS", "--experimental-vm-modules");
+  project.testTask.env(
+    "NODE_OPTIONS",
+    "$NODE_OPTIONS --experimental-vm-modules",
+  );
 }
 
 project.tsconfigDev.addExclude("samples");

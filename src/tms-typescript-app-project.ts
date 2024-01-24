@@ -346,7 +346,7 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
     if (mergedOptions.jest && this.jest) {
       this.jest.config.globals = undefined;
       this.jest.config.transform = {
-        "^.+\\.[tj]sx?$": [
+        "^.+\\.m?[tj]sx?$": [
           "ts-jest",
           {
             useESM: mergedOptions.esmSupportConfig ?? true,
@@ -356,14 +356,21 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
       };
 
       this.jest.config.moduleNameMapper = {
-        "^(\\.{1,2}/.*)\\.js$": "$1",
+        "^(\\.{1,2}/.*)\\.m?js$": "$1",
       };
 
       if (mergedOptions.esmSupportConfig ?? true) {
-        this.jest.config.preset = "ts-jest/presets/default-esm";
-        this.testTask.env("NODE_OPTIONS", "--experimental-vm-modules");
-      } else {
-        this.jest.config.preset = "ts-jest/presets/default";
+        // "If you are using custom transform config, please remove preset from your Jest config to avoid issues that
+        // Jest doesn't transform files correctly."
+        // - https://kulshekhar.github.io/ts-jest/docs/next/guides/esm-support/
+        // this.jest.config.preset = "ts-jest/presets/default-esm";
+
+        this.testTask.env(
+          "NODE_OPTIONS",
+          "$NODE_OPTIONS --experimental-vm-modules",
+        );
+        // } else {
+        //   this.jest.config.preset = "ts-jest/presets/default";
       }
     }
 
