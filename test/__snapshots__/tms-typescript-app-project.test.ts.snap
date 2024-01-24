@@ -100,9 +100,8 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 3`] = `
       "text",
     ],
     "moduleNameMapper": {
-      "^(\\.{1,2}/.*)\\.js$": "$1",
+      "^(\\.{1,2}/.*)\\.m?js$": "$1",
     },
-    "preset": "ts-jest/presets/default-esm",
     "reporters": [
       "default",
       [
@@ -120,7 +119,7 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 3`] = `
       "/node_modules/",
     ],
     "transform": {
-      "^.+\\.[tj]sx?$": [
+      "^.+\\.m?[tj]sx?$": [
         "ts-jest",
         {
           "tsconfig": "tsconfig.dev.json",

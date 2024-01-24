@@ -156,9 +156,8 @@ exports[`TmsNestJSAppProject has reasonable configuration 3`] = `
       "ts",
     ],
     "moduleNameMapper": {
-      "^(\\.{1,2}/.*)\\.js$": "$1",
+      "^(\\.{1,2}/.*)\\.m?js$": "$1",
     },
-    "preset": "ts-jest/presets/default",
     "reporters": [
       "default",
       [
@@ -178,7 +177,7 @@ exports[`TmsNestJSAppProject has reasonable configuration 3`] = `
       "/node_modules/",
     ],
     "transform": {
-      "^.+\\.[tj]sx?$": [
+      "^.+\\.m?[tj]sx?$": [
         "ts-jest",
         {
           "tsconfig": "tsconfig.dev.json",

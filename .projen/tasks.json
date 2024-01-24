@@ -221,7 +221,7 @@
       "name": "test",
       "description": "Run tests",
       "env": {
-        "NODE_OPTIONS": "--experimental-vm-modules"
+        "NODE_OPTIONS": "$NODE_OPTIONS --experimental-vm-modules"
       },
       "steps": [
         {
