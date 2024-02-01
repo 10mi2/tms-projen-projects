@@ -365,9 +365,10 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
         // - https://kulshekhar.github.io/ts-jest/docs/next/guides/esm-support/
         // this.jest.config.preset = "ts-jest/presets/default-esm";
 
+        // Since $NODE_OPTIONS may already have a value for debugging, we need to add to it
         this.testTask.env(
           "NODE_OPTIONS",
-          "$NODE_OPTIONS --experimental-vm-modules",
+          "$(echo $NODE_OPTIONS --experimental-vm-modules)",
         );
         // } else {
         //   this.jest.config.preset = "ts-jest/presets/default";
