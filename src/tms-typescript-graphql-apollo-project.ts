@@ -1,4 +1,3 @@
-import * as assert from "node:assert";
 import * as path from "node:path";
 import { JsonPatch, SampleDir, SampleFile, TextFile } from "projen";
 import { EslintOverride } from "projen/lib/javascript";
@@ -138,18 +137,6 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
       }
     }
 
-    project.tasks.addTask("start:dev", {
-      description: "Start the server in development mode",
-      exec: "nodemon src/index.ts",
-    });
-
-    const prismaGenerate = project.tasks.addTask("prisma:generate", {
-      description: "Update the prisma client",
-      exec: "prisma generate",
-    });
-
-    project.preCompileTask.prependSpawn(prismaGenerate);
-
     // project.gitignore.exclude(".env");
     project.gitignore.exclude("dev.db", "dev.db-journal");
 
@@ -233,7 +220,9 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
       // we'll use the file patching escape hatch to do this, so what's written before
       // is honored and kept, just moved
       const eslintFile = project.tryFindObjectFile(".eslintrc.json");
-      assert(eslintFile, "eslint file not found");
+      if (!eslintFile) {
+        throw Error("eslint file not found");
+      }
       eslintFile.patch(
         JsonPatch.move("/parser", `/overrides/${tsOverridePosition}/parser`),
         JsonPatch.move("/env", `/overrides/${tsOverridePosition}/env`),
