@@ -16,11 +16,11 @@ A collection of opinionated [projen](https://projen.io) projects, adding support
     - [Usage](#usage)
   - [10mi2 Apollo Graphql App (`tms-apollo-graphql-app`)](#10mi2-apollo-graphql-app-tms-apollo-graphql-app)
     - [Make a new `tms-apollo-graphql-app` project](#make-a-new-tms-apollo-graphql-app-project)
-    - [Add `tms-nestjs-app` to an existing project](#add-tms-nestjs-app-to-an-existing-project)
+    - [Add `tms-apollo-graphql-app` to an existing project](#add-tms-apollo-graphql-app-to-an-existing-project)
     - [Usage](#usage-1)
   - [10mi2 NestJS App (`tms-nestjs-app`)](#10mi2-nestjs-app-tms-nestjs-app)
     - [Make a new `tms-nestjs-app` project](#make-a-new-tms-nestjs-app-project)
-    - [Add `tms-nestjs-app` to an existing project](#add-tms-nestjs-app-to-an-existing-project-1)
+    - [Add `tms-nestjs-app` to an existing project](#add-tms-nestjs-app-to-an-existing-project)
     - [Usage](#usage-2)
 - [Adding to an existing project](#adding-to-an-existing-project)
 
@@ -154,7 +154,7 @@ and there shouldn't be a `package.json` in any of the parent directories.
 npx projen new --from @10mi2/tms-projen-projects tms-apollo-graphql-app --sample-type=pothos-prisma
 ```
 
-### Add `tms-nestjs-app` to an existing project
+### Add `tms-apollo-graphql-app` to an existing project
 
 Follow the instructions below for [adding to an existing project](#adding-to-an-existing-project).
 
