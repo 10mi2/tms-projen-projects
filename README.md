@@ -4,8 +4,26 @@ A collection of opinionated [projen](https://projen.io) projects, adding support
 
 > <image alt="Ten Mile Square Logo" src="docs/10mi2-light-or-dark-bg5.svg" height="196" width="400px"/>
 > 
-> [Ten Mile Square](https://tenmilesquare.com) (10mi2 or `TMS` in code where the first character has to be a non-number)
+> [Ten Mile Square](https://tenmilesquare.com) (10mi2 or `TMS`)
 > is an enterprise technology consulting firm based in the Washington DC area.
+
+# Table of Contents
+- [Ten Mile Square Technologies `projen` Projects](#ten-mile-square-technologies-projen-projects)
+- [Table of Contents](#table-of-contents)
+  - [10mi2 TypeScript App (`tms-typescript-app`)](#10mi2-typescript-app-tms-typescript-app)
+    - [Make a new `tms-typescript-app` project](#make-a-new-tms-typescript-app-project)
+    - [Add `tms-typescript-app` to an existing project](#add-tms-typescript-app-to-an-existing-project)
+    - [Usage](#usage)
+  - [10mi2 Apollo Graphql App (`tms-apollo-graphql-app`)](#10mi2-apollo-graphql-app-tms-apollo-graphql-app)
+    - [Make a new `tms-apollo-graphql-app` project](#make-a-new-tms-apollo-graphql-app-project)
+    - [Add `tms-nestjs-app` to an existing project](#add-tms-nestjs-app-to-an-existing-project)
+    - [Usage](#usage-1)
+  - [10mi2 NestJS App (`tms-nestjs-app`)](#10mi2-nestjs-app-tms-nestjs-app)
+    - [Make a new `tms-nestjs-app` project](#make-a-new-tms-nestjs-app-project)
+    - [Add `tms-nestjs-app` to an existing project](#add-tms-nestjs-app-to-an-existing-project-1)
+    - [Usage](#usage-2)
+- [Adding to an existing project](#adding-to-an-existing-project)
+
 
 ## 10mi2 TypeScript App (`tms-typescript-app`)
 
@@ -86,7 +104,7 @@ new TmsTypeScriptAppProject({
 
 ### Usage
 
-Typical `projen` commands apply, such as `npm rub build`, `npm run test`, and `npm run upgrade`.
+Typical `projen` commands apply, such as `npm run build`, `npm run test`, and `npm run upgrade`.
 
 For this project, there is no `npm run start`, but you can easily add one, such as the following
 
@@ -103,6 +121,89 @@ project.addTask("start", {
 // project.synth();
 ```
 
+
+
+## 10mi2 Apollo Graphql App (`tms-apollo-graphql-app`)
+
+An example NestJS app, based on `TmsTSApolloGraphQLProject`, with a sample app. Experimental!
+
+Will load up a sample app (more later):
+
+- `pothos-prisma` - (**default**) which provides the following stak:
+  - [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
+  - [Pothos GraphQL](https://pothos-graphql.dev) Code-First Schema Generator
+  - [Prisma](https://www.prisma.io) Database ORM (configured for SQLite by default)
+  - Complete unit-test suite using [Jest](https://jestjs.io)
+  - Uses sortable pagination according to the blog post Proper Pagination with GraphQL (link pending)
+  - Uses unique IDs for every entity, always exposed as a string-encoded GraphQL `ID` type
+    - The value is a Base64-encoded JSON object with enough info to uniquely identify the entity type and the entity itself
+
+
+Note that the [TSConfig strictest](https://www.npmjs.com/package/@tsconfig/strictest) is used (can be
+disabled with `tsconfigBaseStrictest: false`), and the sample code is adjusted to work with it.
+
+Also the sample code has functional (but not coverage complete) tests that pass at first.
+
+### Make a new `tms-apollo-graphql-app` project
+
+Run this command *in a new directory*, and not within an existing project. IOW, the current directory should be empty
+and there shouldn't be a `package.json` in any of the parent directories.
+
+```bash
+# make an Apollo code-first GraphQL app
+npx projen new --from @10mi2/tms-projen-projects tms-apollo-graphql-app --sample-type=pothos-prisma
+```
+
+### Add `tms-nestjs-app` to an existing project
+
+Follow the instructions below for [adding to an existing project](#adding-to-an-existing-project).
+
+Add the following to the top of your `.projenrc.ts` file:
+
+```typescript
+import { TmsTSApolloGraphQLProject } from "@10mi2/tms-projen-projects";
+```
+
+Add the following to the `.projenrc.ts` file *before* the `project.synth()`:
+
+```typescript
+new TmsTSApolloGraphQLProject({
+  parent: project,
+  name: "apollo-graphql-app",
+  defaultReleaseBranch: "main",
+  projenrcTs: true,
+  packageManager: project.package.packageManager, // <- Use the same package manager as the parent project
+
+  sampleType: "pothos-prisma",
+
+  // addDefaultBundle: true,     /* Add a default bundle to the project. */
+  // deps: [],                   /* Runtime dependencies of this module. */
+  // description: undefined,     /* The description is just a string that helps people understand the purpose of the package. */
+  // eslintFixableAsWarn: true,  /* Change the default-set eslint auto-fixable rules to "warn" instead of "error". */
+  // esmSupportConfig: true,     /* Configure for ESM. */
+  // packageName: undefined,     /* The "name" in package.json. */
+
+  // Change this to whatever you want that won't conflict with parent folders such as `src`, `lib`, or `test`:
+  outdir: "app",
+});
+```
+
+### Usage
+
+Typical `projen` commands apply, such as `npm run build`, `npm run test`, and `npm run upgrade`.
+
+A few additional commands have been added for convenience:
+
+| Command                   | Description                                                                                                 |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `npm run bundle`          | Build the app into the `assets/index/` directory                                                            |
+| `npm run start`           | Start the app                                                                                               |
+| `npm run start:dev`       | Start the app in watch mode                                                                                 |
+| `npm run codegen`         | Generate typings for embedded queries (found only in the tests), also generates `schema.graphql`            |
+| `npm run codegen:watch`   | Runs the same command as `codegen` but uses `nodemon` to watch for file changes (for when making the tests) |
+| `npm run prisma:generate` | Runs `npx prisma generate` to build the client code - run after editing the prisma schema                   |
+
+More information can be found in the [README.md](samples/apollo-graphql-pothos-prisma/root/README.md) that's generated with the sample code.
 
 
 ## 10mi2 NestJS App (`tms-nestjs-app`)
@@ -169,7 +270,7 @@ new TmsNestJSAppProject({
 
 ### Usage
 
-Typical `projen` commands apply, such as `npm rub build`, `npm run test`, and `npm run upgrade`.
+Typical `projen` commands apply, such as `npm run build`, `npm run test`, and `npm run upgrade`.
 
 A few additional commands have been added for convenience:
 
