@@ -2232,6 +2232,7 @@ When given a project, this it the project itself.
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProject.property.eslint">eslint</a></code> | <code>projen.javascript.Eslint</code> | *No description.* |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProject.property.tsconfig">tsconfig</a></code> | <code>projen.javascript.TypescriptConfig</code> | *No description.* |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProject.property.tsconfigEslint">tsconfigEslint</a></code> | <code>projen.javascript.TypescriptConfig</code> | *No description.* |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProject.property.prismadir">prismadir</a></code> | <code>string</code> | *No description.* |
 
 ---
 
@@ -2978,6 +2979,16 @@ public readonly tsconfigEslint: TypescriptConfig;
 ```
 
 - *Type:* projen.javascript.TypescriptConfig
+
+---
+
+##### `prismadir`<sup>Required</sup> <a name="prismadir" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProject.property.prismadir"></a>
+
+```typescript
+public readonly prismadir: string;
+```
+
+- *Type:* string
 
 ---
 
@@ -7010,6 +7021,7 @@ const tmsTSApolloGraphQLProjectOptions: TmsTSApolloGraphQLProjectOptions = { ...
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.tsconfigBaseDev">tsconfigBaseDev</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.tsconfigBaseNoArrayWorkaround">tsconfigBaseNoArrayWorkaround</a></code> | <code>boolean</code> | Workaround `ts-node` bug with "extends" in `tsconfig*.json` files. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.tsconfigBaseStrictest">tsconfigBaseStrictest</a></code> | <code>boolean</code> | Include TSConfig "strinctest" configuration to {@link tsconfigBase}. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.prismadir">prismadir</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.sampleType">sampleType</a></code> | <code>string</code> | Which type of sample code to include, if `sampleCode` is true. |
 
 ---
@@ -9154,6 +9166,16 @@ Using one of the options from https://github.com/tsconfig/bases as a base, then 
 those. Note that only nodes18 and above are supported.
 
 > [{@link tsconfigBase }]({@link tsconfigBase })
+
+---
+
+##### `prismadir`<sup>Optional</sup> <a name="prismadir" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.prismadir"></a>
+
+```typescript
+public readonly prismadir: string;
+```
+
+- *Type:* string
 
 ---
 

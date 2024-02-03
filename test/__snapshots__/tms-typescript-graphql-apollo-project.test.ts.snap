@@ -53,6 +53,7 @@ exports[`TmsTSApolloGraphQLProject has reasonable configuration 2`] = `
   "include": [
     "src/**/*.ts",
     "test/**/*.ts",
+    "scripts/*.ts",
     "codegen.ts",
     ".projenrc.ts",
     "projenrc/**/*.ts",
@@ -78,6 +79,7 @@ exports[`TmsTSApolloGraphQLProject has reasonable configuration 3`] = `
   },
   "devDependencies": {
     "@10mi2/tms-projen-projects": "*",
+    "@faker-js/faker": "*",
     "@graphql-codegen/cli": "*",
     "@graphql-codegen/client-preset": "*",
     "@graphql-eslint/eslint-plugin": "*",
@@ -173,6 +175,8 @@ exports[`TmsTSApolloGraphQLProject has reasonable configuration 3`] = `
     "pre-compile": "npx projen pre-compile",
     "prisma:generate": "npx projen prisma:generate",
     "projen": "npx projen",
+    "save-schema": "npx projen save-schema",
+    "start": "npx projen start",
     "start:dev": "npx projen start:dev",
     "test": "npx projen test",
     "test:update": "npx projen test:update",
@@ -373,6 +377,9 @@ exports[`TmsTSApolloGraphQLProject has reasonable configuration 6`] = `
         "schema.graphql",
       ],
       "parser": "@graphql-eslint/eslint-plugin",
+      "parserOptions": {
+        "schema": "./schema.graphql",
+      },
       "plugins": [
         "@graphql-eslint",
       ],

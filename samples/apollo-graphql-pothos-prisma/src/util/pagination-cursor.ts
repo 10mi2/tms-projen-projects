@@ -2,7 +2,7 @@ import { Prisma } from "@prisma/client";
 import { ZodIssueCode, z } from "zod";
 import { SchemaTypes } from "../builder.js";
 
-const BASE64_ENCODE_CURSORS = false;
+const BASE64_ENCODE_CURSORS = true;
 
 export type CursorScalar = {
   Input: string;

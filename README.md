@@ -194,13 +194,14 @@ Typical `projen` commands apply, such as `npm run build`, `npm run test`, and `n
 
 A few additional commands have been added for convenience:
 
-| Command                 | Description                                                                                                 |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `npm run bundle`        | Build the app into the `assets/index/` directory                                                            |
-| `npm run start`         | Start the app                                                                                               |
-| `npm run start:dev`     | Start the app in watch mode                                                                                 |
-| `npm run codegen`       | Generate typings for embedded queries (found only in the tests), also generates `schema.graphql`            |
-| `npm run codegen:watch` | Runs the same command as `codegen` but uses `nodemon` to watch for file changes (for when making the tests) |
+| Command                   | Description                                                                                                 |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `npm run bundle`          | Build the app into the `assets/index/` directory                                                            |
+| `npm run start`           | Start the app                                                                                               |
+| `npm run start:dev`       | Start the app in watch mode                                                                                 |
+| `npm run codegen`         | Generate typings for embedded queries (found only in the tests), also generates `schema.graphql`            |
+| `npm run codegen:watch`   | Runs the same command as `codegen` but uses `nodemon` to watch for file changes (for when making the tests) |
+| `npm run prisma:generate` | Runs `npx prisma generate` to build the client code - run after editing the prisma schema                   |
 
 More information can be found in the [README.md](samples/apollo-graphql-pothos-prisma/root/README.md) that's generated with the sample code.
 

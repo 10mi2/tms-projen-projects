@@ -16,6 +16,7 @@ export interface TmsTSApolloGraphQLProjectOptions
    * @featured
    */
   readonly sampleType?: "pothos-prisma";
+  readonly prismadir?: string;
 }
 
 /**
@@ -33,6 +34,7 @@ export interface TmsTSApolloGraphQLProjectOptions
  */
 
 export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
+  prismadir: string;
   constructor(options: TmsTSApolloGraphQLProjectOptions) {
     const defaultOptions = {
       tsconfigBaseStrictest: true,
@@ -53,6 +55,7 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
       },
       sampleCode: true,
       sampleType: "pothos-prisma",
+      prismadir: "prisma",
     } satisfies Partial<TmsTSApolloGraphQLProjectOptions>;
 
     const mergedOptions = deepMerge(
@@ -63,20 +66,23 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
       true,
     ) as TmsTSApolloGraphQLProjectOptions; // justified cast, since we know we're merging two of this type
 
-    super({ ...mergedOptions, sampleCode: false, readme: undefined });
+    super({
+      ...mergedOptions,
+      sampleCode: false,
+      readme: { filename: "USAGE.md", contents: "# ChangeMe" },
+    });
 
-    const project = this;
+    this.prismadir = mergedOptions.prismadir ?? "prisma";
 
-    project.tasks.addTask("start:dev", {
-      description: "Start the server in development mode",
+    this.tasks.addTask("start", {
+      description: "Start the server",
+      exec: "ts-node src/index.ts",
+    });
+
+    this.tasks.addTask("start:dev", {
+      description: "Start the server in development (watch) mode",
       exec: "nodemon src/index.ts",
     });
-
-    const prismaGenerateTask = project.tasks.addTask("prisma:generate", {
-      description: "Update the prisma client",
-      exec: "prisma generate",
-    });
-    project.preCompileTask.prependSpawn(prismaGenerateTask);
 
     this.addDeps(
       "@apollo/server",
@@ -97,6 +103,8 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
       "@graphql-typed-document-node/core",
       "graphql",
       "@graphql-eslint/eslint-plugin",
+
+      "@faker-js/faker",
     );
 
     // Since we use extends to get a lot of our settings, including moduleResolution
@@ -104,43 +112,48 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
     // AND https://github.com/hayes/pothos/issues/1107#issue-2042806192
     // we can set moduleResolution to null to get the desired behavior
     // 🤦🏻‍♂️ - since it's only a ts-jest issue, we'll only modify the dev tsconfig
-    project.tsconfigDev.file.patch(
+    this.tsconfigDev.file.patch(
       JsonPatch.add("/compilerOptions/moduleResolution", null),
     );
 
     if (mergedOptions.sampleCode) {
-      project.gitignore.exclude("dev.db", "dev.db-journal");
+      this.gitignore.exclude("dev.db", "dev.db-journal");
 
       if (mergedOptions.sampleType === "pothos-prisma") {
-        const basePath = [
+        const sampleBasePath = [
           __dirname,
           "..",
           "samples",
           "apollo-graphql-pothos-prisma",
         ];
         new SampleDir(this, this.srcdir, {
-          sourceDir: path.join(...basePath, "src"),
+          sourceDir: path.join(...sampleBasePath, "src"),
         });
         new SampleDir(this, this.testdir, {
-          sourceDir: path.join(...basePath, "test"),
+          sourceDir: path.join(...sampleBasePath, "test"),
         });
-        new SampleDir(this, this.testdir, {
-          sourceDir: path.join(...basePath, "prisma"),
+        new SampleDir(this, this.prismadir, {
+          sourceDir: path.join(...sampleBasePath, "prisma"),
         });
-        for (const fileName of ["README.md"]) {
-          new SampleFile(this, fileName, {
-            sourcePath: path.join(...basePath, "root", fileName),
-          });
-        }
+        new SampleDir(this, "scripts", {
+          sourceDir: path.join(...sampleBasePath, "scripts"),
+        });
+        new SampleFile(this, "README.md", {
+          sourcePath: path.join(...sampleBasePath, "root", "README.md"),
+        });
+        new SampleFile(this, ".env", {
+          sourcePath: path.join(...sampleBasePath, "root", ".env"),
+        });
       } else {
         throw new Error("Unsupported sample type");
       }
     }
 
     // project.gitignore.exclude(".env");
-    project.gitignore.exclude("dev.db", "dev.db-journal");
+    this.gitignore.exclude("dev.db", "dev.db-journal");
+    this.tsconfigDev.addInclude("scripts/*.ts");
 
-    if (project.eslint) {
+    if (this.eslint) {
       // add graphql to eslint
       // See: https://the-guild.dev/graphql/eslint/docs/getting-started
       // tricky: `processor` is not in the type definition
@@ -152,10 +165,10 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
         //   "plugin:prettier/recommended",
         // ],
       } satisfies EslintOverride & { processor: string };
-      project.eslint.addOverride(eslintOverrideForTs);
+      this.eslint.addOverride(eslintOverrideForTs);
 
-      const tsOverridePosition = project.eslint.overrides.length;
-      project.eslint.addOverride({
+      const tsOverridePosition = this.eslint.overrides.length;
+      this.eslint.addOverride({
         files: ["*.ts"],
       });
 
@@ -180,9 +193,9 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
       } satisfies EslintOverride & {
         parserOptions: { operations: string; schema: string };
       };
-      project.eslint.addOverride(eslintOverrideForGraphql);
+      this.eslint.addOverride(eslintOverrideForGraphql);
 
-      project.eslint.addOverride({
+      const eslintSchemaGraphqlOverride = {
         files: ["schema.graphql"],
         parser: "@graphql-eslint/eslint-plugin",
         plugins: ["@graphql-eslint"],
@@ -190,6 +203,9 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
           "plugin:prettier/recommended",
           "plugin:@graphql-eslint/schema-recommended",
         ],
+        parserOptions: {
+          schema: "./schema.graphql",
+        },
         rules: {
           "@graphql-eslint/strict-id-in-types": [
             "error",
@@ -213,13 +229,16 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
           ],
           "prettier/prettier": "warn",
         },
-      });
+      } satisfies EslintOverride & {
+        parserOptions: { schema: string };
+      };
+      this.eslint.addOverride(eslintSchemaGraphqlOverride);
 
       // to get the graphql-eslint overrides to work with the typescript-eslint plugin,
       // we have to move the typescript-eslint config to an override as well
       // we'll use the file patching escape hatch to do this, so what's written before
       // is honored and kept, just moved
-      const eslintFile = project.tryFindObjectFile(".eslintrc.json");
+      const eslintFile = this.tryFindObjectFile(".eslintrc.json");
       if (!eslintFile) {
         throw Error("eslint file not found");
       }
@@ -240,7 +259,7 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
       );
     }
 
-    const codegenConfig = new TextFile(project, "codegen.ts", {
+    const codegenConfig = new TextFile(this, "codegen.ts", {
       lines: [
         `import type { CodegenConfig } from "@graphql-codegen/cli";
 import { printSchema } from "graphql";
@@ -262,21 +281,17 @@ const config: CodegenConfig = {
       Cursor: "string",
     },
   },
+  emitLegacyCommonJSImports: false,
   generates: {
     "./test/gql/": {
       documents: ["test/**/*.ts"],
       preset: "client",
       hooks: {
+        beforeAllFileWrite: [
+          "ts-node scripts/saveSchema.ts",
+        ],
         afterOneFileWrite: [
           "eslint --ext .ts --fix --no-error-on-unmatched-pattern",
-        ],
-      },
-    },
-    "./schema.graphql": {
-      plugins: ["schema-ast"],
-      hooks: {
-        afterOneFileWrite: [
-          "eslint --ext .graphql --fix --no-error-on-unmatched-pattern",
         ],
       },
     },
@@ -290,16 +305,35 @@ export default config;
       marker: true,
     });
     codegenConfig.addLine(`// ${codegenConfig.marker}\n`);
-    project.npmignore?.exclude("codegen.ts");
-    project.tsconfigDev.addInclude("codegen.ts");
+    this.npmignore?.exclude("codegen.ts");
+    this.tsconfigDev.addInclude("codegen.ts");
 
-    const codegenTask = project.addTask("codegen", { exec: "graphql-codegen" });
-    project.preCompileTask.prependSpawn(codegenTask);
+    // We want pre-compile to read:
+    // 1) prisma:generate
+    // 2) save-schema
+    // 3) codegen
+    // 4) bundle
+    // bundle is there now, so we'll prepend the other two from the bottom up
+    const codegenTask = this.addTask("codegen", { exec: "graphql-codegen" });
+    this.preCompileTask.prependSpawn(codegenTask);
 
-    const postinstallTask = project.addTask("postinstall");
-    postinstallTask.spawn(project.preCompileTask);
+    const saveSchemaTask = this.addTask("save-schema", {
+      exec: "ts-node scripts/saveSchema.ts",
+    });
+    this.preCompileTask.prependSpawn(saveSchemaTask);
 
-    project.addTask("codegen:watch", {
+    const prismaGenerateTask = this.tasks.addTask("prisma:generate", {
+      description: "Update the prisma client",
+      exec: "prisma generate",
+    });
+    this.preCompileTask.prependSpawn(prismaGenerateTask);
+
+    const postinstallTask = this.addTask("postinstall");
+    postinstallTask.spawn(this.preCompileTask);
+
+    this.eslint?.addLintPattern("schema.graphql");
+
+    this.addTask("codegen:watch", {
       exec: "nodemon -w 'test/**/*.ts' -i 'test/gql' -w 'src/' -e ts --exec graphql-codegen",
     });
   }
