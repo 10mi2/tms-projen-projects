@@ -15,18 +15,27 @@ export function postFindManyImpl<T extends Prisma.PostFindManyArgs>(
     const actualArgs = {
       ...defaultArgs,
       ...args,
+      where: {
+        ...defaultArgs?.where,
+        ...args?.where,
+      },
+      select: {
+        ...defaultArgs?.select,
+        ...args?.select,
+      },
     };
 
     const promise = (async () => {
       const filteredPosts: Post[] = posts.filter((post) => {
         if (actualArgs.where?.id !== undefined) {
-          return actualArgs.where.id == post.id;
+          return actualArgs.where.id === post.id;
         }
         if (actualArgs.where?.authorId !== undefined) {
-          return actualArgs.where.authorId == post.authorId;
+          return actualArgs.where.authorId === post.authorId;
         }
         return true;
       });
+
       if (actualArgs?.include?.author) {
         const filteredPostsWithAuthor: Array<Post & { author: User }> = [];
         for (const post of filteredPosts) {
@@ -37,9 +46,18 @@ export function postFindManyImpl<T extends Prisma.PostFindManyArgs>(
             })(),
           });
         }
+        // console.log(
+        //   JSON.stringify(
+        //     { args, actualArgs, filteredPostsWithAuthor },
+        //     null,
+        //     2,
+        //   ),
+        // );
+
         return filteredPostsWithAuthor;
       }
 
+      // console.log(JSON.stringify({ args, actualArgs, filteredPosts }, null, 2));
       return filteredPosts;
     })();
 
@@ -61,12 +79,23 @@ export function postFindUniqueOrThrowImpl<
   return <T2 extends Prisma.PostFindUniqueOrThrowArgs>(
     args?: T2,
   ): postFindUniqueOrThrowReturn => {
+    const whereId = args?.where?.id ?? defaultArgs?.where?.id;
+    assert(whereId !== undefined);
+
     const actualArgs = {
       ...defaultArgs,
       ...args,
+      where: {
+        ...(defaultArgs?.where ?? {}),
+        ...(args?.where ?? {}),
+        id: whereId,
+      } satisfies Prisma.PostWhereUniqueInput,
+      select: {
+        ...defaultArgs?.select,
+        ...args?.select,
+      },
     };
 
-    const whereId = actualArgs.where?.id;
     const foundPost = whereId
       ? posts.find((post) => whereId == post.id)
       : undefined;
@@ -74,9 +103,12 @@ export function postFindUniqueOrThrowImpl<
 
     const promise = (async () => {
       const post: Post & { author?: User } = foundPost;
-      if (args?.include?.author) {
+      if (args?.include?.author || actualArgs.select?.author) {
         post.author = await userFindUniqueOrThrowImpl(users, posts, {
           where: { id: post.authorId },
+          ...(typeof actualArgs.select?.author === "object"
+            ? actualArgs.select.author
+            : undefined),
         })();
       }
       return post;

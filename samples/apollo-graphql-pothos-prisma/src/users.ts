@@ -27,6 +27,9 @@ export const decodeUserID = (id: string) =>
 export const userWithPaginatedPosts = builder.prismaObject("User", {
   name: "UserWithPaginatedPosts",
   description: "A user with paginated posts",
+  select: {
+    id: true,
+  },
   fields: (t) => {
     return {
       id: t.field({
@@ -37,44 +40,58 @@ export const userWithPaginatedPosts = builder.prismaObject("User", {
       name: t.exposeString("name", { nullable: true }),
       email: t.exposeString("email"),
       test: t.string({ resolve: () => "test" }),
+
       posts: t.field({
         type: PostConnection,
         args: {
           ...commonPaginationArgs(t.arg, PostOrderByInput, "title"),
         },
-        resolve: async (parent, args, ctx) => {
-          const { orderBy, cursorWhere, take, sort, reverse, foundContext } =
-            getCursorProperties(args, postSortConfigs, UserPostCursorSchema, {
-              authorId: parent.id,
-            });
-          if (
-            foundContext &&
-            "authorId" in foundContext &&
-            foundContext.authorId !== parent.id
-          ) {
-            throw new Error(
-              "Cursor passed for a specific User, but the User wasn't pinned with 'at'",
-            );
-          }
-          const posts = await ctx.prisma.post.findMany({
-            where: {
-              ...cursorWhere,
+        select: (args, _context, nestedSelection) => {
+          const { orderBy, cursorWhere, take } = getCursorProperties(
+            args,
+            postSortConfigs,
+            UserPostCursorSchema,
+          );
+
+          const ret = {
+            posts: nestedSelection(
+              {
+                select: {
+                  id: true,
+                },
+                where: {
+                  ...cursorWhere,
+                },
+                orderBy: orderBy,
+                take,
+              },
+              // Look at the selections in posts.edges.edge to determine what relations/fields to select
+              ["edges", "node"],
+            ),
+          } as const;
+          return ret;
+        },
+        resolve: (user, args) => {
+          const { sort, reverse } = getCursorProperties(
+            args,
+            postSortConfigs,
+            UserPostCursorSchema,
+            {
+              authorId: user.id,
             },
-            orderBy: orderBy,
-            take,
-          });
+          );
+
           return new Connection(
             "userPost",
-            !reverse ? posts : posts.reverse(),
+            !reverse ? user.posts : user.posts.reverse(),
             sort,
-            [{ key: "authorId", value: parent.id }],
+            [{ key: "authorId", value: user.id }],
           );
         },
       }),
     };
   },
 });
-type UserWithPaginatedPosts = typeof userWithPaginatedPosts.$inferType;
 
 const UserOrderByInput = builder.enumType("UserOrderByInput", {
   description: "Options for sorting Users",
@@ -85,9 +102,7 @@ const UserOrderByInput = builder.enumType("UserOrderByInput", {
   } as const,
 });
 
-const { connection: UserConnection } = makePagination<UserWithPaginatedPosts>(
-  userWithPaginatedPosts,
-);
+const { connection: UserConnection } = makePagination(userWithPaginatedPosts);
 
 export const CreateUserInput = builder.inputType("CreateUserInput", {
   description: "Input for new users",
@@ -138,25 +153,28 @@ builder.queryFields((t) => ({
         args,
         userSortConfigs,
         UserCursorSchema,
-        {
-          id: typeof args.id === "string" ? decodeUserID(args.id) : undefined,
-        },
+        typeof args.id === "string"
+          ? {
+              id: decodeUserID(args.id),
+            }
+          : undefined,
       );
       // console.log(info);
-      const users = await context.prisma.user.findMany({
+      const findManyArgs = {
         ...queryFromInfo({
-          typeName: "UserWithPaginatedPosts",
-          context,
+          context: context,
           info,
           // nested path where the selections for this type can be found
-          path: ["users", "edges", "node"],
+          path: ["edges", "node"],
         }),
         where: {
           ...cursorWhere,
         },
         orderBy: orderBy,
         take,
-      });
+      } as const;
+      // console.log(findManyArgs);
+      const users = await context.prisma.user.findMany(findManyArgs);
       return new Connection("user", !reverse ? users : users.reverse(), sort);
     },
   }),
@@ -174,10 +192,10 @@ builder.mutationFields((t) => ({
     resolve: async (_parent, args, context, info) => {
       const user = await context.prisma.user.create({
         ...queryFromInfo({
-          context,
+          context: context,
           info,
           // nested path where the selections for this type can be found
-          path: ["createUser"],
+          path: [],
         }),
         data: args.input,
       });
@@ -196,7 +214,7 @@ builder.mutationFields((t) => ({
           context,
           info,
           // nested path where the selections for this type can be found
-          path: ["deleteUser"],
+          path: [],
         }),
         where: {
           id,

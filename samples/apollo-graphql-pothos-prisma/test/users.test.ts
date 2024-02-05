@@ -53,7 +53,7 @@ beforeEach(() => {
   const tempPostsSimple = [...postsSimple];
 
   mockPrisma.user.findMany.mockImplementation(
-    userFindManyImpl(tempUsersSimple),
+    userFindManyImpl(tempUsersSimple, tempPostsSimple),
   );
   mockPrisma.user.create.mockImplementation(userCreateImpl(tempUsersSimple));
   mockPrisma.user.delete.mockImplementation(
@@ -79,19 +79,32 @@ it("simple users query", async () => {
 
   expect(mockPrisma.user.findMany).toHaveBeenNthCalledWith(1, {
     orderBy: [{ name: "asc" }, { id: "asc" }],
+    select: {
+      id: true,
+      name: true,
+      posts: {
+        orderBy: [
+          {
+            title: "asc",
+          },
+          {
+            id: "asc",
+          },
+        ],
+        select: expect.objectContaining({
+          content: true,
+          id: true,
+          title: true,
+        }),
+        take: 50,
+        where: {},
+      },
+    },
     take: 50,
     where: {},
   });
-  expect(mockPrisma.post.findMany).toHaveBeenNthCalledWith(1, {
-    orderBy: [{ title: "asc" }, { id: "asc" }],
-    take: 50,
-    where: { authorId: 1 },
-  });
-  expect(mockPrisma.post.findMany).toHaveBeenNthCalledWith(2, {
-    orderBy: [{ title: "asc" }, { id: "asc" }],
-    take: 50,
-    where: { authorId: 2 },
-  });
+  // If the selection is working right, posts should not be called at all:
+  expect(mockPrisma.post.findMany).toHaveBeenCalledTimes(0);
 });
 
 it("users query without posts", async () => {
@@ -103,6 +116,11 @@ it("users query without posts", async () => {
   expect(mockPrisma.user.findMany).toHaveBeenNthCalledWith(1, {
     orderBy: [{ name: "asc" }, { id: "asc" }],
     take: 50,
+    select: expect.objectContaining({
+      email: true,
+      id: true,
+      name: true,
+    }),
     where: {},
   });
   expect(mockPrisma.post.findMany).toHaveBeenCalledTimes(0);
@@ -123,10 +141,31 @@ it("users query with posts paginated", async () => {
   });
   expect(mockPrisma.user.findMany).toHaveBeenNthCalledWith(1, {
     orderBy: [{ name: "asc" }, { id: "asc" }],
+    select: {
+      id: true,
+      name: true,
+      posts: {
+        orderBy: [
+          {
+            title: "asc",
+          },
+          {
+            id: "asc",
+          },
+        ],
+        select: expect.objectContaining({
+          content: true,
+          id: true,
+          title: true,
+        }),
+        take: 2,
+        where: {},
+      },
+    },
     take: 50,
     where: {},
   });
-  expect(mockPrisma.post.findMany).toHaveBeenCalledTimes(2);
+  expect(mockPrisma.post.findMany).toHaveBeenCalledTimes(0);
   const firstPageUsers = firstPage?.data?.users;
 
   assert(firstPageUsers !== undefined);
@@ -145,14 +184,40 @@ it("users query with posts paginated", async () => {
     mockContext,
     atUser: secondUser.node.id,
     postsAfter: secondUser.node.posts.pageInfo.endCursor,
+    postsFirst: 7,
   });
 
   expect(mockPrisma.user.findMany).toHaveBeenLastCalledWith({
     orderBy: [{ name: "asc" }, { id: "asc" }],
-    take: 50,
-    where: {
-      id: 2,
+    select: {
+      id: true,
+      name: true,
+      posts: {
+        orderBy: [{ title: "asc" }, { id: "asc" }],
+        select: { content: true, id: true, title: true },
+        take: 7,
+        where: {
+          OR: [
+            {
+              title: {
+                gt: expect.any(String),
+              },
+            },
+            {
+              id: {
+                gt: expect.any(Number),
+              },
+              title: {
+                equals: expect.any(String),
+              },
+            },
+          ],
+          authorId: expect.any(Number),
+        },
+      },
     },
+    take: 50,
+    where: { id: expect.any(Number) },
   });
 
   const mixedCursorResponse1 = await getUserWithPostPage({
@@ -181,7 +246,6 @@ it("users query with bad atUser value (string)", async () => {
   });
 
   assert(result?.errors !== undefined);
-  // console.log(result.errors);
 });
 
 it("users query with bad orderBy", async () => {
@@ -197,7 +261,6 @@ it("users query with bad orderBy", async () => {
   });
 
   assert(result?.errors !== undefined);
-  // console.log(result.errors);
 });
 
 it("users query with first and last (bad)", async () => {
@@ -214,7 +277,6 @@ it("users query with first and last (bad)", async () => {
   });
 
   assert(result?.errors !== undefined);
-  // console.log(result.errors);
 });
 
 it("users query with before and after (bad)", async () => {
@@ -258,6 +320,7 @@ it("users creation happy path", async () => {
 
   expect(mockPrisma.user.create).toHaveBeenLastCalledWith({
     data: newUser,
+    select: { id: true },
   });
 
   assert(result?.errors === undefined);
@@ -285,6 +348,7 @@ it("user delete happy path", async () => {
   assert(deletedUser?.id === deleteUserID);
 
   expect(mockPrisma.user.delete).toHaveBeenLastCalledWith({
+    select: { id: true },
     where: { id: userIdNumber },
   });
 });

@@ -52,7 +52,7 @@ beforeEach(() => {
   const tempPostsSimple = [...postsSimple];
 
   mockPrisma.user.findMany.mockImplementation(
-    userFindManyImpl(tempUsersSimple),
+    userFindManyImpl(tempUsersSimple, tempPostsSimple),
   );
   mockPrisma.user.findUniqueOrThrow.mockImplementation(
     userFindUniqueOrThrowImpl(tempUsersSimple, tempPostsSimple),
@@ -86,6 +86,18 @@ it("simple posts query", async () => {
 
   expect(mockPrisma.post.findMany).toHaveBeenNthCalledWith(1, {
     orderBy: [{ title: "asc" }, { id: "asc" }],
+    select: {
+      author: {
+        select: {
+          id: true,
+          name: true,
+        },
+      },
+      content: true,
+      id: true,
+      published: true,
+      title: true,
+    },
     take: 50,
     where: {},
   });
@@ -118,7 +130,7 @@ it("post creation happy path", async () => {
 
   expect(mockPrisma.post.create).toHaveBeenLastCalledWith({
     data: newPostInternal,
-    include: { author: true },
+    select: { author: { select: { id: true } }, id: true },
   });
 
   assert(result?.errors === undefined);
@@ -151,9 +163,8 @@ it("post delete happy path", async () => {
   const deletedPost = deleteResult?.data?.deletePost;
   assert(deletedPost?.id === deletePostID);
 
-  console.log(process.env.NODE_OPTIONS);
-
   expect(mockPrisma.post.delete).toHaveBeenLastCalledWith({
     where: { id: postIdNumber },
+    select: { id: true },
   });
 });

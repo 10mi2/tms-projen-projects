@@ -4,12 +4,33 @@ import { DefaultArgs } from "@prisma/client/runtime/library.js";
 import { postFindManyImpl, postFindUniqueOrThrowImpl } from "./posts.mock.js";
 
 type userFindManyReturn = ReturnType<Prisma.UserDelegate["findMany"]>;
-export function userFindManyImpl(users: User[]) {
+export function userFindManyImpl(users: User[], posts: Post[]) {
   return <T extends Prisma.UserFindManyArgs>(args?: T): userFindManyReturn => {
-    const filteredUsers = users.filter(
-      (user) => args?.where?.id === undefined || args.where.id == user.id,
-    );
-    const promise = Promise.resolve(filteredUsers);
+    const promise = (async () => {
+      const filteredUsers = users.filter(
+        (user) => args?.where?.id === undefined || args.where.id == user.id,
+      );
+      if (args?.select?.posts) {
+        const filteredUsersWithPosts: Array<User & { posts: Post[] }> = [];
+        for (const user of filteredUsers) {
+          filteredUsersWithPosts.push({
+            ...user,
+            posts: await postFindManyImpl(posts, users, {
+              where: { authorId: user.id },
+            })(
+              typeof args.select.posts === "object"
+                ? args.select.posts
+                : undefined,
+            ),
+          });
+        }
+        // console.log(JSON.stringify({ args, filteredUsersWithPosts }, null, 2));
+
+        return filteredUsersWithPosts;
+      }
+      // console.log(JSON.stringify({ args, filteredUsers }, null, 2));
+      return filteredUsers;
+    })();
     return {
       [Symbol.toStringTag]: "PrismaPromise" as const,
       then: promise.then.bind(promise),

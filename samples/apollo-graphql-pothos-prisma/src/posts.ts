@@ -1,4 +1,4 @@
-import { Post } from "@prisma/client";
+import { queryFromInfo } from "@pothos/plugin-prisma";
 import { z } from "zod";
 import { builder } from "./builder.js";
 import { decodeUserID } from "./users.js";
@@ -20,11 +20,14 @@ export const decodePostID = (id: string) =>
 
 const prismaPostObjRef = builder.prismaObject("Post", {
   description: "A blog post",
+  select: {
+    id: true,
+  },
   fields: (t) => ({
     id: t.field({
       type: "ID",
       nullable: false,
-      resolve: (parent) => encodePostID(parent.id),
+      resolve: (post) => encodePostID(post.id),
     }),
     title: t.exposeString("title"),
     content: t.exposeString("content", { nullable: true }),
@@ -32,8 +35,6 @@ const prismaPostObjRef = builder.prismaObject("Post", {
     author: t.relation("author"),
   }),
 });
-// type PaginatedPost =
-typeof prismaPostObjRef.$inferType;
 export const PostOrderByInput = builder.enumType("PostOrderByInput", {
   description: "Options for sorting Posts",
   values: {
@@ -43,7 +44,7 @@ export const PostOrderByInput = builder.enumType("PostOrderByInput", {
 });
 
 export const { edge: PostEdge, connection: PostConnection } =
-  makePagination<Post>(prismaPostObjRef);
+  makePagination(prismaPostObjRef);
 
 export const CreatePostInput = builder.inputType("CreatePostInput", {
   description: "Input for new posts",
@@ -101,16 +102,24 @@ builder.queryFields((t) => ({
       id: t.arg.id({ required: false }),
       ...commonPaginationArgs(t.arg, PostOrderByInput, "title"),
     },
-    resolve: async (_parent, args, ctx, _info) => {
+    resolve: async (_parent, args, context, info) => {
       const { orderBy, cursorWhere, take, sort, reverse } = getCursorProperties(
         args,
         postSortConfigs,
         PostCursorSchema,
-        {
-          id: typeof args.id === "string" ? decodePostID(args.id) : undefined,
-        },
+        typeof args.id === "string"
+          ? {
+              id: decodePostID(args.id),
+            }
+          : undefined,
       );
-      const posts = await ctx.prisma.post.findMany({
+      const posts = await context.prisma.post.findMany({
+        ...queryFromInfo({
+          context,
+          info,
+          // nested path where the selections for this type can be found
+          path: ["edges", "node"],
+        }),
         where: {
           ...cursorWhere,
         },
@@ -131,8 +140,8 @@ builder.mutationFields((t) => ({
         required: true,
       }),
     },
-    resolve: async (query, _parent, args, ctx) => {
-      const post = await ctx.prisma.post.create({
+    resolve: async (query, _parent, args, context) => {
+      const post = await context.prisma.post.create({
         ...query,
         data: {
           ...args.input,
@@ -147,8 +156,8 @@ builder.mutationFields((t) => ({
     args: {
       id: t.arg.id({ required: true }),
     },
-    resolve: async (query, _parent, args, ctx) => {
-      const post = await ctx.prisma.post.delete({
+    resolve: async (query, _parent, args, context) => {
+      const post = await context.prisma.post.delete({
         ...query,
         where: {
           id: decodePostID(args.id),
