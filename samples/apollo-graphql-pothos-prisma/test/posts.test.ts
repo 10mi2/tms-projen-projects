@@ -22,22 +22,26 @@ import { BuilderContext, builder } from "../src/builder.js";
 // https://www.apollographql.com/docs/apollo-server/testing/testing/
 // https://www.prisma.io/docs/orm/prisma-client/testing/unit-testing
 
+// Prepare the schema for testing
 builder.queryType({});
 builder.mutationType({});
 
-// We have to import *something from users and posts
+// We have to import *something* from users and posts
 // to make sure the schema is built correctly
 // if we import nothing specific, import generically
 // import "../src/posts.js";
-import { decodePostID, encodePostID } from "../src/posts.js";
+import { PostCursorSchema, decodePostID, encodePostID } from "../src/posts.js";
 // import "../src/users.js";
 import { encodeUserID } from "../src/users.js";
+import { Cursor } from "../src/util/pagination-cursor.js";
 
+// Build the schema
 const schema = builder.toSchema();
 
 let testServer: ApolloServer<BuilderContext> | undefined;
 let mockContext: BuilderContext | undefined;
 
+// Setup before each test
 beforeEach(() => {
   testServer = new ApolloServer<BuilderContext>({
     schema,
@@ -103,6 +107,44 @@ it("simple posts query", async () => {
   });
 });
 
+it("posts query skipping property that's sorted on", async () => {
+  assert(testServer !== undefined);
+  assert(mockContext !== undefined);
+  const mockPrisma = mockContext.prisma;
+
+  const posts = await getPosts({ testServer, mockContext, skipTitle: true });
+
+  expect(mockPrisma.post.findMany).toHaveBeenNthCalledWith(1, {
+    orderBy: [{ title: "asc" }, { id: "asc" }],
+    select: {
+      author: {
+        select: {
+          id: true,
+          name: true,
+        },
+      },
+      content: true,
+      id: true,
+      published: true,
+      title: true,
+    },
+    take: 50,
+    where: {},
+  });
+
+  expect(posts.data?.posts.edges[0]?.node.title).toBeUndefined();
+  expect(posts.data?.posts.edges[0]?.cursor).not.toBeUndefined();
+  const cursor = posts.data?.posts.edges[0]?.cursor;
+  assert(cursor !== undefined);
+  const cursorValue = Cursor.fromString(cursor, PostCursorSchema);
+  expect(cursorValue).toMatchObject({
+    value: [
+      { key: "title", value: expect.any(String) },
+      { key: "id", value: expect.any(Number) },
+    ],
+  });
+});
+
 it("post creation happy path", async () => {
   assert(testServer !== undefined);
   assert(mockContext !== undefined);
@@ -130,7 +172,11 @@ it("post creation happy path", async () => {
 
   expect(mockPrisma.post.create).toHaveBeenLastCalledWith({
     data: newPostInternal,
-    select: { author: { select: { id: true } }, id: true },
+    select: {
+      author: { select: { id: true, name: true } },
+      id: true,
+      title: true,
+    },
   });
 
   assert(result?.errors === undefined);
@@ -152,7 +198,7 @@ it("post delete happy path", async () => {
   assert(mockContext !== undefined);
   const mockPrisma = mockContext.prisma;
 
-  const postIdNumber = postsSimple[0].id;
+  const postIdNumber = postsSimple[0]?.id;
   const deletePostID = encodePostID(postIdNumber);
 
   const deleteResult = await deletePost({
@@ -164,7 +210,7 @@ it("post delete happy path", async () => {
   assert(deletedPost?.id === deletePostID);
 
   expect(mockPrisma.post.delete).toHaveBeenLastCalledWith({
+    select: { id: true, title: true },
     where: { id: postIdNumber },
-    select: { id: true },
   });
 });

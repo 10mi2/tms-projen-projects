@@ -31,6 +31,7 @@ export async function getPosts({
   last,
   id,
   check = true,
+  skipTitle = false,
 }: {
   testServer: ApolloServer<BuilderContext>;
   mockContext: BuilderContext;
@@ -39,6 +40,7 @@ export async function getPosts({
   last?: number | null;
   id?: string | null;
   check?: boolean;
+  skipTitle?: boolean;
 }) {
   const result = await server.executeOperation<
     LoadPostsQuery,
@@ -46,16 +48,29 @@ export async function getPosts({
   >(
     {
       query: graphql(/* GraphQL */ `
-        query LoadPosts($after: Cursor, $first: Int, $last: Int, $id: ID) {
-          posts(after: $after, first: $first, last: $last, id: $id) {
+        query LoadPosts(
+          $after: Cursor
+          $first: Int
+          $last: Int
+          $id: ID
+          $skipTitle: Boolean = false
+        ) {
+          posts(
+            after: $after
+            first: $first
+            last: $last
+            id: $id
+            orderBy: TITLE
+          ) {
             pageInfo {
               endCursor
             }
             edges {
+              cursor @include(if: $skipTitle)
               node {
                 id
                 published
-                title
+                title @skip(if: $skipTitle)
                 content
                 author {
                   id
@@ -66,7 +81,7 @@ export async function getPosts({
           }
         }
       `),
-      variables: { after, first, last, id },
+      variables: { after, first, last, id, skipTitle },
     },
     {
       contextValue: context,

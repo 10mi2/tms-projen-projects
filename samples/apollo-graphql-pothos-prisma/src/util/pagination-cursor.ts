@@ -1,19 +1,25 @@
+import zlib from "zlib";
 import { Prisma } from "@prisma/client";
 import { ZodIssueCode, z } from "zod";
 import { SchemaTypes } from "../builder.js";
 
+// If set, compress and encode all cursors as base64
 const BASE64_ENCODE_CURSORS = true;
 
+// Scalar type for Cursor - see usage in builder.ts
 export type CursorScalar = {
   Input: string;
   Output: string;
 };
+// Utility function to check if a value is a string and return it, or throw an error
+// Used in CursorResolver below - technically we coulda used Zod, but that seems like overkill
 const checkIsStringAndReturn = (n: unknown) => {
   if (typeof n === "string") {
     return n;
   }
   throw new Error(`Expected string, got ${typeof n}`);
 };
+// Scalar type resolver for Cursor - see usage in builder.ts
 export const CursorResolver: PothosSchemaTypes.ScalarTypeOptions<
   PothosSchemaTypes.ExtendDefaultTypes<SchemaTypes>,
   string,
@@ -23,6 +29,7 @@ export const CursorResolver: PothosSchemaTypes.ScalarTypeOptions<
   parseValue: checkIsStringAndReturn,
 };
 
+// Utility to make a cursor Zod schema from a value schema and an optional context schema
 export const makeCursorSchema = <
   ValueSchema extends
     | z.AnyZodObject
@@ -39,26 +46,33 @@ export const makeCursorSchema = <
     ...(contextSchema ? { context: z.array(contextSchema) } : {}),
   });
 
+// Type for a cursor sort configuration
 export type CursorSort = Array<{
   sort?: "a" | "d";
   key: string;
 }>;
+
+// Type for a cursor context
 export type CursorContext = Array<{
   key: string;
   value: unknown;
 }>;
+
+// Type for a cursor value
 export type CursorValue = Array<{
   sort?: "a" | "d";
   key: string;
   value: unknown;
 }>;
+
+// Object to represent a cursor - use the static fuctions to parse and generate cursors
 export class Cursor {
   static fromString<Z extends z.AnyZodObject>(str: string, validator: Z) {
     try {
       // accept json-encoded cursors for debugging
       const stringValue =
         BASE64_ENCODE_CURSORS && !str.startsWith("{")
-          ? Buffer.from(str, "base64").toString()
+          ? zlib.brotliDecompressSync(Buffer.from(str, "base64")).toString()
           : str;
       const { name, value, context } = validator.parse(JSON.parse(stringValue));
       return new Cursor({ name, value, context });
@@ -109,11 +123,21 @@ export class Cursor {
       value: this.value,
       context: this.context,
     });
-    return BASE64_ENCODE_CURSORS
-      ? Buffer.from(stringValue).toString("base64")
-      : stringValue;
+    if (BASE64_ENCODE_CURSORS) {
+      return zlib
+        .brotliCompressSync(Buffer.from(stringValue), {
+          [zlib.constants.BROTLI_PARAM_MODE]: zlib.constants.BROTLI_MODE_TEXT,
+          [zlib.constants.BROTLI_PARAM_QUALITY]:
+            zlib.constants.BROTLI_MAX_QUALITY,
+          [zlib.constants.BROTLI_PARAM_SIZE_HINT]: stringValue.length,
+        })
+        .toString("base64");
+    }
+    return stringValue;
   }
 }
+
+// Utility function to get Prisma query properties from pagination (including cursor) arguments
 export const getCursorProperties = <Z extends z.AnyZodObject>(
   {
     first = null,
@@ -187,6 +211,8 @@ export const getCursorProperties = <Z extends z.AnyZodObject>(
     foundContext,
   };
 
+  // NOTE: We're still inside getCursorProperties - below are the helper functions used inside this function
+
   // If there's more than one item, we need to use AND
   // So if we sore by title then id, for example, we need to do
   // where title > cursor.title OR (title = cursor.title AND id > cursor.id)
@@ -235,4 +261,4 @@ export const getCursorProperties = <Z extends z.AnyZodObject>(
     }
     return where;
   }
-};
+}; // END getCursorProperties

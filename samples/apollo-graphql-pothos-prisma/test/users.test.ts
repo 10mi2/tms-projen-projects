@@ -30,7 +30,6 @@ builder.mutationType({});
 // to make sure the schema is built correctly
 // if we import nothing specific, import generically
 // import "../src/posts.js";
-import { encodePostID } from "../src/posts.js";
 // import "../src/users.js";
 import { decodeUserID, encodeUserID } from "../src/users.js";
 
@@ -320,7 +319,7 @@ it("users creation happy path", async () => {
 
   expect(mockPrisma.user.create).toHaveBeenLastCalledWith({
     data: newUser,
-    select: { id: true },
+    select: { id: true, name: true },
   });
 
   assert(result?.errors === undefined);
@@ -348,7 +347,7 @@ it("user delete happy path", async () => {
   assert(deletedUser?.id === deleteUserID);
 
   expect(mockPrisma.user.delete).toHaveBeenLastCalledWith({
-    select: { id: true },
+    select: { id: true, name: true },
     where: { id: userIdNumber },
   });
 });

@@ -1,58 +1,61 @@
 import assert from "assert";
 import { Post, Prisma, User } from "@prisma/client";
-import { DefaultArgs, GetFindResult } from "@prisma/client/runtime/library.js";
 import { userFindUniqueOrThrowImpl } from "./users.mock.js";
 
-type postFindManyReturn = ReturnType<Prisma.PostDelegate["findMany"]>;
-export function postFindManyImpl<T extends Prisma.PostFindManyArgs>(
-  posts: Post[],
-  users: User[],
-  defaultArgs?: T,
-) {
-  return <T2 extends Prisma.PostFindManyArgs>(
-    args?: T2,
-  ): postFindManyReturn => {
-    const actualArgs = {
-      ...defaultArgs,
-      ...args,
-      where: {
-        ...defaultArgs?.where,
-        ...args?.where,
-      },
-      select: {
-        ...defaultArgs?.select,
-        ...args?.select,
-      },
-    };
+// Reference: https://www.prisma.io/docs/orm/prisma-client/client-extensions/type-utilities
+
+// Here we make a mock implementation of a few functions of the Prisma PostDelegate
+// Due to how Prisma handles return values, like making a Promise with additional properties (!), we have to do some
+// acrobatics to make the mock implementation type correctly to ensure we're retuning the right values
+
+// NOTE: This is a very basic implementation, and does not handle all possible cases.
+// Specifically, it does not handle the `include` fields of the Prisma query arguments AT ALL, and the `select` fields
+// are only honored to *add* relation fields to the returned object, not to *remove* fields from the returned object.
+
+// Damn Fluent API makes this SO much more complicated:
+//  https://www.prisma.io/docs/orm/prisma-client/queries/relation-queries#fluent-api
+
+/**
+ * Make a `prisma.post.findMany` mock implementation - this function returns a function that is the mock implementation
+ *
+ * @param posts - Array of Post objects to use as sample data
+ * @param users - Array of User objects to use as sample data
+ * @param defaultArgs - (optional) Default arguments to use for the query (for example, to limit the results to a
+ * certain post)
+ * @returns A mock function that takes the query arguments and returns a faked "PrismaPromise" of the result
+ */
+export function postFindManyImpl(posts: Post[], users: User[]) {
+  // This is the actual mock function that will be returned, with the user and post data references "baked in"
+  return <A extends Prisma.PostFindManyArgs>(
+    args?: Prisma.Exact<A, Prisma.PostFindManyArgs>,
+  ): Prisma.Prisma__PostClient<
+    Prisma.Result<Prisma.PostDelegate, typeof args, "findMany">
+  > => {
+    const whereId = args?.where?.id;
+    const whereAuthorId = args?.where?.authorId;
+
+    const filteredPosts = posts.filter((post) => {
+      if (whereId !== undefined) {
+        return whereId === post.id;
+      }
+      if (whereAuthorId !== undefined) {
+        return whereAuthorId === post.authorId;
+      }
+      return true;
+    });
 
     const promise = (async () => {
-      const filteredPosts: Post[] = posts.filter((post) => {
-        if (actualArgs.where?.id !== undefined) {
-          return actualArgs.where.id === post.id;
-        }
-        if (actualArgs.where?.authorId !== undefined) {
-          return actualArgs.where.authorId === post.authorId;
-        }
-        return true;
-      });
-
-      if (actualArgs?.include?.author) {
+      if (args?.select?.author || args?.include?.author) {
         const filteredPostsWithAuthor: Array<Post & { author: User }> = [];
         for (const post of filteredPosts) {
           filteredPostsWithAuthor.push({
             ...post,
-            author: await userFindUniqueOrThrowImpl(users, posts, {
-              where: { id: post.authorId },
-            })(),
+            author: await userFindUniqueOrThrowImpl(
+              users,
+              posts,
+            )({ where: { id: post.authorId } }),
           });
         }
-        // console.log(
-        //   JSON.stringify(
-        //     { args, actualArgs, filteredPostsWithAuthor },
-        //     null,
-        //     2,
-        //   ),
-        // );
 
         return filteredPostsWithAuthor;
       }
@@ -66,35 +69,38 @@ export function postFindManyImpl<T extends Prisma.PostFindManyArgs>(
       then: promise.then.bind(promise),
       catch: promise.catch.bind(promise),
       finally: promise.finally.bind(promise),
-    };
-  };
-}
-
-type postFindUniqueOrThrowReturn = ReturnType<
-  Prisma.PostDelegate["findUniqueOrThrow"]
->;
-export function postFindUniqueOrThrowImpl<
-  T extends Prisma.PostFindUniqueOrThrowArgs,
->(posts: Post[], users: User[], defaultArgs?: T) {
-  return <T2 extends Prisma.PostFindUniqueOrThrowArgs>(
-    args?: T2,
-  ): postFindUniqueOrThrowReturn => {
-    const whereId = args?.where?.id ?? defaultArgs?.where?.id;
-    assert(whereId !== undefined);
-
-    const actualArgs = {
-      ...defaultArgs,
-      ...args,
-      where: {
-        ...(defaultArgs?.where ?? {}),
-        ...(args?.where ?? {}),
-        id: whereId,
-      } satisfies Prisma.PostWhereUniqueInput,
-      select: {
-        ...defaultArgs?.select,
-        ...args?.select,
+      author: <T extends Prisma.UserDefaultArgs = {}>(
+        args2?: Prisma.Subset<T, Prisma.UserDefaultArgs>,
+      ) => {
+        assert(filteredPosts.length == 1);
+        return userFindUniqueOrThrowImpl(
+          users,
+          posts,
+        )({ ...args2, where: { id: filteredPosts[0].authorId } }) as never;
       },
     };
+  };
+} // END postFindManyImpl
+
+/**
+ * Make a `prisma.post.findUniqueOrThrow` mock implementation - this function returns a function that is the mock
+ * implementation
+ *
+ * @param posts - Array of Post objects to use as sample data
+ * @param users - Array of User objects to use as sample data
+ * @param defaultArgs - (optional) Default arguments to use for the query (for example, to limit the results to a
+ * certain post)
+ * @returns A mock function that takes the query arguments and returns a faked "PrismaPromise" of the result
+ */
+export function postFindUniqueOrThrowImpl(posts: Post[], users: User[]) {
+  // This is the actual mock function that will be returned, with the user and post data references "baked in"
+  return <A extends Prisma.PostFindUniqueOrThrowArgs>(
+    args?: Prisma.Exact<A, Prisma.PostFindUniqueOrThrowArgs>,
+  ): Prisma.Prisma__PostClient<
+    Prisma.Result<Prisma.PostDelegate, typeof args, "findFirstOrThrow">
+  > => {
+    const whereId = args?.where.id;
+    assert(whereId !== undefined);
 
     const foundPost = whereId
       ? posts.find((post) => whereId == post.id)
@@ -103,13 +109,18 @@ export function postFindUniqueOrThrowImpl<
 
     const promise = (async () => {
       const post: Post & { author?: User } = foundPost;
-      if (args?.include?.author || actualArgs.select?.author) {
-        post.author = await userFindUniqueOrThrowImpl(users, posts, {
-          where: { id: post.authorId },
-          ...(typeof actualArgs.select?.author === "object"
-            ? actualArgs.select.author
-            : undefined),
-        })();
+      if (args?.include?.author || args?.select?.author) {
+        post.author = await userFindUniqueOrThrowImpl(
+          users,
+          posts,
+        )({
+          where: {
+            id: post.authorId,
+          },
+          ...(typeof args.select?.author === "object"
+            ? args.select?.author
+            : {}),
+        });
       }
       return post;
     })();
@@ -119,47 +130,76 @@ export function postFindUniqueOrThrowImpl<
       then: promise.then.bind(promise),
       catch: promise.catch.bind(promise),
       finally: promise.finally.bind(promise),
-      author: userFindUniqueOrThrowImpl(users, posts, {
-        where: { id: foundPost.authorId },
-      }) as never,
-      // as never since crazy typing, we don't care about most of it
+      author: () =>
+        Promise.reject(
+          "Not implemented: PostFindUniqueOrThrow.author",
+        ) as never,
     };
   };
-}
+} // END postFindUniqueOrThrowImpl
 
-type postCreateReturn = ReturnType<Prisma.PostDelegate["create"]>;
+/**
+ * Make a `prisma.post.create` mock implementation - this function returns a function that is the mock implementation
+ *
+ * @param posts - Array of Post objects to use as sample data
+ * @param users - Array of User objects to use as sample data - used for the return value
+ * @returns A mock function that takes the query arguments and returns a faked "PrismaPromise" of the result
+ */
 export function postCreateImpl(posts: Post[], users: User[]) {
-  return <T extends Prisma.PostCreateArgs>(args: T): postCreateReturn => {
+  // This is the actual mock function that will be returned, with the user and post data references "baked in"
+  return <A extends Prisma.PostCreateArgs>(
+    args: Prisma.Exact<A, Prisma.PostCreateArgs>,
+  ): Prisma.Prisma__PostClient<
+    Prisma.Result<Prisma.PostDelegate, typeof args, "create">
+  > => {
     const authorId = args.data.authorId;
     assert(typeof authorId === "number");
     const authorRaw = users.find((user) => user.id === authorId);
     assert(authorRaw !== undefined);
-    const newPost = {
-      id: posts.length + 1,
-      content: null,
-      published: false,
-      ...args.data,
-      authorId,
-    } satisfies Post;
-    posts.push(newPost);
+
+    const promise = (async () => {
+      const newPost = {
+        id: posts.length + 1,
+        title: args.data.title ?? false,
+        content: args.data.content ?? null,
+        published: args.data.published ?? false,
+        authorId,
+      } satisfies Post;
+      posts.push(newPost);
+
+      return newPost as Prisma.Result<
+        Prisma.PostDelegate,
+        typeof args,
+        "create"
+      >;
+    })();
 
     // add toStringTag and author
-    const promise = Promise.resolve(newPost);
     return {
       [Symbol.toStringTag]: "PrismaPromise" as const,
       then: promise.then.bind(promise),
       catch: promise.catch.bind(promise),
       finally: promise.finally.bind(promise),
-      author: userFindUniqueOrThrowImpl(users, posts, {
-        where: { id: authorId },
-      }) as never,
+      author: () =>
+        Promise.reject("Not implemented: PostCreate.author") as never,
     };
   };
-}
+} // END postCreateImpl
 
-type postDeleteReturn = ReturnType<Prisma.PostDelegate["delete"]>;
+/**
+ * Make a `prisma.post.delete` mock implementation - this function returns a function that is the mock implementation
+ *
+ * @param posts - Array of Post objects to use as sample data
+ * @param users - Array of User objects to use as sample data - used for the return value
+ * @returns A mock function that takes the query arguments and returns a faked "PrismaPromise" of the result
+ */
 export function postDeleteImpl(posts: Post[], users: User[]) {
-  return <T extends Prisma.PostDeleteArgs>(args?: T): postDeleteReturn => {
+  // This is the actual mock function that will be returned, with the user and post data references "baked in"
+  return <A extends Prisma.PostDeleteArgs>(
+    args?: Prisma.Exact<A, Prisma.PostDeleteArgs>,
+  ): Prisma.Prisma__PostClient<
+    Prisma.Result<Prisma.PostDelegate, typeof args, "delete">
+  > => {
     const postId = args?.where?.id;
     assert(postId !== undefined);
 
@@ -167,15 +207,13 @@ export function postDeleteImpl(posts: Post[], users: User[]) {
     const oldPost = posts.splice(postIndex, 1)[0];
 
     const promise = Promise.resolve(oldPost);
-    const postsPromise = Promise.resolve([]);
     return {
       [Symbol.toStringTag]: "PrismaPromise" as const,
       then: promise.then.bind(promise),
       catch: promise.catch.bind(promise),
       finally: promise.finally.bind(promise),
-      author: userFindUniqueOrThrowImpl(users, posts, {
-        where: { id: oldPost.authorId },
-      }) as never,
+      author: () =>
+        Promise.reject("Not implemented: PostDelete.author") as never,
     };
   };
-}
+} // END postDeleteImpl

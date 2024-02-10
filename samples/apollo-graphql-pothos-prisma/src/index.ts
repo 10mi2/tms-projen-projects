@@ -12,7 +12,10 @@ const server = new ApolloServer<BuilderContext>({
   schema,
 });
 
-const prisma = new PrismaClient({ log: [{ level: "query", emit: "event" }] });
+export const prisma = new PrismaClient({
+  log: [{ level: "query", emit: "event" }],
+});
+
 // log queries
 prisma.$on("query", (e) => {
   console.log("Query: " + e.query);
