@@ -4596,6 +4596,7 @@ const tmsNestJSAppProjectOptions: TmsNestJSAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Minimum node.js version to require via `engines` (inclusive). |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum Node.js version to require via package.json `engines` (inclusive). |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmAccess">npmAccess</a></code> | <code>projen.javascript.NpmAccess</code> | Access level of the npm package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmProvenance">npmProvenance</a></code> | <code>boolean</code> | Should provenance statements be generated when the package is published. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmRegistry">npmRegistry</a></code> | <code>string</code> | The host name of the npm registry to publish to. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmRegistryUrl">npmRegistryUrl</a></code> | <code>string</code> | The base URL of the npm package registry. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmTokenSecret">npmTokenSecret</a></code> | <code>string</code> | GitHub secret which contains the NPM token to use when publishing packages. |
@@ -4690,6 +4691,7 @@ const tmsNestJSAppProjectOptions: TmsNestJSAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.typescriptVersion">typescriptVersion</a></code> | <code>string</code> | TypeScript version to use. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.addDefaultBundle">addDefaultBundle</a></code> | <code>boolean</code> | Add a default bundle to the project. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.eslintFixableAsWarn">eslintFixableAsWarn</a></code> | <code>boolean</code> | Change the default-set eslint auto-fixable rules to "warn" instead of "error". |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.esmSupportAddRequireShim">esmSupportAddRequireShim</a></code> | <code>boolean</code> | When configuring for ESM, add a banner to the bundle to support `require` and `__dirname` and `__filename`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.esmSupportConfig">esmSupportConfig</a></code> | <code>boolean</code> | Configure for ESM. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.nodeVersion">nodeVersion</a></code> | <code>string</code> | Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBase">tsconfigBase</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection. |
@@ -5446,6 +5448,27 @@ public readonly npmAccess: NpmAccess;
 - *Default:* for scoped packages (e.g. `foo@bar`), the default is `NpmAccess.RESTRICTED`, for non-scoped packages, the default is `NpmAccess.PUBLIC`.
 
 Access level of the npm package.
+
+---
+
+##### `npmProvenance`<sup>Optional</sup> <a name="npmProvenance" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmProvenance"></a>
+
+```typescript
+public readonly npmProvenance: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true for public packages, false otherwise
+
+Should provenance statements be generated when the package is published.
+
+A supported package manager is required to publish a package with npm provenance statements and
+you will need to use a supported CI/CD provider.
+
+Note that the projen `Release` and `Publisher` components are using `publib` to publish packages,
+which is using npm internally and supports provenance statements independently of the package manager used.
+
+> [https://docs.npmjs.com/generating-provenance-statements](https://docs.npmjs.com/generating-provenance-statements)
 
 ---
 
@@ -6748,6 +6771,19 @@ Change the default-set eslint auto-fixable rules to "warn" instead of "error".
 
 ---
 
+##### `esmSupportAddRequireShim`<sup>Optional</sup> <a name="esmSupportAddRequireShim" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.esmSupportAddRequireShim"></a>
+
+```typescript
+public readonly esmSupportAddRequireShim: boolean;
+```
+
+- *Type:* boolean
+- *Default:* (esmSupportConfig === true && addDefaultBundle === true)
+
+When configuring for ESM, add a banner to the bundle to support `require` and `__dirname` and `__filename`.
+
+---
+
 ##### `esmSupportConfig`<sup>Optional</sup> <a name="esmSupportConfig" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.esmSupportConfig"></a>
 
 ```typescript
@@ -6921,6 +6957,7 @@ const tmsTSApolloGraphQLProjectOptions: TmsTSApolloGraphQLProjectOptions = { ...
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Minimum node.js version to require via `engines` (inclusive). |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum Node.js version to require via package.json `engines` (inclusive). |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.npmAccess">npmAccess</a></code> | <code>projen.javascript.NpmAccess</code> | Access level of the npm package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.npmProvenance">npmProvenance</a></code> | <code>boolean</code> | Should provenance statements be generated when the package is published. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.npmRegistry">npmRegistry</a></code> | <code>string</code> | The host name of the npm registry to publish to. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.npmRegistryUrl">npmRegistryUrl</a></code> | <code>string</code> | The base URL of the npm package registry. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.npmTokenSecret">npmTokenSecret</a></code> | <code>string</code> | GitHub secret which contains the NPM token to use when publishing packages. |
@@ -7015,6 +7052,7 @@ const tmsTSApolloGraphQLProjectOptions: TmsTSApolloGraphQLProjectOptions = { ...
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.typescriptVersion">typescriptVersion</a></code> | <code>string</code> | TypeScript version to use. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.addDefaultBundle">addDefaultBundle</a></code> | <code>boolean</code> | Add a default bundle to the project. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.eslintFixableAsWarn">eslintFixableAsWarn</a></code> | <code>boolean</code> | Change the default-set eslint auto-fixable rules to "warn" instead of "error". |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.esmSupportAddRequireShim">esmSupportAddRequireShim</a></code> | <code>boolean</code> | When configuring for ESM, add a banner to the bundle to support `require` and `__dirname` and `__filename`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.esmSupportConfig">esmSupportConfig</a></code> | <code>boolean</code> | Configure for ESM. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.nodeVersion">nodeVersion</a></code> | <code>string</code> | Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.tsconfigBase">tsconfigBase</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection. |
@@ -7772,6 +7810,27 @@ public readonly npmAccess: NpmAccess;
 - *Default:* for scoped packages (e.g. `foo@bar`), the default is `NpmAccess.RESTRICTED`, for non-scoped packages, the default is `NpmAccess.PUBLIC`.
 
 Access level of the npm package.
+
+---
+
+##### `npmProvenance`<sup>Optional</sup> <a name="npmProvenance" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.npmProvenance"></a>
+
+```typescript
+public readonly npmProvenance: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true for public packages, false otherwise
+
+Should provenance statements be generated when the package is published.
+
+A supported package manager is required to publish a package with npm provenance statements and
+you will need to use a supported CI/CD provider.
+
+Note that the projen `Release` and `Publisher` components are using `publib` to publish packages,
+which is using npm internally and supports provenance statements independently of the package manager used.
+
+> [https://docs.npmjs.com/generating-provenance-statements](https://docs.npmjs.com/generating-provenance-statements)
 
 ---
 
@@ -9074,6 +9133,19 @@ Change the default-set eslint auto-fixable rules to "warn" instead of "error".
 
 ---
 
+##### `esmSupportAddRequireShim`<sup>Optional</sup> <a name="esmSupportAddRequireShim" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.esmSupportAddRequireShim"></a>
+
+```typescript
+public readonly esmSupportAddRequireShim: boolean;
+```
+
+- *Type:* boolean
+- *Default:* (esmSupportConfig === true && addDefaultBundle === true)
+
+When configuring for ESM, add a banner to the bundle to support `require` and `__dirname` and `__filename`.
+
+---
+
 ##### `esmSupportConfig`<sup>Optional</sup> <a name="esmSupportConfig" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.esmSupportConfig"></a>
 
 ```typescript
@@ -9257,6 +9329,7 @@ const tmsTypeScriptAppProjectOptions: TmsTypeScriptAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Minimum node.js version to require via `engines` (inclusive). |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum Node.js version to require via package.json `engines` (inclusive). |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmAccess">npmAccess</a></code> | <code>projen.javascript.NpmAccess</code> | Access level of the npm package. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmProvenance">npmProvenance</a></code> | <code>boolean</code> | Should provenance statements be generated when the package is published. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmRegistry">npmRegistry</a></code> | <code>string</code> | The host name of the npm registry to publish to. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmRegistryUrl">npmRegistryUrl</a></code> | <code>string</code> | The base URL of the npm package registry. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmTokenSecret">npmTokenSecret</a></code> | <code>string</code> | GitHub secret which contains the NPM token to use when publishing packages. |
@@ -9351,6 +9424,7 @@ const tmsTypeScriptAppProjectOptions: TmsTypeScriptAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.typescriptVersion">typescriptVersion</a></code> | <code>string</code> | TypeScript version to use. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.addDefaultBundle">addDefaultBundle</a></code> | <code>boolean</code> | Add a default bundle to the project. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.eslintFixableAsWarn">eslintFixableAsWarn</a></code> | <code>boolean</code> | Change the default-set eslint auto-fixable rules to "warn" instead of "error". |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.esmSupportAddRequireShim">esmSupportAddRequireShim</a></code> | <code>boolean</code> | When configuring for ESM, add a banner to the bundle to support `require` and `__dirname` and `__filename`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.esmSupportConfig">esmSupportConfig</a></code> | <code>boolean</code> | Configure for ESM. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.nodeVersion">nodeVersion</a></code> | <code>string</code> | Declare a specific node version to put in `.nvmrc` for `nvm` or `fnm` to use. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBase">tsconfigBase</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection. |
@@ -10106,6 +10180,27 @@ public readonly npmAccess: NpmAccess;
 - *Default:* for scoped packages (e.g. `foo@bar`), the default is `NpmAccess.RESTRICTED`, for non-scoped packages, the default is `NpmAccess.PUBLIC`.
 
 Access level of the npm package.
+
+---
+
+##### `npmProvenance`<sup>Optional</sup> <a name="npmProvenance" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmProvenance"></a>
+
+```typescript
+public readonly npmProvenance: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true for public packages, false otherwise
+
+Should provenance statements be generated when the package is published.
+
+A supported package manager is required to publish a package with npm provenance statements and
+you will need to use a supported CI/CD provider.
+
+Note that the projen `Release` and `Publisher` components are using `publib` to publish packages,
+which is using npm internally and supports provenance statements independently of the package manager used.
+
+> [https://docs.npmjs.com/generating-provenance-statements](https://docs.npmjs.com/generating-provenance-statements)
 
 ---
 
@@ -11405,6 +11500,19 @@ public readonly eslintFixableAsWarn: boolean;
 - *Default:* true
 
 Change the default-set eslint auto-fixable rules to "warn" instead of "error".
+
+---
+
+##### `esmSupportAddRequireShim`<sup>Optional</sup> <a name="esmSupportAddRequireShim" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.esmSupportAddRequireShim"></a>
+
+```typescript
+public readonly esmSupportAddRequireShim: boolean;
+```
+
+- *Type:* boolean
+- *Default:* (esmSupportConfig === true && addDefaultBundle === true)
+
+When configuring for ESM, add a banner to the bundle to support `require` and `__dirname` and `__filename`.
 
 ---
 

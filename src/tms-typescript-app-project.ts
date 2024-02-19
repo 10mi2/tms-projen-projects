@@ -95,6 +95,14 @@ export interface TmsTypeScriptAppProjectOptions
   readonly esmSupportConfig?: boolean;
 
   /**
+   * When configuring for ESM, add a banner to the bundle to support `require` and `__dirname` and `__filename`
+   *
+   * @default (esmSupportConfig === true && addDefaultBundle === true)
+   * @featured
+   */
+  readonly esmSupportAddRequireShim?: boolean;
+
+  /**
    * Change the default-set eslint auto-fixable rules to "warn" instead of "error"
    *
    * @default true
@@ -248,6 +256,9 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
 
       addDefaultBundle: true,
       esmSupportConfig: true,
+      esmSupportAddRequireShim:
+        (options.addDefaultBundle ?? true) &&
+        (options.esmSupportConfig ?? true),
 
       tsconfigBase: TmsTSConfigBase.NODE18,
       tsconfigBaseDev: TmsTSConfigBase.NODE18,
@@ -400,6 +411,16 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
         platform: "node",
         format: mergedOptions.esmSupportConfig ?? true ? "esm" : "cjs",
         sourcemap: true,
+        watchTask: true,
+        ...(mergedOptions.esmSupportAddRequireShim
+          ? {
+              banner: `import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const __filename = (await import('node:url')).fileURLToPath(import.meta.url);
+const __dirname = (await import('node:path')).dirname(__filename);
+`.replace(/\n/g, ""),
+            }
+          : undefined),
       });
     }
     if (mergedOptions.sampleCode ?? true) {

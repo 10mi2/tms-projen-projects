@@ -22,6 +22,13 @@ test("TMSTypeScriptAppProject has reasonable configuration", () => {
   expect(snapshot["src/index.ts"]).toBeDefined();
   expect(snapshot["src/hello.ts"]).toBeDefined();
   expect(snapshot["test/hello.test.ts"]).toBeDefined();
+
+  const tasks = snapshot[".projen/tasks.json"].tasks;
+  const bundleTask = tasks["bundle:index"];
+  console.dir(bundleTask, { depth: 2 });
+  const bundleCommand = bundleTask.steps[0].exec;
+  expect(bundleCommand).toContain("--format=esm");
+  expect(bundleCommand).toContain("--banner:js=");
 });
 
 test("TMSTypeScriptAppProject doesn't make sample code when told not to", () => {
@@ -76,6 +83,29 @@ test("TMSTypeScriptAppProject honors esmSupportConfig=false", () => {
   expect(snapshot["package.json"].type).toBeUndefined();
   expect(snapshot["tsconfig.json"]).toMatchSnapshot("tsconfig.json");
   expect(snapshot["tsconfig.dev.json"]).toMatchSnapshot("tsconfig.dev.json");
+
+  const tasks = snapshot[".projen/tasks.json"].tasks;
+  const bundleTask = tasks["bundle:index"];
+  const bundleCommand = bundleTask.steps[0].exec;
+  expect(bundleCommand).toContain("--format=cjs");
+});
+
+test("TMSTypeScriptAppProject honors esmSupportConfig=false", () => {
+  const project = new TmsTypeScriptAppProject({
+    name: "test",
+    defaultReleaseBranch: "main",
+    eslintFixableAsWarn: false,
+    esmSupportAddRequireShim: false,
+    // default settings
+    // esmSupportConfig: true,
+  });
+  const snapshot = Testing.synth(project); // synthSnapshot(project, { parseJson: true });
+
+  const tasks = snapshot[".projen/tasks.json"].tasks;
+  const bundleTask = tasks["bundle:index"];
+  const bundleCommand = bundleTask.steps[0].exec;
+  expect(bundleCommand).toContain("--format=esm");
+  expect(bundleCommand).not.toContain("--banner:js=");
 });
 
 test("TMSTypeScriptAppProject honors strictest with workaround", () => {
