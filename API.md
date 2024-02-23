@@ -4698,6 +4698,7 @@ const tmsNestJSAppProjectOptions: TmsNestJSAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseDev">tsconfigBaseDev</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseNoArrayWorkaround">tsconfigBaseNoArrayWorkaround</a></code> | <code>boolean</code> | Workaround `ts-node` bug with "extends" in `tsconfig*.json` files. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsconfigBaseStrictest">tsconfigBaseStrictest</a></code> | <code>boolean</code> | Include TSConfig "strinctest" configuration to {@link tsconfigBase}. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsNodeUnknownFileExtensionWorkaround">tsNodeUnknownFileExtensionWorkaround</a></code> | <code>boolean</code> | Workaround `ts-node` bug with Node 18.19 and newer, where running `ts-node` with `esm` support enabled will fail with the error `ERR_UNKNOWN_FILE_EXTENSION` when you run `projen` itself. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleType">sampleType</a></code> | <code>string</code> | Which type of sample code to include, if `sampleCode` is true. |
 
 ---
@@ -6879,6 +6880,43 @@ those. Note that only nodes18 and above are supported.
 
 ---
 
+##### `tsNodeUnknownFileExtensionWorkaround`<sup>Optional</sup> <a name="tsNodeUnknownFileExtensionWorkaround" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.tsNodeUnknownFileExtensionWorkaround"></a>
+
+```typescript
+public readonly tsNodeUnknownFileExtensionWorkaround: boolean;
+```
+
+- *Type:* boolean
+- *Default:* if (node18_19_or_newer) { true } else { false }
+
+Workaround `ts-node` bug with Node 18.19 and newer, where running `ts-node` with `esm` support enabled will fail with the error `ERR_UNKNOWN_FILE_EXTENSION` when you run `projen` itself.
+
+This workaround will work with node 16 and later, and has not been tested with earlier versions.
+
+THIS DOES NOT FIX ANY OTHER USAGE OF `ts-node` WITH `esm` SUPPORT, ONLY WHEN RUNNING `projen` ITSELF.
+
+If you are using `ts-node` with `esm` support in your project with Node 18.19 or newer, you will need to use the
+workaround in your own:
+
+```bash
+# instead of
+ts-node --project tsconfig.special.json src/index.ts
+
+# use
+tsc .projenrc.ts && \
+  TS_NODE_PROJECT=tsconfig.special.json node --loader ts-node/esm --no-warnings=ExperimentalWarning src/index.ts
+```
+
+If there are any type errors, the `node --loader ts-node/esm` yields a difficult-to-read error message, so we run
+`tsc` first separately to get the type errors before running the `node` command.
+
+The `tsc` command assumes the correct tsconfig file where the target is `include`d has `noEmit` set to `true`. If
+not, add `--noemit` to the `tsc` command.
+
+> [https://github.com/TypeStrong/ts-node/issues/2094](https://github.com/TypeStrong/ts-node/issues/2094)
+
+---
+
 ##### `sampleType`<sup>Optional</sup> <a name="sampleType" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.sampleType"></a>
 
 ```typescript
@@ -7059,6 +7097,7 @@ const tmsTSApolloGraphQLProjectOptions: TmsTSApolloGraphQLProjectOptions = { ...
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.tsconfigBaseDev">tsconfigBaseDev</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.tsconfigBaseNoArrayWorkaround">tsconfigBaseNoArrayWorkaround</a></code> | <code>boolean</code> | Workaround `ts-node` bug with "extends" in `tsconfig*.json` files. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.tsconfigBaseStrictest">tsconfigBaseStrictest</a></code> | <code>boolean</code> | Include TSConfig "strinctest" configuration to {@link tsconfigBase}. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.tsNodeUnknownFileExtensionWorkaround">tsNodeUnknownFileExtensionWorkaround</a></code> | <code>boolean</code> | Workaround `ts-node` bug with Node 18.19 and newer, where running `ts-node` with `esm` support enabled will fail with the error `ERR_UNKNOWN_FILE_EXTENSION` when you run `projen` itself. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.prismadir">prismadir</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.sampleType">sampleType</a></code> | <code>string</code> | Which type of sample code to include, if `sampleCode` is true. |
 
@@ -9241,6 +9280,43 @@ those. Note that only nodes18 and above are supported.
 
 ---
 
+##### `tsNodeUnknownFileExtensionWorkaround`<sup>Optional</sup> <a name="tsNodeUnknownFileExtensionWorkaround" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.tsNodeUnknownFileExtensionWorkaround"></a>
+
+```typescript
+public readonly tsNodeUnknownFileExtensionWorkaround: boolean;
+```
+
+- *Type:* boolean
+- *Default:* if (node18_19_or_newer) { true } else { false }
+
+Workaround `ts-node` bug with Node 18.19 and newer, where running `ts-node` with `esm` support enabled will fail with the error `ERR_UNKNOWN_FILE_EXTENSION` when you run `projen` itself.
+
+This workaround will work with node 16 and later, and has not been tested with earlier versions.
+
+THIS DOES NOT FIX ANY OTHER USAGE OF `ts-node` WITH `esm` SUPPORT, ONLY WHEN RUNNING `projen` ITSELF.
+
+If you are using `ts-node` with `esm` support in your project with Node 18.19 or newer, you will need to use the
+workaround in your own:
+
+```bash
+# instead of
+ts-node --project tsconfig.special.json src/index.ts
+
+# use
+tsc .projenrc.ts && \
+  TS_NODE_PROJECT=tsconfig.special.json node --loader ts-node/esm --no-warnings=ExperimentalWarning src/index.ts
+```
+
+If there are any type errors, the `node --loader ts-node/esm` yields a difficult-to-read error message, so we run
+`tsc` first separately to get the type errors before running the `node` command.
+
+The `tsc` command assumes the correct tsconfig file where the target is `include`d has `noEmit` set to `true`. If
+not, add `--noemit` to the `tsc` command.
+
+> [https://github.com/TypeStrong/ts-node/issues/2094](https://github.com/TypeStrong/ts-node/issues/2094)
+
+---
+
 ##### `prismadir`<sup>Optional</sup> <a name="prismadir" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.prismadir"></a>
 
 ```typescript
@@ -9431,6 +9507,7 @@ const tmsTypeScriptAppProjectOptions: TmsTypeScriptAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBaseDev">tsconfigBaseDev</a></code> | <code><a href="#@10mi2/tms-projen-projects.TmsTSConfigBase">TmsTSConfigBase</a></code> | TSConfig base configuration selection for `tsconfig.dev.json`, used to run projen itslef via `ts-node`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBaseNoArrayWorkaround">tsconfigBaseNoArrayWorkaround</a></code> | <code>boolean</code> | Workaround `ts-node` bug with "extends" in `tsconfig*.json` files. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsconfigBaseStrictest">tsconfigBaseStrictest</a></code> | <code>boolean</code> | Include TSConfig "strinctest" configuration to {@link tsconfigBase}. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsNodeUnknownFileExtensionWorkaround">tsNodeUnknownFileExtensionWorkaround</a></code> | <code>boolean</code> | Workaround `ts-node` bug with Node 18.19 and newer, where running `ts-node` with `esm` support enabled will fail with the error `ERR_UNKNOWN_FILE_EXTENSION` when you run `projen` itself. |
 
 ---
 
@@ -11608,6 +11685,43 @@ Using one of the options from https://github.com/tsconfig/bases as a base, then 
 those. Note that only nodes18 and above are supported.
 
 > [{@link tsconfigBase }]({@link tsconfigBase })
+
+---
+
+##### `tsNodeUnknownFileExtensionWorkaround`<sup>Optional</sup> <a name="tsNodeUnknownFileExtensionWorkaround" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.tsNodeUnknownFileExtensionWorkaround"></a>
+
+```typescript
+public readonly tsNodeUnknownFileExtensionWorkaround: boolean;
+```
+
+- *Type:* boolean
+- *Default:* if (node18_19_or_newer) { true } else { false }
+
+Workaround `ts-node` bug with Node 18.19 and newer, where running `ts-node` with `esm` support enabled will fail with the error `ERR_UNKNOWN_FILE_EXTENSION` when you run `projen` itself.
+
+This workaround will work with node 16 and later, and has not been tested with earlier versions.
+
+THIS DOES NOT FIX ANY OTHER USAGE OF `ts-node` WITH `esm` SUPPORT, ONLY WHEN RUNNING `projen` ITSELF.
+
+If you are using `ts-node` with `esm` support in your project with Node 18.19 or newer, you will need to use the
+workaround in your own:
+
+```bash
+# instead of
+ts-node --project tsconfig.special.json src/index.ts
+
+# use
+tsc .projenrc.ts && \
+  TS_NODE_PROJECT=tsconfig.special.json node --loader ts-node/esm --no-warnings=ExperimentalWarning src/index.ts
+```
+
+If there are any type errors, the `node --loader ts-node/esm` yields a difficult-to-read error message, so we run
+`tsc` first separately to get the type errors before running the `node` command.
+
+The `tsc` command assumes the correct tsconfig file where the target is `include`d has `noEmit` set to `true`. If
+not, add `--noemit` to the `tsc` command.
+
+> [https://github.com/TypeStrong/ts-node/issues/2094](https://github.com/TypeStrong/ts-node/issues/2094)
 
 ---
 

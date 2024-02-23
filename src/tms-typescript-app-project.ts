@@ -190,6 +190,39 @@ export interface TmsTypeScriptAppProjectOptions
    *
    */
   readonly tsconfigBaseNoArrayWorkaround?: boolean;
+
+  /**
+   * Workaround `ts-node` bug with Node 18.19 and newer, where running `ts-node` with `esm` support enabled will fail
+   * with the error `ERR_UNKNOWN_FILE_EXTENSION` when you run `projen` itself.
+   *
+   * This workaround will work with node 16 and later, and has not been tested with earlier versions.
+   *
+   * THIS DOES NOT FIX ANY OTHER USAGE OF `ts-node` WITH `esm` SUPPORT, ONLY WHEN RUNNING `projen` ITSELF.
+   *
+   * If you are using `ts-node` with `esm` support in your project with Node 18.19 or newer, you will need to use the
+   * workaround in your own:
+   *
+   * ```bash
+   * # instead of
+   * ts-node --project tsconfig.special.json src/index.ts
+   *
+   * # use
+   * tsc .projenrc.ts && \
+   *   TS_NODE_PROJECT=tsconfig.special.json node --loader ts-node/esm --no-warnings=ExperimentalWarning src/index.ts
+   * ```
+   *
+   * If there are any type errors, the `node --loader ts-node/esm` yields a difficult-to-read error message, so we run
+   * `tsc` first separately to get the type errors before running the `node` command.
+   *
+   * The `tsc` command assumes the correct tsconfig file where the target is `include`d has `noEmit` set to `true`. If
+   * not, add `--noemit` to the `tsc` command.
+   *
+   * @see https://github.com/TypeStrong/ts-node/issues/2094
+   *
+   * @default if (node18_19_or_newer) { true } else { false }
+   *
+   */
+  readonly tsNodeUnknownFileExtensionWorkaround?: boolean;
 }
 
 /**
@@ -207,6 +240,13 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
     const tsconfigBaseStrictestEmbedded =
       (options.tsconfigBaseStrictest ?? true) &&
       (options.tsconfigBaseNoArrayWorkaround ?? true);
+
+    const nodeVersionSplit = process.versions.node
+      .split(".")
+      .map((v) => parseInt(v, 10));
+    const node18_19_or_newer =
+      nodeVersionSplit[0] > 18 ||
+      (nodeVersionSplit[0] === 18 && nodeVersionSplit[1] >= 19);
 
     const defaultOptions = {
       eslint: true,
@@ -270,6 +310,8 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
       tsconfigBaseDev: TmsTSConfigBase.NODE18,
       tsconfigBaseStrictest: true,
       tsconfigBaseNoArrayWorkaround: true,
+      tsNodeUnknownFileExtensionWorkaround:
+        options.tsNodeUnknownFileExtensionWorkaround ?? node18_19_or_newer,
     } satisfies Partial<TmsTypeScriptAppProjectOptions>;
     const mergedOptions = deepMerge(
       [
@@ -419,6 +461,18 @@ const __dirname = (await import('node:path')).dirname(__filename);
     }
     if (mergedOptions.sampleCode ?? true) {
       new SampleCode(this);
+    }
+
+    if (
+      mergedOptions.tsNodeUnknownFileExtensionWorkaround &&
+      this.defaultTask
+    ) {
+      this.defaultTask.reset(
+        `tsc .projenrc.ts && node --loader ts-node/esm --no-warnings=ExperimentalWarning .projenrc.ts`,
+      );
+      this.defaultTask.env("TS_NODE_PROJECT", "tsconfig.dev.json");
+      this.defaultTask.description =
+        "Run projen with ts-node/esm (workaround for Node 18.19+ applied)";
     }
   }
 }

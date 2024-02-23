@@ -89,6 +89,76 @@ test("TMSTypeScriptAppProject honors esmSupportConfig=false", () => {
   expect(bundleCommand).toContain("--format=cjs");
 });
 
+test.each([true, false])(
+  "TMSTypeScriptAppProject honors tsNodeUnknownFileExtensionWorkaround=%p",
+  (tsNodeUnknownFileExtensionWorkaround: boolean) => {
+    const project = new TmsTypeScriptAppProject({
+      name: "test",
+      defaultReleaseBranch: "main",
+      eslintFixableAsWarn: false,
+      esmSupportConfig: false,
+      // default settings
+      tsNodeUnknownFileExtensionWorkaround,
+    });
+    const snapshot = Testing.synth(project);
+
+    const tasks = snapshot[".projen/tasks.json"].tasks;
+    const defaultTask = tasks.default;
+    const defaultCommand = defaultTask.steps[0].exec;
+    if (tsNodeUnknownFileExtensionWorkaround) {
+      expect(defaultCommand).toContain("--loader ts-node/esm");
+    } else {
+      expect(defaultCommand).not.toContain("--loader ts-node/esm");
+    }
+  },
+);
+describe.each([
+  { version: "16.17.1", isOver18d19: false },
+  { version: "16.20.2", isOver18d19: false },
+  { version: "18.15.0", isOver18d19: false },
+  { version: "18.17.0", isOver18d19: false },
+  { version: "18.17.1", isOver18d19: false },
+  { version: "18.18.0", isOver18d19: false },
+  { version: "18.18.2", isOver18d19: false },
+  { version: "18.19.0", isOver18d19: true },
+  { version: "20.9.0", isOver18d19: true },
+  { version: "20.10.0", isOver18d19: true },
+])(
+  "TMSTypeScriptAppProject interprets process.version=$version as >= 18.19.x: $isOver18d19",
+  ({ version: nodeVersion, isOver18d19 }) => {
+    const originalProcess = process;
+    beforeEach(() => {
+      global.process = {
+        ...originalProcess,
+        versions: { ...originalProcess.versions, node: nodeVersion },
+      };
+    });
+    afterEach(() => {
+      global.process = originalProcess;
+    });
+
+    test(`TMSTypeScriptAppProject interprets process.version=${nodeVersion} as ${isOver18d19 ? ">=" : "<"} 18.19.x`, () => {
+      const project = new TmsTypeScriptAppProject({
+        name: "test",
+        defaultReleaseBranch: "main",
+        eslintFixableAsWarn: false,
+        esmSupportConfig: false,
+        // default settings
+      });
+      const snapshot = Testing.synth(project);
+
+      const tasks = snapshot[".projen/tasks.json"].tasks;
+      const defaultTask = tasks.default;
+      const defaultCommand = defaultTask.steps[0].exec;
+      if (isOver18d19) {
+        expect(defaultCommand).toContain("--loader ts-node/esm");
+      } else {
+        expect(defaultCommand).not.toContain("--loader ts-node/esm");
+      }
+    });
+  },
+);
+
 test("TMSTypeScriptAppProject honors esmSupportConfig=false", () => {
   const project = new TmsTypeScriptAppProject({
     name: "test",
