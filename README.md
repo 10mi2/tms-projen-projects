@@ -44,7 +44,9 @@ following changes:
        ([issue #2000](https://github.com/TypeStrong/ts-node/issues/2000)), so the
        `tsconfigBaseNoArrayWorkaround` flag (`true` by default) is used to work around this by embedding a snapshot of the strictest settings directly
    - The `tsconfigBaseDev` property controls dev tool settings (such as `projen`) (default: `TmsTSConfigBase.NODE18`)
-   - [ts-node issue #2094](https://github.com/TypeStrong/ts-node/issues/2094) prevents us from using Node > 18.18.x
+   - ~~[ts-node issue #2094](https://github.com/TypeStrong/ts-node/issues/2094) prevents us from using Node > 18.18.x~~
+     - Workaround added behind option `tsconfigBaseNoArrayWorkaround` (default: `true` if you're on an effected version of node)
+     - ⚠️ If you're using node 18.18 or earlier and this project *might* be used with node 18.19 or higher in the future, add `--ts-node-unknown-file-extension-workaround=true` to the `projen add` command to enable the workaround ⚠️
    - ~~[ts-node issue #2076](https://github.com/TypeStrong/ts-node/issues/2076) prevents us from using ts-node with the
      app, and a workaround is in place to refer to the TSConfig bases relatively in the `tsconfig.dev.json` for now so
      `projen` works properly~~ (Fixed in `ts-node` [10.9.2](https://github.com/TypeStrong/ts-node/releases/tag/v10.9.2))
@@ -62,6 +64,8 @@ and there shouldn't be a `package.json` in any of the parent directories.
 
 ```bash
 npx projen new --from @10mi2/tms-projen-projects tms-typescript-app
+# Add --ts-node-unknown-file-extension-workaround=true if you're on node 18.18 or earlier and will be
+#   using node 18.19 or higher in the future
 ```
 
 ### Add `tms-typescript-app` to an existing project
