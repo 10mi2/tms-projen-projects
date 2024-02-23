@@ -1,6 +1,17 @@
 import { Testing } from "projen/lib/testing";
 import { TmsTypeScriptAppProject } from "../src/";
 
+const originalProcess = process;
+beforeEach(() => {
+  global.process = {
+    ...originalProcess,
+    versions: { ...originalProcess.versions, node: "18.18.2" },
+  };
+});
+afterEach(() => {
+  global.process = originalProcess;
+});
+
 test("TMSTypeScriptAppProject has reasonable configuration", () => {
   const project = new TmsTypeScriptAppProject({
     name: "test",
@@ -126,7 +137,6 @@ describe.each([
 ])(
   "TMSTypeScriptAppProject interprets process.version=$version as >= 18.19.x: $isOver18d19",
   ({ version: nodeVersion, isOver18d19 }) => {
-    const originalProcess = process;
     beforeEach(() => {
       global.process = {
         ...originalProcess,

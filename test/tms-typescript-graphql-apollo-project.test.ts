@@ -1,6 +1,17 @@
 import { Testing } from "projen/lib/testing";
 import { TmsTSApolloGraphQLProject } from "../src";
 
+const originalProcess = process;
+beforeEach(() => {
+  global.process = {
+    ...originalProcess,
+    versions: { ...originalProcess.versions, node: "18.18.2" },
+  };
+});
+afterEach(() => {
+  global.process = originalProcess;
+});
+
 test("TmsTSApolloGraphQLProject has reasonable configuration", () => {
   const project = new TmsTSApolloGraphQLProject({
     name: "test",

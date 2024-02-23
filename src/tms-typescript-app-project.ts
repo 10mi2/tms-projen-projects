@@ -254,7 +254,7 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
       prettier: true,
       projenrcTs: true,
 
-      nodeVersion: "v18.18.2",
+      nodeVersion: `v${process.versions.node}`,
 
       vscode: true,
       tsconfig: {
