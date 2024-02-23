@@ -253,6 +253,12 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
       jestOptions: {
         updateSnapshot: UpdateSnapshot.NEVER,
       },
+      tsJestOptions: {
+        transformPattern: "^.+\\.m?[tj]sx?$",
+        transformOptions: {
+          useESM: options.esmSupportConfig ?? true,
+        },
+      },
 
       addDefaultBundle: true,
       esmSupportConfig: true,
@@ -356,16 +362,6 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
 
     if (mergedOptions.jest && this.jest) {
       this.jest.config.globals = undefined;
-      this.jest.config.transform = {
-        "^.+\\.m?[tj]sx?$": [
-          "ts-jest",
-          {
-            useESM: mergedOptions.esmSupportConfig ?? true,
-            tsconfig: "tsconfig.dev.json",
-          },
-        ],
-      };
-
       this.jest.config.moduleNameMapper = {
         "^(\\.{1,2}/.*)\\.m?js$": "$1",
       };
@@ -381,8 +377,6 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
           "NODE_OPTIONS",
           "$(echo $NODE_OPTIONS --experimental-vm-modules)",
         );
-        // } else {
-        //   this.jest.config.preset = "ts-jest/presets/default";
       }
     }
 

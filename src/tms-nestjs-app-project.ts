@@ -79,23 +79,18 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
 
       jestOptions: {
         jestConfig: {
-          // testEnvironment: "node",
           moduleFileExtensions: ["js", "json", "ts"],
           rootDir: ".",
-          transform: {
-            "^.+\\.(t|j)s$": new javascript.Transform("ts-jest", {
-              useESM: false,
-              tsconfig: "tsconfig.dev.json",
-            }),
-          },
-          // collectCoverageFrom: ["**/*.(t|j)s"],
-          // coverageDirectory: "../coverage",
           testMatch: ["<rootDir>/(test|src)/**/*(*)@(.|-)@(spec|test).ts?(x)"],
-          moduleNameMapper: {
-            "^(\\.{1,2}/.*)\\.js$": "$1",
-          },
         },
         updateSnapshot: javascript.UpdateSnapshot.NEVER,
+      },
+
+      tsJestOptions: {
+        transformPattern: "^.+\\.m?[tj]sx?$",
+        transformOptions: {
+          useESM: false,
+        },
       },
 
       sampleCode: true,

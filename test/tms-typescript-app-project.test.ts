@@ -25,7 +25,6 @@ test("TMSTypeScriptAppProject has reasonable configuration", () => {
 
   const tasks = snapshot[".projen/tasks.json"].tasks;
   const bundleTask = tasks["bundle:index"];
-  console.dir(bundleTask, { depth: 2 });
   const bundleCommand = bundleTask.steps[0].exec;
   expect(bundleCommand).toContain("--format=esm");
   expect(bundleCommand).toContain("--banner:js=");
