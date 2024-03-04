@@ -80,7 +80,7 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 3`] = `
     "jest": "*",
     "jest-junit": "^15",
     "prettier": "*",
-    "projen": "*",
+    "projen": ">=0.79.23",
     "ts-jest": "*",
     "ts-node": ">=10.9.2",
     "typescript": "*",

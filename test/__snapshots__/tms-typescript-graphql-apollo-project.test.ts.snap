@@ -103,7 +103,7 @@ exports[`TmsTSApolloGraphQLProject has reasonable configuration 3`] = `
     "nodemon": "*",
     "prettier": "*",
     "prisma": "*",
-    "projen": "*",
+    "projen": ">=0.79.23",
     "ts-jest": "*",
     "ts-node": ">=10.9.2",
     "typescript": "*",

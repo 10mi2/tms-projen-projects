@@ -19,6 +19,8 @@ const project = new cdk.JsiiProject({
   eslint: true,
   prettier: true,
 
+  projenVersion: ">=0.79.23",
+
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
