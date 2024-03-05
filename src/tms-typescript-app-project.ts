@@ -1,4 +1,3 @@
-import { unlinkSync } from "fs";
 import { sep } from "path";
 import { Component, JsonPatch, SampleDir, TextFile } from "projen";
 import {
@@ -14,7 +13,7 @@ import {
   TypeScriptProject,
   TypeScriptProjectOptions,
 } from "projen/lib/typescript";
-import { deepMerge, tryReadFileSync } from "projen/lib/util";
+import { deepMerge } from "projen/lib/util";
 
 export enum TmsTSConfigBase {
   NODE_LTS = "node-lts",
