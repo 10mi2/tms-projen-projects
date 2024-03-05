@@ -1,9 +1,11 @@
+import { unlinkSync } from "fs";
 import { sep } from "path";
 import { Component, JsonPatch, SampleDir, TextFile } from "projen";
 import {
   NodePackageManager,
   TypeScriptCompilerOptions,
   TypeScriptModuleResolution,
+  TypescriptConfig,
   TypescriptConfigExtends,
   UpdateSnapshot,
 } from "projen/lib/javascript";
@@ -12,7 +14,7 @@ import {
   TypeScriptProject,
   TypeScriptProjectOptions,
 } from "projen/lib/typescript";
-import { deepMerge } from "projen/lib/util";
+import { deepMerge, tryReadFileSync } from "projen/lib/util";
 
 export enum TmsTSConfigBase {
   NODE_LTS = "node-lts",
@@ -465,14 +467,28 @@ const __dirname = (await import('node:path')).dirname(__filename);
       new SampleCode(this);
     }
 
+    const PROJEN_TSCONFIG_FILENAME = "tsconfig.projenrc.json";
     if (
       mergedOptions.tsNodeUnknownFileExtensionWorkaround &&
       this.defaultTask
     ) {
+      const projenTsconfig = new TypescriptConfig(this, {
+        fileName: PROJEN_TSCONFIG_FILENAME,
+        include: [
+          ".projenrc.ts",
+          "projenrc/**/*.ts", // added by projen for tsconfig.dev - gives a place for projenrc included files
+        ],
+        extends: TypescriptConfigExtends.fromTypescriptConfigs([
+          this.tsconfigDev,
+        ]),
+        compilerOptions: {
+          ...RESET_COMPILER_OPTIONS,
+        },
+      });
       this.defaultTask.reset(
-        `tsc .projenrc.ts && node --loader ts-node/esm --no-warnings=ExperimentalWarning .projenrc.ts`,
+        `tsc --project ${projenTsconfig.fileName} && node --loader ts-node/esm --no-warnings=ExperimentalWarning .projenrc.ts`,
       );
-      this.defaultTask.env("TS_NODE_PROJECT", "tsconfig.dev.json");
+      this.defaultTask.env("TS_NODE_PROJECT", projenTsconfig.fileName);
       this.defaultTask.description =
         "Run projen with ts-node/esm (workaround for Node 18.19+ applied)";
     }
