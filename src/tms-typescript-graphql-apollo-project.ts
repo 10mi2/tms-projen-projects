@@ -76,7 +76,7 @@ export class TmsTSApolloGraphQLProject extends TmsTypeScriptAppProject {
 
     this.tasks.addTask("start", {
       description: "Start the server",
-      exec: "ts-node src/index.ts",
+      exec: "tsx src/index.ts",
     });
 
     this.tasks.addTask("start:dev", {
@@ -288,7 +288,7 @@ const config: CodegenConfig = {
       preset: "client",
       hooks: {
         beforeAllFileWrite: [
-          "ts-node scripts/saveSchema.ts",
+          "tsx --tsconfig=${this.tsconfigDev.fileName} scripts/saveSchema.ts",
         ],
         afterOneFileWrite: [
           "eslint --ext .ts --fix --no-error-on-unmatched-pattern",
