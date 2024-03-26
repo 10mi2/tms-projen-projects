@@ -1,3 +1,7 @@
+# WARNING: You're looking at a test branch. This is not the main branch, or even a development branch.
+
+This branch is for the sake of demonstration on [this projen RFC](https://github.com/projen/projen/issues/3447) only, and will be removed!
+
 # Ten Mile Square Technologies `projen` Projects
 
 A collection of opinionated [projen](https://projen.io) projects, adding support for ESM, additional ESLint config, etc.
@@ -8,6 +12,7 @@ A collection of opinionated [projen](https://projen.io) projects, adding support
 > is an enterprise technology consulting firm based in the Washington DC area.
 
 # Table of Contents
+- [WARNING: You're looking at a test branch. This is not the main branch, or even a development branch.](#warning-youre-looking-at-a-test-branch-this-is-not-the-main-branch-or-even-a-development-branch)
 - [Ten Mile Square Technologies `projen` Projects](#ten-mile-square-technologies-projen-projects)
 - [Table of Contents](#table-of-contents)
   - [10mi2 TypeScript App (`tms-typescript-app`)](#10mi2-typescript-app-tms-typescript-app)

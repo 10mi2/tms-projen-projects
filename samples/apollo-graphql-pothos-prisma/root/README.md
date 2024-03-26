@@ -58,7 +58,7 @@ compared to PostgreSQL but requires no server so is a quick way to get up and ru
 And to help you get started, a script to load random data has been provided as well:
 
 ```bash
-npx ts-node scripts/seedRandomData.ts
+npx tsx scripts/seedRandomData.ts
 ```
 
 The script uses the test queries with actual Prisma in place of the `mockPrisma` used by the tests, so it actually
