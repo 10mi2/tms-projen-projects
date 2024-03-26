@@ -35,17 +35,6 @@ const project = new cdk.JsiiProject({
 });
 
 if (project.jest) {
-  project.jest.config.globals = undefined;
-  project.jest.config.transform = {
-    "^.+\\.[tj]sx?$": [
-      "ts-jest",
-      {
-        // useESM: true,
-        tsconfig: "tsconfig.dev.json",
-      },
-    ],
-  };
-  project.jest.config.preset = "ts-jest/presets/default";
   project.testTask.env(
     "NODE_OPTIONS",
     "$NODE_OPTIONS --experimental-vm-modules",
