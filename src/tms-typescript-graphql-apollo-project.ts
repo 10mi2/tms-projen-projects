@@ -319,7 +319,7 @@ export default config;
 
     this.addDevDeps("tsx");
     const saveSchemaTask = this.addTask("save-schema", {
-      exec: "tsx --tsconfig=${this.tsconfigDev.fileName} scripts/saveSchema.ts",
+      exec: `tsx --tsconfig=${this.tsconfigDev.fileName} scripts/saveSchema.ts`,
     });
     this.preCompileTask.prependSpawn(saveSchemaTask);
 
