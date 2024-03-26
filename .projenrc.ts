@@ -89,9 +89,4 @@ if (project.jest) {
   );
 }
 
-project.package.addField("exports", {
-  // "import": "./index-module.js",
-  require: "./lib/index.cjs",
-});
-
 project.synth();
