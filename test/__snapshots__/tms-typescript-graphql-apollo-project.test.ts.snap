@@ -106,6 +106,7 @@ exports[`TmsTSApolloGraphQLProject has reasonable configuration 3`] = `
     "projen": ">=0.79.23",
     "ts-jest": "*",
     "ts-node": ">=10.9.2",
+    "tsx": "*",
     "typescript": "*",
   },
   "jest": {

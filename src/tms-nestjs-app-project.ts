@@ -214,10 +214,11 @@ export class TmsNestJSAppProject extends TmsTypeScriptAppProject {
           ),
         });
 
+        this.addDevDeps("tsx");
         this.eslint?.addLintPattern(generateTypingsTs);
         this.tsconfigDev.addInclude(generateTypingsTs);
         this.addTask("generate-typings", {
-          exec: `ts-node --project=tsconfig.dev.json ${generateTypingsTs}`,
+          exec: `tsx --tsconfig=${this.tsconfigDev.fileName} ${generateTypingsTs}`,
           description: "Generate typings from graphql files",
         });
       } else {

@@ -317,8 +317,9 @@ export default config;
     const codegenTask = this.addTask("codegen", { exec: "graphql-codegen" });
     this.preCompileTask.prependSpawn(codegenTask);
 
+    this.addDevDeps("tsx");
     const saveSchemaTask = this.addTask("save-schema", {
-      exec: "ts-node scripts/saveSchema.ts",
+      exec: "tsx --tsconfig=${this.tsconfigDev.fileName} scripts/saveSchema.ts",
     });
     this.preCompileTask.prependSpawn(saveSchemaTask);
 
