@@ -448,7 +448,7 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
       this.bundler.addBundle([this.srcdir, "index.ts"].join(sep), {
         target: "node18",
         platform: "node",
-        format: mergedOptions.esmSupportConfig ?? true ? "esm" : "cjs",
+        format: (mergedOptions.esmSupportConfig ?? true) ? "esm" : "cjs",
         sourcemap: true,
         watchTask: true,
         ...(mergedOptions.esmSupportAddRequireShim

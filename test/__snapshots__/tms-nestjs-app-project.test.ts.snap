@@ -116,8 +116,8 @@ exports[`TmsNestJSAppProject has reasonable configuration 3`] = `
     "@types/jest": "*",
     "@types/node": "^18",
     "@types/supertest": "^2.0.12",
-    "@typescript-eslint/eslint-plugin": "^6",
-    "@typescript-eslint/parser": "^6",
+    "@typescript-eslint/eslint-plugin": "^7",
+    "@typescript-eslint/parser": "^7",
     "constructs": "^10.0.0",
     "eslint": "^8",
     "eslint-config-prettier": "*",
@@ -143,6 +143,7 @@ exports[`TmsNestJSAppProject has reasonable configuration 3`] = `
     "coveragePathIgnorePatterns": [
       "/node_modules/",
     ],
+    "coverageProvider": "v8",
     "coverageReporters": [
       "json",
       "lcov",
@@ -170,8 +171,10 @@ exports[`TmsNestJSAppProject has reasonable configuration 3`] = `
     "rootDir": ".",
     "testMatch": [
       "<rootDir>/(test|src)/**/*(*)@(.|-)@(spec|test).ts?(x)",
-      "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/(test|src)/**/*(*.)@(spec|test).ts?(x)",
+      "<rootDir>/@(src|test)/**/*(*.)@(spec|test).ts?(x)",
+      "<rootDir>/@(src|test)/**/__tests__/**/*.ts?(x)",
+      "<rootDir>/@(projenrc)/**/*(*.)@(spec|test).ts?(x)",
+      "<rootDir>/@(projenrc)/**/__tests__/**/*.ts?(x)",
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
@@ -191,6 +194,9 @@ exports[`TmsNestJSAppProject has reasonable configuration 3`] = `
   },
   "license": "Apache-2.0",
   "name": "test",
+  "publishConfig": {
+    "access": "public",
+  },
   "scripts": {
     "build": "npx projen build",
     "clobber": "npx projen clobber",
@@ -308,6 +314,9 @@ exports[`TmsNestJSAppProject has reasonable configuration 6`] = `
     "dot-notation": [
       "warn",
     ],
+    "import/no-duplicates": [
+      "error",
+    ],
     "import/no-extraneous-dependencies": [
       "error",
       {
@@ -341,9 +350,6 @@ exports[`TmsNestJSAppProject has reasonable configuration 6`] = `
       "warn",
     ],
     "no-bitwise": [
-      "error",
-    ],
-    "no-duplicate-imports": [
       "error",
     ],
     "no-multiple-empty-lines": [

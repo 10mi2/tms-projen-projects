@@ -4637,10 +4637,11 @@ const tmsNestJSAppProjectOptions: TmsNestJSAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | A directory which will contain build artifacts. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.autoApproveUpgrades">autoApproveUpgrades</a></code> | <code>boolean</code> | Automatically approve deps upgrade PRs, allowing them to be merged by mergify (if configued). |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflow">buildWorkflow</a></code> | <code>boolean</code> | Define a GitHub workflow for building PRs. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflowOptions">buildWorkflowOptions</a></code> | <code>projen.javascript.BuildWorkflowOptions</code> | Options for PR build workflow. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflowTriggers">buildWorkflowTriggers</a></code> | <code>projen.github.workflows.Triggers</code> | Build workflow triggers. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bundlerOptions">bundlerOptions</a></code> | <code>projen.javascript.BundlerOptions</code> | Options for `Bundler`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.checkLicenses">checkLicenses</a></code> | <code>projen.javascript.LicenseCheckerOptions</code> | Configure which licenses should be deemed acceptable for use by dependencies. |
-| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with `@codeCovTokenSecret`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v4 A secret is required for private repos. Configured with `@codeCovTokenSecret`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.codeCovTokenSecret">codeCovTokenSecret</a></code> | <code>string</code> | Define the secret name for a specified https://codecov.io/ token A secret is required to send coverage for private repositories. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.copyrightOwner">copyrightOwner</a></code> | <code>string</code> | License copyright owner. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.copyrightPeriod">copyrightPeriod</a></code> | <code>string</code> | The copyright years to put in the LICENSE file. |
@@ -6050,7 +6051,21 @@ Define a GitHub workflow for building PRs.
 
 ---
 
-##### `buildWorkflowTriggers`<sup>Optional</sup> <a name="buildWorkflowTriggers" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflowTriggers"></a>
+##### `buildWorkflowOptions`<sup>Optional</sup> <a name="buildWorkflowOptions" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflowOptions"></a>
+
+```typescript
+public readonly buildWorkflowOptions: BuildWorkflowOptions;
+```
+
+- *Type:* projen.javascript.BuildWorkflowOptions
+
+Options for PR build workflow.
+
+---
+
+##### ~~`buildWorkflowTriggers`~~<sup>Optional</sup> <a name="buildWorkflowTriggers" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.buildWorkflowTriggers"></a>
+
+- *Deprecated:* - Use `buildWorkflowOptions.workflowTriggers`
 
 ```typescript
 public readonly buildWorkflowTriggers: Triggers;
@@ -6099,7 +6114,7 @@ public readonly codeCov: boolean;
 - *Type:* boolean
 - *Default:* false
 
-Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with `@codeCovTokenSecret`.
+Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v4 A secret is required for private repos. Configured with `@codeCovTokenSecret`.
 
 ---
 
@@ -6236,7 +6251,9 @@ Jest options.
 
 ---
 
-##### `mutableBuild`<sup>Optional</sup> <a name="mutableBuild" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.mutableBuild"></a>
+##### ~~`mutableBuild`~~<sup>Optional</sup> <a name="mutableBuild" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.mutableBuild"></a>
+
+- *Deprecated:* - Use `buildWorkflowOptions.mutableBuild`
 
 ```typescript
 public readonly mutableBuild: boolean;
@@ -6340,7 +6357,7 @@ public readonly projenDevDependency: boolean;
 ```
 
 - *Type:* boolean
-- *Default:* true
+- *Default:* true if not a subproject
 
 Indicates of "projen" should be installed as a devDependency.
 
@@ -7036,10 +7053,11 @@ const tmsTSApolloGraphQLProjectOptions: TmsTSApolloGraphQLProjectOptions = { ...
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | A directory which will contain build artifacts. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.autoApproveUpgrades">autoApproveUpgrades</a></code> | <code>boolean</code> | Automatically approve deps upgrade PRs, allowing them to be merged by mergify (if configued). |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.buildWorkflow">buildWorkflow</a></code> | <code>boolean</code> | Define a GitHub workflow for building PRs. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.buildWorkflowOptions">buildWorkflowOptions</a></code> | <code>projen.javascript.BuildWorkflowOptions</code> | Options for PR build workflow. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.buildWorkflowTriggers">buildWorkflowTriggers</a></code> | <code>projen.github.workflows.Triggers</code> | Build workflow triggers. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.bundlerOptions">bundlerOptions</a></code> | <code>projen.javascript.BundlerOptions</code> | Options for `Bundler`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.checkLicenses">checkLicenses</a></code> | <code>projen.javascript.LicenseCheckerOptions</code> | Configure which licenses should be deemed acceptable for use by dependencies. |
-| <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with `@codeCovTokenSecret`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v4 A secret is required for private repos. Configured with `@codeCovTokenSecret`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.codeCovTokenSecret">codeCovTokenSecret</a></code> | <code>string</code> | Define the secret name for a specified https://codecov.io/ token A secret is required to send coverage for private repositories. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.copyrightOwner">copyrightOwner</a></code> | <code>string</code> | License copyright owner. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.copyrightPeriod">copyrightPeriod</a></code> | <code>string</code> | The copyright years to put in the LICENSE file. |
@@ -8450,7 +8468,21 @@ Define a GitHub workflow for building PRs.
 
 ---
 
-##### `buildWorkflowTriggers`<sup>Optional</sup> <a name="buildWorkflowTriggers" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.buildWorkflowTriggers"></a>
+##### `buildWorkflowOptions`<sup>Optional</sup> <a name="buildWorkflowOptions" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.buildWorkflowOptions"></a>
+
+```typescript
+public readonly buildWorkflowOptions: BuildWorkflowOptions;
+```
+
+- *Type:* projen.javascript.BuildWorkflowOptions
+
+Options for PR build workflow.
+
+---
+
+##### ~~`buildWorkflowTriggers`~~<sup>Optional</sup> <a name="buildWorkflowTriggers" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.buildWorkflowTriggers"></a>
+
+- *Deprecated:* - Use `buildWorkflowOptions.workflowTriggers`
 
 ```typescript
 public readonly buildWorkflowTriggers: Triggers;
@@ -8499,7 +8531,7 @@ public readonly codeCov: boolean;
 - *Type:* boolean
 - *Default:* false
 
-Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with `@codeCovTokenSecret`.
+Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v4 A secret is required for private repos. Configured with `@codeCovTokenSecret`.
 
 ---
 
@@ -8636,7 +8668,9 @@ Jest options.
 
 ---
 
-##### `mutableBuild`<sup>Optional</sup> <a name="mutableBuild" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.mutableBuild"></a>
+##### ~~`mutableBuild`~~<sup>Optional</sup> <a name="mutableBuild" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.mutableBuild"></a>
+
+- *Deprecated:* - Use `buildWorkflowOptions.mutableBuild`
 
 ```typescript
 public readonly mutableBuild: boolean;
@@ -8740,7 +8774,7 @@ public readonly projenDevDependency: boolean;
 ```
 
 - *Type:* boolean
-- *Default:* true
+- *Default:* true if not a subproject
 
 Indicates of "projen" should be installed as a devDependency.
 
@@ -9446,10 +9480,11 @@ const tmsTypeScriptAppProjectOptions: TmsTypeScriptAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | A directory which will contain build artifacts. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.autoApproveUpgrades">autoApproveUpgrades</a></code> | <code>boolean</code> | Automatically approve deps upgrade PRs, allowing them to be merged by mergify (if configued). |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflow">buildWorkflow</a></code> | <code>boolean</code> | Define a GitHub workflow for building PRs. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflowOptions">buildWorkflowOptions</a></code> | <code>projen.javascript.BuildWorkflowOptions</code> | Options for PR build workflow. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflowTriggers">buildWorkflowTriggers</a></code> | <code>projen.github.workflows.Triggers</code> | Build workflow triggers. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bundlerOptions">bundlerOptions</a></code> | <code>projen.javascript.BundlerOptions</code> | Options for `Bundler`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.checkLicenses">checkLicenses</a></code> | <code>projen.javascript.LicenseCheckerOptions</code> | Configure which licenses should be deemed acceptable for use by dependencies. |
-| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with `@codeCovTokenSecret`. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v4 A secret is required for private repos. Configured with `@codeCovTokenSecret`. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.codeCovTokenSecret">codeCovTokenSecret</a></code> | <code>string</code> | Define the secret name for a specified https://codecov.io/ token A secret is required to send coverage for private repositories. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.copyrightOwner">copyrightOwner</a></code> | <code>string</code> | License copyright owner. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.copyrightPeriod">copyrightPeriod</a></code> | <code>string</code> | The copyright years to put in the LICENSE file. |
@@ -10858,7 +10893,21 @@ Define a GitHub workflow for building PRs.
 
 ---
 
-##### `buildWorkflowTriggers`<sup>Optional</sup> <a name="buildWorkflowTriggers" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflowTriggers"></a>
+##### `buildWorkflowOptions`<sup>Optional</sup> <a name="buildWorkflowOptions" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflowOptions"></a>
+
+```typescript
+public readonly buildWorkflowOptions: BuildWorkflowOptions;
+```
+
+- *Type:* projen.javascript.BuildWorkflowOptions
+
+Options for PR build workflow.
+
+---
+
+##### ~~`buildWorkflowTriggers`~~<sup>Optional</sup> <a name="buildWorkflowTriggers" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.buildWorkflowTriggers"></a>
+
+- *Deprecated:* - Use `buildWorkflowOptions.workflowTriggers`
 
 ```typescript
 public readonly buildWorkflowTriggers: Triggers;
@@ -10907,7 +10956,7 @@ public readonly codeCov: boolean;
 - *Type:* boolean
 - *Default:* false
 
-Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with `@codeCovTokenSecret`.
+Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v4 A secret is required for private repos. Configured with `@codeCovTokenSecret`.
 
 ---
 
@@ -11044,7 +11093,9 @@ Jest options.
 
 ---
 
-##### `mutableBuild`<sup>Optional</sup> <a name="mutableBuild" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mutableBuild"></a>
+##### ~~`mutableBuild`~~<sup>Optional</sup> <a name="mutableBuild" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.mutableBuild"></a>
+
+- *Deprecated:* - Use `buildWorkflowOptions.mutableBuild`
 
 ```typescript
 public readonly mutableBuild: boolean;
@@ -11148,7 +11199,7 @@ public readonly projenDevDependency: boolean;
 ```
 
 - *Type:* boolean
-- *Default:* true
+- *Default:* true if not a subproject
 
 Indicates of "projen" should be installed as a devDependency.
 
