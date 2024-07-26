@@ -259,3 +259,27 @@ test("TMSTypeScriptAppProject honors NOT strictest", () => {
     "@tsconfig/node18/tsconfig.json",
   );
 });
+
+test("TMSTypeScriptAppProject honors tsconfig paths", () => {
+  const project = new TmsTypeScriptAppProject({
+    name: "test",
+    defaultReleaseBranch: "main",
+    eslintFixableAsWarn: false,
+    esmSupportAddRequireShim: false,
+    // default settings
+    // esmSupportConfig: true,
+
+    tsconfig: {
+      compilerOptions: {
+        paths: {
+          "@/*": ["src/weird-path/*"],
+        },
+      },
+    },
+  });
+  const snapshot = Testing.synth(project); // synthSnapshot(project, { parseJson: true });
+  expect(snapshot["package.json"].jest.moduleNameMapper).toMatchObject({
+    "^@/(.*)\\.js$": "<rootDir>/src/weird-path/$1",
+    "^@/(.*)$": "<rootDir>/src/weird-path/$1",
+  });
+});

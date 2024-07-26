@@ -14,6 +14,8 @@ import {
   TypeScriptProjectOptions,
 } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+import { pathsToModuleNameMapper } from "ts-jest";
 
 export enum TmsTSConfigBase {
   NODE_LTS = "node-lts",
@@ -409,8 +411,13 @@ export class TmsTypeScriptAppProject extends TypeScriptAppProject {
       this.jest.config.globals = undefined;
       this.jest.config.moduleNameMapper = {
         "^(\\.{1,2}/.*)\\.m?js$": "$1",
+        ...(this.tsconfig?.compilerOptions?.paths
+          ? pathsToModuleNameMapper(this.tsconfig?.compilerOptions?.paths, {
+              prefix: "<rootDir>/",
+              useESM: true,
+            })
+          : {}),
       };
-
       if (mergedOptions.esmSupportConfig ?? true) {
         // "If you are using custom transform config, please remove preset from your Jest config to avoid issues that
         // Jest doesn't transform files correctly."
