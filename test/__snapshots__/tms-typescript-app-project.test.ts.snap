@@ -68,8 +68,8 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 3`] = `
     "@tsconfig/node18": "*",
     "@types/jest": "*",
     "@types/node": "^18",
-    "@typescript-eslint/eslint-plugin": "^6",
-    "@typescript-eslint/parser": "^6",
+    "@typescript-eslint/eslint-plugin": "^7",
+    "@typescript-eslint/parser": "^7",
     "constructs": "^10.0.0",
     "esbuild": "*",
     "eslint": "^8",
@@ -92,6 +92,7 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 3`] = `
     "coveragePathIgnorePatterns": [
       "/node_modules/",
     ],
+    "coverageProvider": "v8",
     "coverageReporters": [
       "json",
       "lcov",
@@ -112,8 +113,10 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 3`] = `
       ],
     ],
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/(test|src)/**/*(*.)@(spec|test).ts?(x)",
+      "<rootDir>/@(src|test)/**/*(*.)@(spec|test).ts?(x)",
+      "<rootDir>/@(src|test)/**/__tests__/**/*.ts?(x)",
+      "<rootDir>/@(projenrc)/**/*(*.)@(spec|test).ts?(x)",
+      "<rootDir>/@(projenrc)/**/__tests__/**/*.ts?(x)",
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
@@ -133,6 +136,9 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 3`] = `
   },
   "license": "Apache-2.0",
   "name": "test",
+  "publishConfig": {
+    "access": "public",
+  },
   "scripts": {
     "build": "npx projen build",
     "bundle": "npx projen bundle",
@@ -249,6 +255,9 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 6`] = `
     "dot-notation": [
       "warn",
     ],
+    "import/no-duplicates": [
+      "error",
+    ],
     "import/no-extraneous-dependencies": [
       "error",
       {
@@ -282,9 +291,6 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 6`] = `
       "warn",
     ],
     "no-bitwise": [
-      "error",
-    ],
-    "no-duplicate-imports": [
       "error",
     ],
     "no-multiple-empty-lines": [
@@ -396,6 +402,9 @@ exports[`TMSTypeScriptAppProject honors eslintFixableAsWarn=false: .eslintrc.jso
     "dot-notation": [
       "error",
     ],
+    "import/no-duplicates": [
+      "error",
+    ],
     "import/no-extraneous-dependencies": [
       "error",
       {
@@ -429,9 +438,6 @@ exports[`TMSTypeScriptAppProject honors eslintFixableAsWarn=false: .eslintrc.jso
       "error",
     ],
     "no-bitwise": [
-      "error",
-    ],
-    "no-duplicate-imports": [
       "error",
     ],
     "no-multiple-empty-lines": [
