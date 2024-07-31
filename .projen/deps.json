@@ -103,6 +103,10 @@
       "type": "build"
     },
     {
+      "name": "ts-jest",
+      "type": "bundled"
+    },
+    {
       "name": "constructs",
       "type": "peer"
     },
