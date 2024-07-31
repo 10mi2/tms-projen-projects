@@ -63,6 +63,12 @@
     "constructs": "^10.3.0",
     "projen": "^0.84.13"
   },
+  "dependencies": {
+    "ts-jest": "^29.2.3"
+  },
+  "bundledDependencies": [
+    "ts-jest"
+  ],
   "main": "lib/index.js",
   "license": "MIT",
   "publishConfig": {
