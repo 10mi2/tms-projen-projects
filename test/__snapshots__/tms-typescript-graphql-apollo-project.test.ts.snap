@@ -86,7 +86,7 @@ exports[`TmsTSApolloGraphQLProject has reasonable configuration 3`] = `
     "@graphql-typed-document-node/core": "*",
     "@tsconfig/node18": "*",
     "@types/jest": "*",
-    "@types/node": "^18",
+    "@types/node": "*",
     "@typescript-eslint/eslint-plugin": "^7",
     "@typescript-eslint/parser": "^7",
     "constructs": "^10.0.0",
