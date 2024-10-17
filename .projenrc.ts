@@ -21,7 +21,7 @@ const project = new cdk.JsiiProject({
 
   projenVersion: ">=0.79.23",
 
-  bundledDeps: ["ts-jest"] /* Runtime dependencies of this module. */,
+  // bundledDeps: []          /* Runtime dependencies of this module. */,
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
