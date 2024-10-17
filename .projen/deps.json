@@ -6,7 +6,6 @@
     },
     {
       "name": "@types/node",
-      "version": "^18",
       "type": "build"
     },
     {
@@ -102,10 +101,6 @@
     {
       "name": "typescript",
       "type": "build"
-    },
-    {
-      "name": "ts-jest",
-      "type": "bundled"
     },
     {
       "name": "constructs",

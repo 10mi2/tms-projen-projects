@@ -14,8 +14,7 @@ import {
   TypeScriptProjectOptions,
 } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { pathsToModuleNameMapper } from "ts-jest";
+import { pathsToModuleNameMapper } from "./util/paths-to-module-name-mapper";
 
 export enum TmsTSConfigBase {
   NODE_LTS = "node-lts",
