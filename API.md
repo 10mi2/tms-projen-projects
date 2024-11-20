@@ -4623,9 +4623,11 @@ const tmsNestJSAppProjectOptions: TmsNestJSAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.scripts">scripts</a></code> | <code>{[ key: string ]: string}</code> | npm scripts to include. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.stability">stability</a></code> | <code>string</code> | Package's Stability. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.yarnBerryOptions">yarnBerryOptions</a></code> | <code>projen.javascript.YarnBerryOptions</code> | Options for Yarn Berry. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bumpPackage">bumpPackage</a></code> | <code>string</code> | The `commit-and-tag-version` compatible package used to bump the package version, as a dependency string. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.jsiiReleaseVersion">jsiiReleaseVersion</a></code> | <code>string</code> | Version requirement of `publib` which is used to publish modules to npm. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.majorVersion">majorVersion</a></code> | <code>number</code> | Major version to release from the default branch. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.minMajorVersion">minMajorVersion</a></code> | <code>number</code> | Minimal Major version to release. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.nextVersionCommand">nextVersionCommand</a></code> | <code>string</code> | A shell command to control the next version to release. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.npmDistTag">npmDistTag</a></code> | <code>string</code> | The npmDistTag to use when publishing from the default branch. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.postBuildSteps">postBuildSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | Steps to execute after build as part of the release workflow. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.prerelease">prerelease</a></code> | <code>string</code> | Bump versions from the default branch as pre-releases (e.g. "beta", "alpha", "pre"). |
@@ -5707,6 +5709,21 @@ Options for Yarn Berry.
 
 ---
 
+##### `bumpPackage`<sup>Optional</sup> <a name="bumpPackage" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.bumpPackage"></a>
+
+```typescript
+public readonly bumpPackage: string;
+```
+
+- *Type:* string
+- *Default:* A recent version of "commit-and-tag-version"
+
+The `commit-and-tag-version` compatible package used to bump the package version, as a dependency string.
+
+This can be any compatible package version, including the deprecated `standard-version@9`.
+
+---
+
 ##### `jsiiReleaseVersion`<sup>Optional</sup> <a name="jsiiReleaseVersion" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.jsiiReleaseVersion"></a>
 
 ```typescript
@@ -5751,6 +5768,37 @@ This can be useful to set to 1, as breaking changes before the 1.x major
 release are not incrementing the major version number.
 
 Can not be set together with `majorVersion`.
+
+---
+
+##### `nextVersionCommand`<sup>Optional</sup> <a name="nextVersionCommand" id="@10mi2/tms-projen-projects.TmsNestJSAppProjectOptions.property.nextVersionCommand"></a>
+
+```typescript
+public readonly nextVersionCommand: string;
+```
+
+- *Type:* string
+- *Default:* The next version will be determined based on the commit history and project settings.
+
+A shell command to control the next version to release.
+
+If present, this shell command will be run before the bump is executed, and
+it determines what version to release. It will be executed in the following
+environment:
+
+- Working directory: the project directory.
+- `$VERSION`: the current version. Looks like `1.2.3`.
+- `$LATEST_TAG`: the most recent tag. Looks like `prefix-v1.2.3`, or may be unset.
+
+The command should print one of the following to `stdout`:
+
+- Nothing: the next version number will be determined based on commit history.
+- `x.y.z`: the next version number will be `x.y.z`.
+- `major|minor|patch`: the next version number will be the current version number
+  with the indicated component bumped.
+
+This setting cannot be specified together with `minMajorVersion`; the invoked
+script can be used to achieve the effects of `minMajorVersion`.
 
 ---
 
@@ -7057,9 +7105,11 @@ const tmsTSApolloGraphQLProjectOptions: TmsTSApolloGraphQLProjectOptions = { ...
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.scripts">scripts</a></code> | <code>{[ key: string ]: string}</code> | npm scripts to include. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.stability">stability</a></code> | <code>string</code> | Package's Stability. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.yarnBerryOptions">yarnBerryOptions</a></code> | <code>projen.javascript.YarnBerryOptions</code> | Options for Yarn Berry. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.bumpPackage">bumpPackage</a></code> | <code>string</code> | The `commit-and-tag-version` compatible package used to bump the package version, as a dependency string. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.jsiiReleaseVersion">jsiiReleaseVersion</a></code> | <code>string</code> | Version requirement of `publib` which is used to publish modules to npm. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.majorVersion">majorVersion</a></code> | <code>number</code> | Major version to release from the default branch. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.minMajorVersion">minMajorVersion</a></code> | <code>number</code> | Minimal Major version to release. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.nextVersionCommand">nextVersionCommand</a></code> | <code>string</code> | A shell command to control the next version to release. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.npmDistTag">npmDistTag</a></code> | <code>string</code> | The npmDistTag to use when publishing from the default branch. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.postBuildSteps">postBuildSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | Steps to execute after build as part of the release workflow. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.prerelease">prerelease</a></code> | <code>string</code> | Bump versions from the default branch as pre-releases (e.g. "beta", "alpha", "pre"). |
@@ -8142,6 +8192,21 @@ Options for Yarn Berry.
 
 ---
 
+##### `bumpPackage`<sup>Optional</sup> <a name="bumpPackage" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.bumpPackage"></a>
+
+```typescript
+public readonly bumpPackage: string;
+```
+
+- *Type:* string
+- *Default:* A recent version of "commit-and-tag-version"
+
+The `commit-and-tag-version` compatible package used to bump the package version, as a dependency string.
+
+This can be any compatible package version, including the deprecated `standard-version@9`.
+
+---
+
 ##### `jsiiReleaseVersion`<sup>Optional</sup> <a name="jsiiReleaseVersion" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.jsiiReleaseVersion"></a>
 
 ```typescript
@@ -8186,6 +8251,37 @@ This can be useful to set to 1, as breaking changes before the 1.x major
 release are not incrementing the major version number.
 
 Can not be set together with `majorVersion`.
+
+---
+
+##### `nextVersionCommand`<sup>Optional</sup> <a name="nextVersionCommand" id="@10mi2/tms-projen-projects.TmsTSApolloGraphQLProjectOptions.property.nextVersionCommand"></a>
+
+```typescript
+public readonly nextVersionCommand: string;
+```
+
+- *Type:* string
+- *Default:* The next version will be determined based on the commit history and project settings.
+
+A shell command to control the next version to release.
+
+If present, this shell command will be run before the bump is executed, and
+it determines what version to release. It will be executed in the following
+environment:
+
+- Working directory: the project directory.
+- `$VERSION`: the current version. Looks like `1.2.3`.
+- `$LATEST_TAG`: the most recent tag. Looks like `prefix-v1.2.3`, or may be unset.
+
+The command should print one of the following to `stdout`:
+
+- Nothing: the next version number will be determined based on commit history.
+- `x.y.z`: the next version number will be `x.y.z`.
+- `major|minor|patch`: the next version number will be the current version number
+  with the indicated component bumped.
+
+This setting cannot be specified together with `minMajorVersion`; the invoked
+script can be used to achieve the effects of `minMajorVersion`.
 
 ---
 
@@ -9502,9 +9598,11 @@ const tmsTypeScriptAppProjectOptions: TmsTypeScriptAppProjectOptions = { ... }
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.scripts">scripts</a></code> | <code>{[ key: string ]: string}</code> | npm scripts to include. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.stability">stability</a></code> | <code>string</code> | Package's Stability. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.yarnBerryOptions">yarnBerryOptions</a></code> | <code>projen.javascript.YarnBerryOptions</code> | Options for Yarn Berry. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bumpPackage">bumpPackage</a></code> | <code>string</code> | The `commit-and-tag-version` compatible package used to bump the package version, as a dependency string. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jsiiReleaseVersion">jsiiReleaseVersion</a></code> | <code>string</code> | Version requirement of `publib` which is used to publish modules to npm. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.majorVersion">majorVersion</a></code> | <code>number</code> | Major version to release from the default branch. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.minMajorVersion">minMajorVersion</a></code> | <code>number</code> | Minimal Major version to release. |
+| <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.nextVersionCommand">nextVersionCommand</a></code> | <code>string</code> | A shell command to control the next version to release. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.npmDistTag">npmDistTag</a></code> | <code>string</code> | The npmDistTag to use when publishing from the default branch. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.postBuildSteps">postBuildSteps</a></code> | <code>projen.github.workflows.JobStep[]</code> | Steps to execute after build as part of the release workflow. |
 | <code><a href="#@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.prerelease">prerelease</a></code> | <code>string</code> | Bump versions from the default branch as pre-releases (e.g. "beta", "alpha", "pre"). |
@@ -10585,6 +10683,21 @@ Options for Yarn Berry.
 
 ---
 
+##### `bumpPackage`<sup>Optional</sup> <a name="bumpPackage" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.bumpPackage"></a>
+
+```typescript
+public readonly bumpPackage: string;
+```
+
+- *Type:* string
+- *Default:* A recent version of "commit-and-tag-version"
+
+The `commit-and-tag-version` compatible package used to bump the package version, as a dependency string.
+
+This can be any compatible package version, including the deprecated `standard-version@9`.
+
+---
+
 ##### `jsiiReleaseVersion`<sup>Optional</sup> <a name="jsiiReleaseVersion" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.jsiiReleaseVersion"></a>
 
 ```typescript
@@ -10629,6 +10742,37 @@ This can be useful to set to 1, as breaking changes before the 1.x major
 release are not incrementing the major version number.
 
 Can not be set together with `majorVersion`.
+
+---
+
+##### `nextVersionCommand`<sup>Optional</sup> <a name="nextVersionCommand" id="@10mi2/tms-projen-projects.TmsTypeScriptAppProjectOptions.property.nextVersionCommand"></a>
+
+```typescript
+public readonly nextVersionCommand: string;
+```
+
+- *Type:* string
+- *Default:* The next version will be determined based on the commit history and project settings.
+
+A shell command to control the next version to release.
+
+If present, this shell command will be run before the bump is executed, and
+it determines what version to release. It will be executed in the following
+environment:
+
+- Working directory: the project directory.
+- `$VERSION`: the current version. Looks like `1.2.3`.
+- `$LATEST_TAG`: the most recent tag. Looks like `prefix-v1.2.3`, or may be unset.
+
+The command should print one of the following to `stdout`:
+
+- Nothing: the next version number will be determined based on commit history.
+- `x.y.z`: the next version number will be `x.y.z`.
+- `major|minor|patch`: the next version number will be the current version number
+  with the indicated component bumped.
+
+This setting cannot be specified together with `minMajorVersion`; the invoked
+script can be used to achieve the effects of `minMajorVersion`.
 
 ---
 
