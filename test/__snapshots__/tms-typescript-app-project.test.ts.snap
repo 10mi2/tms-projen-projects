@@ -78,7 +78,7 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 3`] = `
     "eslint-plugin-import": "*",
     "eslint-plugin-prettier": "*",
     "jest": "*",
-    "jest-junit": "^15",
+    "jest-junit": "^16",
     "prettier": "*",
     "projen": ">=0.79.23",
     "ts-jest": "*",

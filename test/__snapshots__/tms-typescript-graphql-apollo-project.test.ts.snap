@@ -98,7 +98,7 @@ exports[`TmsTSApolloGraphQLProject has reasonable configuration 3`] = `
     "eslint-plugin-prettier": "*",
     "graphql": "*",
     "jest": "*",
-    "jest-junit": "^15",
+    "jest-junit": "^16",
     "jest-mock-extended": "*",
     "nodemon": "*",
     "prettier": "*",

@@ -125,7 +125,7 @@ exports[`TmsNestJSAppProject has reasonable configuration 3`] = `
     "eslint-plugin-import": "*",
     "eslint-plugin-prettier": "*",
     "jest": "*",
-    "jest-junit": "^15",
+    "jest-junit": "^16",
     "prettier": "*",
     "projen": ">=0.79.23",
     "source-map-support": "^0.5.21",

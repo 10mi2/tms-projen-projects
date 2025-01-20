@@ -8,7 +8,7 @@ const project = new cdk.JsiiProject({
   npmAccess: javascript.NpmAccess.PUBLIC,
 
   defaultReleaseBranch: "main",
-  jsiiVersion: "~5.3.0",
+  jsiiVersion: "~5.7.0",
   name: "tms-projen-projects",
   packageName: "@10mi2/tms-projen-projects",
   packageManager: javascript.NodePackageManager.NPM,
