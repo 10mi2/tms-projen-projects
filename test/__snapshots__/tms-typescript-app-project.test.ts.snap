@@ -240,17 +240,14 @@ exports[`TMSTypeScriptAppProject has reasonable configuration 6`] = `
         ],
       },
     ],
-    "@typescript-eslint/no-floating-promises": [
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-require-imports": "error",
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/return-await": "error",
+    "curly": [
       "error",
-    ],
-    "@typescript-eslint/no-require-imports": [
-      "error",
-    ],
-    "@typescript-eslint/no-shadow": [
-      "error",
-    ],
-    "@typescript-eslint/return-await": [
-      "error",
+      "multi-line",
+      "consistent",
     ],
     "dot-notation": [
       "warn",
@@ -387,17 +384,14 @@ exports[`TMSTypeScriptAppProject honors eslintFixableAsWarn=false: .eslintrc.jso
         ],
       },
     ],
-    "@typescript-eslint/no-floating-promises": [
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-require-imports": "error",
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/return-await": "error",
+    "curly": [
       "error",
-    ],
-    "@typescript-eslint/no-require-imports": [
-      "error",
-    ],
-    "@typescript-eslint/no-shadow": [
-      "error",
-    ],
-    "@typescript-eslint/return-await": [
-      "error",
+      "multi-line",
+      "consistent",
     ],
     "dot-notation": [
       "error",
@@ -434,13 +428,7 @@ exports[`TMSTypeScriptAppProject honors eslintFixableAsWarn=false: .eslintrc.jso
         ],
       },
     ],
-    "key-spacing": [
-      "error",
-    ],
     "no-bitwise": [
-      "error",
-    ],
-    "no-multiple-empty-lines": [
       "error",
     ],
     "no-return-await": [
@@ -448,9 +436,6 @@ exports[`TMSTypeScriptAppProject honors eslintFixableAsWarn=false: .eslintrc.jso
     ],
     "no-shadow": [
       "off",
-    ],
-    "no-trailing-spaces": [
-      "error",
     ],
   },
   "settings": {

@@ -270,17 +270,14 @@ exports[`TmsTSApolloGraphQLProject has reasonable configuration 6`] = `
             ],
           },
         ],
-        "@typescript-eslint/no-floating-promises": [
+        "@typescript-eslint/no-floating-promises": "error",
+        "@typescript-eslint/no-require-imports": "error",
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/return-await": "error",
+        "curly": [
           "error",
-        ],
-        "@typescript-eslint/no-require-imports": [
-          "error",
-        ],
-        "@typescript-eslint/no-shadow": [
-          "error",
-        ],
-        "@typescript-eslint/return-await": [
-          "error",
+          "multi-line",
+          "consistent",
         ],
         "dot-notation": [
           "warn",

@@ -33,7 +33,7 @@ exports[`TmsNestJSAppProject has reasonable configuration 1`] = `
     "strict": true,
     "strictBindCallApply": true,
     "strictNullChecks": true,
-    "target": "ES2019",
+    "target": "ES2020",
   },
   "exclude": [],
   "extends": "@tsconfig/node18/tsconfig.json",
@@ -299,17 +299,14 @@ exports[`TmsNestJSAppProject has reasonable configuration 6`] = `
         ],
       },
     ],
-    "@typescript-eslint/no-floating-promises": [
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-require-imports": "error",
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/return-await": "error",
+    "curly": [
       "error",
-    ],
-    "@typescript-eslint/no-require-imports": [
-      "error",
-    ],
-    "@typescript-eslint/no-shadow": [
-      "error",
-    ],
-    "@typescript-eslint/return-await": [
-      "error",
+      "multi-line",
+      "consistent",
     ],
     "dot-notation": [
       "warn",
